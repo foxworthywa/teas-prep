@@ -45,7 +45,7 @@ Last updated: 2026-11-18 (late evening: practice site built)
 - Reviews: code audit, student-perspective UX review and re-review in `source/review/site_*.md`.
 
 ## Open items for Alex
-- Turn on GitHub Pages (Settings › Pages › Deploy from a branch › main, /docs) after merging the site PR.
+- Turn on GitHub Pages: Settings › Pages › Deploy from a branch › main, /docs. The site code is on main (2026-11-18). The address will be https://foxworthywa.github.io/teas-prep/
 - Optional: create the results Google Form and fill `docs/assets/config.js` (steps in SITE.md).
 - The Docs converter mangles "___" blanks (M.2.3 Doc shows `say " depends on ."`) and nested bold/italic (E.2.1 §5). The website is fine; fix the two Docs if they are still shared anywhere.
 - Delete the "Superseded study pages (safe to delete)" folder, the three "zz import temp" sheets, plus these in the Study pages folder: "OLD S.1.1 (no figures, replaced - delete)", "OLD S.1.3 (no figures, replaced - delete)", "zz image import test (delete)", "zz html image test (delete)".
