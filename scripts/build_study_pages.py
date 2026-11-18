@@ -106,6 +106,44 @@ def page_html(code, md_text):
                 if cols >= 3 else "")
         return f'{hint}<div class="table-wrap"><table>{m.group(1)}</table></div>'
     body = re.sub(r"<table>(.*?)</table>", wrap, body, flags=re.S)
+    return add_contents(body)
+
+
+def slug(text, used):
+    base = re.sub(r"[^a-z0-9]+", "-", html.unescape(re.sub(r"<[^>]+>", "", text)).lower()).strip("-") or "section"
+    base = re.sub(r"^\d+-", "", base) or base  # '1. The path of air' -> 'the-path-of-air'
+    s, n = base, 2
+    while s in used:
+        s, n = f"{base}-{n}", n + 1
+    used.add(s)
+    return s
+
+
+def add_contents(body):
+    """'On this page' links under the title, ids on each section heading, and a
+    'Back to contents' link before each later section. 'Answer at the bottom'
+    in the checks links to the answers."""
+    used, entries = {"contents"}, []
+
+    def h2(m):
+        inner = m.group(1)
+        sid = slug(inner, used)
+        entries.append((sid, inner))
+        back = ('<p class="to-contents"><a href="#contents">Back to contents ↑</a></p>'
+                if len(entries) > 1 else "")
+        return f'{back}<h2 id="{sid}">{inner}</h2>'
+
+    body = re.sub(r"<h2>(.*?)</h2>", h2, body, flags=re.S)
+    if len(entries) < 2:
+        return body
+    links = "".join(f'<li><a href="#{sid}">{inner}</a></li>' for sid, inner in entries)
+    nav = (f'<nav class="page-contents" id="contents" aria-labelledby="contents-h">'
+           f'<h2 id="contents-h" class="contents-h">On this page</h2><ol>{links}</ol></nav>')
+    body = re.sub(r"(</h1>)", r"\1" + nav.replace("\\", "\\\\"), body, count=1)
+    answers = next((sid for sid, inner in entries if "answer" in inner.lower()), None)
+    if answers:
+        body = re.sub(r"(Answer at the bottom(?: of the page)?\.)",
+                      rf'<a href="#{answers}">\1</a>', body)
     return body
 
 
