@@ -16,9 +16,18 @@
 
 - **Atomic number** = number of **protons**. It defines the element: every atom with 6 protons is carbon.
 - **Mass number** = **protons + neutrons**. Electrons are too light to count.
+  - Turned around, this gives the neutrons: **neutrons = mass number − atomic number**.
 - In a **neutral** atom, electrons = protons.
 
-**Worked example:** chlorine-35 has atomic number 17. Protons = 17, electrons (if neutral) = 17, neutrons = 35 − 17 = **18**.
+**Worked example: how many protons, neutrons, and electrons are in chlorine-35?**
+
+The number after an element's name is its **mass number**, so chlorine-35 (also written Cl-35) has a mass number of 35. The periodic table gives chlorine's atomic number: 17.
+
+1. **Protons** = atomic number = **17**.
+2. **Electrons** = protons in a neutral atom = **17**.
+3. **Neutrons:** the mass number counts protons + neutrons, so 17 + neutrons = 35. Subtract the protons: 35 − 17 = **18** neutrons.
+
+Check that it adds up: 17 protons + 18 neutrons = 35, the mass number. The 17 electrons aren't part of that sum because they are too light to count.
 
 > **Check 1:** An atom has atomic number 8 and mass number 17. How many neutrons does it have?
 > *Answer at the bottom of the page.*

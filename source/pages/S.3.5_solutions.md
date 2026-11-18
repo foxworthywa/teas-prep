@@ -36,9 +36,15 @@
 - **Percent (w/v, weight/volume)** = grams of solute per **100 mL** of solution. A 0.9% saline solution has 0.9 g of NaCl per 100 mL.
 - **Molarity (M)** = **moles of solute per liter of solution**. (A **mole** is a counting unit for particles, like a dozen but far larger: 6.02 × 10²³.) 1 M NaCl has 1 mole of NaCl in each liter.
 - **Dilution:** adding solvent lowers concentration but **not** the amount of solute. Use **C₁V₁ = C₂V₂**.
+  - C₁ and V₁ are the concentration and volume of the strong solution you start with; C₂ and V₂ are the concentration and volume of the weaker solution you want to end up with.
 
-**Worked example:** how much 10% solution do you need to make 200 mL of 2% solution?
-C₁V₁ = C₂V₂ → 10% × V₁ = 2% × 200 mL → V₁ = (2 × 200) ÷ 10 = **40 mL** (then add water up to 200 mL).
+**Worked example: how much 10% solution do you need to make 200 mL of 2% solution?**
+
+1. Sort the numbers. Start: C₁ = 10%, V₁ = unknown (that's the question). End: C₂ = 2%, V₂ = 200 mL.
+2. Plug them in: 10 × V₁ = 2 × 200 = 400.
+3. Divide both sides by 10: V₁ = 400 ÷ 10 = **40 mL**.
+
+So measure 40 mL of the 10% solution and add water until the total is 200 mL. Check: 10% of 40 mL is 4 g of solute, and 2% of 200 mL is also 4 g. The solute stays the same; only the water changes.
 
 > **Check 1:** How many grams of glucose are in 500 mL of a 5% (w/v) glucose solution?
 > *Answer at the bottom of the page.*
