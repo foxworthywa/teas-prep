@@ -36,9 +36,17 @@ Study pages are built from `source/pages/*.md`. Edit the .md file, not the Googl
 
 ## Settings (`docs/assets/config.js`)
 
-- `diagnostic.maxPerSubarea` (15), `minPerSubarea` (6), `stopConfidence` (0.85): a subarea stops once the most likely band has at least 85% probability, but never before 6 items.
+- `diagnostic.maxPerSubarea` (15), `minPerSubarea` (8), `stopConfidence` (0.9): a part (subarea) stops early only after at least 8 questions, and only when it's at least 90% likely that answering all of its questions would leave its band unchanged. In simulation the early band matched the full-length band 93–99% of the time, with 9–12 questions per part on average. Students near a cut point usually answer all 15.
 - `diagnostic.passageCapPerForm` (3): at most 3 items from one Reading passage per diagnostic. This spreads RP-21's 12 items across several attempts. Repeat diagnostics prefer items the student hasn't seen yet.
-- `diagnostic.bands`: cut points at 60% and 80% correct, labelled *Build the basics*, *Getting there* and *Strong*. These are practice bands, not TEAS predictions. Change them once real TEAS scores are available to calibrate against.
+- `diagnostic.bands`: cut points at 60% and 80% correct, labelled *Build the basics*, *Getting there* and *Strong*. The band comes from the share answered correctly, so it always matches the legend. These are practice bands, not TEAS predictions. Change them once real TEAS scores are available to calibrate against.
+- Repeat diagnostics prefer questions the student hasn't seen yet, in earlier diagnostics or in practice.
+
+## Display overrides (`data/overrides.json`)
+
+The Sheet holds all content. This file holds two display settings the Sheet has no column for:
+
+- `optionOrder`: per item, `fixed` keeps the Sheet's option order instead of shuffling. Number options are already sorted automatically ("About 95 bpm", "January 9", "$1,152.00", age ranges).
+- `explanationLetters`: items whose Explanation names options by bare letter ("Only C places every comma correctly"). The site rewrites those letters to match the shuffled order. The build report flags new explanations that look like this, so you can add them here. Rewriting them in the Sheet to quote the option text would be better still.
 
 ## Optional: results to a Google Form
 
@@ -51,4 +59,5 @@ Study pages are built from `source/pages/*.md`. Edit the .md file, not the Googl
 ## Tests
 
 - `node --test tests/core.test.mjs`: grading, supply-answer normalizing, option order, do-not-pair and passage limits across 200 random forms per section, banding, the stopping rule, and a check that the export copies the Sheet text exactly.
+- `python3 tests/test_xlsx_path.py`: building from a downloaded .xlsx gives the same result as building from the tab dumps.
 - `python3 tests/smoke.py --shots /tmp/shots`: opens the site in headless Chrome. It runs every diagnostic and some practice, loads all 64 study pages, and fails on any script error or missing file.

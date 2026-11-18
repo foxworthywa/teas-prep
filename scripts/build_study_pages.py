@@ -76,15 +76,18 @@ def page_html(code, md_text):
         alt, rel = m.group(1), m.group(2)
         name, w, h = web_figure(pathlib.Path("figures") / pathlib.Path(rel).name)
         k = f"FIGTOKEN{len(figs)}X"
-        figs[k] = (f'<img src="figures/{name}" alt="{html.escape(alt, quote=True)}" '
-                   f'width="{w}" height="{h}" loading="lazy">')
+        figs[k] = (f'<a href="figures/{name}" title="Open the full-size figure">'
+                   f'<img src="figures/{name}" alt="{html.escape(alt, quote=True)}" '
+                   f'width="{w}" height="{h}" loading="lazy"></a>')
         return f"\n\n{k}\n\n"
 
     text = re.sub(r"!\[([^\]]*)\]\((figures/[^)]+)\)", stash, md_text)
     text = fix_lists(text)
+    # fill-in blanks like ___ must not become bold/italic markers
+    text = re.sub(r"_{2,}", lambda m: "\\_" * len(m.group(0)), text)
     body = markdown.markdown(text, extensions=["tables", "sane_lists"])
     for k, v in figs.items():
-        body = body.replace(f"<p>{k}</p>", f'<figure class="study-fig">{v}</figure>')
+        body = body.replace(f"<p>{k}</p>", f'<figure class="study-fig">{v}<p class="fig-tip">Tap or click the figure to open it full size.</p></figure>')
     # caption + credit paragraphs follow the image: fold them into the figure
     body = re.sub(r'</figure>\s*<p>(<strong>Figure \d+\..*?)</p>',
                   lambda m: f'<figcaption>{m.group(1)}</figcaption></figure>', body, flags=re.S)

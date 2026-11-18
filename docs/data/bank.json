@@ -1,6 +1,6 @@
 {
  "version": 1,
- "built": "2026-11-18T19:22Z",
+ "built": "2026-11-18T19:54Z",
  "source": "Google Sheet: ESCC TEAS Prep: Master Bank",
  "diagnosticMaxPerSubarea": 15,
  "sections": [
@@ -3393,7 +3393,7 @@
    "key": [
     "C"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "fixed",
    "optionNotes": {
     "A": [
      {
@@ -4449,7 +4449,13 @@
    "key": [
     "B"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -4551,7 +4557,7 @@
    "key": [
     "B"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "fixed",
    "optionNotes": {
     "A": [
      {
@@ -5963,7 +5969,7 @@
    "key": [
     "B"
    ],
-   "optionOrder": "fixed",
+   "optionOrder": "shuffle",
    "optionNotes": {
     "A": [
      {
@@ -6532,7 +6538,13 @@
    "key": [
     "A"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "A",
+    "D",
+    "B",
+    "C"
+   ],
    "optionNotes": {
     "B": [
      {
@@ -7013,7 +7025,13 @@
    "key": [
     "A"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "B",
+    "D",
+    "A",
+    "C"
+   ],
    "optionNotes": {
     "B": [
      {
@@ -7322,7 +7340,7 @@
     "B",
     "E"
    ],
-   "optionOrder": "fixed",
+   "optionOrder": "shuffle",
    "optionNotes": {
     "C": [
      {
@@ -9560,7 +9578,13 @@
    "key": [
     "A"
    ],
-   "optionOrder": "fixed",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "B",
+    "A",
+    "C",
+    "D"
+   ],
    "optionNotes": {
     "B": [
      {
@@ -10577,7 +10601,13 @@
    "key": [
     "D"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "C",
+    "A",
+    "D",
+    "B"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -11471,7 +11501,13 @@
    "key": [
     "B"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "B",
+    "A",
+    "C",
+    "D"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -11579,7 +11615,7 @@
    "key": [
     "B"
    ],
-   "optionOrder": "fixed",
+   "optionOrder": "shuffle",
    "optionNotes": {
     "A": [
      {
@@ -12106,7 +12142,13 @@
    "key": [
     "A"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "B",
+    "D",
+    "C",
+    "A"
+   ],
    "optionNotes": {
     "B": [
      {
@@ -12273,7 +12315,13 @@
    "key": [
     "C"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "D",
+    "A",
+    "C",
+    "B"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -13206,7 +13254,7 @@
    "key": [
     "C"
    ],
-   "optionOrder": "fixed",
+   "optionOrder": "shuffle",
    "optionNotes": {
     "A": [
      {
@@ -14198,6 +14246,7 @@
     ]
    },
    "generalNotes": [],
+   "explanationLetters": "bare",
    "reviewPending": true
   },
   {
@@ -14676,6 +14725,7 @@
     ]
    },
    "generalNotes": [],
+   "explanationLetters": "bare",
    "reviewPending": true
   },
   {
@@ -15359,7 +15409,7 @@
     ]
    },
    "generalNotes": [],
-   "explanationLetters": true,
+   "explanationLetters": "option",
    "reviewPending": true
   },
   {
@@ -16454,6 +16504,7 @@
     ]
    },
    "generalNotes": [],
+   "explanationLetters": "bare",
    "reviewPending": true
   },
   {
@@ -18264,6 +18315,7 @@
     ]
    },
    "generalNotes": [],
+   "explanationLetters": "bare",
    "reviewPending": true
   },
   {
@@ -24133,7 +24185,13 @@
    "key": [
     "A"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "B",
+    "C",
+    "A",
+    "D"
+   ],
    "optionNotes": {
     "B": [
      {
@@ -24362,7 +24420,7 @@
    "key": [
     "B"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "fixed",
    "optionNotes": {
     "A": [
      {
@@ -26607,7 +26665,13 @@
    "key": [
     "C"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -26667,7 +26731,13 @@
    "key": [
     "C"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
    "optionNotes": {
     "A": [
      {

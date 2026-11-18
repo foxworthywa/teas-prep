@@ -68,7 +68,7 @@ Don't shift tense without a reason. *She opened the chart and reads the notes.* 
 
 ## 5. Adjectives vs adverbs
 
-Adjectives describe nouns; adverbs describe verbs, adjectives, or other adverbs. *She did **well** on the test* (not *good*). *The patient feels **bad*** (not *badly*). **Linking verbs** (*is, seems, feels, looks, becomes*) connect the subject to a word that describes it, so they take an adjective. Test: if you can swap in "is" (*The patient is bad*), use the adjective.
+Adjectives describe nouns; adverbs describe verbs, adjectives, or other adverbs. *She did* ***well*** *on the test* (not *good*). *The patient feels* ***bad*** (not *badly*). **Linking verbs** (*is, seems, feels, looks, becomes*) connect the subject to a word that describes it, so they take an adjective. Test: if you can swap in "is" (*The patient is bad*), use the adjective.
 
 ---
 

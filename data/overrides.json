@@ -1,0 +1,18 @@
+{
+  "_about": "Display-only settings the Sheet has no column for. Content still comes only from the Sheet.",
+  "optionOrder": {
+    "_help": "item id -> 'fixed' (keep Sheet order), 'shuffle', or 'sorted' is automatic only",
+    "S.2.1-003": "fixed",
+    "S.3.3-003": "fixed",
+    "R.1.5-005": "fixed"
+  },
+  "explanationLetters": {
+    "_help": "Items whose Explanation names options by bare letter ('Only C ...'); the site swaps in the letters the student saw",
+    "items": [
+      "E.1.2-004",
+      "E.2.1-004",
+      "E.1.2-012",
+      "E.2.3-009"
+    ]
+  }
+}

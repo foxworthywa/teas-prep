@@ -28,6 +28,8 @@ FORMATS = {
     "Supply answer": "supply",
 }
 TABS = ["Items", "Passages", "Objectives", "Blueprint"]
+OVERRIDES = ROOT / "data" / "overrides.json"
+BARE_LETTER = re.compile(r"(?:^|[.;:]\s+|\b(?:Only|only|In|in|and|or|unlike|Unlike)\s+|,\s+)([A-F])(?=(?:,|\s+and|\s+(?:is|are|has|have|joins|places|uses|each|does|do|can|gives|keeps|makes|shows|says)\b))")
 SECTION_ORDER = ["Reading", "Math", "Science", "English"]
 
 report = []
@@ -157,40 +159,75 @@ def numeric_value(opt):
 RANGE_RE = re.compile(r"^(\d+)\s*[–-]\s*\d+\b|^(\d+)\s+and\s+(?:older|over|up)\b|^(?:under|younger than)\s+(\d+)\b", re.I)
 
 
+QUALIFIER = {"less than": 0, "fewer than": 0, "under": 0, "about": 1, "approximately": 1, "exactly": 1,
+             "more than": 2, "over": 2, "greater than": 2}
+UNICODE_FRACTIONS = {"½": ".5", "¼": ".25", "¾": ".75", "⅓": ".333", "⅔": ".667"}
+NUM_IN_TEXT = re.compile(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?")
+
+
+def template_key(text):
+    """('template', (numbers...), qualifier rank) for options like 'About 115 bpm',
+    'January 9, Run 1 (...)', 'Less than 1 serving', 'Student 3'. None if no number."""
+    t = text.strip()
+    for k, v in UNICODE_FRACTIONS.items():
+        t = re.sub(r"(\d)" + k, lambda m: m.group(1) + v, t).replace(k, "0" + v)
+    q = 1
+    low = t.lower()
+    for word, rank in QUALIFIER.items():
+        if low.startswith(word + " "):
+            q, t = rank, t[len(word) + 1:]
+            break
+    nums = [float(n.replace(",", "")) for n in NUM_IN_TEXT.findall(t)]
+    if not nums:
+        return None
+    tmpl = NUM_IN_TEXT.sub("#", t).lower()
+    tmpl = re.sub(r"\b(\w+?)s\b", r"\1", tmpl)  # serving / servings
+    tmpl = re.sub(r"\s+", " ", tmpl).strip(" .")
+    return tmpl, tuple(nums), q
+
+
+ALL_OPTION = re.compile(r"^(all|none|both|neither) of (the above|them|these)\.?$|^all of the above\.?$", re.I)
+
+
 def natural_order(options):
     """How the site may order the options of a multiple-choice or select-all item.
 
-    sorted:  every option is one quantity in the same notation and unit, or an
-             age group / range; shown ascending
-    fixed:   single quantities in mixed notations or units (0.09 | 1/9 | 11%),
-             or an 'All of them' option; the Sheet order is kept
-    shuffle: everything else (including ratios, expressions, coefficient sets);
-             shuffled per student
+    sorted:  options that differ only in their numbers ('About 95 bpm', 'January 9',
+             'Run 1, leaving at 7:00 a.m.', '$1,152.00', '18-29'), shown ascending
+             (ties: 'less than' < 'about' < 'more than'); an 'All of them' option goes last
+    fixed:   set by the overrides file only
+    shuffle: everything else, shuffled per student
     """
     letters = [L for L, _ in options]
     texts = [t for _, t in options]
-    if any(re.search(r"\b(all|none|both|neither) of (the above|them|these)\b", t, re.I) for t in texts):
-        return "fixed", None
-    vals = [numeric_value(t) for t in texts]
+    tail = [i for i, t in enumerate(texts) if ALL_OPTION.match(t.strip())]
+    body = [i for i in range(len(texts)) if i not in tail]
+    if len(tail) > 1 or len(body) < 2:
+        return "shuffle", None
+    # one quantity per option, same notation and unit
+    vals = [numeric_value(texts[i]) for i in body]
     if all(vals):
         notations = {v[1] for v in vals}
-        # whole numbers mix cleanly with fractions or decimals (0, 1/4, 1/2, 1);
-        # fractions with decimals or percents stay put (sorting would hint at the
-        # answer to 'which is greatest?' items)
         if len(notations - {"integer"}) <= 1 and len({v[2] for v in vals}) == 1:
-            order = sorted(range(len(texts)), key=lambda i: vals[i][0])
-            return "sorted", [letters[i] for i in order]
-        return "fixed", None
+            order = sorted(body, key=lambda i: vals[body.index(i)][0])
+            return "sorted", [letters[i] for i in order + tail]
+        return "shuffle", None  # mixed notations (0.09, 1/9, 11%): sorting would hint
+    keys = [template_key(texts[i]) for i in body]
+    if all(keys) and len({k[0] for k in keys}) == 1 and len({len(k[1]) for k in keys}) == 1:
+        order = sorted(body, key=lambda i: (keys[body.index(i)][1], keys[body.index(i)][2]))
+        return "sorted", [letters[i] for i in order + tail]
     starts = []
-    for t in texts:
-        m = RANGE_RE.match(t.strip())
+    for i in body:
+        m = RANGE_RE.match(texts[i].strip())
         if not m:
             starts = None
             break
         starts.append(int(m.group(1) or m.group(2)) if (m.group(1) or m.group(2)) else int(m.group(3)) - 0.5)
     if starts:
-        order = sorted(range(len(texts)), key=lambda i: starts[i])
-        return "sorted", [letters[i] for i in order]
+        order = sorted(body, key=lambda i: starts[body.index(i)])
+        return "sorted", [letters[i] for i in order + tail]
+    if tail:
+        return "fixed", None  # keep 'All of them' last; leave the rest as written
     return "shuffle", None
 
 
@@ -228,6 +265,9 @@ def parse_blueprint(rows):
 
 # ---------------------------------------------------------------- build
 def build(tabs):
+    ov = json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {}
+    order_ov = ov.get("optionOrder", {})
+    letter_ov = set(ov.get("explanationLetters", {}).get("items", []))
     items_raw = as_dicts(tabs["Items"])
     passages_raw = as_dicts(tabs["Passages"])
     objectives_raw = as_dicts(tabs["Objectives"])
@@ -320,6 +360,8 @@ def build(tabs):
             item["key"] = key
             if fmt in ("mc", "multi"):
                 mode, order = natural_order(opts)
+                if iid in order_ov:
+                    mode, order = order_ov[iid], None
                 item["optionOrder"] = mode
                 if order:
                     item["sortedOrder"] = order
@@ -334,8 +376,14 @@ def build(tabs):
             missing = [L for L in letters if L not in key and L not in by_opt]
             if fmt == "mc" and missing and not general:
                 warn(f"{iid}: no distractor note for option(s) {missing}")
-        if re.search(r"\b(?:[Oo]ption|[Cc]hoice)s? [A-F]\b", item["explanation"]):
-            item["explanationLetters"] = True  # site swaps in displayed letters
+        if fmt != "supply":
+            if iid in letter_ov:
+                item["explanationLetters"] = "bare"  # every standalone A-F is an option letter
+            elif re.search(r"\b(?:[Oo]ption|[Cc]hoice)s? [A-F]\b", item["explanation"]):
+                item["explanationLetters"] = "option"
+            elif BARE_LETTER.search(item["explanation"]) and not item.get("passages"):
+                warn(f"{iid}: explanation may name options by bare letter; add it to data/overrides.json "
+                     f"explanationLetters if so: {item['explanation'][:80]}")
 
         notes = r.get("Review notes", "")
         np = re.search(r"Do not place on the same form as (.*?)(?:\.(?:\s|$)|$)", notes)

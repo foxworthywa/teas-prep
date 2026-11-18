@@ -65,8 +65,11 @@ export function joinLetters(letters) {
   return `${letters.slice(0, -1).join(", ")}, and ${letters[letters.length - 1]}`;
 }
 
-// 'Option C' / 'Choice C' in explanations -> the letter the student saw
-export function relabelLetters(text, map) {
+// Option letters in an explanation -> the letters the student saw.
+// mode 'option': only 'Option C' / 'Choice C'. mode 'bare': every standalone A-F
+// (used only for items listed in data/overrides.json, whose explanations say 'Only C ...').
+export function relabelLetters(text, map, mode = "option") {
+  if (mode === "bare") return text.replace(/\b([A-F])\b/g, (m, L) => map[L] || m);
   return text.replace(/\b(Option|option|Choice|choice)(s?) ([A-F])\b/g, (m, w, s, L) => (map[L] ? `${w}${s} ${map[L]}` : m));
 }
 
@@ -77,6 +80,8 @@ export function normalizeText(s) {
   return String(s ?? "")
     .normalize("NFKC")
     .toLowerCase()
+    .trim()
+    .replace(/^(the|a|an)\s+/, "")
     .replace(MINUS, "-")
     .replace(/[\s\-_.,'"’]/g, "");
 }
@@ -106,7 +111,7 @@ export function parseNumberAnswer(raw) {
     }
     rest = m[3];
   }
-  rest = rest.replace(/\s+/g, "");
+  rest = rest.replace(/\s+/g, "").replace(/([a-zA-Z])\^?[23](?![0-9])/g, "$1"); // cm³, cm^3, cm3
   // trailing text may only be a unit: no digits, operators or a second number
   if (/[0-9=+*×÷^(<>]/.test(rest)) return null;
   if (rest.length > 15) return null;
@@ -118,16 +123,18 @@ export function numbersMatch(a, b) {
   return Math.abs(a - b) <= 1e-9 * Math.max(1, Math.abs(b));
 }
 
+// Numeric items: the answer must parse to one of the accepted numbers (units,
+// spaces and commas ignored). Text items: compare with the accepted list,
+// ignoring case, spaces, hyphens and punctuation.
 export function gradeSupply(item, response) {
   const given = String(response ?? "").trim();
   if (!given) return false;
-  const n = normalizeText(given);
-  if ((item.accepted || []).some((a) => normalizeText(a) === n)) return true;
   if (item.numeric && item.numeric.length) {
     const v = parseNumberAnswer(given);
-    if (v !== null && item.numeric.some((x) => numbersMatch(v, x))) return true;
+    return v !== null && item.numeric.some((x) => numbersMatch(v, x));
   }
-  return false;
+  const n = normalizeText(given);
+  return n.length > 0 && (item.accepted || []).some((a) => normalizeText(a) === n);
 }
 
 // ------------------------------------------------------------------ grading
@@ -162,14 +169,14 @@ export function feedbackNotes(item, response, order) {
   const map = letterMap(order);
   const out = [];
   const render = (note) =>
-    note.lead ? `${joinLetters(note.lead.map((L) => map[L] || L))} ${note.text}` : note.text;
+    note.lead ? `${joinLetters(note.lead.map((L) => map[L] || L).sort())} ${note.text}` : note.text;
   const seen = new Set();
   const add = (optionId) => {
     for (const note of (item.optionNotes || {})[optionId] || []) {
       const t = render(note);
       if (seen.has(t)) continue;
       seen.add(t);
-      out.push({ optionId, text: t });
+      out.push({ optionId, text: t, lead: !!note.lead, shared: note.shared || null });
     }
   };
   if (item.format === "mc" && response && response !== item.key[0]) add(response);
@@ -185,45 +192,50 @@ export function feedbackNotes(item, response, order) {
 }
 
 // ------------------------------------------------------------------ bands
-// Beta(1 + correct, 1 + wrong) posterior on the share of this subarea's items the
-// student would get right. Bands are practice bands, not TEAS score predictions.
-function logChoose(n, k) {
-  let s = 0;
-  for (let i = 1; i <= k; i++) s += Math.log(n - k + i) - Math.log(i);
-  return s;
-}
-
-// regularized incomplete beta I_x(a, b) for integer a, b >= 1
-export function betaCdf(x, a, b) {
-  if (x <= 0) return 0;
-  if (x >= 1) return 1;
-  const n = a + b - 1;
-  let p = 0;
-  for (let j = a; j <= n; j++) p += Math.exp(logChoose(n, j) + j * Math.log(x) + (n - j) * Math.log(1 - x));
-  return Math.min(1, Math.max(0, p));
-}
-
-export function bandProbabilities(correct, n, bands) {
-  const a = 1 + correct, b = 1 + (n - correct);
-  let lo = 0;
-  return bands.map((band) => {
-    const hi = band.upTo;
-    const p = betaCdf(hi, a, b) - betaCdf(lo, a, b);
-    lo = hi;
-    return p;
-  });
+// A part's band comes from the share of its questions answered correctly, using the
+// cut points in config (e.g. under 60%, 60-79%, 80% or more). These are practice
+// bands, not TEAS score predictions.
+export function bandIndex(share, bands) {
+  for (let i = 0; i < bands.length; i++) if (share < bands[i].upTo - 1e-9) return i;
+  return bands.length - 1;
 }
 
 export function bandFor(correct, n, cfg) {
-  const probs = bandProbabilities(correct, n, cfg.bands);
-  let best = 0;
-  probs.forEach((p, i) => { if (p > probs[best]) best = i; });
-  return { index: best, band: cfg.bands[best], confidence: probs[best], probs };
+  const share = n ? correct / n : 0;
+  const index = bandIndex(share, cfg.bands);
+  // within 5 points of a cut point: say so on the results page
+  const near = cfg.bands.slice(0, -1).some((b) => Math.abs(share - b.upTo) < 0.05 + 1e-9);
+  return { index, band: cfg.bands[index], share, nearCutoff: n > 0 && near };
 }
 
-export function subareaSettled(correct, n, cfg) {
+const LF = [0];
+function logFact(n) {
+  for (let i = LF.length; i <= n; i++) LF[i] = LF[i - 1] + Math.log(i);
+  return LF[n];
+}
+const logBeta = (a, b) => logFact(a - 1) + logFact(b - 1) - logFact(a + b - 1); // integer a, b >= 1
+
+// Probability that, if the student answered all `total` planned questions in this
+// part, the band would be the same as it is now (uniform prior on their true share;
+// beta-binomial for the questions not yet answered).
+export function chanceBandHolds(correct, n, total, cfg) {
+  if (n >= total) return 1;
+  const now = bandIndex(correct / n, cfg.bands);
+  const r = total - n, a = 1 + correct, b = 1 + n - correct;
+  let p = 0;
+  for (let x = 0; x <= r; x++) {
+    if (bandIndex((correct + x) / total, cfg.bands) !== now) continue;
+    p += Math.exp(logFact(r) - logFact(x) - logFact(r - x) + logBeta(x + a, r - x + b) - logBeta(a, b));
+  }
+  return Math.min(1, p);
+}
+
+// Stop a part once it has at least minPerSubarea answers and finishing the part
+// would very probably (stopConfidence) leave the band unchanged.
+export function subareaSettled(correct, n, cfg, total) {
+  if (n >= total) return true;
   if (n < cfg.minPerSubarea) return false;
-  return bandFor(correct, n, cfg).confidence >= cfg.stopConfidence;
+  return chanceBandHolds(correct, n, total, cfg) >= cfg.stopConfidence;
 }
 
 // ------------------------------------------------------------------ diagnostic form
@@ -339,7 +351,7 @@ export function newDiagnostic(bank, sectionName, cfg, { seed, seen }) {
     passageCap: cfg.passageCapPerForm,
   });
   const stats = {};
-  for (const code in form.bySub) stats[code] = { n: 0, correct: 0, settled: false };
+  for (const code in form.bySub) stats[code] = { n: 0, correct: 0, settled: form.bySub[code].length === 0, total: form.bySub[code].length };
   return {
     kind: "diagnostic",
     section: sectionName,
@@ -371,13 +383,14 @@ export function itemIndex(bank) {
 }
 
 export function recordDiagnosticAnswer(session, bank, cfg, index, response) {
+  if (index !== nextIndex(session, bank)) return null; // stale or double submit
   const it = itemIndex(bank)[session.order[index]];
   const correct = grade(it, response);
   session.answers.push({ id: it.id, response, correct });
   const st = session.stats[it.subarea];
   st.n += 1;
   if (correct) st.correct += 1;
-  st.settled = subareaSettled(st.correct, st.n, cfg);
+  st.settled = subareaSettled(st.correct, st.n, cfg, st.total ?? session.bySub[it.subarea].length);
   session.pos = index + 1;
   if (nextIndex(session, bank) === -1) session.finished = true;
   return correct;
@@ -398,8 +411,9 @@ export function diagnosticResults(session, bank, cfg) {
       n: st.n,
       correct: st.correct,
       band: b.band,
-      confidence: b.confidence,
-      settled: b.confidence >= cfg.stopConfidence,
+      share: b.share,
+      nearCutoff: b.nearCutoff,
+      stoppedEarly: st.n < (st.total ?? session.bySub[s.code].length),
       missedObjectives: [...new Set(missed)],
     };
   });

@@ -1,8 +1,8 @@
-Built 2026-11-18T19:22Z: 482 approved items, 24 passages, 64 objectives
+Built 2026-11-18T19:54Z: 482 approved items, 24 passages, 64 objectives
 Not included (status): {'Example': 1}
 Items per subarea: E.1 40, E.2 40, E.3 40, M.1 40, M.2 40, R.1 40, R.2 40, R.3 40, S.1 42, S.2 40, S.3 40, S.4 40
 Formats: {'mc': 429, 'multi': 24, 'order': 13, 'supply': 16}
-Option order: {'shuffle': 393, 'n/a (supply)': 16, 'sorted': 68, 'fixed': 5}
+Option order: {'shuffle': 384, 'n/a (supply)': 16, 'fixed': 3, 'sorted': 79}
 Items with do-not-pair notes: 34
 Faculty review pending: 240
 
