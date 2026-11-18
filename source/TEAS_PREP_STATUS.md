@@ -3,6 +3,7 @@
 Last updated: 2026-11-18 (evening)
 
 ## Where things live
+- GitHub repo: foxworthywa/teas-prep (public) — https://github.com/foxworthywa/teas-prep. The content-phase working files (page sources, figures, build scripts, item batches, review reports) are under `source/`. The web app will be built here and published with GitHub Pages.
 - Master workbook (single source of truth): ESCC TEAS Prep: Master Bank — https://docs.google.com/spreadsheets/d/14RULVFb58M78c_BUmQu5az1T0fKTlX32nW4beebqhf8/edit
   - Tabs: Read me, Blueprint, Objectives (64 ATI objectives, all codes confirmed against the ATI TEAS 7 content outline; columns I–J hold study-page status and links), Items (columns A–V), Passages (Reading passages RP-01 to RP-24; items point to them in Items column R, "Image or asset"), Programs (cutoffs blank)
 - Drive folder: ESCC TEAS Prep — https://drive.google.com/drive/folders/1lhyZ1D6LPp9pd-ssDrH8L8jfLT6NrU3-
@@ -36,7 +37,7 @@ Last updated: 2026-11-18 (evening)
 ## Open items for Alex
 - Delete the "Superseded study pages (safe to delete)" folder, the three "zz import temp" sheets, plus these in the Study pages folder: "OLD S.1.1 (no figures, replaced - delete)", "OLD S.1.3 (no figures, replaced - delete)", "zz image import test (delete)", "zz html image test (delete)".
 - Fill Programs tab cutoffs (LPN, RN, dental hygiene).
-- GitHub account/repo for the web app; TEAS Gem link.
+- TEAS Gem link. Choose a license (suggested: CC BY 4.0 for content, MIT for code).
 - Grader design: Supply-answer items should be scored by normalizing (strip spaces, commas and units; compare numbers), not only by the accepted-answer list.
 - Unconfirmed: whether the TEAS on-screen calculator has a square-root key (pages tell students to know perfect squares either way).
 - For English faculty: E.2.1 presents singular "they" as acceptable and advises plural rewrites as the safe test choice; check against current ATI materials.
