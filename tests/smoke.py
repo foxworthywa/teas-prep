@@ -114,8 +114,27 @@ def main():
                     page.click("#submit")
                     page.wait_for_selector("h1")
             page.goto(base + "#/practice")
-            page.wait_for_selector(".obj-list")
+            page.wait_for_selector(".section-list")
+            assert page.locator(".keep-going").count(), "keep going link after practice"
             shot("practice-menu")
+            page.click('.section-btn[href="#/practice/Math"]')
+            page.wait_for_selector("details.subarea")
+            page.locator("details.subarea summary").first.click()
+            shot("practice-section")
+            page.locator("details.subarea .obj-link").first.click()
+            page.wait_for_selector("#qform")
+            page.goto(base + "#/practice/mix/Science")
+            page.wait_for_selector("#qform")
+            assert "of 10" in page.inner_text(".q-count"), page.inner_text(".q-count")
+            for k in range(10):
+                answer_current(page, rnd)
+                page.click("#submit")
+                page.wait_for_selector(".feedback")
+                if k == 0:
+                    shot("practice-mix")
+                page.click("#submit")
+                page.wait_for_selector("h1")
+            assert page.locator("#again").count(), "end of Quick 10"
             page.goto(base + "#/practice/weak/Science")
             page.wait_for_selector("h1")
             shot("weak")

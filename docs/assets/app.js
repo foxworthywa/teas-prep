@@ -63,6 +63,8 @@ function sanitize(data) {
     });
   const p = data.profile && typeof data.profile === "object" ? data.profile : {};
   out.profile = { name: String(p.name || "").slice(0, 100), email: String(p.email || "").slice(0, 100), program: String(p.program || "").slice(0, 60) };
+  const lp = data.lastPractice;
+  out.lastPractice = lp && ["obj", "mix", "weak"].includes(lp.kind) && typeof lp.arg === "string" ? { kind: lp.kind, arg: lp.arg } : null;
   out.current = data.current && typeof data.current === "object" && Array.isArray(data.current.order) && data.current.order.every((id) => byId[id]) ? data.current : null;
   return out;
 }
@@ -311,13 +313,14 @@ function viewHome() {
       <p class="small muted">${s.subareas.map((x) => esc(x.name)).join(" · ")}</p>
       ${d ? `<p class="small">Last diagnostic ${fmtDate(d.date)}: ${d.results.map((r) => `${esc(r.code)} ${bandChip(bandById(r.band))}`).join(" ")}</p>` : `<p class="small muted">No diagnostic yet.</p>`}
       <div class="spacer"></div>
-      <div class="btn-row" style="margin:6px 0 0"><a class="btn" href="#/diagnostic/${s.name}">Diagnostic</a><a class="btn secondary" href="#/practice#${s.name.toLowerCase()}">Practice</a></div></div>`;
+      <div class="btn-row" style="margin:6px 0 0"><a class="btn" href="#/diagnostic/${s.name}">Diagnostic</a><a class="btn secondary" href="#/practice/${s.name}">Practice</a></div></div>`;
   }).join("");
   setView(`
     <h1>Free TEAS 7 practice</h1>
     <p class="lead">From Eastern Shore Community College, for anyone preparing for the ATI TEAS: LPN, RN, dental hygiene and other programs. No login, and nothing to buy.</p>
     <p class="small muted">Your progress is saved in this browser on this device only. Clearing your browser data erases it; <a href="#/progress">My progress</a> lets you download a copy.</p>
     ${cur && !cur.finished ? `<p class="notice">You have a ${esc(cur.section)} diagnostic in progress. <a href="#/diagnostic/${cur.section}">Pick up where you left off</a>.</p>` : ""}
+    ${(() => { const l = lastPracticeLink(); return l ? `<a class="keep-going" href="${l.href}"><span class="kg-label">Keep practicing</span><span class="kg-what">${esc(l.label)}</span></a>` : ""; })()}
     <div class="cards">
       <div class="card"><h2>1. Take a diagnostic</h2><p>A practice test for one section (Reading, Math, Science or English). It shows where you stand in each part of the section, so you know what to study. Allow 20 to 60 minutes.</p><div class="spacer"></div><a class="btn" href="#/diagnostic">Start a diagnostic</a></div>
       <div class="card"><h2>2. Practice by objective</h2><p>Questions for each of the 64 TEAS objectives, with an explanation for every answer you pick.</p><div class="spacer"></div><a class="btn" href="#/practice">Practice</a></div>
@@ -387,7 +390,7 @@ function runDiagnostic() {
     <div class="q-head"><span><strong>${esc(s.section)} diagnostic</strong> · Question ${answered + 1}</span><span>${remainingMax > 0 ? `at most ${remainingMax} more after this` : "last question"}</span></div>
     <div class="progressbar" role="progressbar" aria-label="Diagnostic progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(doneShare * 100)}"><span style="width:${(doneShare * 100).toFixed(1)}%"></span></div>
     <form id="qform">${itemHtml(item, { order, response, passageRepeat: passageRepeat(item) })}
-      <div class="btn-row"><button class="btn" type="submit" id="submit" disabled>Submit answer</button>
+      <div class="btn-row action-bar"><button class="btn" type="submit" id="submit" disabled>Submit answer</button>
       <button class="btn link" type="button" id="quit">Stop and discard this diagnostic</button></div></form>
     <p class="small muted">Your place is saved. You can close this page and come back later.</p>`, `${s.section} diagnostic`);
   const form = document.getElementById("qform");
@@ -473,7 +476,7 @@ function viewResults(i) {
     <h2>What to work on</h2>
     ${missedList.length ? `<ul class="obj-list">${missedList.map((o) => `<li><span class="obj-main"><span class="code">${o}</span>${esc(objTitle(o))}</span>
       <span><a href="${studyUrl(o)}">Study page</a> · <a href="#/practice/${o}">Practice</a></span></li>`).join("")}</ul>` : "<p>You didn't miss anything. Try another section, or practice the objectives you want to keep fresh.</p>"}
-    <div class="btn-row">${sendButton()}<a class="btn secondary" href="#/practice#${rec.section.toLowerCase()}">Practice ${esc(rec.section)}</a><a class="btn secondary" href="#/diagnostic">Another diagnostic</a></div>
+    <div class="btn-row">${sendButton()}<a class="btn secondary" href="#/practice/${rec.section}">Practice ${esc(rec.section)}</a><a class="btn secondary" href="#/diagnostic">Another diagnostic</a></div>
     <h2>Review your answers</h2><p class="small muted">Open a question to see the explanation.</p>${review}`, `${rec.section} results`);
   $main.querySelectorAll("details.review-item").forEach((d) =>
     d.addEventListener("toggle", () => {
@@ -491,25 +494,59 @@ function viewResults(i) {
 }
 
 // ------------------------------------------------------------------ practice
+const sectionStats = (name) => stats(bank.items.filter((i) => i.section === name).map((i) => i.id));
+const meter = (c, n) => `<span class="meter" aria-hidden="true"><span style="width:${pct(c, n)}%"></span></span>`;
+
+function lastPracticeLink() {
+  const lp = state.lastPractice;
+  if (!lp) return "";
+  if (lp.kind === "obj" && bank.objectives[lp.arg]) return { href: `#/practice/${lp.arg}`, label: `${lp.arg} ${objTitle(lp.arg)}` };
+  if (lp.kind === "mix" && sectionOf(lp.arg)) return { href: `#/practice/mix/${lp.arg}`, label: `Quick 10: ${lp.arg}` };
+  if (lp.kind === "weak" && sectionOf(lp.arg)) return { href: `#/practice/weak/${lp.arg}`, label: `Weak spots: ${lp.arg}` };
+  return "";
+}
+
 function viewPracticeMenu() {
   navHighlight("practice");
-  const parts = bank.sections.map((s) => {
-    const subs = s.subareas.map((sub) => {
-      const lis = sub.objectives.map((o) => {
-        const st = objectiveStats(o);
-        const n = bank.items.filter((i) => i.objective === o).length;
-        return `<li><span class="obj-main"><a href="#/practice/${o}"><span class="code">${o}</span>${esc(objTitle(o))}</a></span>
-          <span class="obj-stats">${st.n ? `<span class="meter" aria-hidden="true"><span style="width:${pct(st.c, st.n)}%"></span></span>${st.c}/${st.n} right` : `${n} questions`}</span></li>`;
-      }).join("");
-      return `<h3>${sub.code} ${esc(sub.name)}</h3><ul class="obj-list">${lis}</ul>`;
-    }).join("");
-    return `<section aria-labelledby="sec-${s.name.toLowerCase()}"><h2 id="sec-${s.name.toLowerCase()}">${s.name}</h2>
-      ${config.reviewPendingSections.includes(s.name) ? `<p class="small muted">${s.name} questions are still being reviewed by ESCC faculty.</p>` : ""}
-      <p><a class="btn secondary" href="#/practice/weak/${s.name}">Practice my weak spots in ${s.name}</a></p>${subs}</section>`;
+  const last = lastPracticeLink();
+  const sections = bank.sections.map((s) => {
+    const st = sectionStats(s.name);
+    const n = bank.items.filter((i) => i.section === s.name).length;
+    return `<li><a class="section-btn" href="#/practice/${s.name}"><span class="sb-name">${s.name}</span>
+      <span class="sb-stats">${st.n ? `${meter(st.c, st.n)}${st.c}/${st.n} right` : `${n} questions`}</span></a></li>`;
   }).join("");
-  setView(`<h1>Practice</h1><p class="lead">Pick an objective. You'll see an explanation after every answer and a link to that objective's study page. New questions come first, then ones you missed.</p>${parts}`, "Practice");
-  const frag = location.hash.split("#")[2];
-  if (frag) document.getElementById(`sec-${frag}`)?.scrollIntoView();
+  const quick = bank.sections.map((s) => `<a class="btn secondary" href="#/practice/mix/${s.name}">${s.name}</a>`).join("");
+  setView(`<h1>Practice</h1>
+    ${last ? `<a class="keep-going" href="${last.href}"><span class="kg-label">Keep going</span><span class="kg-what">${esc(last.label)}</span></a>` : ""}
+    <h2 class="tight">Quick 10</h2>
+    <p class="small muted">Ten mixed questions from one section. Good for a few spare minutes.</p>
+    <div class="quick-row">${quick}</div>
+    <h2 class="tight">By section and objective</h2>
+    <ul class="section-list">${sections}</ul>
+    <p class="small muted">After every answer you'll see why it's right or wrong, plus a link to that objective's study page. New questions come first, then ones you missed.</p>`, "Practice");
+}
+
+function viewPracticeSection(name) {
+  navHighlight("practice");
+  const sec = sectionOf(name);
+  const tabs = bank.sections.map((s) => `<a href="#/practice/${s.name}" ${s.name === name ? 'aria-current="page"' : ""}>${s.name}</a>`).join("");
+  const subs = sec.subareas.map((sub, k) => {
+    const st = stats(bank.items.filter((i) => i.subarea === sub.code).map((i) => i.id));
+    const lis = sub.objectives.map((o) => {
+      const os = objectiveStats(o);
+      const n = bank.items.filter((i) => i.objective === o).length;
+      return `<li><a class="obj-link" href="#/practice/${o}"><span class="obj-main"><span class="code">${o}</span>${esc(objTitle(o))}</span>
+        <span class="obj-stats">${os.n ? `${meter(os.c, os.n)}${os.c}/${os.n} right` : `${n} questions`}</span></a></li>`;
+    }).join("");
+    return `<details class="subarea" ${sec.subareas.length === 1 ? "open" : ""}><summary><span class="sa-name"><span class="code">${sub.code}</span>${esc(sub.name)}</span>
+      <span class="obj-stats">${sub.objectives.length} objectives${st.n ? ` · ${st.c}/${st.n} right` : ""}</span></summary><ul class="obj-list">${lis}</ul></details>`;
+  }).join("");
+  setView(`<nav class="section-tabs" aria-label="Sections">${tabs}</nav>
+    <h1>${esc(name)} practice</h1>
+    ${config.reviewPendingSections.includes(name) ? `<p class="small muted">${esc(name)} questions are still being checked by ESCC faculty.</p>` : ""}
+    <div class="quick-row"><a class="btn" href="#/practice/mix/${name}">Quick 10</a><a class="btn secondary" href="#/practice/weak/${name}">My weak spots</a></div>
+    <p class="small muted">Or tap a part to see its objectives.</p>
+    ${subs}`, `${name} practice`);
 }
 
 function weakObjectives(sectionName) {
@@ -521,10 +558,17 @@ function weakObjectives(sectionName) {
   return enough.filter((x) => x.c / x.n < 0.8).slice(0, 3).map((x) => x.o);
 }
 
-function viewPractice(arg, weakSection) {
+function viewPractice(arg, weakSection, mixSection) {
   navHighlight("practice");
   let items, title, back, objs;
-  if (weakSection) {
+  if (mixSection) {
+    if (!sectionOf(mixSection)) return viewNotFound();
+    items = bank.items.filter((i) => i.section === mixSection);
+    objs = [];
+    title = `Quick 10: ${mixSection}`;
+    back = `#/practice/${mixSection}`;
+    state.lastPractice = { kind: "mix", arg: mixSection };
+  } else if (weakSection) {
     if (!sectionOf(weakSection)) return viewNotFound();
     objs = weakObjectives(weakSection);
     if (!objs.length) {
@@ -533,18 +577,21 @@ function viewPractice(arg, weakSection) {
     }
     items = bank.items.filter((i) => objs.includes(i.objective));
     title = `Weak spots: ${weakSection}`;
-    back = `#/practice#${weakSection.toLowerCase()}`;
+    back = `#/practice/${weakSection}`;
+    state.lastPractice = { kind: "weak", arg: weakSection };
   } else {
     const obj = bank.objectives[arg];
     if (!obj) return viewNotFound();
     objs = [arg];
     items = bank.items.filter((i) => i.objective === arg);
     title = `${arg} ${objTitle(arg)}`;
-    back = `#/practice#${obj.section.toLowerCase()}`;
+    back = `#/practice/${obj.section}`;
+    state.lastPractice = { kind: "obj", arg };
   }
+  save();
   const seed = newSeed();
   let queue = core.practiceQueue(items, state.attempts, seed);
-  if (weakSection) queue = queue.slice(0, config.practice.weakSpotSessionLength);
+  if (weakSection || mixSection) queue = queue.slice(0, config.practice.weakSpotSessionLength);
   const session = { pos: 0, right: 0, done: 0 };
 
   const showNext = () => {
@@ -552,12 +599,15 @@ function viewPractice(arg, weakSection) {
     const item = byId[queue[session.pos]];
     const order = core.displayOrder(item, seed);
     let response = null;
-    setView(`<p class="crumbs"><a href="${back}">Practice</a> › ${esc(item.section)}</p>
-      <h1>${esc(title)}</h1>
-      ${objs.length === 1 ? `<p class="small muted"><a href="${studyUrl(objs[0])}">Study page for ${objs[0]}</a></p>` : `<p class="small muted">Mixing ${objs.map((o) => `<a href="${studyUrl(o)}">${o} ${esc(objTitle(o))}</a>`).join(", ")}</p>`}
-      <div class="q-head"><span>Question ${session.pos + 1} of ${queue.length}</span><span>${session.done ? `${session.right} of ${session.done} right so far` : ""}</span></div>
+    const sub = objs.length === 1
+      ? `<a href="${studyUrl(objs[0])}">Study page</a>`
+      : objs.length ? `Mixing ${objs.map((o) => `<a href="${studyUrl(o)}">${o}</a>`).join(", ")}` : `${item.objective} ${esc(objTitle(item.objective))} · <a href="${studyUrl(item.objective)}">Study page</a>`;
+    setView(`<div class="practice-top"><a class="back" href="${back}" aria-label="Back to ${esc(item.section)} practice">‹ ${esc(item.section)}</a>
+        <span class="q-count">${session.pos + 1} of ${queue.length}${session.done ? ` · ${session.right} right` : ""}</span></div>
+      <h1 class="practice-h">${esc(title)}</h1>
+      <p class="small muted practice-sub">${sub}</p>
       <form id="qform">${itemHtml(item, { order, response, passageRepeat: passageRepeat(item) })}
-        <div class="btn-row"><button class="btn" type="submit" id="submit" disabled>Check answer</button><a class="btn link" href="${back}">Finish</a></div></form>`, title);
+        <div class="btn-row action-bar"><button class="btn" type="submit" id="submit" disabled>Check answer</button><a class="btn link" href="${back}">Finish</a></div></form>`, title);
     const form = document.getElementById("qform");
     const submit = document.getElementById("submit");
     bindItem(form, item, { order, response, onChange: (r) => { response = r; submit.disabled = !core.isAnswered(item, r); } });
@@ -590,9 +640,9 @@ function viewPractice(arg, weakSection) {
   const showEnd = () => {
     setView(`<h1>${esc(title)}</h1>
       <p class="lead">You got ${session.right} of ${session.done} right this round.</p>
-      <div class="btn-row"><a class="btn" href="${location.hash}" id="again">Practice again</a>
+      <div class="btn-row"><a class="btn" href="${location.hash}" id="again">${mixSection ? "Another Quick 10" : "Practice again"}</a>
       ${objs.length === 1 ? `<a class="btn secondary" href="${studyUrl(objs[0])}">Study page</a>` : ""}
-      <a class="btn secondary" href="${back}">More objectives</a></div>`, title);
+      <a class="btn secondary" href="${back}">Back to ${esc(sectionOf(mixSection || weakSection || bank.objectives[objs[0]]?.section)?.name || "practice")}</a></div>`, title);
     document.getElementById("again").addEventListener("click", (e) => { e.preventDefault(); route(); });
   };
   showNext();
@@ -781,6 +831,8 @@ function route() {
       case "results": return viewResults(parts[1]);
       case "practice":
         if (parts[1] === "weak") return viewPractice(null, parts[2]);
+        if (parts[1] === "mix") return viewPractice(null, null, parts[2]);
+        if (parts[1] && sectionOf(parts[1])) return viewPracticeSection(parts[1]);
         return parts[1] ? viewPractice(parts[1]) : viewPracticeMenu();
       case "progress": return viewProgress();
       case "about": return viewAbout();

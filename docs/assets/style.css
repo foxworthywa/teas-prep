@@ -209,3 +209,51 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print { .page-contents, .to-contents { display: none; } }
 .page-contents ol.jump { columns: auto; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+
+/* practice: phone-first navigation */
+h2.tight { margin: 22px 0 4px; font-size: 1.1rem; }
+.keep-going { display: flex; flex-direction: column; gap: 2px; background: var(--brand); color: #fff; text-decoration: none; border-radius: var(--radius); padding: 12px 16px; margin: 6px 0 14px; }
+.keep-going:hover { background: #083c52; }
+.keep-going .kg-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #cfe8ef; }
+.keep-going .kg-what { font-weight: 700; font-size: 1.05rem; }
+.keep-going .kg-what::after { content: " ›"; }
+.quick-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin: 8px 0 6px; }
+.quick-row .btn { text-align: center; padding: 12px 10px; }
+.section-list { list-style: none; padding: 0; margin: 8px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; }
+.section-btn { display: flex; justify-content: space-between; align-items: center; gap: 10px; border: 1.5px solid var(--line); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; color: var(--ink); background: #fff; min-height: 56px; }
+.section-btn:hover { border-color: var(--brand); }
+.section-btn .sb-name { font-weight: 700; font-size: 1.08rem; color: var(--brand); }
+.section-btn .sb-name::after { content: " ›"; }
+.section-btn .sb-stats { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.section-tabs { display: flex; gap: 4px; overflow-x: auto; background: var(--bg); border-bottom: 1px solid var(--line); margin: -8px 0 10px; padding: 6px 0 0; position: sticky; top: 0; z-index: 5; }
+.section-tabs a { flex: 1 0 auto; text-align: center; padding: 10px 12px; text-decoration: none; color: var(--muted); font-weight: 600; border-bottom: 3px solid transparent; }
+.section-tabs a[aria-current="page"] { color: var(--brand); border-bottom-color: var(--brand); }
+details.subarea { border: 1px solid var(--line); border-radius: var(--radius); margin: 8px 0; background: #fff; }
+details.subarea > summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; align-items: center; padding: 12px 14px; min-height: 52px; }
+details.subarea > summary::-webkit-details-marker { display: none; }
+details.subarea > summary .sa-name { font-weight: 700; }
+details.subarea > summary .sa-name::before { content: "▸ "; color: var(--brand); }
+details.subarea[open] > summary .sa-name::before { content: "▾ "; }
+details.subarea .obj-list { margin: 0; padding: 0 6px 4px; border-top: 1px solid var(--line); }
+.obj-list li:has(> .obj-link) { padding: 0; }
+.obj-link { display: flex; flex-wrap: wrap; gap: 2px 12px; justify-content: space-between; align-items: center; width: 100%; padding: 11px 8px; text-decoration: none; color: var(--ink); min-height: 48px; }
+.obj-link:hover { background: var(--panel); }
+.obj-link .obj-main { flex: 1 1 240px; }
+.practice-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 0.92rem; margin-bottom: 4px; }
+.practice-top .back { text-decoration: none; font-weight: 600; padding: 6px 0; }
+.practice-top .q-count { color: var(--muted); }
+h1.practice-h { font-size: 1.25rem; margin: 2px 0 2px; }
+.practice-sub { margin: 0 0 12px; }
+
+@media (max-width: 640px) {
+  /* compact header: brand and links on two short rows */
+  .site-header .wrap { padding-top: 6px; padding-bottom: 4px; gap: 0 14px; }
+  .brand { font-size: 1rem; }
+  .site-header nav { gap: 0 14px; font-size: 0.92rem; flex-wrap: nowrap; overflow-x: auto; width: 100%; }
+  .site-header nav a { padding: 6px 0; white-space: nowrap; }
+  main { padding-top: 12px; }
+  h1 { font-size: 1.4rem; }
+  /* the answer button stays within thumb reach */
+  .btn-row.action-bar { position: sticky; bottom: 0; z-index: 4; background: rgba(255, 255, 255, 0.97); margin: 14px -18px 0; padding: 10px 18px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
+  .btn-row.action-bar .btn:not(.link) { flex: 1; text-align: center; padding: 13px 18px; }
+}
