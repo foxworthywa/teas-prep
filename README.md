@@ -8,6 +8,15 @@ Free, open TEAS 7 preparation for Eastern Shore Community College students and a
 - **Study pages:** one Google Doc per TEAS 7 objective (64), linked from the Objectives tab, column J.
 - **Status and decisions:** `source/TEAS_PREP_STATUS.md` (also kept as a doc in the Claude project).
 
+## The practice site
+
+The public site lives in `docs/` and is served by GitHub Pages: a diagnostic per section, practice by objective, the 64 study pages, and progress saved in the student's browser. No login.
+
+- **How to update it, settings, and the optional Google Form:** `SITE.md`
+- **Item data format and the Canvas QTI mapping:** `SCHEMA.md`
+- **Build:** `python3 scripts/build_data.py --xlsx <downloaded Sheet>` then `python3 scripts/build_study_pages.py`
+- **Tests:** `node --test tests/core.test.mjs` and `python3 tests/smoke.py`
+
 ## What's in `source/`
 
 Working files from the content-building phase (November 2026):
@@ -22,7 +31,7 @@ Working files from the content-building phase (November 2026):
 | `tutor/` | Instructions for the TEAS tutor Gem |
 | `sheetfmt/` | Sheet formatting helpers |
 
-Run the page build from `source/build/`: `python3 build_pages.py && python3 build_docs_html.py` (output goes to `source/build/out/`, which is not committed).
+Run the page build from `source/build/`: `python3 build_pages.py && python3 build_docs_html.py` (output goes to `source/build/out/`, which is not committed). The .md files in `source/pages/` are now the source for the website's study pages too, so edit them rather than the Google Docs.
 
 The Google Sheet, not these JSON files, is authoritative for items: some items were corrected after loading.
 

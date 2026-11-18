@@ -2,3 +2,6 @@ source/build/out/
 __pycache__/
 *.xlsx
 .DS_Store
+
+# Sheet dumps used by scripts/build_data.py (re-create from the Sheet)
+data/raw/

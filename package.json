@@ -1,0 +1,9 @@
+{
+  "name": "escc-teas-prep",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build_data.py && python3 scripts/build_study_pages.py",
+    "test": "node --test tests/core.test.mjs"
+  }
+}
