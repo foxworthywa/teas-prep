@@ -50,6 +50,11 @@ test("supply grading normalizes spaces, commas, units and number formats", () =>
   assert.ok(g("S.1.4-002", "the gallbladder"));
   assert.ok(g("M.2.4-004", "282.6 cm^3"));
   assert.ok(g("M.2.4-007", "1000 cm3"));
+  assert.ok(!g("M.1.2-004", "12 x 3"));
+  assert.ok(!g("M.1.2-004", "12x3"));
+  // fraction and ratio answers (none in the bank today)
+  const frac = { format: "supply", accepted: ["1/2", "0.5"], numeric: [0.5], inputMode: "number" };
+  assert.ok(core.gradeSupply(frac, "1/2") && core.gradeSupply(frac, ".5") && !core.gradeSupply(frac, "1"));
   assert.ok(!g("S.1.4-002", "liver"));
   assert.ok(!g("M.1.2-004", ""));
   assert.ok(!g("M.1.2-004", "12 + 3"));
@@ -106,7 +111,7 @@ test("display order: sorted, fixed and shuffled options", () => {
   const sorted = byId["M.1.1-001"];
   const texts = core.displayOrder(sorted, "s1").map((id) => sorted.options.find((o) => o.id === id).text);
   assert.deepEqual(texts, ["0.0375", "0.375", "0.38", "0.83"]);
-  const fixed = byId["S.2.1-003"];
+  const fixed = byId["R.1.5-005"];
   assert.deepEqual(core.displayOrder(fixed, "s1"), fixed.options.map((o) => o.id));
   const sh = byId["S.1.1-002"];
   const orders = new Set(Array.from({ length: 30 }, (_, i) => core.displayOrder(sh, "seed" + i).join("")));

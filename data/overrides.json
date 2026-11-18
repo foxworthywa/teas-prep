@@ -2,7 +2,6 @@
   "_about": "Display-only settings the Sheet has no column for. Content still comes only from the Sheet.",
   "optionOrder": {
     "_help": "item id -> 'fixed' (keep Sheet order), 'shuffle', or 'sorted' is automatic only",
-    "S.2.1-003": "fixed",
     "S.3.3-003": "fixed",
     "R.1.5-005": "fixed"
   },

@@ -1,6 +1,6 @@
 {
  "version": 1,
- "built": "2026-11-18T19:54Z",
+ "built": "2026-11-18T20:16Z",
  "source": "Google Sheet: ESCC TEAS Prep: Master Bank",
  "diagnosticMaxPerSubarea": 15,
  "sections": [
@@ -3393,7 +3393,7 @@
    "key": [
     "C"
    ],
-   "optionOrder": "fixed",
+   "optionOrder": "shuffle",
    "optionNotes": {
     "A": [
      {
@@ -6538,13 +6538,7 @@
    "key": [
     "A"
    ],
-   "optionOrder": "sorted",
-   "sortedOrder": [
-    "A",
-    "D",
-    "B",
-    "C"
-   ],
+   "optionOrder": "shuffle",
    "optionNotes": {
     "B": [
      {
@@ -6811,7 +6805,13 @@
    "key": [
     "C"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "A",
+    "D",
+    "B",
+    "C"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -12900,7 +12900,13 @@
    "key": [
     "D"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -21011,7 +21017,13 @@
    "key": [
     "B"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "A",
+    "D",
+    "B",
+    "C"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -23403,7 +23415,13 @@
    "key": [
     "D"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "D",
+    "C",
+    "A",
+    "B"
+   ],
    "optionNotes": {
     "A": [
      {
@@ -24475,7 +24493,13 @@
    "key": [
     "A"
    ],
-   "optionOrder": "shuffle",
+   "optionOrder": "sorted",
+   "sortedOrder": [
+    "B",
+    "C",
+    "A",
+    "D"
+   ],
    "optionNotes": {
     "B": [
      {

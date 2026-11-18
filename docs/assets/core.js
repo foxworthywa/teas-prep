@@ -111,7 +111,7 @@ export function parseNumberAnswer(raw) {
     }
     rest = m[3];
   }
-  rest = rest.replace(/\s+/g, "").replace(/([a-zA-Z])\^?[23](?![0-9])/g, "$1"); // cm³, cm^3, cm3
+  rest = rest.replace(/\s+/g, "").replace(/^((?:c|m|d|k)?m|in|ft|yd)\^?[23]$/i, "$1"); // cm³, cm^3, cm3
   // trailing text may only be a unit: no digits, operators or a second number
   if (/[0-9=+*×÷^(<>]/.test(rest)) return null;
   if (rest.length > 15) return null;
@@ -131,7 +131,10 @@ export function gradeSupply(item, response) {
   if (!given) return false;
   if (item.numeric && item.numeric.length) {
     const v = parseNumberAnswer(given);
-    return v !== null && item.numeric.some((x) => numbersMatch(v, x));
+    if (v !== null) return item.numeric.some((x) => numbersMatch(v, x));
+    // not one number: only an exact accepted answer (ignoring case and spaces) counts
+    const squash = (x) => String(x).normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+    return (item.accepted || []).some((a) => squash(a) === squash(given));
   }
   const n = normalizeText(given);
   return n.length > 0 && (item.accepted || []).some((a) => normalizeText(a) === n);

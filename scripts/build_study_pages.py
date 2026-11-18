@@ -21,6 +21,8 @@ sys.path.insert(0, str(SRC / "build"))
 from build_pages import render  # noqa: E402  (same figure captions and credits as the Docs)
 
 BANK = json.loads((ROOT / "docs" / "data" / "bank.json").read_text(encoding="utf-8"))
+_cfg = (ROOT / "docs" / "assets" / "config.js").read_text(encoding="utf-8")
+REVIEW_PENDING = re.findall(r'"([A-Za-z]+)"', re.search(r"reviewPendingSections:\s*\[([^\]]*)\]", _cfg).group(1))
 MAX_W = 1400
 LIST_RE = re.compile(r"^(\s*)([-*]|\d+\.)\s")
 
@@ -98,7 +100,12 @@ def page_html(code, md_text):
                   lambda m: f'<a href="{m.group(1)}" target="_blank" rel="noopener">{link_label(m.group(1))}'
                             f'<span class="ext" aria-hidden="true"> ↗</span><span class="sr-only"> (opens in a new tab)</span></a>',
                   body)
-    body = re.sub(r'<table>', '<div class="table-wrap"><table>', body).replace("</table>", "</table></div>")
+    def wrap(m):
+        cols = len(re.findall(r"<th\b", m.group(0).split("</tr>")[0]))
+        hint = ('<p class="scroll-hint narrow-only">Swipe the table sideways to see every column. →</p>'
+                if cols >= 3 else "")
+        return f'{hint}<div class="table-wrap"><table>{m.group(1)}</table></div>'
+    body = re.sub(r"<table>(.*?)</table>", wrap, body, flags=re.S)
     return body
 
 
@@ -139,7 +146,7 @@ def main():
         md_text = render(p.read_text(encoding="utf-8"), "web")
         title = re.search(r"^#\s+(.+)$", md_text, re.M).group(1).strip()
         n = sum(1 for i in BANK["items"] if i["objective"] == code)
-        pending = obj["section"] in ("English", "Reading")
+        pending = obj["section"] in REVIEW_PENDING
         top = (f'<p class="crumbs"><a href="index.html">Study pages</a> › {html.escape(obj["section"])} › '
                f'{html.escape(obj["subarea"])} {html.escape(obj["subareaName"])}</p>'
                f'<div class="study-actions"><a class="btn" href="../index.html#/practice/{code}">Practice {code} ({n} questions)</a></div>')

@@ -74,9 +74,12 @@ def main():
                     if n == 1:
                         shot(f"diag-{sec}")
                     answer_current(page, rnd)
+                    before = page.inner_text(".q-head")
                     page.click("#submit")
                     n += 1
-                    page.wait_for_load_state()
+                    page.wait_for_function(
+                        "b => document.querySelector('table.results') || (document.querySelector('.q-head') && document.querySelector('.q-head').innerText !== b)",
+                        arg=before)
                 page.wait_for_selector("table.results")
                 assert "results" in page.url, page.url
                 print(f"{tag} {sec} diagnostic finished after {n} questions")

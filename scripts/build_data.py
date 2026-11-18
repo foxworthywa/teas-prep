@@ -47,8 +47,29 @@ def load_xlsx(path):
         sys.exit("openpyxl is needed for --xlsx:  pip install openpyxl")
     wb = openpyxl.load_workbook(path, data_only=True)
     out = {}
+
+    def text(cell):
+        v = cell.value
+        if v is None:
+            return ""
+        if isinstance(v, bool):
+            return "TRUE" if v else "FALSE"
+        if isinstance(v, (int, float)):
+            fmt = cell.number_format or ""
+            if "%" in fmt:
+                digits = len(fmt.split(".")[1].rstrip("%")) if "." in fmt else 0
+                s = f"{v * 100:.{digits}f}%"
+            elif float(v).is_integer():
+                s = str(int(v))
+            else:
+                s = repr(float(v))
+            if tab == "Items" and cell.column > 5:  # text columns stored as numbers: worth a look
+                warn(f"Items {cell.coordinate}: number cell read as {s!r}; format the column as plain text in the Sheet")
+            return s
+        return str(v)
+
     for tab in TABS:
-        rows = [["" if c is None else str(c) for c in r] for r in wb[tab].iter_rows(values_only=True)]
+        rows = [[text(c) for c in r] for r in wb[tab].iter_rows()]
         while rows and not any(rows[-1]):
             rows.pop()
         out[tab] = rows
@@ -165,10 +186,27 @@ UNICODE_FRACTIONS = {"½": ".5", "¼": ".25", "¾": ".75", "⅓": ".333", "⅔":
 NUM_IN_TEXT = re.compile(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?")
 
 
+MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september",
+          "october", "november", "december"]
+WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+CAL_RE = re.compile(r"\b(" + "|".join(MONTHS + WEEKDAYS) + r")\b", re.I)
+
+
+def calendar_numbers(text):
+    """'January to April' -> 'Mon#1 to Mon#4' style placeholders, so month/day options sort."""
+    def sub(m):
+        w = m.group(1).lower()
+        return f" CAL{(MONTHS.index(w) + 1) if w in MONTHS else (WEEKDAYS.index(w) + 1)} "
+    return CAL_RE.sub(sub, text)
+
+
 def template_key(text):
     """('template', (numbers...), qualifier rank) for options like 'About 115 bpm',
     'January 9, Run 1 (...)', 'Less than 1 serving', 'Student 3'. None if no number."""
     t = text.strip()
+    if re.search(r"\d\s*:\s*\d", t) and not re.search(r"\d:\d\d\s*[ap]\.?m", t):
+        return None  # ratios (2:3) have no natural order
+    t = calendar_numbers(t)
     for k, v in UNICODE_FRACTIONS.items():
         t = re.sub(r"(\d)" + k, lambda m: m.group(1) + v, t).replace(k, "0" + v)
     q = 1
@@ -180,7 +218,7 @@ def template_key(text):
     nums = [float(n.replace(",", "")) for n in NUM_IN_TEXT.findall(t)]
     if not nums:
         return None
-    tmpl = NUM_IN_TEXT.sub("#", t).lower()
+    tmpl = NUM_IN_TEXT.sub("#", t).lower().replace("cal#", "#")
     tmpl = re.sub(r"\b(\w+?)s\b", r"\1", tmpl)  # serving / servings
     tmpl = re.sub(r"\s+", " ", tmpl).strip(" .")
     return tmpl, tuple(nums), q
@@ -235,9 +273,17 @@ def supply_spec(accepted):
     """Accepted answers come as 'a|b|c'. Keep the list and pull out the numbers."""
     answers = [a.strip() for a in accepted.split("|") if a.strip()]
     nums = []
+    if any(re.search(r"\d\s*:\s*\d", a) for a in answers):
+        return answers, []  # ratios: grade as text
     for a in answers:
         s = a.replace("−", "-").replace("–", "-")
         s = re.sub(r"^[a-z]\s*=\s*", "", s, flags=re.I)
+        fr = re.match(r"^(-?)(?:(\d+)\s+)?(\d+)\s*/\s*(\d+)", s)
+        if fr and int(fr.group(4)):
+            v = (int(fr.group(2) or 0) + int(fr.group(3)) / int(fr.group(4))) * (-1 if fr.group(1) else 1)
+            if v not in nums:
+                nums.append(v)
+            continue
         m = re.match(r"-?\d{1,3}(?:,\d{3})+(?:\.\d+)?|-?\d+(?:\.\d+)?|-?\.\d+", s)
         if m:
             v = float(m.group(0).replace(",", ""))

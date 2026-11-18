@@ -129,7 +129,7 @@ fieldset.options legend { padding: 0; margin-bottom: 6px; font-weight: 600; font
 .obj-list { list-style: none; padding: 0; margin: 8px 0; }
 .obj-list li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); padding: 9px 2px; }
 .obj-list .obj-main { flex: 1 1 320px; }
-.obj-list .obj-stats { color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
+.obj-list .obj-stats { color: var(--muted); font-size: 0.88rem; display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
 .code { font-weight: 700; color: var(--brand); margin-right: 4px; font-variant-numeric: tabular-nums; }
 details.review-item { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 8px 0; }
 details.review-item summary { cursor: pointer; }
@@ -193,3 +193,5 @@ pre.payload { white-space: pre-wrap; background: var(--panel); padding: 8px; bor
   table.stack td:empty { display: none; }
 }
 .fig-tip { font-size: 0.8rem; color: var(--muted); margin: 4px 0 0; }
+.narrow-only { display: none; }
+@media (max-width: 640px) { .narrow-only { display: block; } }
