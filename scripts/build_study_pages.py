@@ -200,6 +200,8 @@ def main():
     titles = dict(built)
     parts = ['<h1>Study pages</h1><p class="lead">One short page for each TEAS 7 objective, with figures and quick checks. '
              'Each page ends with links to free OpenStax textbook sections if you want more.</p>']
+    jump = "".join(f'<li><a href="#{sec["name"].lower()}">{sec["name"]}</a></li>' for sec in BANK["sections"])
+    parts.append(f'<nav class="page-contents" aria-label="Sections"><ol class="jump">{jump}</ol></nav>')
     for sec in BANK["sections"]:
         parts.append(f'<h2 id="{sec["name"].lower()}">{sec["name"]}</h2>')
         for sub in sec["subareas"]:
