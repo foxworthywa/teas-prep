@@ -1,0 +1,1182 @@
+[
+ {
+  "id": "R.1.1-005",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.1",
+  "passage": "RP-17",
+  "format": "Multiple choice",
+  "stem": "Which statement best summarizes the passage?",
+  "options": [
+   "The flu vaccine must be updated every year because the virus that causes the flu keeps changing over time.",
+   "Vaccines safely show the immune system a germ so it forms memory cells and can fight the real germ fast.",
+   "Vaccines often cause a sore arm or a mild fever, so many people choose not to get them at all.",
+   "The immune system needs several days to recognize a new germ, so most infections cannot be prevented."
+  ],
+  "answer": "B",
+  "explanation": "The passage explains how the immune system learns and how vaccines use that ability. The other options are details or distortions.",
+  "distractors": "A: a single detail from the last paragraph. C: the passage mentions side effects but never says people skip vaccines. D: distorts the first paragraph and contradicts the point about vaccines.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.1-006",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.1",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "Which statement best summarizes the passage?",
+  "options": [
+   "Fleming returned from a vacation in 1928 and found mold growing on a dish of bacteria in his laboratory.",
+   "Fleming alone developed penicillin into a drug and produced enough of it to treat soldiers in World War I.",
+   "Fleming found penicillin by accident; others later purified and mass-produced it, changing medicine.",
+   "Bacteria have become resistant to penicillin, so doctors no longer use antibiotics to treat infections."
+  ],
+  "answer": "C",
+  "explanation": "A summary covers the discovery, the later development, and the impact.",
+  "distractors": "A: a detail from the opening, not the whole passage. B: the Oxford team purified it, and the passage describes World War II. D: overstates the warning in the last paragraph.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.1-007",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.1",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "Which statement best summarizes both passages?",
+  "options": [
+   "Both writers agree that phones should be banned from every classroom without exception.",
+   "A teacher explains how phone apps can help students manage diabetes during class.",
+   "A parent argues that teachers should plan more lessons that require students to use phones.",
+   "A teacher argues for phone-free classrooms, while a parent supports limits but not a total ban."
+  ],
+  "answer": "D",
+  "explanation": "A summary of paired passages states each writer's position.",
+  "distractors": "A: Passage B argues against a total ban. B: the diabetes point comes from Passage B, the parent. C: Passage B mentions planned use but argues mainly for a limited policy.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.2-005",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.2",
+  "passage": "RP-20",
+  "format": "Multiple choice",
+  "stem": "What can the reader infer about Marcus at the beginning of the power outage?",
+  "options": [
+   "He had never heard of a power outage before that night.",
+   "He was nervous, even though he had been trained for emergencies.",
+   "He was angry that Ms. Reyes kept giving him extra tasks to do that night.",
+   "He planned to leave the clinic as soon as the storm ended."
+  ],
+  "answer": "B",
+  "explanation": "His heart pounds, and the story says the class hadn't prepared him for the real noise and fear.",
+  "distractors": "A: nothing suggests this; he had trained for it. C: nothing suggests anger; he follows her lead. D: nothing in the story suggests this.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.2-006",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.2",
+  "passage": "RP-20",
+  "format": "Multiple choice",
+  "stem": "What does Ms. Reyes most likely mean when she says, \"Plans help, but people are what get you through\"?",
+  "options": [
+   "Emergency plans are useless and should not be written at all.",
+   "The clinic should hire more people to work the evening shift during storms.",
+   "Patients should take care of themselves during an emergency.",
+   "Staying calm and caring for others matters as much as having a plan."
+  ],
+  "answer": "D",
+  "explanation": "The plan (flashlights, the generator) helped, but the story shows that calm people looking after the patients got everyone through the night.",
+  "distractors": "A: she says plans help. B: she isn't talking about staffing levels. C: the staff took care of the patients.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.2-007",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.2",
+  "passage": "RP-22",
+  "format": "Multiple choice",
+  "stem": "Based on the passage, why did average steps most likely fall slightly in May?",
+  "options": [
+   "Employees forgot how to use their step counters.",
+   "The company ended the challenge at the start of May.",
+   "The weather in May was too hot for walking outside.",
+   "Employees on vacation wore their step counters less."
+  ],
+  "answer": "D",
+  "explanation": "The wellness coordinator links May to vacations and less use of the step counters.",
+  "distractors": "A: the passage gives no evidence for this. B: May's average was still recorded. C: the passage never mentions weather.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.2-008",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.2",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "What can the reader infer from the fact that Fleming warned about misuse of penicillin in his Nobel lecture?",
+  "options": [
+   "Fleming did not deserve the Nobel Prize.",
+   "Penicillin was first produced in large amounts in 1945.",
+   "Concern about antibiotic resistance is not new.",
+   "Penicillin no longer works against any infections."
+  ],
+  "answer": "C",
+  "explanation": "Fleming's warning, given when penicillin was new, shows the problem was foreseen from the start.",
+  "distractors": "A: the passage praises the discovery. B: the passage says large-scale production happened during the war, and the lecture isn't about production. D: the passage doesn't say this.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.3-004",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.3",
+  "passage": "RP-18",
+  "format": "Multiple choice",
+  "stem": "According to the directions, where should a person aim the extinguisher?",
+  "options": [
+   "High, at the top of the flames",
+   "At the smoke above the fire",
+   "At the wall behind the fire",
+   "Low, at the base of the fire"
+  ],
+  "answer": "D",
+  "explanation": "Step A says: \"Aim the nozzle low, at the base of the fire, not at the flames.\"",
+  "distractors": "A: the directions say not to aim at the flames. B: the directions don't mention aiming at smoke. C: the directions say to aim at the base of the fire.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.3-005",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.3",
+  "passage": "RP-18",
+  "format": "Multiple choice",
+  "stem": "A small trash-can fire starts in an office, and the room begins filling with smoke. According to the directions, what should a worker do?",
+  "options": [
+   "Leave immediately and call 911.",
+   "Pull the pin and aim at the base of the fire.",
+   "Stand 6 to 8 feet away and begin to sweep.",
+   "Open a window and wait for the smoke to clear."
+  ],
+  "answer": "A",
+  "explanation": "The directions say: \"If the fire is spreading or the room is filling with smoke, leave immediately and call 911.\"",
+  "distractors": "B: the directions say to leave if the room is filling with smoke. C: only for a small fire with no spreading smoke. D: the directions never suggest this.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.3-006",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.3",
+  "passage": "RP-04",
+  "format": "Multiple choice",
+  "stem": "An adult took one Allergy Relief tablet at 8:00 a.m. and still has a runny nose at 2:00 p.m. According to the label, what should the adult do?",
+  "options": [
+   "Take a second tablet now, because the first one did not work.",
+   "Wait until 8:00 a.m. the next day before taking another tablet.",
+   "Take half a tablet now and half a tablet at bedtime tonight.",
+   "Stop using the product, because it does not work for adults."
+  ],
+  "answer": "B",
+  "explanation": "Adults take 1 tablet every 24 hours, and no more than 1 tablet in 24 hours.",
+  "distractors": "A: the label says not to take more than 1 tablet in 24 hours. C: the label gives no half-tablet dose and limits use to 1 tablet in 24 hours. D: the label doesn't say this; adults are the intended users.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.3-007",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.3",
+  "passage": "RP-11",
+  "format": "Multiple choice",
+  "stem": "A student finishes the online permit form on January 8. According to the memo, what is the earliest day the student can pick up the permit?",
+  "options": [
+   "January 10",
+   "January 8",
+   "January 9",
+   "January 12"
+  ],
+  "answer": "A",
+  "explanation": "The memo says permits will be ready for pickup starting January 10.",
+  "distractors": "B: permits aren't ready on the day the form is submitted. C: that's the form deadline, not the pickup date. D: that's the day permits are required, not the first pickup day.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.4-004",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.4",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "According to the passage, who led the Oxford team that purified penicillin?",
+  "options": [
+   "Howard Florey and Ernst Chain",
+   "Alexander Fleming and Howard Florey",
+   "Alexander Fleming working alone",
+   "Ernst Chain and a drug company"
+  ],
+  "answer": "A",
+  "explanation": "The passage names Howard Florey and Ernst Chain as the leaders of the Oxford team.",
+  "distractors": "B: Fleming was not part of the Oxford team. C: Fleming couldn't produce enough pure penicillin. D: the drug companies came later, during the war.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.4-005",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.4",
+  "passage": "RP-23",
+  "format": "Multiple choice",
+  "stem": "According to the label, how many grams of added sugars are in one serving?",
+  "options": [
+   "4 g",
+   "9 g",
+   "8 g",
+   "30 g"
+  ],
+  "answer": "C",
+  "explanation": "The label says \"Total sugars: 9 g, including 8 g added sugars.\"",
+  "distractors": "A: that's the dietary fiber (and the protein). B: that's total sugars, which includes the added sugars. D: that's total carbohydrate.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.4-006",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.4",
+  "passage": "RP-17",
+  "format": "Multiple choice",
+  "stem": "According to the passage, what are the most common side effects of vaccines?",
+  "options": [
+   "A sore arm or a mild fever for a day or two",
+   "Several days of illness while the body learns the germ",
+   "A changing virus that requires a new dose every year",
+   "Memory cells that stay in the body after an infection"
+  ],
+  "answer": "A",
+  "explanation": "The last paragraph names \"a sore arm or a mild fever for a day or two.\"",
+  "distractors": "B: describes catching the real germ, not getting a vaccine. C: describes why the flu vaccine is updated. D: memory cells are the goal, not a side effect.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.5-005",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.5",
+  "passage": "RP-19",
+  "format": "Multiple choice",
+  "stem": "A student needs to be at the Health Sciences Building by 10:00 a.m. Which is the latest shuttle run from the Main Street Park-and-Ride that gets her there on time?",
+  "options": [
+   "Run 1, leaving at 7:00 a.m.",
+   "Run 2, leaving at 9:30 a.m.",
+   "Run 3, leaving at 12:30 p.m.",
+   "Run 4, leaving at 4:00 p.m."
+  ],
+  "answer": "B",
+  "explanation": "Run 2 reaches the Health Sciences Building at 9:55 a.m., before 10:00.",
+  "distractors": "A: arrives on time, but Run 2 is later and still arrives by 9:55. C: arrives at 12:55 p.m., too late. D: arrives at 4:25 p.m., too late.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.5-006",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.5",
+  "passage": "RP-22",
+  "format": "Multiple choice",
+  "stem": "In which month did the employees first reach the company's goal?",
+  "options": [
+   "April",
+   "February",
+   "March",
+   "May"
+  ],
+  "answer": "A",
+  "explanation": "April's average (7,400) was the first to reach at least 7,000.",
+  "distractors": "B: 4,800 is below 7,000. C: 6,100 is below 7,000. D: May also met the goal (7,200), but April was first.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.6-004",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.6",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "Which event happened last?",
+  "options": [
+   "Fleming published his findings about penicillin.",
+   "The Oxford team showed that penicillin cured infections.",
+   "Fleming, Florey, and Chain shared the Nobel Prize.",
+   "Fleming found mold growing on a dish of bacteria."
+  ],
+  "answer": "C",
+  "explanation": "The Nobel Prize came in 1945, after the other events.",
+  "distractors": "A: 1929. B: around 1940. D: 1928, the first event.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.6-005",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.6",
+  "passage": "RP-20",
+  "format": "Multiple choice",
+  "stem": "What did Ms. Reyes ask Marcus to do after she sent him for flashlights?",
+  "options": [
+   "Lock up the clinic for the night",
+   "Sit with the waiting patients and explain what was happening",
+   "Check that the backup generator had started",
+   "Call the doctor to cancel the evening appointments"
+  ],
+  "answer": "B",
+  "explanation": "She sent Marcus for flashlights while she checked the generator herself. Then she asked him to sit with the patients and explain what was happening.",
+  "distractors": "A: they locked up at the end of the story. C: Ms. Reyes checked the generator herself while Marcus got the flashlights. D: the story says every patient was seen.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.1.6-006",
+  "section": "Reading",
+  "subarea": "R.1",
+  "objective": "R.1.6",
+  "passage": "RP-18",
+  "format": "Ordered response",
+  "stem": "Put these actions in the correct order for using a fire extinguisher.",
+  "options": [
+   "Squeeze the handle slowly and evenly.",
+   "Pull the pin.",
+   "Sweep from side to side.",
+   "Aim the nozzle at the base of the fire."
+  ],
+  "answer": "B, D, A, C",
+  "explanation": "PASS: Pull, Aim, Squeeze, Sweep.",
+  "distractors": "Common error: squeezing before aiming. Another: aiming before pulling the pin, which leaves the extinguisher sealed.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.1-006",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.1",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "Which statement based on Passage A is an opinion?",
+  "options": [
+   "Every time a phone buzzes, my students' attention breaks.",
+   "Our school began requiring students to keep phones in their lockers.",
+   "Classrooms should be phone-free.",
+   "I have seen fewer missing assignments since the policy began."
+  ],
+  "answer": "C",
+  "explanation": "\"Should\" signals a recommendation, which is an opinion.",
+  "distractors": "A: an observation the teacher reports. B: a fact about the school's policy. D: an observation that could be checked against records.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.1-007",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.1",
+  "passage": "RP-17",
+  "format": "Multiple choice",
+  "stem": "Which statement is a fact rather than an opinion?",
+  "options": [
+   "Everyone should be grateful for the scientists who make vaccines.",
+   "Some vaccines, such as the flu vaccine, are updated every year.",
+   "Vaccines are the most important medical discovery in history.",
+   "Getting a sore arm is a small price to pay for being protected."
+  ],
+  "answer": "B",
+  "explanation": "Whether a vaccine is updated yearly can be checked. The other options are opinions that the passage doesn't state.",
+  "distractors": "A: a judgment, and it isn't in the passage. C: a judgment, and it isn't in the passage. D: a judgment, and it isn't in the passage.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.1-008",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.1",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "Which statement from Passage B shows the writer's awareness of the other side?",
+  "options": [
+   "Phones let families reach students during emergencies.",
+   "I understand why teachers are frustrated, but a total ban goes too far.",
+   "Some students use apps to manage health conditions, such as diabetes.",
+   "Phones can also be learning tools when teachers plan for them."
+  ],
+  "answer": "B",
+  "explanation": "Acknowledging teachers' frustration shows a balanced, less biased approach.",
+  "distractors": "A: supports the writer's own side. C: supports the writer's own side. D: supports the writer's own side.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.1-009",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.1",
+  "passage": "RP-23",
+  "format": "Multiple choice",
+  "stem": "A cereal box's front says \"Made with whole grains, so it's healthy!\" Which misconception does this slogan encourage?",
+  "options": [
+   "That one healthy ingredient makes a food healthy overall",
+   "That whole grains contain no carbohydrates or calories at all",
+   "That cereal should always be eaten with milk",
+   "That a serving size is always the whole box of cereal"
+  ],
+  "answer": "A",
+  "explanation": "The slogan points to one ingredient, but the label shows that a serving also has 8 g of added sugars and 190 mg of sodium. One ingredient doesn't describe the whole food.",
+  "distractors": "B: the slogan doesn't say anything about carbohydrates. C: the slogan doesn't mention milk. D: the slogan doesn't mention serving size.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.1-010",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.1",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "Which statement best describes the language in the passage?",
+  "options": [
+   "It presents mostly the author's personal opinions about Fleming's character.",
+   "It uses loaded words to persuade readers to stop taking antibiotics.",
+   "It relies on one person's story with no dates or names to check.",
+   "It presents mostly facts that can be checked, such as dates and names."
+  ],
+  "answer": "D",
+  "explanation": "Dates (1928, 1929, 1945), names, and events can all be verified; the passage is informational.",
+  "distractors": "A: the passage reports events, not opinions about his character. B: the passage warns about overuse but doesn't urge readers to stop. C: the passage gives many dates and names.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.2-006",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.2",
+  "passage": "RP-17",
+  "format": "Multiple choice",
+  "stem": "In the second paragraph, the word preview in \"a safe preview of a germ\" most nearly means",
+  "options": [
+   "a full infection",
+   "a written report",
+   "a type of medicine",
+   "an early look"
+  ],
+  "answer": "D",
+  "explanation": "A vaccine lets the immune system \"see\" the germ ahead of time without the disease.",
+  "distractors": "A: the point is that you don't get the disease. B: nothing is written. C: the vaccine is the medicine; the preview is what it offers.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.2-007",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.2",
+  "passage": "RP-20",
+  "format": "Multiple choice",
+  "stem": "In the first paragraph, the word flickered in \"the emergency lights flickered on\" most nearly means",
+  "options": [
+   "came on unsteadily",
+   "broke completely",
+   "shone very brightly",
+   "turned off again"
+  ],
+  "answer": "A",
+  "explanation": "\"Dim and yellow\" lights that \"flickered on\" came on in an uneven, wavering way.",
+  "distractors": "B: the lights came on. C: the lights were \"dim.\" D: the lights stayed on.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.2-008",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.2",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "In Passage B, the phrase \"goes too far\" most nearly means",
+  "options": [
+   "covers a long distance",
+   "is not nearly strict enough",
+   "is more extreme than necessary",
+   "is simple and easy to enforce"
+  ],
+  "answer": "C",
+  "explanation": "The writer thinks limits are fine but a total ban is excessive.",
+  "distractors": "A: a literal meaning that doesn't fit. B: the opposite of the writer's point. D: the writer doesn't discuss enforcement.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.2-009",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.2",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "In the first paragraph, the word realized most nearly means",
+  "options": [
+   "hoped",
+   "forgot",
+   "denied",
+   "understood"
+  ],
+  "answer": "D",
+  "explanation": "Seeing the clear ring, Fleming came to understand that the mold killed bacteria.",
+  "distractors": "A: Fleming saw evidence; he wasn't just hoping. B: the opposite of what happened. C: he didn't reject the idea.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.2-010",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.2",
+  "passage": "RP-17",
+  "format": "Multiple choice",
+  "stem": "In the last paragraph, the word monitor in \"continue to monitor vaccine safety\" most nearly means",
+  "options": [
+   "approve for the first time",
+   "stop selling",
+   "advertise to the public",
+   "keep watching and checking"
+  ],
+  "answer": "D",
+  "explanation": "Agencies keep checking safety even after approval.",
+  "distractors": "A: the sentence says this happens after approval. B: nothing suggests removing vaccines. C: monitoring isn't advertising.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.3-006",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.3",
+  "passage": "RP-17",
+  "format": "Multiple choice",
+  "stem": "What is the main purpose of the passage?",
+  "options": [
+   "To persuade readers to oppose vaccines",
+   "To tell a story about a patient getting sick",
+   "To explain how vaccines help the immune system",
+   "To give directions for scheduling a vaccine"
+  ],
+  "answer": "C",
+  "explanation": "The passage explains a process in a neutral, informative way.",
+  "distractors": "A: the passage is not against vaccines. B: there's no story. D: no steps or directions are given.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.3-007",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.3",
+  "passage": "RP-18",
+  "format": "Multiple choice",
+  "stem": "Why does the author include the word PASS?",
+  "options": [
+   "To show that using an extinguisher is a test",
+   "To help readers remember the steps in order",
+   "To describe how fires start and spread",
+   "To list the types of extinguishers sold"
+  ],
+  "answer": "B",
+  "explanation": "Each letter stands for a step, making the order easy to recall in an emergency.",
+  "distractors": "A: PASS isn't about passing a test. C: it describes using the extinguisher. D: no types are listed.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.3-008",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.3",
+  "passage": "RP-20",
+  "format": "Multiple choice",
+  "stem": "Why does the author describe the rain and the crying toddler?",
+  "options": [
+   "To explain how the storm caused the power outage at the clinic",
+   "To show why Marcus felt more stress than his class had prepared him for",
+   "To show that the toddler was the most seriously ill patient at the clinic that night",
+   "To suggest that the clinic should close during bad weather"
+  ],
+  "answer": "B",
+  "explanation": "The story says the class \"had not included\" these sounds, which explains Marcus's pounding heart.",
+  "distractors": "A: the outage's cause isn't the point of these details. C: nothing says the toddler was seriously ill. D: the story doesn't argue this.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.3-009",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.3",
+  "passage": "RP-22",
+  "format": "Multiple choice",
+  "stem": "Why does the author include the last sentence of the passage?",
+  "options": [
+   "To offer a possible reason for the drop in May",
+   "To show that the challenge failed to meet its goal",
+   "To argue that employees should not take vacations",
+   "To explain how step counters measure steps"
+  ],
+  "answer": "A",
+  "explanation": "The note explains why steps dipped slightly in May.",
+  "distractors": "B: May still met the goal. C: the note doesn't argue this. D: the note is about vacations, not how step counters work.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.3-010",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.3",
+  "passage": "RP-23",
+  "format": "Multiple choice",
+  "stem": "What is the main purpose of a Nutrition Facts label like this one?",
+  "options": [
+   "To persuade shoppers that the cereal is the healthiest choice",
+   "To give a recipe that uses the cereal as an ingredient",
+   "To inform shoppers about what is in one serving of the food",
+   "To tell a story about how the cereal was invented"
+  ],
+  "answer": "C",
+  "explanation": "The label lists amounts of calories and nutrients per serving so shoppers can compare foods.",
+  "distractors": "A: the label gives facts, not arguments. B: there is no recipe. D: there is no story.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.4-006",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.4",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "The author of Passage B works as an emergency medical technician. How does this most likely shape the author's view?",
+  "options": [
+   "It makes the author focus on lesson plans and grading.",
+   "It makes the author focus on emergencies and medical needs.",
+   "It makes the author focus on the cost of new phones.",
+   "It makes the author focus on conflicts in the hallway."
+  ],
+  "answer": "B",
+  "explanation": "The author's main reasons are reaching students in emergencies and managing health conditions.",
+  "distractors": "A: those are a teacher's concerns. C: cost isn't mentioned. D: that's Passage A's concern.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.4-007",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.4",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "The author of Passage A would most likely agree with which statement?",
+  "options": [
+   "Phones should stay in class but be silenced.",
+   "Teachers should plan lessons that require students to use their phones.",
+   "Phones in class distract students even when they are face down.",
+   "Families must be able to text students during class."
+  ],
+  "answer": "C",
+  "explanation": "Passage A says even a phone face down \"can pull a student's thoughts away.\"",
+  "distractors": "A: this is closer to Passage B's proposal. B: this is Passage B's point. D: Passage B's concern.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.4-008",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.4",
+  "passage": "RP-20",
+  "format": "Multiple choice",
+  "stem": "From whose perspective is the story mainly told?",
+  "options": [
+   "Ms. Reyes's, in the first person",
+   "The toddler's mother's, in the first person",
+   "The reader's, in the second person",
+   "Marcus's, through a third-person narrator"
+  ],
+  "answer": "D",
+  "explanation": "The narrator uses \"he\" and shares Marcus's feelings (his pounding heart, his thoughts on the way home).",
+  "distractors": "A: the story uses \"she,\" not \"I,\" for Ms. Reyes. B: she's described from the outside. C: the story doesn't use \"you.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.4-009",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.4",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "Which best describes the author's attitude toward Fleming's discovery?",
+  "options": [
+   "Respectful and informative",
+   "Mocking and dismissive",
+   "Angry and critical",
+   "Uncertain and confused"
+  ],
+  "answer": "A",
+  "explanation": "The title calls it \"an accident that changed medicine,\" and the tone is factual and appreciative.",
+  "distractors": "B: the author never makes fun of Fleming. C: the author doesn't criticize Fleming. D: the author states events clearly.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.2.4-010",
+  "section": "Reading",
+  "subarea": "R.2",
+  "objective": "R.2.4",
+  "passage": "RP-12",
+  "format": "Multiple choice",
+  "stem": "Whose interests does the DreamDeep advertisement mainly represent?",
+  "options": [
+   "The company selling the product",
+   "Doctors who treat sleep problems",
+   "The Food and Drug Administration",
+   "Researchers who study melatonin"
+  ],
+  "answer": "A",
+  "explanation": "An advertisement is written to sell, so it reflects the seller's point of view.",
+  "distractors": "B: no doctor is involved. C: the fine print says the FDA hasn't evaluated the claims. D: no research is cited.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.1-006",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.1",
+  "passage": "RP-17",
+  "format": "Multiple choice",
+  "stem": "Based on the passage, what would most likely happen if a vaccinated person were later exposed to the germ the vaccine targets?",
+  "options": [
+   "The person would become sick for several days, exactly as if never vaccinated.",
+   "The person's body would have no defense, because vaccines contain dead germs.",
+   "The person's memory cells would recognize the germ and fight it quickly.",
+   "The person would need a new vaccine before the immune system could respond."
+  ],
+  "answer": "C",
+  "explanation": "The passage says memory cells let the body fight the germ \"before you feel ill.\"",
+  "distractors": "A: the vaccine's purpose is to prevent this. B: the passage says vaccines lead to memory cells. D: memory cells already allow a quick response.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.1-007",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.1",
+  "passage": "RP-22",
+  "format": "Multiple choice",
+  "stem": "Suppose that in June employees wear their step counters as often as they did in April. Which prediction is best supported?",
+  "options": [
+   "The June average will likely fall back to February's level.",
+   "The June average will likely be close to or above the goal.",
+   "The company will likely raise the goal to 12,000 steps.",
+   "The challenge will likely be cancelled for poor results."
+  ],
+  "answer": "B",
+  "explanation": "When employees wore their counters regularly in April, the average was 7,400 steps, above the 7,000 goal.",
+  "distractors": "A: the passage gives no reason for such a large drop. C: nothing suggests a new goal. D: the results met the goal.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.1-008",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.1",
+  "passage": "RP-24",
+  "format": "Multiple choice",
+  "stem": "Which sentence best supports the conclusion that Fleming's discovery alone was not enough to help patients?",
+  "options": [
+   "\"Around the mold was a clear ring where the bacteria had died.\"",
+   "\"In 1945, Fleming, Florey, and Chain shared the Nobel Prize in Physiology or Medicine.\"",
+   "\"Fleming published his findings in 1929, but he could not produce enough pure penicillin to treat patients.\"",
+   "\"Today, doctors warn that bacteria can become resistant to antibiotics when these drugs are overused or misused.\""
+  ],
+  "answer": "C",
+  "explanation": "This sentence directly says penicillin couldn't yet be made in usable amounts.",
+  "distractors": "A: describes the discovery, not its limits. B: describes an honor, not a limitation. D: about today's resistance, not the early limits.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.1-009",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.1",
+  "passage": "RP-20",
+  "format": "Multiple choice",
+  "stem": "Based on the story, how will Marcus most likely act during the next emergency?",
+  "options": [
+   "He will try to stay calm and reassure patients, as he did that night.",
+   "He will refuse to work any shifts during bad weather.",
+   "He will leave the patients alone and wait for the manager to tell him what to do.",
+   "He will ignore the plan and do whatever feels right."
+  ],
+  "answer": "A",
+  "explanation": "The story ends with Marcus thinking about Ms. Reyes's lesson all the way home.",
+  "distractors": "B: nothing suggests he wants to avoid storms. C: he learned the value of staying with patients. D: Ms. Reyes says plans help.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.1-010",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.1",
+  "passage": "RP-18",
+  "format": "Multiple choice",
+  "stem": "A worker uses an extinguisher on a small wastebasket fire, and the fire appears to be out. Based on the directions, what should the worker do next?",
+  "options": [
+   "Return to work right away, since the fire is out.",
+   "Put the pin back in and store the extinguisher.",
+   "Open the windows and wait for the smoke to clear.",
+   "Watch the area and report the fire to the fire department."
+  ],
+  "answer": "D",
+  "explanation": "The directions say to watch the area because a fire can start again, and to report the fire even if you put it out.",
+  "distractors": "A: the directions say a fire can start again. B: the directions don't mention this. C: the directions don't mention this.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.2-006",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.2",
+  "passage": "RP-20 and RP-07",
+  "format": "Multiple choice",
+  "stem": "Which theme is shared by \"The Storm Shift\" and \"First Shift\"?",
+  "options": [
+   "Experienced workers should never trust new employees with important tasks.",
+   "Training classes are useless once someone starts a real job.",
+   "Bad weather is the greatest danger in health care settings.",
+   "A new worker learns that caring attention to people matters most."
+  ],
+  "answer": "D",
+  "explanation": "Both new workers succeed by paying close attention to the people in their care, and each supervisor's closing words stress the importance of people.",
+  "distractors": "A: both supervisors trust the new worker with important tasks. B: neither story calls training useless; Marcus's class simply didn't cover everything. C: only one story involves weather.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.2-007",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.2",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "How do the two passages differ in their main concern?",
+  "options": [
+   "Passage A focuses on attention and learning; Passage B focuses on safety and health.",
+   "Passage A focuses on emergencies; Passage B focuses on missing assignments.",
+   "Both passages focus mainly on the cost of buying phones for students.",
+   "Passage A wants phones used in lessons; Passage B wants them banned."
+  ],
+  "answer": "A",
+  "explanation": "The teacher cites distraction and classroom results; the parent cites emergencies and medical apps.",
+  "distractors": "B: this reverses the passages. C: neither discusses cost. D: this reverses their positions.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.2-008",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.2",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "On which point would both authors most likely agree?",
+  "options": [
+   "Phones should be locked away with no exceptions.",
+   "Phones should not be used freely during class.",
+   "Phones are never useful for learning.",
+   "Students' families should not contact them at school."
+  ],
+  "answer": "B",
+  "explanation": "Passage A wants them in lockers; Passage B wants them silent and out of sight unless a teacher allows them. Both limit free use.",
+  "distractors": "A: Passage B wants medical exceptions. C: Passage B says they can be learning tools. D: Passage B says families need to reach them.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.2-009",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.2",
+  "passage": "RP-14 and RP-24",
+  "format": "Multiple choice",
+  "stem": "How is Fleming's discovery in \"An Accident That Changed Medicine\" similar to Marisol's success in Story A?",
+  "options": [
+   "Both happened on the very first try without any setbacks.",
+   "Both depended on helpful advice that came from a neighbor.",
+   "Both came from closely examining something that had gone wrong.",
+   "Both ended with a large cash prize for the person who succeeded."
+  ],
+  "answer": "C",
+  "explanation": "Fleming studied a contaminated dish; Marisol studied her broken bridge.",
+  "distractors": "A: Marisol failed first, and penicillin took years to develop. B: only Mr. Lyle in Story B got advice. D: neither text mentions money.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.2-010",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.2",
+  "passage": "RP-14 and RP-20",
+  "format": "Multiple choice",
+  "stem": "How is Marcus's situation in \"The Storm Shift\" different from Marisol's in Story A?",
+  "options": [
+   "Marcus fails and never recovers, while Marisol succeeds easily on her very first try.",
+   "Marisol works under a supervisor, while Marcus works completely alone during the storm.",
+   "Both characters ignore the advice they are given and succeed mostly because of luck.",
+   "Marcus must act fast with a supervisor's help; Marisol studies her problem alone over time."
+  ],
+  "answer": "D",
+  "explanation": "Marcus has to respond in the moment with Ms. Reyes directing him; Marisol studies her broken bridge for a week and redesigns it the next year.",
+  "distractors": "A: Marcus handles the night well, and Marisol fails first. B: this reverses the characters. C: neither succeeds by luck, and Marcus follows Ms. Reyes's directions.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.3-006",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.3",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "What evidence does the author of Passage A use to support banning phones in class?",
+  "options": [
+   "The teacher's own observations after the school's policy began",
+   "Results from a national survey of thousands of teachers in many states",
+   "Statements from students who say they prefer phone-free classrooms",
+   "Data showing that phone apps help students manage diabetes in class"
+  ],
+  "answer": "A",
+  "explanation": "The teacher relies on personal observation of one school's results.",
+  "distractors": "B: the passage cites no survey. C: no students are quoted. D: that's Passage B's point.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.3-007",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.3",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "What is the main weakness of the evidence in Passage A?",
+  "options": [
+   "It includes too many statistics from scientific studies.",
+   "It comes from one teacher's observations at one school.",
+   "It focuses only on the cost of the policy.",
+   "It relies only on statistics from other schools."
+  ],
+  "answer": "B",
+  "explanation": "Personal observation is useful but limited; it may not apply to other schools.",
+  "distractors": "A: the passage includes no studies. C: cost isn't discussed. D: the teacher describes only the teacher's own school.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.3-008",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.3",
+  "passage": "RP-21",
+  "format": "Multiple choice",
+  "stem": "Which additional evidence would most strengthen Passage B's argument?",
+  "options": [
+   "Data showing how often students used phones to reach help during school emergencies",
+   "A study showing that phones distract students even when they are face down",
+   "A list of schools that require all students to keep their phones in lockers during class",
+   "A report showing that most students check social media during class"
+  ],
+  "answer": "A",
+  "explanation": "Passage B's main reason is emergencies, so data on emergency use supports it most directly.",
+  "distractors": "B: this supports Passage A. C: doesn't show the value of phones. D: this supports Passage A.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.3-009",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.3",
+  "passage": "RP-22",
+  "format": "Multiple choice",
+  "stem": "Suppose the company announces that the walking challenge made its employees healthier. What is the main weakness of this conclusion, based on the passage?",
+  "options": [
+   "The average never reached the company's step goal.",
+   "The passage reports step counts, not any measure of health.",
+   "The challenge lasted only one week in February.",
+   "The wellness coordinator counted every step by hand."
+  ],
+  "answer": "B",
+  "explanation": "Walking more may help health, but the passage measured only steps, so it can't show that health improved.",
+  "distractors": "A: April and May both met the 7,000-step goal. C: the challenge lasted four months. D: employees wore step counters.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.3-010",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.3",
+  "passage": "RP-16",
+  "format": "Multiple choice",
+  "stem": "Which statement would a critic most likely use to weaken the essay's argument?",
+  "options": [
+   "The essay says students study late at night.",
+   "The essay's pass-rate data come from only one college.",
+   "The essay says good tutors ask guiding questions.",
+   "The essay says failing a course costs money."
+  ],
+  "answer": "B",
+  "explanation": "Evidence from a single college may not apply everywhere, which is a fair weakness to point out.",
+  "distractors": "A: this supports the essay. C: this answers a criticism. D: this supports the essay.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.4-006",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.4",
+  "passage": "RP-19 and RP-11",
+  "format": "Multiple choice",
+  "stem": "A student submitted the online permit form on January 8 and wants to pick up the permit as early as possible. The Workforce Building is a short walk from the Student Center stop. Assume January 8 through January 12 are all weekdays and none is a college holiday. Which date and shuttle run from the Main Street Park-and-Ride should the student choose?",
+  "options": [
+   "January 9, Run 1 (arrives at the Student Center at 7:35 a.m.)",
+   "January 10, Run 2 (arrives at the Student Center at 10:05 a.m.)",
+   "January 10, Run 1 (arrives at the Student Center at 7:35 a.m.)",
+   "January 12, Run 1 (arrives at the Student Center at 7:35 a.m.)"
+  ],
+  "answer": "C",
+  "explanation": "The memo says permits are ready starting January 10, and Run 1 is the earliest shuttle to reach the Student Center that day.",
+  "distractors": "A: January 9 is the form deadline; permits aren't ready until January 10. B: Run 2 is later than Run 1 on the same day. D: January 12 is when permits become required, not the first pickup day.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.4-007",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.4",
+  "passage": "RP-23 and RP-06",
+  "format": "Multiple choice",
+  "stem": "The letter in \"Get Sugary Drinks Out of Our Hospital\" gives the American Heart Association's daily limit on added sugar for most women. Using the cereal label and that limit, how many servings of the cereal would reach the limit? (1 teaspoon of sugar ≈ 4 grams)",
+  "options": [
+   "Less than 1 serving",
+   "2 servings",
+   "3 servings",
+   "About 4½ servings"
+  ],
+  "answer": "C",
+  "explanation": "One serving has 8 g of added sugars, which is about 2 teaspoons (8 ÷ 4). The letter gives a limit of about 6 teaspoons for most women, and 6 ÷ 2 = 3 servings.",
+  "distractors": "A: compares 8 grams directly with 6 teaspoons without converting units. B: 8 ÷ 4 = 2 is the number of teaspoons in one serving, not the number of servings. D: uses the limit for most men (9 ÷ 2), not for women.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.4-008",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.4",
+  "passage": "RP-22 and RP-17",
+  "format": "Multiple choice",
+  "stem": "Using both passages, which statement is supported?",
+  "options": [
+   "Both use data tables to show results over several months.",
+   "Both argue against the advice given by health agencies.",
+   "Both report that their efforts failed to reach their goals in the end.",
+   "Both describe ways people can protect or improve their health."
+  ],
+  "answer": "D",
+  "explanation": "The vaccine passage explains how vaccines prevent disease, and the walking passage shows average steps rising to meet a goal.",
+  "distractors": "A: only the walking passage has a table. B: neither argues against health agencies. C: the challenge met its goal, and the vaccine passage sets no goal.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.4-009",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.4",
+  "passage": "RP-24 and RP-02",
+  "format": "Multiple choice",
+  "stem": "The penicillin passage warns about overusing antibiotics. The fasting-test directions say to take usual medicines unless told to stop. What do both texts suggest about medicines?",
+  "options": [
+   "They should be stopped whenever a person feels better.",
+   "They are always safe in any amount.",
+   "They should be used as directed by a health care provider.",
+   "They should be avoided before any medical test."
+  ],
+  "answer": "C",
+  "explanation": "One warns against overuse; the other says to follow the provider's instructions. Both point to using medicines as directed.",
+  "distractors": "A: neither text says this. B: the penicillin passage warns about overuse. D: the directions say to keep taking usual medicines.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "R.3.4-010",
+  "section": "Reading",
+  "subarea": "R.3",
+  "objective": "R.3.4",
+  "passage": "RP-21 and RP-13",
+  "format": "Multiple choice",
+  "stem": "How could the survey in \"Screens and Sleep\" be used in the debate about phones in the classroom?",
+  "options": [
+   "Neither side could use it directly; it measures bedtime screen use, not class use.",
+   "It proves that phones in class cause students to fail their courses.",
+   "It shows that students who keep their phones in lockers during class sleep better.",
+   "It shows that phones are needed so that students can manage medical conditions."
+  ],
+  "answer": "A",
+  "explanation": "A source is only useful evidence when it measures what the argument is about.",
+  "distractors": "B: the survey doesn't study class time or grades. C: lockers aren't part of the survey. D: the survey says nothing about medical apps.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ }
+]

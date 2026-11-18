@@ -1,0 +1,49 @@
+# ESCC TEAS Prep: status and decisions
+
+Last updated: 2026-11-18 (evening)
+
+## Where things live
+- Master workbook (single source of truth): ESCC TEAS Prep: Master Bank — https://docs.google.com/spreadsheets/d/14RULVFb58M78c_BUmQu5az1T0fKTlX32nW4beebqhf8/edit
+  - Tabs: Read me, Blueprint, Objectives (64 ATI objectives, all codes confirmed against the ATI TEAS 7 content outline; columns I–J hold study-page status and links), Items (columns A–V), Passages (Reading passages RP-01 to RP-24; items point to them in Items column R, "Image or asset"), Programs (cutoffs blank)
+- Drive folder: ESCC TEAS Prep — https://drive.google.com/drive/folders/1lhyZ1D6LPp9pd-ssDrH8L8jfLT6NrU3-
+  - Study pages subfolder: one Google Doc per objective, figures embedded. The Objectives tab column J is the authoritative link list.
+  - "Superseded study pages (safe to delete)" subfolder: 33 older copies replaced on 2026-11-18 (see below).
+- Tutor instructions (Gem now, Gemini skill later): claude/TEAS_TUTOR_INSTRUCTIONS.md. Alex is holding off on updating the Gem until the materials exist.
+- Build pipeline (in the working environment; to move into the GitHub repo): pages/*.md sources with {{FIG id}} markers; build/figures.json manifest (OpenStax figures carry their book); build_pages.py makes web, docs and notebook versions (the notebook version strips all figures and checks none remain); build_docs_html.py makes Docs-ready HTML with embedded images (transparent images flattened onto white). It now also inserts the blank lines Python-Markdown needs before lists and before "---" dividers. Small corrections to published Docs are made in place (replaceAllText or paragraph-style edits) so links don't change.
+
+## Decisions (Alex, 2026-11-17)
+- Public web app on GitHub Pages, no login; content portable for later Canvas import via QTI. No dependence on Canvas admins.
+- Master content in a Google Sheet.
+- Diagnostic: more items per subsection than the real test (max 15), reported as bands, adaptive stopping; the practice layer keeps adding evidence. No cutoff predictions until calibrated against real TEAS scores.
+- Compressed study pages per objective with embedded checks and deep links to specific OpenStax sections: A&P 2e for S.1; Concepts of Biology for S.2, with Biology 2e for viruses; Chemistry 2e for S.3, S.4.1 and unit conversions; Concepts of Biology for the scientific method; Prealgebra 2e, Elementary Algebra 2e and Introductory Statistics 2e for Math; Writing Guide with Handbook for English (handbook landing page; its section slugs aren't predictable), plus A&P 2e 1.6 for word parts.
+- Figures wherever they help: OpenStax figures where best (CC BY 4.0, credited per figure; skip third-party credits and micrographs), original diagrams for flows, scales and graphs. Alt text and a teaching caption for every figure. Notebook/Gem versions are figure-free.
+- AI tutoring via one Gem (later a skill) plus four NotebookLM notebooks; the app works fully without AI.
+- Progress tracking: in-browser history plus an optional prefilled Google Form into a sheet in Alex's Drive.
+- Audience: LPN, RN, dental hygiene, and future programs.
+- Order: Science, then Math, then English and Reading (English and Reading faculty review after).
+- QC: Claude drafts; two independent reviewer agents (blind solve from a key-free file; content audit); fixes applied; changed items re-reviewed; passing items Approved; uncertain items "Flagged for Alex". Study pages get a content audit plus a weak-student-perspective review, then a re-review after fixes.
+- English pages use the serial (Oxford) comma throughout and say so.
+
+## Progress
+- **Bank complete: 482 items Approved.** S.1 42 · S.2 40 · S.3 40 · S.4 40 · M.1 40 · M.2 40 · E.1 40 · E.2 40 · E.3 40 · R.1 40 · R.2 40 · R.3 40. English and Reading items carry "faculty review pending" in Review notes. Reading uses 24 original passages (RP-01 to RP-24) in the Passages tab, with the items that use each one listed.
+- Item-writing safeguards added 2026-11-18: answer positions are shuffled with balance (no A-B-C-D cycling, no three identical keys in a row); a script flags keys that are noticeably the longest option (Reading batch 1 went from 46% to 22% "key is longest"); numeric options stay in natural order. About 25 Reading item pairs give each other away (same table, same keyed idea) and are marked "Do not place on the same form as …" in Review notes; the diagnostic builder must honor these. RP-21 (phones) carries 12 items, so spread them across forms.
+- Loading method: rows go into the workbook through a temporary .xlsx (text-typed cells) copied in as a sheet, then pasted as values; this avoids number/date conversion. Temporary files "zz import temp (delete)", "zz import temp 2 (delete)" and "zz import temp 3 (delete)" are in the ESCC TEAS Prep folder.
+- **All 64 study pages published** and linked in Objectives (27 Science, 15 Math, 8 English, 14 Reading). Reading pages link OpenStax College Success (5.2, 7.3, 7.4) and Introductory Statistics 2e (2.1).
+- 2026-11-18 rendering fix: the Docs converter was merging any list that directly followed a line of text into that paragraph (bullets showed as "- item - item" run-on text). 27 Science/Math Docs were affected and were re-uploaded with new links (Objectives column J updated); the old copies are in the Superseded subfolder. The Math pages' calculator tip, which had imported as a large heading, was fixed in place. M.1.2's PEMDAS list was also repaired (an exponent note had split it).
+- Content corrections after review (2026-11-18): antibiotics "take exactly as prescribed" (S.2.5); ADH trigger and posterior pituitary (S.4.3); plant lysosomes (S.2.1); enzyme denaturation caveat (S.3.4); micro- prefix (S.4.1, M.2.5); "is more than" vs "more than" (M.1.10). English pages: added definitions (clause, FANBOYS, antecedent, linking verb, modifier), however/therefore semicolon rule, capitalization, "although" removed from the transitions table, doubling rule with stress, an arguable thesis example, an expanded medical word-parts table.
+- Objective codes confirmed (2026-11-17) from the ATI TEAS 7 content outline.
+
+## Open items for Alex
+- Delete the "Superseded study pages (safe to delete)" folder, the three "zz import temp" sheets, plus these in the Study pages folder: "OLD S.1.1 (no figures, replaced - delete)", "OLD S.1.3 (no figures, replaced - delete)", "zz image import test (delete)", "zz html image test (delete)".
+- Fill Programs tab cutoffs (LPN, RN, dental hygiene).
+- GitHub account/repo for the web app; TEAS Gem link.
+- Grader design: Supply-answer items should be scored by normalizing (strip spaces, commas and units; compare numbers), not only by the accepted-answer list.
+- Unconfirmed: whether the TEAS on-screen calculator has a square-root key (pages tell students to know perfect squares either way).
+- For English faculty: E.2.1 presents singular "they" as acceptable and advises plural rewrites as the safe test choice; check against current ATI materials.
+
+## Next
+- Faculty review: English and Reading items and pages (filter Review notes for "faculty review pending").
+- Web app next: diagnostic (bands, adaptive stopping, honors do-not-pair notes and shuffles options except natural-order ones), practice mode, then QTI export, Google Form tracking, and NotebookLM source docs (figure-free, no OpenStax text).
+- Reviewer suggestion to weigh for Reading pages: TEAS prep materials commonly also cover parts of a book and dictionary guide words, text structures, and figurative language. These aren't separate TEAS 7 objectives; check ATI's current outline before adding them.
+- Later: web app (diagnostic and practice), QTI export, Google Form tracking, NotebookLM source docs.
+- OpenStax pages state their books may not be ingested into generative AI offerings without permission. OpenStax text and figures stay out of the Gem and NotebookLM sources.

@@ -1,0 +1,356 @@
+[
+ {
+  "id": "E.1.1-001",
+  "format": "Multiple choice",
+  "stem": "Which word is spelled correctly?",
+  "options": [
+   "Recieve",
+   "Receive",
+   "Recive",
+   "Receeve"
+  ]
+ },
+ {
+  "id": "E.1.1-002",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nThe nurses left ___ coats in the break room.",
+  "options": [
+   "their",
+   "there",
+   "they're",
+   "thier"
+  ]
+ },
+ {
+  "id": "E.1.1-003",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nThe new visiting hours will ___ every family on the unit.",
+  "options": [
+   "effect",
+   "effective",
+   "affect",
+   "affection"
+  ]
+ },
+ {
+  "id": "E.1.1-004",
+  "format": "Select all",
+  "stem": "Which words are spelled correctly? Select all that apply.",
+  "options": [
+   "necessary",
+   "seperate",
+   "definitely",
+   "occurence",
+   "accommodate"
+  ]
+ },
+ {
+  "id": "E.1.2-001",
+  "format": "Multiple choice",
+  "stem": "Which sentence is punctuated correctly?",
+  "options": [
+   "After the shift ended, the nurse wrote her notes.",
+   "After the shift ended the nurse, wrote her notes.",
+   "After, the shift ended the nurse wrote her notes.",
+   "After the shift, ended the nurse wrote her notes."
+  ]
+ },
+ {
+  "id": "E.1.2-002",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses an apostrophe correctly?",
+  "options": [
+   "The patient's were discharged today.",
+   "Its' battery died during the shift.",
+   "The doctors's notes were clear.",
+   "The patients' rooms were cleaned."
+  ]
+ },
+ {
+  "id": "E.1.2-003",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses a semicolon correctly?",
+  "options": [
+   "I studied every night; and I felt ready.",
+   "I studied every night; I felt ready.",
+   "I studied; every night before the test.",
+   "Because I studied; I felt ready on test day."
+  ]
+ },
+ {
+  "id": "E.1.2-004",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses commas correctly?",
+  "options": [
+   "Bring your ID two pencils, and a water bottle.",
+   "Bring, your ID, two pencils and, a water bottle.",
+   "Bring your ID, two pencils, and a water bottle.",
+   "Bring your ID, two pencils, and, a water bottle."
+  ]
+ },
+ {
+  "id": "E.1.3-001",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a complete sentence?",
+  "options": [
+   "Because the clinic was closed.",
+   "Running down the hall to the elevator.",
+   "The clinic closed early.",
+   "When the doctor arrives."
+  ]
+ },
+ {
+  "id": "E.1.3-002",
+  "format": "Multiple choice",
+  "stem": "Which revision correctly fixes this run-on sentence?\n\nThe lab results came back they were normal.",
+  "options": [
+   "The lab results came back, they were normal.",
+   "The lab results came back; they were normal.",
+   "The lab results came back they, were normal.",
+   "The lab results, came back they were normal."
+  ]
+ },
+ {
+  "id": "E.1.3-003",
+  "format": "Multiple choice",
+  "stem": "Which sentence is a compound sentence?",
+  "options": [
+   "The nurse checked the chart and called the doctor.",
+   "After checking the chart, the nurse called the doctor.",
+   "Because she checked the chart, the nurse knew the dose.",
+   "The nurse checked the chart, and the doctor reviewed it."
+  ]
+ },
+ {
+  "id": "E.1.3-004",
+  "format": "Multiple choice",
+  "stem": "Which sentence is written most clearly?",
+  "options": [
+   "Walking in, the nurse heard the monitor beep.",
+   "Walking into the room, the monitor beeped.",
+   "The monitor beeped walking into the room.",
+   "Walking into the room, a beep came from the monitor."
+  ]
+ },
+ {
+  "id": "E.2.1-001",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nEach of the students ___ a name badge.",
+  "options": [
+   "have",
+   "has",
+   "are having",
+   "were having"
+  ]
+ },
+ {
+  "id": "E.2.1-002",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses pronouns correctly?",
+  "options": [
+   "Me and Maria went to the lab.",
+   "Maria and me went to the lab.",
+   "Maria and I went to the lab.",
+   "Maria and myself went to the lab."
+  ]
+ },
+ {
+  "id": "E.2.1-003",
+  "format": "Multiple choice",
+  "stem": "Which sentence keeps verb tense consistent?",
+  "options": [
+   "She opened the chart and read the notes.",
+   "She opened the chart and reads the notes.",
+   "She opens the chart and read the notes.",
+   "She will open the chart and read the notes yesterday."
+  ]
+ },
+ {
+  "id": "E.2.1-004",
+  "format": "Multiple choice",
+  "stem": "Which sentence is clearest?",
+  "options": [
+   "When Dana called Kim, she was upset.",
+   "Dana told Kim that her test was canceled.",
+   "Dana and Kim's shift, she said, was moved.",
+   "Dana was upset when she called Kim."
+  ]
+ },
+ {
+  "id": "E.2.2-001",
+  "format": "Multiple choice",
+  "stem": "Which sentence is most appropriate for an email to a professor?",
+  "options": [
+   "Hey, can u send me the notes from class?",
+   "Send me the notes from Tuesday's class ASAP.",
+   "Could you please send the notes from Tuesday's class?",
+   "Yo prof, notes pls?"
+  ]
+ },
+ {
+  "id": "E.2.2-002",
+  "format": "Multiple choice",
+  "stem": "A nurse is explaining a procedure to a patient with no medical background. Which sentence is best?",
+  "options": [
+   "We'll put a small tube in a vein in your arm to give you fluids.",
+   "We'll insert a peripheral IV catheter for parenteral fluid administration.",
+   "IV time! Let's go!",
+   "You need fluids, so just let us handle it."
+  ]
+ },
+ {
+  "id": "E.2.2-003",
+  "format": "Select all",
+  "stem": "Which phrases are too informal for a scholarship essay? Select all that apply.",
+  "options": [
+   "I am committed to",
+   "kind of a big deal",
+   "gonna",
+   "In addition",
+   "stuff like that"
+  ]
+ },
+ {
+  "id": "E.2.2-004",
+  "format": "Multiple choice",
+  "stem": "Which word best completes this sentence in a formal lab report?\n\nThe results ___ the hypothesis.",
+  "options": [
+   "back up",
+   "support",
+   "are cool with",
+   "go along with"
+  ]
+ },
+ {
+  "id": "E.2.3-001",
+  "format": "Multiple choice",
+  "stem": "Which sentence would make the best topic sentence for a paragraph about the benefits of regular exercise?",
+  "options": [
+   "My cousin runs every morning before work.",
+   "Some gyms charge high monthly fees.",
+   "Running shoes come in many styles and colors.",
+   "Regular exercise has several health benefits."
+  ]
+ },
+ {
+  "id": "E.2.3-002",
+  "format": "Ordered response",
+  "stem": "Put these sentences in the most logical order for a paragraph about handwashing.",
+  "options": [
+   "Next, lather with soap and scrub for at least 20 seconds.",
+   "First, wet your hands with clean running water.",
+   "Finally, dry them with a clean towel.",
+   "Then, rinse your hands well under running water."
+  ]
+ },
+ {
+  "id": "E.2.3-003",
+  "format": "Multiple choice",
+  "stem": "Which sentence does NOT belong in a paragraph about how to prepare for the TEAS?",
+  "options": [
+   "Take a practice test to find your weak areas.",
+   "Review the study page for each weak objective.",
+   "The TEAS was first introduced several decades ago.",
+   "Get a good night's sleep before test day."
+  ]
+ },
+ {
+  "id": "E.2.3-004",
+  "format": "Multiple choice",
+  "stem": "Choose the best transition for the blank.\n\nMany students feel anxious about math. ___, regular practice can build confidence.",
+  "options": [
+   "Therefore",
+   "However",
+   "For example",
+   "Similarly"
+  ]
+ },
+ {
+  "id": "E.3.1-001",
+  "format": "Multiple choice",
+  "stem": "In which stage of the writing process does a writer brainstorm ideas and make an outline?",
+  "options": [
+   "Prewriting",
+   "Drafting",
+   "Revising",
+   "Editing"
+  ]
+ },
+ {
+  "id": "E.3.1-002",
+  "format": "Multiple choice",
+  "stem": "During which stage of the writing process should a writer correct spelling and punctuation errors?",
+  "options": [
+   "Revising",
+   "Editing",
+   "Drafting",
+   "Prewriting"
+  ]
+ },
+ {
+  "id": "E.3.1-003",
+  "format": "Multiple choice",
+  "stem": "A student rereads her essay draft and notices the main points are in a confusing order. What should she do next?",
+  "options": [
+   "Proofread it for spelling errors",
+   "Choose a completely new topic",
+   "Submit it as written",
+   "Revise it to reorganize the ideas"
+  ]
+ },
+ {
+  "id": "E.3.1-004",
+  "format": "Multiple choice",
+  "stem": "Which is the best thesis statement for an essay arguing that community colleges should offer free TEAS preparation?",
+  "options": [
+   "Community colleges offer many different programs.",
+   "The TEAS has four sections: reading, math, science and English.",
+   "Free TEAS prep would help more students enter health programs.",
+   "Some students take the TEAS more than once."
+  ]
+ },
+ {
+  "id": "E.3.2-001",
+  "format": "Multiple choice",
+  "stem": "The prefix hyper- means",
+  "options": [
+   "below normal",
+   "above normal",
+   "within",
+   "before"
+  ]
+ },
+ {
+  "id": "E.3.2-002",
+  "format": "Multiple choice",
+  "stem": "Using its word parts, what does cardiology mean?",
+  "options": [
+   "Inflammation of the heart",
+   "Surgery on the heart",
+   "A heart muscle",
+   "The study of the heart"
+  ]
+ },
+ {
+  "id": "E.3.2-003",
+  "format": "Multiple choice",
+  "stem": "The suffix -itis means",
+  "options": [
+   "inflammation",
+   "removal",
+   "study of",
+   "pain"
+  ]
+ },
+ {
+  "id": "E.3.2-004",
+  "format": "Multiple choice",
+  "stem": "Which word means surgical removal of the appendix?",
+  "options": [
+   "Appendicitis",
+   "Appendalgia",
+   "Appendectomy",
+   "Appendology"
+  ]
+ }
+]

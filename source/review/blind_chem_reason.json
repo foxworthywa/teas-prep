@@ -1,0 +1,324 @@
+[
+ {
+  "id": "S.3.1-001",
+  "format": "Multiple choice",
+  "stem": "A neutral atom has 11 protons, 12 neutrons and 11 electrons. What is its mass number?",
+  "options": [
+   "11",
+   "22",
+   "23",
+   "34"
+  ]
+ },
+ {
+  "id": "S.3.1-002",
+  "format": "Multiple choice",
+  "stem": "Which feature of an atom determines which element it is?",
+  "options": [
+   "Its number of neutrons",
+   "Its number of electrons",
+   "Its number of energy levels",
+   "Its number of protons"
+  ]
+ },
+ {
+  "id": "S.3.1-003",
+  "format": "Multiple choice",
+  "stem": "Sodium and potassium are in the same group (column) of the periodic table. Why do they react in similar ways?",
+  "options": [
+   "They have the same number of valence electrons.",
+   "They have the same atomic mass.",
+   "They have the same number of neutrons.",
+   "They have the same number of electron energy levels."
+  ]
+ },
+ {
+  "id": "S.3.2-001",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a chemical change?",
+  "options": [
+   "Ice melting",
+   "Sugar dissolving in water",
+   "Iron rusting",
+   "Water boiling"
+  ]
+ },
+ {
+  "id": "S.3.2-002",
+  "format": "Multiple choice",
+  "stem": "Dry ice (solid carbon dioxide) turns directly into a gas without melting. What is this change called?",
+  "options": [
+   "Sublimation",
+   "Deposition",
+   "Condensation",
+   "Evaporation"
+  ]
+ },
+ {
+  "id": "S.3.2-003",
+  "format": "Select all",
+  "stem": "Which of the following are physical changes? Select all that apply.",
+  "options": [
+   "Cutting paper",
+   "Burning wood",
+   "Melting butter",
+   "Baking a cake",
+   "Dissolving salt in water"
+  ]
+ },
+ {
+  "id": "S.3.3-001",
+  "format": "Multiple choice",
+  "stem": "Which set of coefficients balances this equation? __ H₂ + __ O₂ → __ H₂O",
+  "options": [
+   "1, 1, 1",
+   "2, 1, 2",
+   "1, 2, 1",
+   "2, 2, 2"
+  ]
+ },
+ {
+  "id": "S.3.3-002",
+  "format": "Multiple choice",
+  "stem": "What type of reaction is Zn + 2HCl → ZnCl₂ + H₂?",
+  "options": [
+   "Synthesis (combination)",
+   "Decomposition",
+   "Combustion",
+   "Single replacement"
+  ]
+ },
+ {
+  "id": "S.3.3-003",
+  "format": "Multiple choice",
+  "stem": "In a sealed container, 10 grams of reactants react completely. What is the total mass of the products?",
+  "options": [
+   "Less than 10 grams, because some mass becomes energy",
+   "Exactly 10 grams",
+   "More than 10 grams, because new bonds add mass",
+   "It cannot be predicted without the balanced equation"
+  ]
+ },
+ {
+  "id": "S.3.4-001",
+  "format": "Multiple choice",
+  "stem": "Which change would NOT speed up a chemical reaction?",
+  "options": [
+   "Raising the temperature",
+   "Increasing the concentration of a reactant",
+   "Grinding a solid reactant into powder",
+   "Removing a catalyst"
+  ]
+ },
+ {
+  "id": "S.3.4-002",
+  "format": "Multiple choice",
+  "stem": "How does a catalyst speed up a reaction?",
+  "options": [
+   "It lowers the activation energy needed.",
+   "It raises the temperature of the mixture.",
+   "It is used up to supply extra energy.",
+   "It increases the total amount of product made."
+  ]
+ },
+ {
+  "id": "S.3.4-003",
+  "format": "Multiple choice",
+  "stem": "Why does food spoil more slowly in a refrigerator?",
+  "options": [
+   "Cold air contains less oxygen than warm air, so oxidation stops.",
+   "Cold temperatures kill the bacteria and molds that make food spoil.",
+   "Lower temperature slows particles, so reactions happen more slowly.",
+   "The refrigerator removes all moisture, so no reactions can occur."
+  ]
+ },
+ {
+  "id": "S.3.5-001",
+  "format": "Multiple choice",
+  "stem": "In salt water, what is the salt?",
+  "options": [
+   "The solvent",
+   "The solute",
+   "The solution",
+   "The precipitate"
+  ]
+ },
+ {
+  "id": "S.3.5-002",
+  "format": "Multiple choice",
+  "stem": "A red blood cell is placed in a hypertonic solution (one with a higher solute concentration than the cell). What happens to the cell?",
+  "options": [
+   "It swells and may burst.",
+   "It stays the same size.",
+   "It takes in salt from the solution and swells.",
+   "It shrinks as water leaves it."
+  ]
+ },
+ {
+  "id": "S.3.5-003",
+  "format": "Supply answer",
+  "stem": "How many grams of glucose are in 250 mL of a 5% (weight/volume) glucose solution? Enter a number.",
+  "options": []
+ },
+ {
+  "id": "S.3.6-001",
+  "format": "Multiple choice",
+  "stem": "A solution has a pH of 3. How would you describe it?",
+  "options": [
+   "Strongly basic",
+   "Weakly basic",
+   "Neutral",
+   "Acidic"
+  ]
+ },
+ {
+  "id": "S.3.6-002",
+  "format": "Multiple choice",
+  "stem": "A solution at pH 4 has how many times the hydrogen ion concentration of a solution at pH 6?",
+  "options": [
+   "2 times",
+   "20 times",
+   "100 times",
+   "1,000 times"
+  ]
+ },
+ {
+  "id": "S.3.6-003",
+  "format": "Multiple choice",
+  "stem": "When an acid reacts completely with a base, what are the usual products?",
+  "options": [
+   "A salt and water",
+   "Hydrogen gas only",
+   "A stronger acid",
+   "Oxygen and carbon dioxide"
+  ]
+ },
+ {
+  "id": "S.4.1-001",
+  "format": "Multiple choice",
+  "stem": "A nurse needs to measure exactly 37 mL of a liquid. Which of these tools gives the most precise measurement?",
+  "options": [
+   "Beaker",
+   "Erlenmeyer flask (cone-shaped)",
+   "Graduated cylinder",
+   "Test tube"
+  ]
+ },
+ {
+  "id": "S.4.1-002",
+  "format": "Supply answer",
+  "stem": "Convert 2.5 kilograms to grams. Enter a number.",
+  "options": []
+ },
+ {
+  "id": "S.4.1-003",
+  "format": "Multiple choice",
+  "stem": "How should you read the volume of water in a graduated cylinder?",
+  "options": [
+   "At the top edge of the curved surface, looking down from above",
+   "At the bottom of the curved surface (meniscus), with your eye level with it",
+   "At the highest marking on the cylinder that the water touches along the glass",
+   "At the average of the top and bottom of the curve, viewed from any angle"
+  ]
+ },
+ {
+  "id": "S.4.2-001",
+  "format": "Multiple choice",
+  "stem": "A student measures an enzyme's activity. Activity rises steadily from 20 °C to 40 °C, then drops sharply between 40 °C and 50 °C. What is the best prediction for its activity at 60 °C?",
+  "options": [
+   "Very low, because high heat changes the enzyme's shape",
+   "Higher than at 40 °C, because heat speeds up reactions",
+   "About the same as at 20 °C, because the curve repeats",
+   "Twice the activity at 40 °C, because the temperature is higher"
+  ]
+ },
+ {
+  "id": "S.4.2-002",
+  "format": "Multiple choice",
+  "stem": "A sealed syringe of air is kept at constant temperature. If you push the plunger in so the volume of air decreases, what happens to the pressure of the air?",
+  "options": [
+   "It decreases.",
+   "It stays the same.",
+   "It increases.",
+   "It drops to zero."
+  ]
+ },
+ {
+  "id": "S.4.2-003",
+  "format": "Multiple choice",
+  "stem": "A study finds that towns with more hospitals also have more deaths each year. What is the best conclusion?",
+  "options": [
+   "Hospitals cause more people to die, so towns should build fewer of them.",
+   "More deaths cause towns to build more hospitals to keep up with demand.",
+   "The data must contain an error, because hospitals are known to save lives.",
+   "They are correlated; a third factor, such as population, may explain both."
+  ]
+ },
+ {
+  "id": "S.4.3-001",
+  "format": "Multiple choice",
+  "stem": "Which statement is a testable hypothesis?",
+  "options": [
+   "Plants are the most beautiful living things.",
+   "If plants receive more light, then they will grow taller.",
+   "The plant grew 5 centimeters last week.",
+   "Plants are green because their leaves contain the pigment chlorophyll."
+  ]
+ },
+ {
+  "id": "S.4.3-002",
+  "format": "Multiple choice",
+  "stem": "Which statement about a patient is an inference rather than an observation?",
+  "options": [
+   "The patient's temperature is 39 °C.",
+   "The patient's skin is red and warm.",
+   "The patient probably has an infection.",
+   "The patient's heart rate is 110 beats per minute."
+  ]
+ },
+ {
+  "id": "S.4.3-003",
+  "format": "Multiple choice",
+  "stem": "Which evidence would best support the claim that Drug X lowers blood pressure?",
+  "options": [
+   "A well-known athlete says Drug X lowered her own blood pressure.",
+   "Ten people who already take Drug X say on a survey that they now feel much healthier.",
+   "An advertisement from the drug's maker says it is the best treatment.",
+   "In a large randomized trial, Drug X lowered pressure more than a placebo did."
+  ]
+ },
+ {
+  "id": "S.4.4-001",
+  "format": "Multiple choice",
+  "stem": "A student tests how fertilizer affects plant growth. She gives four groups of plants 0, 5, 10 and 15 grams of fertilizer and measures their height after three weeks. What is the independent variable?",
+  "options": [
+   "The amount of fertilizer",
+   "The height of the plants",
+   "The length of the experiment",
+   "The amount of water given"
+  ]
+ },
+ {
+  "id": "S.4.4-002",
+  "format": "Multiple choice",
+  "stem": "In the same fertilizer experiment, what is the purpose of the group that receives 0 grams of fertilizer?",
+  "options": [
+   "It is the dependent variable.",
+   "It is the control group for comparison.",
+   "It only increases the total sample size.",
+   "It proves that the hypothesis is correct."
+  ]
+ },
+ {
+  "id": "S.4.4-003",
+  "format": "Ordered response",
+  "stem": "Put these steps of the scientific method in the usual order.",
+  "options": [
+   "Analyze the data",
+   "Form a hypothesis",
+   "Make an observation and ask a question",
+   "Conduct an experiment",
+   "Draw a conclusion"
+  ]
+ }
+]

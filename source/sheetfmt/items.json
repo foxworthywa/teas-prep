@@ -1,0 +1,3 @@
+{"rules":[{"range":"A1:V2000","font":"Arial","valign":"top"},{"range":"A1:V1","bold": true, "bg": "#1F3864", "fg": "#FFFFFF", "wrap": true, "valign": "middle"},{"range":"F2:O2000","wrap":true},{"range":"T2:T2000","wrap":true},{"range":"A2:V2","italic":true,"fg":"#666666"},{"range":"V2:V2000","number":"text"}],
+ "freeze":{"rows":1,"columns":1},
+ "col_widths":{"A":100,"B":85,"C":90,"D":95,"E":130,"F":380,"G:L":160,"M":110,"N":320,"O":320,"P":95,"Q":100,"R":130,"S":130,"T":260,"U":120,"V":100},"row_heights":{"1":40}}

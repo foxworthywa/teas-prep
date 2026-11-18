@@ -1,0 +1,192 @@
+[
+ {
+  "id": "M.1.2-001",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.2",
+  "format": "Multiple choice",
+  "stem": "What is 2/3 + 1/4?",
+  "options": [
+   "3/7",
+   "11/12",
+   "2/12",
+   "11/24"
+  ],
+  "answer": "B",
+  "explanation": "Use a common denominator of 12: 2/3 = 8/12 and 1/4 = 3/12. 8/12 + 3/12 = 11/12.",
+  "distractors": "A: adds numerators and denominators straight across. C: multiplies the fractions instead of adding. D: correct numerator, but doubles the common denominator.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.3-002",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.3",
+  "format": "Multiple choice",
+  "stem": "Which of these values is the greatest?",
+  "options": [
+   "0.09",
+   "1/9",
+   "11%",
+   "0.1"
+  ],
+  "answer": "B",
+  "explanation": "As decimals: 0.09, 1/9 ≈ 0.111, 11% = 0.11, and 0.1. The greatest is 1/9 (0.111 is a little more than 0.110).",
+  "distractors": "A: 0.09 is the smallest. C: 11% = 0.110, just less than 0.111. D: 0.1 is less than 0.111.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.4-001",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.4",
+  "format": "Multiple choice",
+  "stem": "Solve for x: 3x − 7 = 11",
+  "options": [
+   "4/3",
+   "18",
+   "6",
+   "11/3"
+  ],
+  "answer": "C",
+  "explanation": "Add 7 to both sides: 3x = 18. Divide both sides by 3: x = 6. Check: 3(6) − 7 = 11.",
+  "distractors": "A: subtracts 7 instead of adding it (3x = 4). B: stops before dividing by 3. D: ignores the −7 (3x = 11).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.5-002",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.5",
+  "format": "Multiple choice",
+  "stem": "A nurse works three 12-hour shifts each week and earns $32.50 per hour. What is the nurse's weekly pay before taxes?",
+  "options": [
+   "$1,152.00",
+   "$1,170.00",
+   "$1,188.00",
+   "$390.00"
+  ],
+  "answer": "B",
+  "explanation": "Hours: 3 × 12 = 36. Pay: 36 × $32.50 = $1,170.00.",
+  "distractors": "A: drops the $0.50 (36 × $32). C: rounds the rate up to $33. D: pays for only one 12-hour shift.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.7-001",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.7",
+  "format": "Multiple choice",
+  "stem": "A calculated medication volume is 3.4762 mL. The syringe is marked in hundredths of a milliliter. Round the volume to the nearest hundredth.",
+  "options": [
+   "3.48 mL",
+   "3.47 mL",
+   "3.5 mL",
+   "3.476 mL"
+  ],
+  "answer": "A",
+  "explanation": "The hundredths digit is 7. The next digit, 6, is 5 or more, so round up: 3.48 mL.",
+  "distractors": "B: truncates instead of rounding. C: rounds to the nearest tenth. D: rounds to the nearest thousandth.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.7-002",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.7",
+  "format": "Multiple choice",
+  "stem": "A student buys 12.2 gallons of gas at $3.89 per gallon. By first rounding each number to the nearest whole number, estimate the cost.",
+  "options": [
+   "$36",
+   "$48",
+   "$52",
+   "$40"
+  ],
+  "answer": "B",
+  "explanation": "12.2 rounds to 12 and $3.89 rounds to $4. 12 × $4 = $48. (The exact cost is about $47.46.)",
+  "distractors": "A: drops the decimals instead of rounding (12 × 3). C: rounds both numbers up (13 × 4). D: rounds 12.2 to 10.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.9-002",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.9",
+  "format": "Multiple choice",
+  "stem": "A car travels 150 miles in 2.5 hours. What is its average speed?",
+  "options": [
+   "375 miles per hour",
+   "75 miles per hour",
+   "60 miles per hour",
+   "50 miles per hour"
+  ],
+  "answer": "C",
+  "explanation": "Speed = distance ÷ time = 150 ÷ 2.5 = 60 miles per hour.",
+  "distractors": "A: multiplies instead of dividing. B: ignores the half hour (150 ÷ 2). D: rounds 2.5 hours up to 3 (150 ÷ 3).",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.10-001",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.10",
+  "format": "Multiple choice",
+  "stem": "A gym charges a $50 sign-up fee plus $25 per month. Which expression gives the total cost for m months?",
+  "options": [
+   "50 + 25m",
+   "25 + 50m",
+   "75m",
+   "50m + 25"
+  ],
+  "answer": "A",
+  "explanation": "The $50 fee is paid once; $25 is paid each month, so 25m. Total: 50 + 25m.",
+  "distractors": "B: swaps the one-time and monthly amounts. C: charges the sign-up fee every month. D: charges the $50 fee every month and the monthly fee only once.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.1-001",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.1",
+  "format": "Multiple choice",
+  "stem": "A patient's temperature was recorded each morning:\n\nDay | Temperature\nMonday | 98.6 °F\nTuesday | 99.1 °F\nWednesday | 100.4 °F\nThursday | 99.5 °F\nFriday | 98.8 °F\n\nBy how much did the temperature rise from Monday to its highest reading?",
+  "options": [
+   "0.5 °F",
+   "1.4 °F",
+   "1.8 °F",
+   "2.2 °F"
+  ],
+  "answer": "C",
+  "explanation": "The highest reading is Wednesday, 100.4 °F. 100.4 − 98.6 = 1.8 °F.",
+  "distractors": "A: Monday to Tuesday only. B: 100 − 98.6, dropping the 0.4. D: subtraction without borrowing correctly.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.1-002",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.1",
+  "format": "Multiple choice",
+  "stem": "A clinic recorded these monthly visits:\n\nMonth | Visits\nJanuary | 120\nFebruary | 150\nMarch | 140\nApril | 180\n\nBetween which two consecutive months did visits increase the most?",
+  "options": [
+   "January to February",
+   "February to March",
+   "March to April",
+   "January to April"
+  ],
+  "answer": "C",
+  "explanation": "Changes: January to February +30, February to March −10, March to April +40. The largest increase between consecutive months is March to April.",
+  "distractors": "A: an increase of 30, less than 40. B: visits went down. D: January and April are not consecutive months.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

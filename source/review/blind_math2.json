@@ -1,0 +1,309 @@
+[
+ {
+  "id": "M.1.1-003",
+  "format": "Multiple choice",
+  "stem": "A patient has taken 3/5 of a prescribed course of antibiotics. What percent of the course is left?",
+  "options": [
+   "60%",
+   "0.4%",
+   "40%",
+   "4%"
+  ]
+ },
+ {
+  "id": "M.1.1-004",
+  "format": "Select all",
+  "stem": "Which of these are equal to 3/4? Select all that apply.",
+  "options": [
+   "0.75",
+   "75%",
+   "0.34",
+   "7.5%",
+   "6/8"
+  ]
+ },
+ {
+  "id": "M.1.2-003",
+  "format": "Multiple choice",
+  "stem": "A recipe calls for 2 1/2 cups of flour. How many cups are needed to make 1 1/2 batches?",
+  "options": [
+   "4",
+   "2 1/4",
+   "1 2/3",
+   "3 3/4"
+  ]
+ },
+ {
+  "id": "M.1.2-004",
+  "format": "Supply answer",
+  "stem": "Evaluate: 18 − 4 × (5 − 2)² ÷ 6. Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.1.3-003",
+  "format": "Multiple choice",
+  "stem": "Which list is in order from least to greatest?",
+  "options": [
+   "−1/2, −0.6, 0.05, 1/4",
+   "−0.6, −1/2, 0.05, 1/4",
+   "−0.6, −1/2, 1/4, 0.05",
+   "0.05, 1/4, −1/2, −0.6"
+  ]
+ },
+ {
+  "id": "M.1.3-004",
+  "format": "Multiple choice",
+  "stem": "Four students reported their quiz results: Ana 5/6, Ben 0.83, Cal 82%, Dee 4/5. Who scored the highest?",
+  "options": [
+   "Ana",
+   "Ben",
+   "Cal",
+   "Dee"
+  ]
+ },
+ {
+  "id": "M.1.4-003",
+  "format": "Multiple choice",
+  "stem": "Solve for x: 2(3x − 4) = 4x + 10",
+  "options": [
+   "7",
+   "1",
+   "9",
+   "18"
+  ]
+ },
+ {
+  "id": "M.1.4-004",
+  "format": "Supply answer",
+  "stem": "Solve for x: x/3 − 4 = 2. Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.1.5-003",
+  "format": "Multiple choice",
+  "stem": "An IV of 1,500 mL is ordered to run over 12 hours. After 5 hours, only 500 mL has been infused. To the nearest whole number, at what rate in mL per hour must the rest run to finish on time?",
+  "options": [
+   "125 mL/hr",
+   "143 mL/hr",
+   "200 mL/hr",
+   "100 mL/hr"
+  ]
+ },
+ {
+  "id": "M.1.5-004",
+  "format": "Multiple choice",
+  "stem": "Store A sells 3 pounds of apples for $7.47. Store B sells 5 pounds for $11.95. How much do you save per pound by buying at Store B?",
+  "options": [
+   "$0.10",
+   "$2.39",
+   "$4.48",
+   "$2.49"
+  ]
+ },
+ {
+  "id": "M.1.6-003",
+  "format": "Multiple choice",
+  "stem": "A store marks up an $80 item by 25%. Later it puts the item on sale at 30% off the marked-up price. What is the sale price?",
+  "options": [
+   "$76",
+   "$70",
+   "$100",
+   "$56"
+  ]
+ },
+ {
+  "id": "M.1.6-004",
+  "format": "Supply answer",
+  "stem": "A town's population grew from 2,400 to 2,700. What was the percent increase? Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.1.7-003",
+  "format": "Multiple choice",
+  "stem": "A family's weekly grocery bills were $187.42, $203.15, $194.88 and $212.67. Estimate the four-week total by first rounding each bill to the nearest ten dollars.",
+  "options": [
+   "$790",
+   "$800",
+   "$780",
+   "$820"
+  ]
+ },
+ {
+  "id": "M.1.7-004",
+  "format": "Multiple choice",
+  "stem": "Which is the best estimate of 0.48 × 612?",
+  "options": [
+   "30",
+   "600",
+   "3,000",
+   "300"
+  ]
+ },
+ {
+  "id": "M.1.8-003",
+  "format": "Multiple choice",
+  "stem": "On a map, 1 cm represents 2.5 km. Two towns are 18.5 km apart. How far apart are they on the map?",
+  "options": [
+   "46.25 cm",
+   "16 cm",
+   "0.74 cm",
+   "7.4 cm"
+  ]
+ },
+ {
+  "id": "M.1.8-004",
+  "format": "Supply answer",
+  "stem": "A child weighs 44 lb. A medication is ordered at 15 mg per kg of body weight. How many milligrams should the child receive? (1 kg = 2.2 lb) Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.1.9-003",
+  "format": "Multiple choice",
+  "stem": "A cleaning solution mixes concentrate and water in a ratio of 2:7. How much concentrate is needed to make 1,350 mL of solution?",
+  "options": [
+   "300 mL",
+   "386 mL",
+   "150 mL",
+   "1,050 mL"
+  ]
+ },
+ {
+  "id": "M.1.9-004",
+  "format": "Multiple choice",
+  "stem": "A runner finishes a 10-kilometer race in 50 minutes. What is her average speed in kilometers per hour?",
+  "options": [
+   "0.2 km/hr",
+   "5 km/hr",
+   "12 km/hr",
+   "20 km/hr"
+  ]
+ },
+ {
+  "id": "M.1.10-003",
+  "format": "Multiple choice",
+  "stem": "A plumber charges a $65 service fee plus $45 per hour. A customer's bill is $290. How many hours did the plumber work?",
+  "options": [
+   "6.4 hours",
+   "5 hours",
+   "7.9 hours",
+   "3.5 hours"
+  ]
+ },
+ {
+  "id": "M.1.10-004",
+  "format": "Select all",
+  "stem": "Which values of x make the inequality −2x + 5 > 11 true? Select all that apply.",
+  "options": [
+   "−5",
+   "−3",
+   "0",
+   "−4",
+   "3"
+  ]
+ },
+ {
+  "id": "M.2.1-003",
+  "format": "Multiple choice",
+  "stem": "A hospital unit's yearly budget of $350,000 is divided as follows:\n\nCategory | Share of budget\nStaff | 62%\nSupplies | 18%\nEquipment | 12%\nOther | 8%\n\nHow much more is budgeted for supplies than for equipment?",
+  "options": [
+   "$63,000",
+   "$42,000",
+   "$6,000",
+   "$21,000"
+  ]
+ },
+ {
+  "id": "M.2.1-004",
+  "format": "Multiple choice",
+  "stem": "The table shows hours of sleep for three students:\n\nStudent | Mon | Tue | Wed\nAnn | 7 | 6 | 8\nBo | 5 | 7 | 6\nCy | 8 | 8 | 6\n\nWhich student averaged the most sleep over the three nights?",
+  "options": [
+   "Ann",
+   "Bo",
+   "Cy",
+   "All three averaged the same."
+  ]
+ },
+ {
+  "id": "M.2.2-003",
+  "format": "Multiple choice",
+  "stem": "The mean of six test scores is 84. Five of the scores are 80, 90, 76, 88 and 85. What is the sixth score?",
+  "options": [
+   "85",
+   "84",
+   "83.8",
+   "81"
+  ]
+ },
+ {
+  "id": "M.2.2-004",
+  "format": "Multiple choice",
+  "stem": "The ages of six people at a meeting are 22, 24, 25, 27, 29 and 71. Which measure best describes a typical age in this group?",
+  "options": [
+   "Mean",
+   "Range",
+   "Mode",
+   "Median"
+  ]
+ },
+ {
+  "id": "M.2.3-003",
+  "format": "Multiple choice",
+  "stem": "The table shows the cost of renting a canoe:\n\nHours (x) | Cost (y)\n0 | $40\n1 | $65\n2 | $90\n3 | $115\n\nWhich equation fits the table?",
+  "options": [
+   "y = 40x + 25",
+   "y = 65x",
+   "y = 25x + 40",
+   "y = 25x"
+  ]
+ },
+ {
+  "id": "M.2.3-004",
+  "format": "Multiple choice",
+  "stem": "A plant's height in centimeters is modeled by h = 1.5w + 4, where w is the number of weeks after planting. What does the 1.5 represent?",
+  "options": [
+   "The weekly growth in cm",
+   "The height when it was planted",
+   "The height after one week",
+   "The number of weeks to grow 4 cm"
+  ]
+ },
+ {
+  "id": "M.2.4-003",
+  "format": "Multiple choice",
+  "stem": "A rectangular garden is 20 ft by 12 ft. A path 3 ft wide runs around the outside of the garden. What is the area of the path alone?",
+  "options": [
+   "192 square feet",
+   "228 square feet",
+   "468 square feet",
+   "96 square feet"
+  ]
+ },
+ {
+  "id": "M.2.4-004",
+  "format": "Supply answer",
+  "stem": "A cylinder has a radius of 3 cm and a height of 10 cm. What is its volume in cubic centimeters? (Use π ≈ 3.14.) Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.2.5-003",
+  "format": "Multiple choice",
+  "stem": "An IV runs at 125 mL per hour. How many liters are infused in 8 hours?",
+  "options": [
+   "1,000 L",
+   "10 L",
+   "1 L",
+   "0.1 L"
+  ]
+ },
+ {
+  "id": "M.2.5-004",
+  "format": "Multiple choice",
+  "stem": "A patient drinks 2 cups of coffee, one 12-fl-oz can of soda and 500 mL of water. What is the total intake in milliliters? (1 cup = 8 fl oz; 1 fl oz = 30 mL)",
+  "options": [
+   "920 mL",
+   "1,340 mL",
+   "980 mL",
+   "840 mL"
+  ]
+ }
+]

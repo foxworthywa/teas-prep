@@ -1,0 +1,231 @@
+[
+ {
+  "id": "S.2.4-007",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "The stomach enzyme pepsin works best at about pH 2. What happens to pepsin's activity when it enters the small intestine, where the pH is about 8?",
+  "options": [
+   "It increases, because enzymes work faster at higher pH.",
+   "It stays the same, because enzymes are not used up.",
+   "It drops sharply, as the higher pH alters pepsin's shape.",
+   "It changes so that it digests fats instead of proteins."
+  ],
+  "answer": "C",
+  "explanation": "Each enzyme has an optimum pH. Far from it, the enzyme's shape (and its active site) changes, so the substrate no longer fits and activity drops.",
+  "distractors": "A: each enzyme has its own optimum; pepsin's is acidic. B: enzymes are reusable, but they can still be inactivated by the wrong pH. D: an enzyme's job is set by its shape; it doesn't switch to a different substrate.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-004",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Multiple choice",
+  "stem": "Why should patients take antibiotics exactly as prescribed, rather than skipping doses or stopping on their own?",
+  "options": [
+   "Misuse lets less-susceptible bacteria survive and spread.",
+   "The body stores leftover antibiotic for future infections.",
+   "Antibiotics also help clear viral infections.",
+   "Extra doses help the immune system make antibodies."
+  ],
+  "answer": "A",
+  "explanation": "Using antibiotics incorrectly (skipping doses, stopping on one's own, or using them when they aren't needed) gives bacteria that are less affected by the drug a chance to survive and multiply, which contributes to antibiotic resistance. The prescriber sets the dose and length of treatment, so patients should follow it exactly.",
+  "distractors": "B: the body does not store antibiotics for later. C: antibiotics do not work on viruses. D: antibodies come from the immune system's response to a pathogen, not from antibiotic doses.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "Hemophilia is an X-linked recessive trait. A carrier mother and an unaffected father have a son. What is the probability that he has hemophilia?",
+  "options": [
+   "0",
+   "1/4",
+   "1/2",
+   "1"
+  ],
+  "answer": "C",
+  "explanation": "Sons get their X from the mother and their Y from the father. The mother (XᴴXʰ) passes Xʰ half the time, so each son has a 1/2 chance of hemophilia.",
+  "distractors": "A: the mother carries the allele, so a son can be affected. B: the chance that any child (son or daughter) is an affected son. D: only half of the mother's X chromosomes carry the allele.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-008",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "A tall pea plant of unknown genotype is crossed with a short plant (tt). Half of the offspring are short. What is the genotype of the tall parent?",
+  "options": [
+   "Tt",
+   "TT",
+   "TT; the short offspring came from mutations.",
+   "It cannot be determined."
+  ],
+  "answer": "A",
+  "explanation": "Short offspring (tt) must get a t from each parent, so the tall parent must carry t: it is Tt. Tt × tt gives half Tt (tall) and half tt (short).",
+  "distractors": "B: TT × tt would give all tall (Tt) offspring. C: half the offspring being short is far too many to blame on chance mutations. D: the short offspring reveal the hidden allele; this is the purpose of a test cross.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-008",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "Deleting one nucleotide near the start of a gene usually harms the protein more than substituting one nucleotide. Why?",
+  "options": [
+   "It shifts how every later codon is read.",
+   "It changes only the last amino acid.",
+   "It changes only the one amino acid at that spot.",
+   "It prevents the gene from being copied at all."
+  ],
+  "answer": "A",
+  "explanation": "Codons are read three bases at a time. Deleting one base shifts how every later group of three is read (a frameshift), so most amino acids after that point change, and a stop codon often appears early.",
+  "distractors": "B: the change starts at the deletion, not at the end of the protein. C: that describes a single substitution; a deletion affects every codon after it. D: the gene can still be transcribed; the message is garbled.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "The enzyme lactase splits lactose (milk sugar) into glucose and galactose. What type of reaction is this?",
+  "options": [
+   "Hydrolysis",
+   "Dehydration synthesis",
+   "Denaturation",
+   "Neutralization"
+  ],
+  "answer": "A",
+  "explanation": "Hydrolysis breaks a bond by adding water. Digestion of larger molecules into smaller units, like lactose into two simple sugars, is hydrolysis.",
+  "distractors": "B: dehydration synthesis is the reverse: it joins units and removes water. C: denaturation changes a protein's shape. D: neutralization is an acid reacting with a base.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-006",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "Which element is found in all proteins but not in simple sugars such as glucose?",
+  "options": [
+   "Carbon",
+   "Hydrogen",
+   "Oxygen",
+   "Nitrogen"
+  ],
+  "answer": "D",
+  "explanation": "Every amino acid has an amino group containing nitrogen. Simple sugars such as glucose contain only carbon, hydrogen and oxygen.",
+  "distractors": "A, B and C: carbon, hydrogen and oxygen are found in both carbohydrates and proteins.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Select all",
+  "stem": "Which of these diseases are caused by viruses? Select all that apply.",
+  "options": [
+   "Strep throat",
+   "Influenza",
+   "Tuberculosis",
+   "Measles",
+   "HIV/AIDS"
+  ],
+  "answer": "B, D, E",
+  "explanation": "Influenza, measles and HIV/AIDS are viral diseases.",
+  "distractors": "A and C: strep throat and tuberculosis are bacterial infections, which is why they are treated with antibiotics.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-004",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "An antacid tablet fizzes as it reacts with water. Which conditions would make the reaction finish fastest?",
+  "options": [
+   "A whole tablet in cold water",
+   "A whole tablet in warm water",
+   "A crushed tablet in cold water",
+   "A crushed tablet in warm water"
+  ],
+  "answer": "D",
+  "explanation": "Crushing increases surface area, so more particles can react at once, and warmer water makes particles move faster and collide harder. Both speed the reaction.",
+  "distractors": "A: neither change; the slowest. B: warmer water helps, but the whole tablet has less surface area. C: crushing helps, but cold water slows the particles.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "Antacid tablets relieve heartburn caused by stomach acid. How do they change the pH in the stomach?",
+  "options": [
+   "They are bases, so they raise the pH toward neutral.",
+   "They are bases, so they lower the pH further.",
+   "They are acids, so they raise the pH toward neutral.",
+   "They add H⁺ ions, so they raise the pH."
+  ],
+  "answer": "A",
+  "explanation": "Antacids contain mild bases, such as magnesium hydroxide or calcium carbonate. They react with stomach acid, removing H⁺ ions, so the pH rises toward neutral. (Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O; calcium carbonate also gives off CO₂.)",
+  "distractors": "B: removing acid raises the pH; a lower pH means more acid. C: adding acid would worsen heartburn. D: adding H⁺ would lower the pH, not raise it.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "Methane burns according to CH₄ + 2O₂ → CO₂ + 2H₂O. How many molecules of O₂ are needed to burn 5 molecules of CH₄ completely?",
+  "options": [
+   "2",
+   "5",
+   "10",
+   "20"
+  ],
+  "answer": "C",
+  "explanation": "The equation shows 2 O₂ for every 1 CH₄. So 5 CH₄ need 5 × 2 = 10 O₂.",
+  "distractors": "A: copies the coefficient from the equation. B: assumes a 1:1 ratio. D: counts oxygen atoms (10 × 2) instead of O₂ molecules.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-007",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "Burning wood gives off heat and light. How is this reaction classified?",
+  "options": [
+   "Endothermic",
+   "A physical change",
+   "Exothermic",
+   "A decomposition reaction"
+  ],
+  "answer": "C",
+  "explanation": "A reaction that releases energy to its surroundings is exothermic. Burning (combustion) is exothermic.",
+  "distractors": "A: endothermic reactions absorb energy from their surroundings. B: burning forms new substances (ash, carbon dioxide, water vapor), so it is a chemical change. D: burning combines fuel with oxygen; it is a combustion reaction, not a decomposition.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

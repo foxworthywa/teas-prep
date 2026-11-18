@@ -1,0 +1,136 @@
+[
+ {
+  "id": "M.1.10-003",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.10",
+  "format": "Multiple choice",
+  "stem": "A plumber charges a $50 service fee plus $25 per hour. A customer's bill is $200. How many hours did the plumber work?",
+  "options": [
+   "8 hours",
+   "6 hours",
+   "10 hours",
+   "3 hours"
+  ],
+  "answer": "B",
+  "explanation": "Set up 50 + 25h = 200. Subtract 50: 25h = 150. Divide by 25: h = 6 hours.",
+  "distractors": "A: divides the whole bill by the hourly rate (200 ÷ 25) and ignores the fee. C: adds the fee instead of subtracting it ((200 + 50) ÷ 25). D: divides the remaining $150 by the $50 fee instead of the hourly rate.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.10-004",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.10",
+  "format": "Select all",
+  "stem": "A phone's battery is at 85% and drops 4% for each hour of video. The inequality 85 − 4h > 20 describes keeping the battery above 20%. Which numbers of hours, h, satisfy the inequality? Select all that apply.",
+  "options": [
+   "10",
+   "16",
+   "17",
+   "20",
+   "15"
+  ],
+  "answer": "A, B, E",
+  "explanation": "Subtract 85: −4h > −65. Divide by −4 and flip the sign: h < 16.25. Of the choices, 10, 16 and 15 are less than 16.25.",
+  "distractors": "C and D: forgetting to flip the sign gives h > 16.25, which would wrongly select 17 and 20.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.7-004",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.7",
+  "format": "Multiple choice",
+  "stem": "A clinic saw 612 patients last month, and 48% of them were over age 50. Which is the best estimate of the number of patients over age 50?",
+  "options": [
+   "30",
+   "600",
+   "3,000",
+   "300"
+  ],
+  "answer": "D",
+  "explanation": "48% is close to 50% (one half), and 612 is close to 600. Half of 600 is 300. (The exact value is 293.76, about 294 patients.)",
+  "distractors": "A and C: misplace the decimal point. B: ignores the 0.48 and keeps only 612 rounded.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.1-004",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.1",
+  "format": "Multiple choice",
+  "stem": "The table shows hours of sleep for three students:\n\nStudent | Mon | Tue | Wed\nAnn | 9 | 5 | 7\nBo | 5 | 7 | 6\nCy | 8 | 8 | 6\n\nWhich student averaged the most sleep over the three nights?",
+  "options": [
+   "Ann",
+   "Bo",
+   "Cy",
+   "Ann and Cy averaged the same."
+  ],
+  "answer": "C",
+  "explanation": "Averages: Ann (9 + 5 + 7) ÷ 3 = 7. Bo (5 + 7 + 6) ÷ 3 = 6. Cy (8 + 8 + 6) ÷ 3 ≈ 7.33. Cy is highest.",
+  "distractors": "A: Ann had the single longest night (9 hours), but her average is lower. B: Bo has the lowest average. D: rounds Cy's 7.33 down to 7 and calls it a tie.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.2-003",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.2",
+  "format": "Multiple choice",
+  "stem": "The mean of six test scores is 84. Five of the scores are 80, 90, 76, 88 and 85. What is the sixth score?",
+  "options": [
+   "85",
+   "84",
+   "83.8",
+   "83"
+  ],
+  "answer": "A",
+  "explanation": "Total of all six = 84 × 6 = 504. Sum of the five = 419. Sixth score = 504 − 419 = 85.",
+  "distractors": "B: assumes the missing score equals the mean. C: the mean of the five known scores (419 ÷ 5). D: uses differences from the mean (−4, +6, −8, +4, +1 = −1) but gets the sign wrong (84 − 1 instead of 84 + 1).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.1.3-004",
+  "section": "Math",
+  "subarea": "M.1",
+  "objective": "M.1.3",
+  "format": "Multiple choice",
+  "stem": "Four students reported their quiz results: Ana 5/6, Ben 0.81, Cal 82%, Dee 4/5. Who scored the highest?",
+  "options": [
+   "Ana",
+   "Ben",
+   "Cal",
+   "Dee"
+  ],
+  "answer": "A",
+  "explanation": "As decimals: Ana 0.833…, Ben 0.81, Cal 0.82, Dee 0.80. Ana's 5/6 is the greatest.",
+  "distractors": "B: 0.81 is less than 0.82 and 0.833. C: 82% = 0.82, less than 0.833. D: treats 4/5 as larger because 4 and 5 are close; 4/5 = 0.80.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.4-003",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.4",
+  "format": "Multiple choice",
+  "stem": "A rectangular garden is 20 ft by 12 ft. A path 3 ft wide runs around the outside of the garden. What is the area of the path alone?",
+  "options": [
+   "192 square feet",
+   "228 square feet",
+   "468 square feet",
+   "96 square feet"
+  ],
+  "answer": "B",
+  "explanation": "With the path, the outer rectangle is (20 + 6) by (12 + 6) = 26 ft by 18 ft = 468 ft². Subtract the garden: 468 − 240 = 228 ft².",
+  "distractors": "A: adds the four side strips of the path but leaves out the four 3 × 3 ft corner squares (228 − 36). C: the total area including the garden. D: multiplies the path width by half the perimeter (3 × 32).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ }
+]

@@ -1,0 +1,136 @@
+[
+ {
+  "id": "S.3.2-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Select all",
+  "stem": "Which of the following are physical changes? Select all that apply.",
+  "options": [
+   "Cutting paper",
+   "Burning wood",
+   "Melting butter",
+   "Baking a cake",
+   "Dissolving sugar in water"
+  ],
+  "answer": "A, C, E",
+  "explanation": "In a physical change the substance keeps its identity: cut paper is still paper, melted butter is still butter, and dissolved sugar is still sugar (evaporate the water and it is left behind).",
+  "distractors": "B and D are chemical changes: burning and baking form new substances (ash, gases, new compounds in the cake).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "Why does food spoil more slowly in a refrigerator?",
+  "options": [
+   "Cold makes food molecules more stable by adding energy to them.",
+   "Cold temperatures kill the bacteria and molds that make food spoil.",
+   "Lower temperature slows particles, so reactions happen more slowly.",
+   "The refrigerator removes moisture, which spoilage reactions need."
+  ],
+  "answer": "C",
+  "explanation": "Spoilage involves chemical reactions, many driven by microbes' enzymes. At lower temperature particles move more slowly and collide less often and with less energy, so the reactions slow down.",
+  "distractors": "A: cooling removes energy; it does not add it. B: refrigeration slows the growth of most bacteria and molds but does not kill them. D: refrigerators do not dry food out enough to matter, and reactions still occur, just more slowly.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-001",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "A solution has a pH of 3. Which statement best describes it?",
+  "options": [
+   "It is acidic, with more H⁺ ions than pure water.",
+   "It is basic, with more OH⁻ ions than pure water.",
+   "It is neutral, like pure water.",
+   "It is acidic, with fewer H⁺ ions than pure water."
+  ],
+  "answer": "A",
+  "explanation": "Below pH 7 is acidic, and a lower pH means more hydrogen ions. pH 3 has 10,000 times the H⁺ concentration of pure water (pH 7).",
+  "distractors": "B: basic solutions have pH above 7. C: neutral is pH 7. D: acidic is right, but acids have more H⁺ than water, not fewer; this reverses the scale.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-003",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "Water in a graduated cylinder has a curved surface (a meniscus). How should you read the volume?",
+  "options": [
+   "At the top edge of the curved surface, looking down from above",
+   "At the bottom of the curve, with your eye level with it",
+   "At the highest marking on the cylinder that the water touches along the glass",
+   "At the average of the top and bottom of the curve, viewed from any angle"
+  ],
+  "answer": "B",
+  "explanation": "Water curves down in the middle, forming a meniscus. Read the bottom of the meniscus with your eye level with it to avoid parallax error.",
+  "distractors": "A: reading the edge overestimates the volume, and looking from above adds parallax error. C: water clings up the glass at the edges, so this overestimates. D: there is no averaging rule, and reading from an angle causes error.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-003",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A student records the boiling point of water at different altitudes: sea level, 100 °C; 1,500 m, 95 °C; 3,000 m, 90 °C. Assuming the pattern continues, what is the best prediction for the boiling point at 4,500 m?",
+  "options": [
+   "80 °C",
+   "85 °C",
+   "90 °C",
+   "95 °C"
+  ],
+  "answer": "B",
+  "explanation": "The boiling point drops about 5 °C for every 1,500 m of altitude. One more 1,500 m step below 90 °C gives 85 °C.",
+  "distractors": "A: drops 10 °C, twice the observed step. C: assumes the boiling point stops changing. D: reverses the trend.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-002",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "A student gives four groups of plants 0, 5, 10 and 15 grams of fertilizer and measures their height after three weeks. What is the purpose of the group that receives 0 grams?",
+  "options": [
+   "It is the dependent variable.",
+   "It is the control group for comparison.",
+   "It only increases the total sample size.",
+   "It proves that the hypothesis is correct."
+  ],
+  "answer": "B",
+  "explanation": "The 0-gram group is the control: it shows how plants grow without the treatment, so the effect of fertilizer can be measured against it.",
+  "distractors": "A: the dependent variable is plant height, a measurement, not a group. C: it adds plants, but its real purpose is comparison. D: experiments support or refute a hypothesis; they do not prove it.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-004",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "Which statement is a testable hypothesis?",
+  "options": [
+   "Plants are the most beautiful living things.",
+   "If plants receive more light, then they will grow taller.",
+   "The plant grew 5 centimeters last week.",
+   "Gardeners should water their plants every morning."
+  ],
+  "answer": "B",
+  "explanation": "A hypothesis is a testable prediction, often in if-then form, that an experiment can support or refute.",
+  "distractors": "A: an opinion cannot be tested. C: an observation (a measurement already made). D: a recommendation, not a prediction an experiment could support or refute.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ }
+]

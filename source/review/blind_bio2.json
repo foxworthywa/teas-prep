@@ -1,0 +1,268 @@
+[
+ {
+  "id": "S.2.1-006",
+  "format": "Multiple choice",
+  "stem": "A cell is placed in a solution, and water moves out of the cell, causing it to shrink. What kind of solution is it?",
+  "options": [
+   "Hypotonic",
+   "Isotonic",
+   "Hypertonic",
+   "Saturated"
+  ]
+ },
+ {
+  "id": "S.2.1-007",
+  "format": "Multiple choice",
+  "stem": "A cell moves sodium ions out across its membrane, from an area of lower concentration to an area of higher concentration. Which process is this?",
+  "options": [
+   "Simple diffusion",
+   "Osmosis",
+   "Facilitated diffusion",
+   "Active transport"
+  ]
+ },
+ {
+  "id": "S.2.1-008",
+  "format": "Multiple choice",
+  "stem": "Cells in the pancreas make large amounts of digestive enzymes, which are proteins, for export. Which organelle would you expect to be especially abundant in these cells?",
+  "options": [
+   "Smooth endoplasmic reticulum",
+   "Rough endoplasmic reticulum",
+   "Lysosomes",
+   "Centrioles"
+  ]
+ },
+ {
+  "id": "S.2.1-009",
+  "format": "Ordered response",
+  "stem": "Put the stages of mitosis in order.",
+  "options": [
+   "Anaphase",
+   "Prophase",
+   "Telophase",
+   "Metaphase"
+  ]
+ },
+ {
+  "id": "S.2.1-010",
+  "format": "Multiple choice",
+  "stem": "During which phase of meiosis does crossing over between homologous chromosomes occur?",
+  "options": [
+   "Prophase I",
+   "Metaphase II",
+   "Anaphase I",
+   "Telophase II"
+  ]
+ },
+ {
+  "id": "S.2.1-011",
+  "format": "Select all",
+  "stem": "Which structures are found in prokaryotic cells such as bacteria? Select all that apply.",
+  "options": [
+   "Ribosomes",
+   "Nucleus",
+   "Cell membrane",
+   "Mitochondria",
+   "DNA"
+  ]
+ },
+ {
+  "id": "S.2.2-004",
+  "format": "Multiple choice",
+  "stem": "Which nitrogen base is found in RNA but not in DNA?",
+  "options": [
+   "Thymine",
+   "Uracil",
+   "Adenine",
+   "Guanine"
+  ]
+ },
+ {
+  "id": "S.2.2-005",
+  "format": "Multiple choice",
+  "stem": "An mRNA codon reads AUG. Which tRNA anticodon pairs with it?",
+  "options": [
+   "AUG",
+   "TAC",
+   "UAC",
+   "ATG"
+  ]
+ },
+ {
+  "id": "S.2.2-006",
+  "format": "Multiple choice",
+  "stem": "A mutation changes one base in a gene, but the protein's amino acid sequence is unchanged. What is the best explanation?",
+  "options": [
+   "The mutation shifted the reading frame of the gene.",
+   "The mutation happened in a ribosome, not the DNA.",
+   "The mRNA corrects the error before translation.",
+   "More than one codon can code for the same amino acid."
+  ]
+ },
+ {
+  "id": "S.2.2-007",
+  "format": "Multiple choice",
+  "stem": "How many nucleotides make up one codon?",
+  "options": [
+   "3",
+   "1",
+   "2",
+   "4"
+  ]
+ },
+ {
+  "id": "S.2.2-008",
+  "format": "Multiple choice",
+  "stem": "Deleting one nucleotide near the start of a gene usually harms the protein more than substituting one nucleotide. Why?",
+  "options": [
+   "It shifts how every later codon is read.",
+   "It removes the entire gene from the chromosome.",
+   "It changes the DNA into RNA.",
+   "It prevents the gene from being copied at all."
+  ]
+ },
+ {
+  "id": "S.2.3-004",
+  "format": "Multiple choice",
+  "stem": "Cystic fibrosis is caused by a recessive allele. Two parents who are both carriers have a child. What is the probability that the child is also a carrier?",
+  "options": [
+   "1/4",
+   "1/2",
+   "3/4",
+   "0"
+  ]
+ },
+ {
+  "id": "S.2.3-005",
+  "format": "Multiple choice",
+  "stem": "Hemophilia is an X-linked recessive trait. A carrier mother has children with an unaffected father. What is the probability that a son will have hemophilia?",
+  "options": [
+   "0",
+   "1/4",
+   "1/2",
+   "1"
+  ]
+ },
+ {
+  "id": "S.2.3-006",
+  "format": "Multiple choice",
+  "stem": "A mother with type A blood (genotype AO) and a father with type B blood (genotype BO) have a child. What is the probability that the child has type O blood?",
+  "options": [
+   "0",
+   "1/2",
+   "3/4",
+   "1/4"
+  ]
+ },
+ {
+  "id": "S.2.3-007",
+  "format": "Multiple choice",
+  "stem": "In snapdragons, flower color shows incomplete dominance: RR is red, RW is pink and WW is white. Two pink plants are crossed. What fraction of the offspring will be pink?",
+  "options": [
+   "1/2",
+   "1/4",
+   "3/4",
+   "All of them"
+  ]
+ },
+ {
+  "id": "S.2.3-008",
+  "format": "Multiple choice",
+  "stem": "A tall pea plant of unknown genotype is crossed with a short plant (tt). Half of the offspring are short. What is the genotype of the tall parent?",
+  "options": [
+   "Tt",
+   "TT",
+   "tt",
+   "It cannot be determined."
+  ]
+ },
+ {
+  "id": "S.2.4-004",
+  "format": "Multiple choice",
+  "stem": "Which type of macromolecule forms the basic structure (the bilayer) of cell membranes?",
+  "options": [
+   "Proteins",
+   "Phospholipids",
+   "Carbohydrates",
+   "Nucleic acids"
+  ]
+ },
+ {
+  "id": "S.2.4-005",
+  "format": "Multiple choice",
+  "stem": "The enzyme lactase splits lactose (milk sugar) into glucose and galactose by adding a water molecule. What is this type of reaction called?",
+  "options": [
+   "Hydrolysis",
+   "Dehydration synthesis",
+   "Denaturation",
+   "Photosynthesis"
+  ]
+ },
+ {
+  "id": "S.2.4-006",
+  "format": "Multiple choice",
+  "stem": "Which element is found in all proteins but not in carbohydrates?",
+  "options": [
+   "Carbon",
+   "Hydrogen",
+   "Oxygen",
+   "Nitrogen"
+  ]
+ },
+ {
+  "id": "S.2.4-007",
+  "format": "Multiple choice",
+  "stem": "The stomach enzyme pepsin works best at about pH 2. What happens to pepsin's activity when it enters the small intestine, where the pH is about 8?",
+  "options": [
+   "It increases, because higher pH speeds up all reactions.",
+   "It stays the same, because enzymes are not used up.",
+   "It drops sharply as the pH changes its shape.",
+   "It changes into a different enzyme that digests fat."
+  ]
+ },
+ {
+  "id": "S.2.5-003",
+  "format": "Multiple choice",
+  "stem": "Malaria is caused by which type of microorganism?",
+  "options": [
+   "A virus",
+   "A bacterium",
+   "A protozoan",
+   "A fungus"
+  ]
+ },
+ {
+  "id": "S.2.5-004",
+  "format": "Multiple choice",
+  "stem": "Why are patients told to finish a full course of antibiotics even after they feel better?",
+  "options": [
+   "To kill surviving bacteria, which tend to be resistant",
+   "To build up a supply of antibiotics in the body for future infections",
+   "To help the antibiotic kill any viruses that may also be present",
+   "To train the immune system to make its own antibiotics"
+  ]
+ },
+ {
+  "id": "S.2.5-005",
+  "format": "Select all",
+  "stem": "Which of these diseases are caused by viruses? Select all that apply.",
+  "options": [
+   "Influenza",
+   "Strep throat",
+   "Measles",
+   "Tuberculosis",
+   "HIV/AIDS"
+  ]
+ },
+ {
+  "id": "S.2.5-006",
+  "format": "Multiple choice",
+  "stem": "Athlete's foot is caused by which type of microorganism?",
+  "options": [
+   "A bacterium",
+   "A virus",
+   "A protozoan",
+   "A fungus"
+  ]
+ }
+]

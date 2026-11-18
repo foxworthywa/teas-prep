@@ -1,0 +1,312 @@
+[
+ {
+  "id": "M.1.1-001",
+  "format": "Multiple choice",
+  "stem": "Which decimal is equal to 3/8?",
+  "options": [
+   "0.375",
+   "0.38",
+   "0.83",
+   "0.0375"
+  ]
+ },
+ {
+  "id": "M.1.1-002",
+  "format": "Supply answer",
+  "stem": "Write 0.045 as a percent. Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.1.2-001",
+  "format": "Multiple choice",
+  "stem": "What is 2/3 + 1/4?",
+  "options": [
+   "3/7",
+   "11/12",
+   "11/24",
+   "5/6"
+  ]
+ },
+ {
+  "id": "M.1.2-002",
+  "format": "Multiple choice",
+  "stem": "What is (−8) × (−3) ÷ 4?",
+  "options": [
+   "24",
+   "−6",
+   "−24",
+   "6"
+  ]
+ },
+ {
+  "id": "M.1.3-001",
+  "format": "Ordered response",
+  "stem": "Put these numbers in order from least to greatest.",
+  "options": [
+   "0.6",
+   "5/8",
+   "58%",
+   "0.65"
+  ]
+ },
+ {
+  "id": "M.1.3-002",
+  "format": "Multiple choice",
+  "stem": "Which of these values is the greatest?",
+  "options": [
+   "0.09",
+   "1/9",
+   "9%",
+   "0.1"
+  ]
+ },
+ {
+  "id": "M.1.4-001",
+  "format": "Multiple choice",
+  "stem": "Solve for x: 3x − 7 = 11",
+  "options": [
+   "4/3",
+   "18",
+   "6",
+   "3"
+  ]
+ },
+ {
+  "id": "M.1.4-002",
+  "format": "Supply answer",
+  "stem": "Solve for x: 5(x + 2) = 35. Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.1.5-001",
+  "format": "Multiple choice",
+  "stem": "A patient drinks 240 mL at breakfast, 180 mL mid-morning and 350 mL at lunch. What is the patient's total fluid intake?",
+  "options": [
+   "670 mL",
+   "700 mL",
+   "770 mL",
+   "870 mL"
+  ]
+ },
+ {
+  "id": "M.1.5-002",
+  "format": "Multiple choice",
+  "stem": "A nurse works three 12-hour shifts each week and earns $32.50 per hour. What is the nurse's weekly pay before taxes?",
+  "options": [
+   "$1,050.00",
+   "$1,170.00",
+   "$1,200.00",
+   "$390.00"
+  ]
+ },
+ {
+  "id": "M.1.6-001",
+  "format": "Multiple choice",
+  "stem": "A $60 textbook is on sale for 25% off. What is the sale price?",
+  "options": [
+   "$15",
+   "$35",
+   "$45",
+   "$48"
+  ]
+ },
+ {
+  "id": "M.1.6-002",
+  "format": "Multiple choice",
+  "stem": "A patient's weight drops from 80 kg to 72 kg. What is the percent decrease?",
+  "options": [
+   "11.1%",
+   "8%",
+   "90%",
+   "10%"
+  ]
+ },
+ {
+  "id": "M.1.7-001",
+  "format": "Multiple choice",
+  "stem": "Round 3.4762 to the nearest hundredth.",
+  "options": [
+   "3.48",
+   "3.47",
+   "3.5",
+   "3.476"
+  ]
+ },
+ {
+  "id": "M.1.7-002",
+  "format": "Multiple choice",
+  "stem": "Estimate 49.8 × 6.1 by first rounding each number to the nearest whole number.",
+  "options": [
+   "250",
+   "300",
+   "360",
+   "3,000"
+  ]
+ },
+ {
+  "id": "M.1.8-001",
+  "format": "Multiple choice",
+  "stem": "A recipe uses 3 cups of flour to make 24 cookies. How many cups of flour are needed to make 40 cookies?",
+  "options": [
+   "6",
+   "4",
+   "8",
+   "5"
+  ]
+ },
+ {
+  "id": "M.1.8-002",
+  "format": "Supply answer",
+  "stem": "A liquid medication contains 250 mg in 5 mL. How many mL contain 400 mg? Enter a number.",
+  "options": []
+ },
+ {
+  "id": "M.1.9-001",
+  "format": "Multiple choice",
+  "stem": "A class has 12 men and 18 women. What is the ratio of men to women in simplest form?",
+  "options": [
+   "2:3",
+   "3:2",
+   "12:30",
+   "2:5"
+  ]
+ },
+ {
+  "id": "M.1.9-002",
+  "format": "Multiple choice",
+  "stem": "A car travels 150 miles in 2.5 hours. What is its average speed?",
+  "options": [
+   "375 miles per hour",
+   "37.5 miles per hour",
+   "60 miles per hour",
+   "62.5 miles per hour"
+  ]
+ },
+ {
+  "id": "M.1.10-001",
+  "format": "Multiple choice",
+  "stem": "A gym charges a $50 sign-up fee plus $25 per month. Which expression gives the total cost for m months?",
+  "options": [
+   "50 + 25m",
+   "25 + 50m",
+   "75m",
+   "50m + 25m"
+  ]
+ },
+ {
+  "id": "M.1.10-002",
+  "format": "Multiple choice",
+  "stem": "Maria needs at least $600 for tuition. She has saved $150 and earns $15 per hour. Which inequality can be used to find the number of hours, h, she must work?",
+  "options": [
+   "150 + 15h ≤ 600",
+   "15 + 150h ≥ 600",
+   "150h + 15 ≤ 600",
+   "150 + 15h ≥ 600"
+  ]
+ },
+ {
+  "id": "M.2.1-001",
+  "format": "Multiple choice",
+  "stem": "A patient's temperature was recorded each morning: Monday 98.6 °F, Tuesday 99.1 °F, Wednesday 100.4 °F, Thursday 99.5 °F, Friday 98.8 °F. By how much did the temperature rise from Monday to its highest reading?",
+  "options": [
+   "0.5 °F",
+   "1.4 °F",
+   "1.8 °F",
+   "2.2 °F"
+  ]
+ },
+ {
+  "id": "M.2.1-002",
+  "format": "Multiple choice",
+  "stem": "A clinic recorded these monthly visits: January 120, February 150, March 135, April 180. Between which two consecutive months did visits increase the most?",
+  "options": [
+   "January to February",
+   "February to March",
+   "The increases were equal",
+   "March to April"
+  ]
+ },
+ {
+  "id": "M.2.2-001",
+  "format": "Multiple choice",
+  "stem": "What is the mean of this data set: 4, 7, 7, 9, 13?",
+  "options": [
+   "7",
+   "9",
+   "8",
+   "40"
+  ]
+ },
+ {
+  "id": "M.2.2-002",
+  "format": "Select all",
+  "stem": "For the data set 3, 5, 5, 8, 9, which statements are true? Select all that apply.",
+  "options": [
+   "The median is 5.",
+   "The mode is 8.",
+   "The range is 6.",
+   "The mean is 5."
+  ]
+ },
+ {
+  "id": "M.2.3-001",
+  "format": "Multiple choice",
+  "stem": "A study finds that as the number of hours students study increases, their test scores also increase. Which describes this relationship?",
+  "options": [
+   "Negative correlation",
+   "Positive correlation",
+   "No correlation",
+   "Inverse relationship"
+  ]
+ },
+ {
+  "id": "M.2.3-002",
+  "format": "Multiple choice",
+  "stem": "In the equation y = 4x + 3, how does y change when x increases by 2?",
+  "options": [
+   "It increases by 8.",
+   "It increases by 2.",
+   "It increases by 11.",
+   "It increases by 4."
+  ]
+ },
+ {
+  "id": "M.2.4-001",
+  "format": "Multiple choice",
+  "stem": "A rectangular room is 12 feet wide and 15 feet long. What is its area?",
+  "options": [
+   "54 square feet",
+   "180 square feet",
+   "27 square feet",
+   "360 square feet"
+  ]
+ },
+ {
+  "id": "M.2.4-002",
+  "format": "Multiple choice",
+  "stem": "A circle has a radius of 5 cm. What is its circumference? (Use π ≈ 3.14.)",
+  "options": [
+   "15.7 cm",
+   "78.5 cm",
+   "25 cm",
+   "31.4 cm"
+  ]
+ },
+ {
+  "id": "M.2.5-001",
+  "format": "Multiple choice",
+  "stem": "A patient weighs 165 pounds. What is the patient's weight in kilograms? (1 kg = 2.2 lb)",
+  "options": [
+   "75 kg",
+   "363 kg",
+   "82.5 kg",
+   "70 kg"
+  ]
+ },
+ {
+  "id": "M.2.5-002",
+  "format": "Supply answer",
+  "stem": "How many milliliters are in 8 fluid ounces? (1 fl oz ≈ 30 mL) Enter a number.",
+  "options": []
+ }
+]

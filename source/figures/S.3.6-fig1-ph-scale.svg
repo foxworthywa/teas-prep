@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 340" role="img" aria-labelledby="t d" font-family="Arial, Helvetica, sans-serif">
+<title id="t">The pH scale</title>
+<desc id="d">A color bar numbered 0 to 14, red at the acidic end, green near neutral 7 and purple at the basic end. Examples marked above the bar: stomach acid about 1.5 to 2, lemon juice about 2, vinegar about 3, black coffee about 5, pure water 7, blood 7.35 to 7.45, baking soda solution about 8.5, household ammonia about 11, bleach about 12.5, drain cleaner about 14. Arrows below: toward 0 is more acidic with more hydrogen ions; toward 14 is more basic. Each step on the scale is a tenfold change.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<rect x="40.0" y="120" width="49.3" height="44" fill="#d7191c" stroke="#fff"/>
+<text x="64.7" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">0</text>
+<rect x="89.3" y="120" width="49.3" height="44" fill="#e8452a" stroke="#fff"/>
+<text x="114.0" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">1</text>
+<rect x="138.7" y="120" width="49.3" height="44" fill="#f06a2f" stroke="#fff"/>
+<text x="163.3" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">2</text>
+<rect x="188.0" y="120" width="49.3" height="44" fill="#f59139" stroke="#fff"/>
+<text x="212.7" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">3</text>
+<rect x="237.3" y="120" width="49.3" height="44" fill="#f8b545" stroke="#fff"/>
+<text x="262.0" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#000">4</text>
+<rect x="286.7" y="120" width="49.3" height="44" fill="#fbd453" stroke="#fff"/>
+<text x="311.3" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#000">5</text>
+<rect x="336.0" y="120" width="49.3" height="44" fill="#e6e85c" stroke="#fff"/>
+<text x="360.7" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#000">6</text>
+<rect x="385.3" y="120" width="49.3" height="44" fill="#9fd36a" stroke="#fff"/>
+<text x="410.0" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#000">7</text>
+<rect x="434.7" y="120" width="49.3" height="44" fill="#6cc07a" stroke="#fff"/>
+<text x="459.3" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#000">8</text>
+<rect x="484.0" y="120" width="49.3" height="44" fill="#4aa98d" stroke="#fff"/>
+<text x="508.7" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#000">9</text>
+<rect x="533.3" y="120" width="49.3" height="44" fill="#3d8fa6" stroke="#fff"/>
+<text x="558.0" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">10</text>
+<rect x="582.7" y="120" width="49.3" height="44" fill="#3a73b5" stroke="#fff"/>
+<text x="607.3" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">11</text>
+<rect x="632.0" y="120" width="49.3" height="44" fill="#4357b5" stroke="#fff"/>
+<text x="656.7" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">12</text>
+<rect x="681.3" y="120" width="49.3" height="44" fill="#5340a8" stroke="#fff"/>
+<text x="706.0" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">13</text>
+<rect x="730.7" y="120" width="49.3" height="44" fill="#5e2b8f" stroke="#fff"/>
+<text x="755.3" y="149" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">14</text>
+<line x1="148.5" y1="109" x2="148.5" y2="118" stroke="#555" stroke-width="1.2"/>
+<text x="148.5" y="104" text-anchor="middle" font-size="13">Stomach acid</text>
+<line x1="212.7" y1="79" x2="212.7" y2="118" stroke="#555" stroke-width="1.2"/>
+<text x="212.7" y="74" text-anchor="middle" font-size="13">Vinegar</text>
+<line x1="311.3" y1="109" x2="311.3" y2="118" stroke="#555" stroke-width="1.2"/>
+<text x="311.3" y="104" text-anchor="middle" font-size="13">Black coffee</text>
+<line x1="410.0" y1="79" x2="410.0" y2="118" stroke="#555" stroke-width="1.2"/>
+<text x="410.0" y="74" text-anchor="middle" font-size="13">Pure water</text>
+<line x1="484.0" y1="109" x2="484.0" y2="118" stroke="#555" stroke-width="1.2"/>
+<text x="484.0" y="104" text-anchor="middle" font-size="13">Baking soda</text>
+<line x1="681.3" y1="79" x2="681.3" y2="118" stroke="#555" stroke-width="1.2"/>
+<text x="681.3" y="74" text-anchor="middle" font-size="13">Bleach</text>
+<line x1="173.2" y1="166" x2="173.2" y2="180" stroke="#555" stroke-width="1.2"/>
+<text x="173.2" y="195" text-anchor="middle" font-size="13">Lemon juice</text>
+<line x1="429.7" y1="166" x2="429.7" y2="180" stroke="#555" stroke-width="1.2"/>
+<text x="429.7" y="195" text-anchor="middle" font-size="13">Blood (7.35–7.45)</text>
+<line x1="607.3" y1="166" x2="607.3" y2="180" stroke="#555" stroke-width="1.2"/>
+<text x="607.3" y="195" text-anchor="middle" font-size="13">Ammonia</text>
+<line x1="755.3" y1="166" x2="755.3" y2="180" stroke="#555" stroke-width="1.2"/>
+<text x="763.3" y="195" text-anchor="end" font-size="13">Drain cleaner</text>
+<line x1="375.5" y1="235" x2="45" y2="235" stroke="#333" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="444.5" y1="235" x2="775" y2="235" stroke="#333" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="410.0" y="240" text-anchor="middle" font-size="14" font-weight="bold">NEUTRAL</text>
+<text x="40" y="263" font-size="15" font-weight="bold" fill="#b2182b">MORE ACIDIC (more H⁺)</text>
+<text x="780" y="263" text-anchor="end" font-size="15" font-weight="bold" fill="#4a2a8f">MORE BASIC (more OH⁻)</text>
+<text x="410.0" y="315" text-anchor="middle" font-size="15">Each step is a <tspan font-weight="bold">tenfold</tspan> change: pH 3 has 10× the H⁺ of pH 4 and 100× the H⁺ of pH 5.</text></svg>

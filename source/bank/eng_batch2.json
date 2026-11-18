@@ -1,0 +1,1679 @@
+[
+ {
+  "id": "E.1.1-005",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses the correct word?",
+  "options": [
+   "The nurse could not except the gift from the family.",
+   "Please accept my apology for the delay.",
+   "Everyone accept Maria passed the quiz.",
+   "The clinic will except new patients next month."
+  ],
+  "answer": "B",
+  "explanation": "\"Accept\" means to receive or agree to, which fits accepting an apology.",
+  "distractors": "A: \"except\" means \"but\" or \"excluding\"; the verb meaning \"receive\" is \"accept.\" C: this needs \"except\" (\"everyone but Maria\"). D: the verb meaning \"take in\" is \"accept.\"",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-006",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nThe patient asked ___ turn it was to use the shower.",
+  "options": [
+   "who's",
+   "whose",
+   "whos",
+   "who is"
+  ],
+  "answer": "B",
+  "explanation": "\"Whose\" is the possessive form (the turn belongs to someone). Test: \"who is turn\" doesn't work, so it isn't \"who's.\"",
+  "distractors": "A: \"who's\" means \"who is\": \"who is turn\" makes no sense. C: not a word; the possessive is \"whose.\" D: \"who is turn it was\" makes no sense; the sentence needs a possessive.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-007",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "What is the correct plural of diagnosis?",
+  "options": [
+   "diagnosises",
+   "diagnosis'",
+   "diagnoses",
+   "diagnosi"
+  ],
+  "answer": "C",
+  "explanation": "Greek and Latin words ending in -is form the plural with -es: diagnosis → diagnoses (like crisis → crises).",
+  "distractors": "A: adds -es to the singular instead of changing -is to -es. B: an apostrophe never makes a plural. D: drops the s; the -is ending changes to -es.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-008",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word is spelled correctly?",
+  "options": [
+   "privilege",
+   "privelege",
+   "priviledge",
+   "privilage"
+  ],
+  "answer": "A",
+  "explanation": "The correct spelling is p-r-i-v-i-l-e-g-e, with no d.",
+  "distractors": "B: uses e in place of the second i (priv-i-lege). C: adds a d that isn't there (no \"edge\" in privilege). D: uses a in place of the e before g (-lege, not -lage).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-009",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word correctly adds a suffix to its base word?",
+  "options": [
+   "hopeing (hope + -ing)",
+   "carful (care + -ful)",
+   "happyness (happy + -ness)",
+   "beginning (begin + -ing)"
+  ],
+  "answer": "D",
+  "explanation": "\"Begin\" is stressed on its last syllable and ends in one vowel + one consonant, so the n doubles before -ing: beginning.",
+  "distractors": "A: drop the silent e before a vowel suffix: hoping. B: keep the silent e before a consonant suffix: careful. C: change y to i after a consonant: happiness.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-010",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nThe bandage was too ___ and kept slipping off.",
+  "options": [
+   "lose",
+   "loose",
+   "loss",
+   "lost"
+  ],
+  "answer": "B",
+  "explanation": "\"Loose\" means not tight.",
+  "distractors": "A: \"lose\" is a verb meaning to misplace or fail to win. C: \"loss\" is a noun (a loss of blood). D: \"lost\" is the past tense of lose and doesn't describe a bandage that is not tight.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-011",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Select all",
+  "stem": "Which words are spelled correctly? Select all that apply.",
+  "options": [
+   "schedule",
+   "recieve",
+   "benefited",
+   "occured",
+   "referred"
+  ],
+  "answer": "A, C, E",
+  "explanation": "Schedule, benefited (stress on BEN, so no doubled t), and referred (stress on -FER, so the r doubles) are correct.",
+  "distractors": "B: the correct spelling is \"receive\" (e before i after c). D: the correct spelling is \"occurred\" (stress on -CUR, so the r doubles).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-012",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence is written correctly?",
+  "options": [
+   "It's been a long shift.",
+   "Its time to check the patient's vital signs.",
+   "The clinic changed it's hours.",
+   "The cat licked it's paw."
+  ],
+  "answer": "A",
+  "explanation": "\"It's\" means \"it has\" or \"it is\": \"It has been a long shift.\"",
+  "distractors": "B: \"It is time\" needs the contraction \"It's.\" C: the possessive is \"its\"; \"it is hours\" makes no sense. D: the possessive is \"its\" with no apostrophe.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-013",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses then or than correctly?",
+  "options": [
+   "First wash your hands, then put on gloves.",
+   "Take the pill, than drink a full glass of water.",
+   "Her score was higher then mine.",
+   "He would rather walk then drive."
+  ],
+  "answer": "A",
+  "explanation": "\"Then\" shows time or order; \"than\" compares.",
+  "distractors": "B: time order needs \"then.\" C: comparisons need \"than.\" D: \"rather … than\" is a comparison, so it needs \"than.\"",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-005",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence is punctuated correctly?",
+  "options": [
+   "I studied hard, however, the test was difficult.",
+   "I studied hard; however, the test was difficult.",
+   "I studied hard however, the test was difficult.",
+   "I studied hard; however the test, was difficult."
+  ],
+  "answer": "B",
+  "explanation": "When \"however\" joins two complete sentences, use a semicolon before it and a comma after it.",
+  "distractors": "A: a comma before \"however\" between two complete sentences makes a comma splice. C: two complete sentences run together with no semicolon or period. D: the comma belongs after \"however,\" not between the subject and verb.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-006",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses a colon correctly?",
+  "options": [
+   "The kit includes: gauze, tape, and gloves.",
+   "The kit: includes gauze, tape, and gloves.",
+   "The kit includes three items: gauze, tape, and gloves.",
+   "The kit includes items such as: gauze, tape, and gloves."
+  ],
+  "answer": "C",
+  "explanation": "A colon introduces a list only after a complete sentence (\"The kit includes three items\").",
+  "distractors": "A: the words before the colon (\"The kit includes\") aren't a complete sentence. B: a colon can't split a subject from its verb. D: no colon after \"such as.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-007",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Maria has only one sister. Which sentence that Maria might write about her sister is punctuated correctly?",
+  "options": [
+   "My sister, who lives in Norfolk, is a nurse.",
+   "My sister who lives in Norfolk, is a nurse.",
+   "My sister, who lives in Norfolk is a nurse.",
+   "My, sister who lives in Norfolk is a nurse."
+  ],
+  "answer": "A",
+  "explanation": "Maria has one sister, so \"who lives in Norfolk\" is extra information. Extra information takes a pair of commas, one on each side.",
+  "distractors": "B: one comma separates the subject from its verb; extra information needs a comma on both sides. C: the extra information needs a closing comma too. D: the comma after \"My\" splits a word from the noun it belongs to.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-008",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence punctuates the quotation correctly?",
+  "options": [
+   "She said, \"The lab opens at noon\".",
+   "She said \"The lab opens at noon.\"",
+   "She said, \"The lab opens at noon.\"",
+   "She said, \"the lab opens at noon.\""
+  ],
+  "answer": "C",
+  "explanation": "Use a comma to introduce the quotation, capitalize its first word, and put the period inside the quotation marks.",
+  "distractors": "A: in American English the period goes inside the closing quotation mark. B: a comma is needed after \"said\" to introduce the quotation. D: a full-sentence quotation starts with a capital letter.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-009",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which is the correct way to write \"the books that belong to the children\"?",
+  "options": [
+   "the childrens' books",
+   "the children's books",
+   "the childrens books",
+   "the childrens's books"
+  ],
+  "answer": "B",
+  "explanation": "For a plural noun that doesn't end in s, add 's: children → children's.",
+  "distractors": "A: \"children\" is already plural and doesn't end in s, so add 's, not s'. C: the possessive needs an apostrophe. D: adds an extra s; \"childrens\" is not a word.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-010",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence is punctuated correctly?",
+  "options": [
+   "The doctor however, was on time.",
+   "Therefore the patient, rested.",
+   "However, the shift ran late.",
+   "For example the test, was long."
+  ],
+  "answer": "C",
+  "explanation": "An introductory transition such as \"However\" is followed by a comma.",
+  "distractors": "A: \"however\" in the middle of a sentence needs a comma on both sides. B: the comma belongs after \"Therefore,\" not between the subject and verb. D: the comma belongs after \"For example,\" not between the subject and verb.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-011",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence is punctuated correctly?",
+  "options": [
+   "On March 3 2026 the clinic opened.",
+   "On March 3, 2026, the clinic opened.",
+   "On March, 3 2026 the clinic opened.",
+   "On March 3, 2026 the clinic, opened."
+  ],
+  "answer": "B",
+  "explanation": "In a full date, put a comma between the day and the year and another comma after the year when the sentence continues.",
+  "distractors": "A: missing the commas after the day and after the year. C: the comma goes between the day and the year, not between the month and the day. D: missing the comma after the year, and the last comma splits the subject from its verb.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-012",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Select all",
+  "stem": "Which sentences are punctuated correctly? Select all that apply.",
+  "options": [
+   "We checked the chart, and we called the doctor.",
+   "We checked the chart, we called the doctor.",
+   "We checked the chart; we called the doctor.",
+   "We checked the chart and called the doctor.",
+   "We checked the chart and, called the doctor."
+  ],
+  "answer": "A, C, D",
+  "explanation": "A joins two complete sentences with a comma + \"and.\" C joins them with a semicolon. D has one subject with two verbs, so it needs no comma.",
+  "distractors": "B: a comma alone between two complete sentences is a comma splice. E: the comma after \"and\" is misplaced.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-013",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses capital letters correctly?",
+  "options": [
+   "Last spring, my aunt moved to Virginia.",
+   "Last Spring, my Aunt moved to Virginia.",
+   "Last spring, my aunt moved to virginia.",
+   "Last Spring, my aunt moved to Virginia."
+  ],
+  "answer": "A",
+  "explanation": "Capitalize proper nouns such as Virginia. Don't capitalize seasons, or family words used after \"my.\"",
+  "distractors": "B: seasons aren't capitalized, and \"aunt\" isn't capitalized when it follows \"my.\" C: a state's name is a proper noun and must be capitalized. D: seasons aren't capitalized.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-014",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses capital letters correctly?",
+  "options": [
+   "I asked Doctor Patel about my results.",
+   "I asked doctor Patel about my results.",
+   "The Doctor said my results were normal.",
+   "I'm taking Biology and english this term."
+  ],
+  "answer": "A",
+  "explanation": "Capitalize a title when it comes right before a person's name.",
+  "distractors": "B: a title used before a name is capitalized. C: a title used alone, without a name, isn't capitalized. D: school subjects aren't capitalized unless they're languages, so it should be \"biology\" and \"English.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-005",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a sentence fragment?",
+  "options": [
+   "The nurse smiled at the anxious patient.",
+   "Please sit down and wait for your name.",
+   "Although the waiting room was full.",
+   "The test ended at noon on Friday."
+  ],
+  "answer": "C",
+  "explanation": "\"Although\" makes the clause dependent, so it can't stand alone.",
+  "distractors": "A: has a subject and a verb and is a complete thought. B: a command; the subject \"you\" is understood, so it's complete. D: has a subject and a verb and is a complete thought.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-006",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which revision correctly fixes this comma splice?\n\nThe power went out, the generator started.",
+  "options": [
+   "The power went out, the generator, started.",
+   "The power went out the generator started.",
+   "The power went out, then the generator started.",
+   "When the power went out, the generator started."
+  ],
+  "answer": "D",
+  "explanation": "Making the first clause dependent with \"When\" turns the two sentences into one correct complex sentence.",
+  "distractors": "A: keeps the comma splice and adds a comma between the subject and verb. B: removing the comma makes a run-on. C: \"then\" isn't a FANBOYS word, so a comma before it still leaves a comma splice.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-007",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence has parallel structure?",
+  "options": [
+   "She enjoys hiking, swimming, and to read.",
+   "She enjoys to hike, swimming, and reading.",
+   "She enjoys hiking, to swim, and reads.",
+   "She enjoys hiking, swimming, and reading."
+  ],
+  "answer": "D",
+  "explanation": "All three items use the same -ing form.",
+  "distractors": "A: switches from -ing words to \"to read.\" B: mixes \"to hike\" with -ing words. C: mixes three different forms.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-008",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a complex sentence?",
+  "options": [
+   "Because the lab was closed, we left.",
+   "The lab was closed, so we left.",
+   "The lab was closed.",
+   "The lab was closed; we left."
+  ],
+  "answer": "A",
+  "explanation": "A complex sentence has one independent clause plus a dependent clause (\"Because the lab was closed\").",
+  "distractors": "B: two independent clauses joined by \", so\": a compound sentence. C: one independent clause: a simple sentence. D: two independent clauses joined by a semicolon: a compound sentence.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-009",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses a modifier correctly?",
+  "options": [
+   "I saw a deer driving to work.",
+   "Driving to work, a deer ran across the road.",
+   "Driving to work, the road was blocked by a deer.",
+   "Driving to work, I saw a deer."
+  ],
+  "answer": "D",
+  "explanation": "The phrase \"Driving to work\" must sit next to the person who was driving: \"I.\"",
+  "distractors": "A: the phrase sits next to \"deer,\" so the sentence can be read as saying the deer was driving. B: the phrase describes the deer, which wasn't driving. C: the phrase describes the road.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-010",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a compound-complex sentence?",
+  "options": [
+   "The alarm rang in the hall, and the nurse responded quickly.",
+   "When the alarm rang, the nurse responded, and the patient woke up.",
+   "When the alarm rang in the hall, the nurse responded quickly.",
+   "The alarm rang loudly in the hall outside the patient's room."
+  ],
+  "answer": "B",
+  "explanation": "A compound-complex sentence has at least two independent clauses (\"the nurse responded\"; \"the patient woke up\") and at least one dependent clause (\"When the alarm rang\").",
+  "distractors": "A: two independent clauses with no dependent clause: compound. C: one dependent and one independent clause: complex. D: one independent clause: simple.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-011",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a complete sentence?",
+  "options": [
+   "Running late for the exam.",
+   "Since the shuttle was delayed.",
+   "The shuttle, which was delayed by the storm.",
+   "The shuttle was delayed by the storm."
+  ],
+  "answer": "D",
+  "explanation": "It has a subject (shuttle), a verb (was delayed), and a complete thought.",
+  "distractors": "A: no subject and no complete verb. B: \"Since\" makes this a dependent clause. C: has a subject but no main verb for it.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-012",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which revision best combines these two sentences?\n\nThe patient was nervous. She asked many questions.",
+  "options": [
+   "The patient was nervous, she asked many questions.",
+   "The patient was nervous so, she asked many questions.",
+   "The patient was nervous, so she asked many questions.",
+   "The patient, was nervous and asked, many questions."
+  ],
+  "answer": "C",
+  "explanation": "Two complete sentences can be joined with a comma plus a FANBOYS word such as \"so.\"",
+  "distractors": "A: a comma alone between two complete sentences is a comma splice. B: the comma belongs before \"so,\" not after it. D: the commas split the subject from its verb and the verb from its object.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-013",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence is a run-on?",
+  "options": [
+   "The test is tomorrow, so I need to study.",
+   "Because the test is tomorrow, I need to study.",
+   "The test is tomorrow; I need to study.",
+   "The test is tomorrow I need to study."
+  ],
+  "answer": "D",
+  "explanation": "Two complete sentences are joined with no punctuation or joining word.",
+  "distractors": "A: joined correctly with a comma + \"so.\" B: a correct complex sentence. C: joined correctly with a semicolon.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-005",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which verb correctly completes the sentence?\n\nNeither the students nor the instructor ___ ready.",
+  "options": [
+   "were",
+   "are",
+   "was",
+   "have been"
+  ],
+  "answer": "C",
+  "explanation": "With \"neither … nor,\" the verb agrees with the subject nearer to it: \"the instructor was.\"",
+  "distractors": "A: agrees with \"students,\" but the verb should agree with the nearer subject, \"instructor.\" B: plural and present tense; the nearer subject, \"instructor,\" is singular. D: plural; the nearer subject, \"instructor,\" is singular.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-006",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which verb correctly completes the sentence?\n\nThe results of the study ___ surprising.",
+  "options": [
+   "were",
+   "was",
+   "is",
+   "has been"
+  ],
+  "answer": "A",
+  "explanation": "The subject is \"results\" (plural). \"Of the study\" is a phrase in between and doesn't change the verb.",
+  "distractors": "B: agrees with \"study,\" but the subject is \"results.\" C: singular; the subject \"results\" is plural. D: singular; the subject \"results\" is plural.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-007",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses who or whom correctly?",
+  "options": [
+   "To whom should I send the form?",
+   "Whom is calling?",
+   "The nurse whom helped me was kind.",
+   "Whom did the report say was absent?"
+  ],
+  "answer": "A",
+  "explanation": "After a preposition (\"to\"), use the object form \"whom.\" Test: send it to him.",
+  "distractors": "B: the caller is a subject (he is calling), so use \"who.\" C: the nurse is the subject of \"helped\" (she helped), so use \"who.\" D: the person is the subject of \"was absent\" (he was absent), so use \"who.\"",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-008",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses pronouns correctly?",
+  "options": [
+   "The instructor gave the handouts to Ana and I.",
+   "Between you and I, the test was hard.",
+   "The instructor gave the handouts to Ana and me.",
+   "Him and Ana finished early."
+  ],
+  "answer": "C",
+  "explanation": "After the preposition \"to,\" use the object form \"me.\" Test by removing Ana: \"gave the handouts to me.\"",
+  "distractors": "A: \"I\" can't follow \"to\"; test: \"gave the handouts to I.\" B: after the preposition \"between,\" use \"me.\" D: the subject needs \"He\"; test: \"Him finished early.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-009",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses fewer or less correctly?",
+  "options": [
+   "There were less patients in the clinic today.",
+   "We need fewer water for this recipe.",
+   "She drank fewer coffee this week.",
+   "There were fewer patients in the clinic today."
+  ],
+  "answer": "D",
+  "explanation": "Use \"fewer\" for things you can count and \"less\" for amounts.",
+  "distractors": "A: patients can be counted, so use \"fewer.\" B: water is an amount, not a count, so use \"less.\" C: coffee is an amount, so use \"less.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-010",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence is written in the active voice?",
+  "options": [
+   "The technician collected the samples.",
+   "The samples were collected by the technician.",
+   "The samples had been collected before noon.",
+   "Mistakes were made during the procedure."
+  ],
+  "answer": "A",
+  "explanation": "In the active voice the subject (the technician) does the action.",
+  "distractors": "B: passive: the subject (samples) receives the action. C: passive, and the doer isn't named. D: passive, and the doer isn't named.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-011",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which revision of this sentence is clearest and most concise?\n\nDue to the fact that the road was closed, we were late.",
+  "options": [
+   "Because the road was closed, we were late.",
+   "Due to the fact of the road closure, we were late.",
+   "Owing to the fact that the road was closed, we were late.",
+   "Due to the fact that there was a road closure, we were late."
+  ],
+  "answer": "A",
+  "explanation": "\"Because\" replaces the five-word phrase \"due to the fact that\" without losing meaning.",
+  "distractors": "B: keeps the wordy \"due to the fact.\" C: just as wordy as the original. D: even wordier than the original.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-012",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses an adjective or adverb correctly?",
+  "options": [
+   "She sings good.",
+   "The soup smells well.",
+   "He did really good on the exam.",
+   "She answered the question correctly."
+  ],
+  "answer": "D",
+  "explanation": "\"Correctly\" is an adverb describing the action verb \"answered.\"",
+  "distractors": "A: \"sings\" is an action verb, so it needs the adverb \"well.\" B: \"smells\" is a linking verb here, so it needs the adjective \"good.\" C: \"did\" is an action verb, so it needs \"well.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-013",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which verb correctly completes the sentence?\n\nThere ___ several reasons to arrive early.",
+  "options": [
+   "is",
+   "are",
+   "was",
+   "has been"
+  ],
+  "answer": "B",
+  "explanation": "In a \"There is/There are\" sentence, the subject comes after the verb. \"Reasons\" is plural, so use \"are.\"",
+  "distractors": "A: the subject comes after the verb: \"reasons\" is plural. C: singular; the subject \"reasons\" is plural. D: singular; the subject \"reasons\" is plural.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-014",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence avoids an unclear pronoun reference?",
+  "options": [
+   "The doctor told the nurse that she needed a break.",
+   "When Sam called Raj, Sam was still at work.",
+   "When the cup hit the tray, it broke.",
+   "They say the clinic is closing."
+  ],
+  "answer": "B",
+  "explanation": "Repeating the name removes any doubt about who was at work.",
+  "distractors": "A: \"she\" could mean the doctor or the nurse. C: \"it\" could mean the cup or the tray. D: \"They\" doesn't refer to anyone named.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-005",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence is most appropriate for a cover letter for a nursing assistant job?",
+  "options": [
+   "I am excited to apply for your nursing assistant position.",
+   "I'm super pumped to work at your totally awesome hospital this year!",
+   "Hire me for this job right away. You definitely won't regret it.",
+   "I really need this job badly because my bills keep piling up."
+  ],
+  "answer": "A",
+  "explanation": "A cover letter calls for a polite, formal, and specific tone.",
+  "distractors": "B: slang and exaggeration are too informal for a cover letter. C: a pushy command that's too demanding for a cover letter. D: informal, and it focuses on the writer's need, not what they offer.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-006",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "A writer wants to describe a patient's attitude in a positive way. Which word fits best?",
+  "options": [
+   "stubborn",
+   "obstinate",
+   "determined",
+   "bullheaded"
+  ],
+  "answer": "C",
+  "explanation": "All four words describe someone who won't give up or give in, but only \"determined\" has a positive connotation.",
+  "distractors": "A: similar meaning but a negative connotation. B: similar meaning but a negative connotation. D: negative and informal.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-007",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence is most appropriate for a lab report?",
+  "options": [
+   "We think the plants probably grew more because of the light, maybe.",
+   "The plants kept in light grew 4 cm more than the plants kept in the dark.",
+   "The light made the plants grow like crazy compared to the dark ones.",
+   "I was totally amazed by how much the plants in the light grew!"
+  ],
+  "answer": "B",
+  "explanation": "A lab report should be objective and precise, reporting measured results.",
+  "distractors": "A: vague and full of hedging words. C: slang, and gives no measurement. D: emotional, and gives no data.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-008",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "A pamphlet is titled \"Why You Should Get a Flu Shot.\" What is the main purpose of the pamphlet?",
+  "options": [
+   "To entertain readers with a story",
+   "To explain how the flu virus was discovered",
+   "To describe a nurse's workday",
+   "To persuade readers to get vaccinated"
+  ],
+  "answer": "D",
+  "explanation": "\"Why you should\" signals an argument meant to convince the reader to act.",
+  "distractors": "A: the title gives reasons, not a story. B: the title isn't about history. C: the topic is the flu shot, not a nurse's day.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-009",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "A nurse is writing discharge instructions for a patient. Which sentence is best?",
+  "options": [
+   "Ambulate TID and maintain NPO status after midnight before your procedure.",
+   "Try to get some walking in and maybe skip eating late at night.",
+   "Walk three times a day, and don't eat or drink anything after midnight.",
+   "Ambulation and NPO adherence after midnight are recommended for you."
+  ],
+  "answer": "C",
+  "explanation": "Patient instructions should use plain, specific language.",
+  "distractors": "A: medical abbreviations the patient may not understand. B: too vague: how often, and what exactly to skip? D: jargon the patient may not understand, and it doesn't say how often to walk.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-010",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which phrase uses person-first language?",
+  "options": [
+   "the patient with diabetes in room 4",
+   "the diabetic patient in room 4",
+   "the diabetes case in room 4",
+   "the diabetic woman in room 4"
+  ],
+  "answer": "A",
+  "explanation": "Person-first language names the person first and the condition second.",
+  "distractors": "B: puts the condition before the person. C: calls the person a \"case.\" D: puts the condition before the person.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-011",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which message is the most appropriate text to a close friend?",
+  "options": [
+   "Dear Ms. Lopez, I regret to inform you that I will be late.",
+   "I'm running 10 min late. Save me a seat!",
+   "Pursuant to our arrangement, I shall arrive late.",
+   "To whom it may concern: I will be late."
+  ],
+  "answer": "B",
+  "explanation": "Informal, short messages suit a close friend. The best register depends on the audience.",
+  "distractors": "A: far too formal for a close friend. C: stiff legal wording that doesn't fit a friend. D: a formal greeting for an unknown reader.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-012",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence avoids unnecessary references to personal traits?",
+  "options": [
+   "The elderly lady doctor explained the results.",
+   "The female doctor, surprisingly, explained the results clearly.",
+   "The young male nurse helped the patient.",
+   "The doctor explained the results."
+  ],
+  "answer": "D",
+  "explanation": "Mention traits such as age or gender only when they matter to the point.",
+  "distractors": "A: age and gender have nothing to do with the point. B: mentions gender, and \"surprisingly\" implies bias. C: age and gender have nothing to do with the point.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-013",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which choice is the most precise wording for a formal report?\n\nThe medication ___ the patient's pain.",
+  "options": [
+   "did stuff to",
+   "messed with",
+   "kind of helped",
+   "reduced"
+  ],
+  "answer": "D",
+  "explanation": "\"Reduced\" is precise and formal.",
+  "distractors": "A: vague and informal. B: slang. C: vague and informal.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-005",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Choose the best transition for the blank.\n\nThe clinic extended its hours. ___, more working adults were able to get care.",
+  "options": [
+   "However",
+   "As a result",
+   "For example",
+   "Similarly"
+  ],
+  "answer": "B",
+  "explanation": "The second sentence describes an effect of the first, so a cause-and-effect transition fits.",
+  "distractors": "A: signals a contrast, but the second sentence is a result. C: the second sentence isn't an example of extended hours. D: signals a comparison, not a result.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-006",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Choose the best transition for the blank.\n\nSome students study best in the morning. ___, others focus better at night.",
+  "options": [
+   "Therefore",
+   "For instance",
+   "As a result",
+   "In contrast"
+  ],
+  "answer": "D",
+  "explanation": "The two sentences describe opposite habits, so a contrast transition fits.",
+  "distractors": "A: signals a result; night studying isn't caused by morning studying. B: the second sentence isn't an example of the first. C: signals a result, not a difference.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-007",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence would best conclude this paragraph?\n\nDrinking enough water helps the body in several ways. It keeps body temperature steady. It helps the kidneys remove waste. It also cushions the joints.",
+  "options": [
+   "Some people prefer sparkling water to plain tap water.",
+   "For these reasons, staying hydrated supports good health.",
+   "Water covers most of Earth's surface, including the oceans.",
+   "Coffee and tea also contain a lot of water."
+  ],
+  "answer": "B",
+  "explanation": "A concluding sentence sums up the main idea that the details supported.",
+  "distractors": "A: an off-topic detail. C: true, but off topic. D: introduces a new topic instead of wrapping up.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-008",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Ordered response",
+  "stem": "Put these sentences in the most logical order for a paragraph about checking a pulse at the wrist.",
+  "options": [
+   "Count the beats for 30 seconds.",
+   "Place two fingers on the inside of the wrist, below the thumb.",
+   "Multiply the count by 2 to get beats per minute.",
+   "Have the person sit and rest for a few minutes."
+  ],
+  "answer": "D, B, A, C",
+  "explanation": "The steps follow time order: rest first, find the pulse, count, then calculate.",
+  "distractors": "Common error: counting before the fingers are placed. Another: multiplying before counting.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-009",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Select all",
+  "stem": "A paragraph's topic sentence is \"Regular sleep improves student performance.\" Which sentences support it? Select all that apply.",
+  "options": [
+   "Well-rested students remember more of what they study.",
+   "Many dorms have bunk beds.",
+   "Sleep helps the brain store new information.",
+   "Some students work night shifts at restaurants.",
+   "Students who sleep enough often score higher on tests."
+  ],
+  "answer": "A, C, E",
+  "explanation": "A, C, and E each connect sleep to learning or test performance.",
+  "distractors": "B: about furniture, not performance. D: about jobs; it doesn't connect sleep to performance.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-010",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence does NOT belong in a paragraph about preparing for a blood draw?",
+  "options": [
+   "Drink plenty of water the day before so your veins are easier to find.",
+   "Wear a shirt with sleeves that roll up easily.",
+   "Blood is made of plasma, red cells, white cells, and platelets.",
+   "Tell the technician if you tend to feel faint."
+  ],
+  "answer": "C",
+  "explanation": "The paragraph is about how to prepare. What blood is made of is true but off topic.",
+  "distractors": "A: a preparation tip. B: a preparation tip. D: a preparation tip.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-011",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Which topic sentence best fits these supporting details?\n\n• The program offers evening classes.\n• Students can get help with child care costs.\n• Tutors are available on weekends.",
+  "options": [
+   "Evening classes in the program start at 6 p.m. on weeknights.",
+   "The program is designed to fit the lives of working adults.",
+   "Tutoring can be useful for many different kinds of students.",
+   "Many college programs in Virginia are expensive to attend."
+  ],
+  "answer": "B",
+  "explanation": "Each detail shows the program fitting around jobs and family, so this main idea covers all three.",
+  "distractors": "A: a single detail, not a main idea. C: covers only one detail. D: doesn't connect to the details listed.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-012",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "A writer lists reasons to wash hands and saves the strongest reason for last. Which transition best introduces that last reason?",
+  "options": [
+   "Most importantly",
+   "First",
+   "For example",
+   "In contrast"
+  ],
+  "answer": "A",
+  "explanation": "Order of importance builds to the strongest point, often signaled by \"most importantly.\"",
+  "distractors": "B: starts a list rather than ending it. C: introduces an example, not the strongest reason. D: signals an opposing idea.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-013",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Which method of organization does this paragraph use?\n\nFirst, blood enters the right atrium. Next, it flows into the right ventricle. Then it is pumped to the lungs.",
+  "options": [
+   "Spatial (location) order",
+   "Compare-and-contrast order",
+   "Chronological (sequence) order",
+   "Order of importance (ranking)"
+  ],
+  "answer": "C",
+  "explanation": "The signal words first, next, and then show steps in time order.",
+  "distractors": "A: describes where things are, not when they happen. B: would show similarities and differences. D: would rank ideas from least to most important.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-005",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "A student lists every idea she can think of about her topic without judging any of them. Which prewriting strategy is she using?",
+  "options": [
+   "Brainstorming",
+   "Proofreading",
+   "Citing",
+   "Revising"
+  ],
+  "answer": "A",
+  "explanation": "Brainstorming means listing ideas freely before choosing what to use.",
+  "distractors": "B: checks a finished draft for errors. C: gives credit to sources. D: improves a draft that already exists.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-006",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which task belongs to the drafting stage of the writing process?",
+  "options": [
+   "Writing full paragraphs from an outline",
+   "Choosing a topic and making a list of ideas",
+   "Checking each sentence for comma errors",
+   "Submitting the final copy to the instructor"
+  ],
+  "answer": "A",
+  "explanation": "Drafting turns the plan into a first full version.",
+  "distractors": "B: prewriting. C: editing. D: publishing.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-007",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which addition would most strengthen support for this thesis?\n\nCommunity gardens improve neighborhood health.",
+  "options": [
+   "A sentence explaining that the writer personally enjoys gardening",
+   "A paragraph describing the history of the garden shovel",
+   "Survey data showing garden members eat more vegetables",
+   "A list of the most popular flower colors in local gardens"
+  ],
+  "answer": "C",
+  "explanation": "Data that links gardens to healthier eating directly supports the claim.",
+  "distractors": "A: personal preference isn't evidence. B: off topic. D: doesn't connect to health.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-008",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which is the strongest evidence for the claim that handwashing reduces infections?",
+  "options": [
+   "My friend washes her hands all the time and almost never gets sick.",
+   "Washing your hands with warm water and soap feels very refreshing.",
+   "Everyone already knows that washing your hands works well.",
+   "A hospital study found infections fell as staff handwashing rose."
+  ],
+  "answer": "D",
+  "explanation": "Data from a study is stronger evidence than opinion or a single anecdote.",
+  "distractors": "A: one person's experience is weak evidence. B: a feeling isn't evidence about infections. C: an appeal to popular belief, not evidence.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-009",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which of the following is an example of plagiarism?",
+  "options": [
+   "Copying a paragraph from a website without quotation marks or credit",
+   "Quoting a source in quotation marks and citing it",
+   "Summarizing a source in your own words and citing it",
+   "Stating common knowledge, such as \"the heart pumps blood,\" without a citation"
+  ],
+  "answer": "A",
+  "explanation": "Using someone else's words or ideas without credit is plagiarism.",
+  "distractors": "B: proper use of a source. C: proper use of a source. D: common knowledge doesn't need a citation.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-010",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "While revising, a writer notices that one paragraph discusses two unrelated ideas. What should the writer do?",
+  "options": [
+   "Split it into two paragraphs, each with its own topic sentence",
+   "Correct all the spelling errors in that paragraph",
+   "Add a more interesting title to the beginning of the essay",
+   "Delete the conclusion so the essay is shorter"
+  ],
+  "answer": "A",
+  "explanation": "Each paragraph should develop one main idea, so the two ideas need separate paragraphs.",
+  "distractors": "B: editing won't fix a problem with unity. C: doesn't address the paragraph. D: unrelated to the problem.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-011",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "In a short academic essay, where is the thesis statement usually placed?",
+  "options": [
+   "Only in the conclusion",
+   "At the end of the introduction",
+   "In the middle of the second body paragraph",
+   "Only in the title"
+  ],
+  "answer": "B",
+  "explanation": "The introduction leads up to the thesis, which tells the reader the essay's main claim.",
+  "distractors": "A: the conclusion restates the thesis; it doesn't introduce it. C: readers need the main claim up front. D: a title isn't a full thesis statement.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-012",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "During prewriting, which question best helps a writer plan for the audience?",
+  "options": [
+   "Did I spell every word in my draft correctly?",
+   "Which font and color will make the essay look best?",
+   "Are all of my commas in the right places?",
+   "Who will read this, and what do they already know?"
+  ],
+  "answer": "D",
+  "explanation": "Thinking about readers' needs and background shapes content, word choice, and tone.",
+  "distractors": "A: an editing question. B: about formatting, not audience. C: an editing question.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-013",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence is the best paraphrase of this one?\n\n\"Regular exercise lowers the risk of heart disease.\"",
+  "options": [
+   "\"Regular exercise lowers the risk of heart disease.\"",
+   "People who work out often are less likely to develop heart problems.",
+   "Exercise is one of the main causes of heart disease in adults.",
+   "Heart disease is a common illness in the United States."
+  ],
+  "answer": "B",
+  "explanation": "A paraphrase keeps the original meaning in new words.",
+  "distractors": "A: this is a direct quotation, not a paraphrase. C: reverses the meaning. D: drops the main idea about exercise.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-014",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "What is the main job of a conclusion paragraph?",
+  "options": [
+   "To restate the main point and show why it matters",
+   "To introduce a brand-new argument for the reader",
+   "To list every source the writer used in the essay",
+   "To apologize for any weaknesses in the argument"
+  ],
+  "answer": "A",
+  "explanation": "A conclusion wraps up by restating the thesis in new words and showing its significance.",
+  "distractors": "B: new arguments belong in the body. C: that's the job of the reference list. D: undercuts the essay.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-015",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which point would support the thesis \"High schools should start later in the morning\"?",
+  "options": [
+   "School buses are painted yellow.",
+   "Teenagers get more sleep when school starts later.",
+   "Some schools require uniforms.",
+   "Later start times can make it harder for students to get to after-school jobs."
+  ],
+  "answer": "B",
+  "explanation": "Only this point gives a reason for the claim.",
+  "distractors": "A: about bus color, not start times. C: about dress codes, not start times. D: on topic, but it's a point against the thesis, not support for it.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-016",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Why might a writer include a counterargument in a persuasive essay?",
+  "options": [
+   "To confuse readers about which side the writer is on",
+   "To make the essay shorter and easier to finish",
+   "To answer an opposing view and strengthen the argument",
+   "To replace the thesis statement with a new claim"
+  ],
+  "answer": "C",
+  "explanation": "Addressing the other side and answering it makes an argument more convincing.",
+  "distractors": "A: a counterargument is answered, not left hanging. B: it usually adds length. D: the thesis stays the same.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-017",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Ordered response",
+  "stem": "Put the stages of the writing process in order.",
+  "options": [
+   "Revising",
+   "Prewriting",
+   "Editing and proofreading",
+   "Drafting"
+  ],
+  "answer": "B, D, A, C",
+  "explanation": "Plan (prewriting), write (drafting), improve the content (revising), then fix surface errors (editing and proofreading).",
+  "distractors": "Common error: editing before revising; there's no point polishing sentences that may be cut.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-018",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Select all",
+  "stem": "Which of these are revising tasks? Select all that apply.",
+  "options": [
+   "Moving a paragraph to improve the order",
+   "Fixing a misspelled word",
+   "Adding an example to support a point",
+   "Correcting a comma splice",
+   "Cutting a sentence that is off topic"
+  ],
+  "answer": "A, C, E",
+  "explanation": "Revising changes content and organization: moving, adding, and cutting.",
+  "distractors": "B and D: fixing spelling and punctuation is editing.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-019",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which source is most reliable for a research paper on high blood pressure?",
+  "options": [
+   "An anonymous post shared widely on social media",
+   "An advertisement for a blood pressure supplement",
+   "An online forum where users share their opinions",
+   "A government health agency website, such as the CDC's"
+  ],
+  "answer": "D",
+  "explanation": "Government health agencies publish reviewed, evidence-based information and name their sources.",
+  "distractors": "A: no author or evidence to check. B: written to sell a product. C: opinions, not checked facts.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-020",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which detail best supports the thesis \"Everyone should learn basic first aid\"?",
+  "options": [
+   "First aid kits come in many sizes and are sold at most drugstores.",
+   "The American Red Cross, which teaches first aid, was founded in the 1800s.",
+   "Prompt bystander CPR can double or triple the chance of surviving cardiac arrest.",
+   "Some people dislike the sight of blood and feel uneasy around injuries."
+  ],
+  "answer": "C",
+  "explanation": "Evidence that bystander CPR saves lives gives a strong reason for everyone to learn it.",
+  "distractors": "A: doesn't give a reason to learn first aid. B: a history fact, not a reason. D: doesn't support the claim.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-005",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "The prefix brady- means",
+  "options": [
+   "fast",
+   "large",
+   "slow",
+   "painful"
+  ],
+  "answer": "C",
+  "explanation": "Brady- means slow, as in bradycardia (a slow heart rate).",
+  "distractors": "A: fast is tachy-. B: large or enlarged is megal/o or -megaly. D: pain is -algia.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-006",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using its word parts, what does gastritis mean?",
+  "options": [
+   "Surgical removal of the stomach",
+   "Study of the stomach",
+   "Pain in the stomach",
+   "Inflammation of the stomach"
+  ],
+  "answer": "D",
+  "explanation": "Gastr/o = stomach; -itis = inflammation.",
+  "distractors": "A: removal is -ectomy (gastrectomy). B: study of is -logy. C: pain is -algia.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-007",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Which term means surgical removal of the appendix?",
+  "options": [
+   "appendicitis",
+   "appendotomy",
+   "appendalgia",
+   "appendectomy"
+  ],
+  "answer": "D",
+  "explanation": "-Ectomy means surgical removal.",
+  "distractors": "A: -itis means inflammation. B: -otomy means cutting into, not removal. C: -algia means pain.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-008",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "The root nephr/o refers to the",
+  "options": [
+   "liver",
+   "kidney",
+   "lung",
+   "nerve"
+  ],
+  "answer": "B",
+  "explanation": "Nephr/o means kidney, as in nephrology.",
+  "distractors": "A: liver is hepat/o. C: lung is pulmon/o or pneumon/o. D: nerve is neur/o.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-009",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using its word parts, what does intravenous mean?",
+  "options": [
+   "Around a vein",
+   "Under a vein",
+   "Within a vein",
+   "Removal of a vein"
+  ],
+  "answer": "C",
+  "explanation": "Intra- = within; ven/o = vein.",
+  "distractors": "A: around is peri-. B: under is sub-. D: removal is -ectomy.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-010",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using its word parts, what does cardiomegaly mean?",
+  "options": [
+   "A slow heart rate",
+   "An enlarged heart",
+   "Inflammation of the heart",
+   "Heart pain"
+  ],
+  "answer": "B",
+  "explanation": "Cardi/o = heart; -megaly = enlargement.",
+  "distractors": "A: that's bradycardia. C: that's carditis. D: pain is -algia.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-011",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "The suffix -algia means",
+  "options": [
+   "pain",
+   "inflammation",
+   "enlargement",
+   "study of"
+  ],
+  "answer": "A",
+  "explanation": "-Algia means pain, as in neuralgia (nerve pain).",
+  "distractors": "B: inflammation is -itis. C: enlargement is -megaly. D: study of is -logy.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-012",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Which term means a body temperature that is below normal?",
+  "options": [
+   "hypothermia",
+   "hyperthermia",
+   "hypoglycemia",
+   "thermometer"
+  ],
+  "answer": "A",
+  "explanation": "Hypo- = below; therm/o = heat; -ia = condition.",
+  "distractors": "B: hyper- means above normal. C: glyc/o means sugar: low blood sugar. D: therm/o = heat and -meter = measuring instrument; a thermometer measures temperature, not a condition.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-013",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using its word parts, what does pericardium most likely refer to?",
+  "options": [
+   "The inside lining of the heart",
+   "The sac around the heart",
+   "The heart muscle",
+   "An enlarged heart"
+  ],
+  "answer": "B",
+  "explanation": "Peri- = around; cardi/o = heart.",
+  "distractors": "A: inside would be endo- (endocardium). C: muscle is my/o (myocardium). D: that's cardiomegaly.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-014",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using its word parts, what does transport mean?",
+  "options": [
+   "To carry across",
+   "To look across",
+   "To write again",
+   "Unable to be carried"
+  ],
+  "answer": "A",
+  "explanation": "Trans- = across; port = carry.",
+  "distractors": "B: \"look\" is the root spect. C: \"write\" is the root scrib/script, and \"again\" is re-. D: \"not\" is un- or in-, and \"able\" is -able.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-015",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "What does dys- mean in the word dysfunction?",
+  "options": [
+   "without or lacking",
+   "under or below",
+   "abnormal or impaired",
+   "again or back"
+  ],
+  "answer": "C",
+  "explanation": "Dys- means difficult, painful, or abnormal. A dysfunction is abnormal or impaired function.",
+  "distractors": "A: without is a- or an-. B: under is sub-. D: again is re-.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-016",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Which word part means cell?",
+  "options": [
+   "my/o",
+   "cyt/o",
+   "oste/o",
+   "derm/o"
+  ],
+  "answer": "B",
+  "explanation": "Cyt/o means cell, as in cytology (the study of cells).",
+  "distractors": "A: my/o means muscle. C: oste/o means bone. D: derm/o means skin.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-017",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "A patient reports arthralgia. Using word parts, what does this mean?",
+  "options": [
+   "Joint inflammation",
+   "Surgical removal of a joint",
+   "Joint pain",
+   "Joint enlargement"
+  ],
+  "answer": "C",
+  "explanation": "Arthr/o = joint; -algia = pain.",
+  "distractors": "A: that would be arthritis (-itis). B: removal is -ectomy. D: enlargement is -megaly.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-018",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "In the word postoperative, the prefix post- means",
+  "options": [
+   "before",
+   "during",
+   "around",
+   "after"
+  ],
+  "answer": "D",
+  "explanation": "Postoperative means after surgery.",
+  "distractors": "A: before is pre-. B: during is intra- (intraoperative). C: around is peri-.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-019",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Select all",
+  "stem": "Which words contain a word part meaning blood? Select all that apply.",
+  "options": [
+   "hematology",
+   "anemia",
+   "hepatitis",
+   "hemorrhage",
+   "nephrology"
+  ],
+  "answer": "A, B, D",
+  "explanation": "Hemat/o and hem/o mean blood (hematology, hemorrhage); -emia means a blood condition (anemia).",
+  "distractors": "C: hepat/o means liver. E: nephr/o means kidney.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-020",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Which term means the study of the skin?",
+  "options": [
+   "dermatitis",
+   "hematology",
+   "cytology",
+   "dermatology"
+  ],
+  "answer": "D",
+  "explanation": "Dermat/o = skin; -logy = study of.",
+  "distractors": "A: -itis means inflammation. B: hemat/o means blood. C: cyt/o means cell.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ }
+]

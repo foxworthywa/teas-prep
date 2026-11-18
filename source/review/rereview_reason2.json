@@ -1,0 +1,207 @@
+[
+ {
+  "id": "S.4.1-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "Which length is the greatest?",
+  "options": [
+   "60,000 mm",
+   "0.5 km",
+   "450 m",
+   "5,000 cm"
+  ],
+  "answer": "B",
+  "explanation": "Convert to meters: 60,000 mm = 60 m; 0.5 km = 500 m; 450 m; 5,000 cm = 50 m. The greatest is 0.5 km.",
+  "distractors": "A: the biggest raw number, but only 60 m. C: 450 m is less than 500 m. D: 5,000 cm is only 50 m.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-006",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Supply answer",
+  "stem": "A patient's temperature is 102.2 °F. What is it in degrees Celsius? Use °C = (°F − 32) × 5/9. Enter a number.",
+  "options": [],
+  "answer": "39|39 °C|39°C|39.0|39.0 °C|39.0°C|39 C|39C|39 degrees|39.00",
+  "explanation": "102.2 − 32 = 70.2. 70.2 × 5/9 = 39 °C.",
+  "distractors": "Common errors: 56.8 (forgetting to subtract 32: 102.2 × 5/9); 88.8 (multiplying by 5/9 and then adding 32); 126.4 (using 9/5 instead of 5/9 after subtracting 32).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-010",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A bacterial population doubles every 30 minutes. If it starts with 500 bacteria, how many will there be after 2 hours?",
+  "options": [
+   "2,000",
+   "8,000",
+   "4,000",
+   "1,000"
+  ],
+  "answer": "B",
+  "explanation": "2 hours = 4 doubling periods. 500 → 1,000 → 2,000 → 4,000 → 8,000.",
+  "distractors": "A: multiplies 500 by the number of periods (500 × 4) instead of doubling four times, or doubles only twice. C: doubles only three times. D: doubles only once.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Ordered response",
+  "stem": "A person becomes dehydrated. Put these events in the order they occur.",
+  "options": [
+   "The kidneys reabsorb more water.",
+   "Blood volume falls and the blood becomes more concentrated.",
+   "ADH (antidiuretic hormone) is released.",
+   "Urine becomes more concentrated."
+  ],
+  "answer": "B, C, A, D",
+  "explanation": "Losing water makes the blood more concentrated and lowers blood volume. The hypothalamus senses this, and ADH is released from the posterior pituitary. ADH makes the kidneys reabsorb more water, so less water leaves in the urine and the urine becomes more concentrated.",
+  "distractors": "Common error: placing the kidney response before the hormone that triggers it.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-010",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Select all",
+  "stem": "Which are characteristics of a good scientific hypothesis? Select all that apply.",
+  "options": [
+   "It can be tested.",
+   "It could be shown to be wrong.",
+   "It is based on personal opinion.",
+   "It leads to a testable prediction.",
+   "It has already been proven true."
+  ],
+  "answer": "A, B, D",
+  "explanation": "A good hypothesis is testable, falsifiable (some result could show it is wrong), and makes a prediction, often in if-then form.",
+  "distractors": "C: opinions can't be tested. E: a hypothesis is tested, not already proven; experiments support or refute it.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "In a lab, a student adds drops of an indicator to a clear solution. Which statement is a direct observation?",
+  "options": [
+   "The solution is basic.",
+   "The solution turned blue.",
+   "The indicator reacted with a base.",
+   "A new compound formed."
+  ],
+  "answer": "B",
+  "explanation": "An observation is what is directly seen or measured: the color changed to blue.",
+  "distractors": "A, C and D: each is an inference that explains the color change; none can be seen directly.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-007",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "A survey finds that people who drink more coffee report more headaches. Which conclusion is best supported?",
+  "options": [
+   "Coffee causes headaches in most people.",
+   "Headaches lead people to drink more coffee.",
+   "The survey shows coffee is safe to drink.",
+   "They are linked, but the survey can't show cause."
+  ],
+  "answer": "D",
+  "explanation": "A survey shows a correlation. It cannot show cause; a third factor (such as stress or lack of sleep) might lead to both.",
+  "distractors": "A and B: each claims a cause the survey cannot establish. C: the survey found a link with headaches; it says nothing about safety.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-008",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "A scientist's results do not support her hypothesis. What should she do?",
+  "options": [
+   "Report the results and test a revised hypothesis.",
+   "Repeat the experiment until the results support it.",
+   "Throw out the results and report nothing.",
+   "Repeat only the trials that agreed with the hypothesis."
+  ],
+  "answer": "A",
+  "explanation": "Results that don't support a hypothesis are still useful. Scientists report them honestly and form or test a new hypothesis.",
+  "distractors": "B: repeating only until the results agree biases the conclusion. C: discarding results hides useful information. D: choosing only agreeing trials biases the conclusion.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "Why do scientists repeat trials in an experiment?",
+  "options": [
+   "To make the data look more impressive",
+   "To reduce the effect of chance errors",
+   "To change the hypothesis partway through",
+   "To eliminate all systematic error"
+  ],
+  "answer": "B",
+  "explanation": "Repeating trials shows whether results are consistent and reduces the influence of random errors and chance.",
+  "distractors": "A: the goal is reliability, not appearance. C: repeating trials doesn't change the hypothesis. D: repeating doesn't remove a systematic error, such as a miscalibrated scale that reads high every time; it only reduces random error.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-006",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "In a drug study, Group 1 receives the new drug and stays in private rooms. Group 2 receives a placebo and stays in a shared ward. What is the main flaw in this design?",
+  "options": [
+   "There is no control group.",
+   "The placebo group should also get the drug.",
+   "Neither group knew which treatment it received.",
+   "The groups differ in more than one way."
+  ],
+  "answer": "D",
+  "explanation": "The groups differ in both treatment and room type, so any difference in results can't be blamed on the drug alone.",
+  "distractors": "A: the placebo group is the control. B: giving both groups the drug would remove the comparison. C: blinding the groups is a strength, not a flaw.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-004",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "The table shows how much sugar dissolves in 100 g of water at different temperatures:\n\nTemperature | Sugar dissolved\n20 °C | 204 g\n40 °C | 238 g\n60 °C | 287 g\n80 °C | 362 g\n\nBased on the pattern, how much sugar would most likely dissolve at 100 °C?",
+  "options": [
+   "More than 362 g",
+   "Less than 204 g",
+   "About 362 g",
+   "About 287 g"
+  ],
+  "answer": "A",
+  "explanation": "Solubility rises with temperature, and each 20-degree step adds more than the last (+34, +49, +75). At 100 °C it should be well above 362 g.",
+  "distractors": "B: reverses the trend. C: assumes the trend stops. D: the value at 60 °C.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

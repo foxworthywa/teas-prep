@@ -1,0 +1,340 @@
+[
+ {
+  "id": "S.3.1-001",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.1",
+  "format": "Multiple choice",
+  "stem": "A neutral atom has 11 protons, 12 neutrons and 11 electrons. What is its mass number?",
+  "options": [
+   "11",
+   "22",
+   "23",
+   "34"
+  ],
+  "answer": "C",
+  "explanation": "Mass number = protons + neutrons = 11 + 12 = 23. Electrons have almost no mass and are not counted.",
+  "distractors": "A: 11 is the atomic number (protons only). B: 22 adds protons and electrons. D: 34 adds all three particles; electrons are not counted in the mass number.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.1-002",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.1",
+  "format": "Multiple choice",
+  "stem": "Which feature of an atom determines which element it is?",
+  "options": [
+   "Its number of neutrons",
+   "Its number of electrons",
+   "Its number of energy levels",
+   "Its number of protons"
+  ],
+  "answer": "D",
+  "explanation": "The number of protons is the atomic number, and it defines the element. Every carbon atom has 6 protons; an atom with 7 protons is nitrogen.",
+  "distractors": "A: changing neutrons makes a different isotope of the same element. B: gaining or losing electrons makes an ion of the same element. C: energy levels relate to the element's period (row), but the proton count is what defines the element.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.1-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.1",
+  "format": "Multiple choice",
+  "stem": "Sodium and potassium are in the same group (column) of the periodic table. Why do they react in similar ways?",
+  "options": [
+   "They have the same number of valence electrons.",
+   "They have the same atomic mass.",
+   "They have the same number of neutrons.",
+   "They have the same number of electron energy levels."
+  ],
+  "answer": "A",
+  "explanation": "Elements in the same group have the same number of valence (outer-shell) electrons, and valence electrons determine how an element reacts. Sodium and potassium each have one.",
+  "distractors": "B and C: their masses and neutron counts differ (sodium about 23, potassium about 39). D: elements in the same period (row), not group, have the same number of energy levels.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.2-001",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a chemical change?",
+  "options": [
+   "Ice melting",
+   "Sugar dissolving in water",
+   "Iron rusting",
+   "Water boiling"
+  ],
+  "answer": "C",
+  "explanation": "Rusting forms a new substance (iron oxide) with new properties, so it is a chemical change.",
+  "distractors": "A and D: melting and boiling are changes of state; the substance is still water. B: dissolving is a physical change; evaporating the water gets the sugar back.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.2-002",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Multiple choice",
+  "stem": "Dry ice (solid carbon dioxide) turns directly into a gas without melting. What is this change called?",
+  "options": [
+   "Sublimation",
+   "Deposition",
+   "Condensation",
+   "Evaporation"
+  ],
+  "answer": "A",
+  "explanation": "Sublimation is the change from solid directly to gas.",
+  "distractors": "B: deposition is the reverse, gas directly to solid (frost). C: condensation is gas to liquid. D: evaporation is liquid to gas.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.2-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Select all",
+  "stem": "Which of the following are physical changes? Select all that apply.",
+  "options": [
+   "Cutting paper",
+   "Burning wood",
+   "Melting butter",
+   "Baking a cake",
+   "Dissolving sugar in water"
+  ],
+  "answer": "A, C, E",
+  "explanation": "In a physical change the substance keeps its identity: cut paper is still paper, melted butter is still butter, and dissolved sugar is still sugar (evaporate the water and it is left behind).",
+  "distractors": "B and D are chemical changes: burning and baking form new substances (ash, gases, new compounds in the cake).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-001",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "Which set of coefficients balances this equation? __ H₂ + __ O₂ → __ H₂O",
+  "options": [
+   "1, 1, 1",
+   "2, 1, 2",
+   "1, 2, 1",
+   "2, 2, 2"
+  ],
+  "answer": "B",
+  "explanation": "2H₂ + O₂ → 2H₂O. Left: 4 H and 2 O. Right: 4 H and 2 O. Atoms are conserved.",
+  "distractors": "A: 2 O on the left but only 1 on the right. C: 4 O on the left, 1 on the right. D: 4 O on the left, 2 on the right.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-002",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "What type of reaction is Zn + 2HCl → ZnCl₂ + H₂?",
+  "options": [
+   "Synthesis (combination)",
+   "Decomposition",
+   "Combustion",
+   "Single replacement"
+  ],
+  "answer": "D",
+  "explanation": "One element (zinc) replaces another (hydrogen) in a compound: A + BC → AC + B. That is single replacement.",
+  "distractors": "A: synthesis combines substances into one product (A + B → AB). B: decomposition breaks one compound apart (AB → A + B). C: combustion is a reaction with oxygen that releases energy, usually making CO₂ and water.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "In a sealed container, 10 grams of reactants react completely. What is the total mass of the products?",
+  "options": [
+   "Less than 10 grams, because some mass becomes energy",
+   "Exactly 10 grams",
+   "More than 10 grams, because new bonds add mass",
+   "It cannot be predicted without the balanced equation"
+  ],
+  "answer": "B",
+  "explanation": "The law of conservation of mass: atoms are rearranged, not created or destroyed, so the products have the same mass as the reactants in a closed system.",
+  "distractors": "A: in ordinary chemical reactions the mass change is far too small to measure. C: forming bonds does not add atoms. D: conservation of mass holds for every chemical reaction, so no equation is needed.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-001",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "Which change would NOT speed up a chemical reaction?",
+  "options": [
+   "Raising the temperature",
+   "Increasing the concentration of a reactant",
+   "Grinding a solid reactant into powder",
+   "Removing a catalyst"
+  ],
+  "answer": "D",
+  "explanation": "Removing a catalyst slows the reaction, because the catalyst was lowering the activation energy.",
+  "distractors": "A: higher temperature makes particles move faster and collide harder and more often. B: higher concentration means more frequent collisions. C: powder has more surface area, so more particles are exposed to collide.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-002",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "How does a catalyst speed up a reaction?",
+  "options": [
+   "It lowers the activation energy needed.",
+   "It raises the temperature of the mixture.",
+   "It is used up to supply extra energy.",
+   "It increases the total amount of product made."
+  ],
+  "answer": "A",
+  "explanation": "A catalyst provides an easier pathway with a lower activation energy, so more collisions succeed. It is not consumed.",
+  "distractors": "B: catalysts do not heat the mixture. C: catalysts are not used up. D: a catalyst makes product faster but does not change how much product the reaction can make.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "Why does food spoil more slowly in a refrigerator?",
+  "options": [
+   "Cold makes food molecules more stable by adding energy to them.",
+   "Cold temperatures kill the bacteria and molds that make food spoil.",
+   "Particles move less at lower temperature, so reaction rates drop.",
+   "The refrigerator removes moisture, which spoilage reactions need."
+  ],
+  "answer": "C",
+  "explanation": "Spoilage involves chemical reactions, many driven by microbes' enzymes. At lower temperature particles move more slowly and collide less often and with less energy, so the reactions slow down.",
+  "distractors": "A: cooling removes energy; it does not add it. B: refrigeration slows the growth of most bacteria and molds but does not kill them. D: refrigerators do not dry food out enough to matter, and reactions still occur, just more slowly.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.5-001",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.5",
+  "format": "Multiple choice",
+  "stem": "In salt water, what is the salt?",
+  "options": [
+   "The solvent",
+   "The solute",
+   "The solution",
+   "The precipitate"
+  ],
+  "answer": "B",
+  "explanation": "The solute is the substance that is dissolved (salt). The solvent does the dissolving (water). Together they make the solution.",
+  "distractors": "A: water is the solvent. C: the solution is the whole mixture. D: a precipitate is a solid that comes out of a solution.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.5-002",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.5",
+  "format": "Multiple choice",
+  "stem": "A red blood cell is placed in a hypertonic solution (one with a higher solute concentration than the cell). What happens to the cell?",
+  "options": [
+   "It swells and may burst.",
+   "It stays the same size.",
+   "It takes in salt from the solution and swells.",
+   "It shrinks as water leaves it."
+  ],
+  "answer": "D",
+  "explanation": "Water moves by osmosis toward the higher solute concentration. The solution outside is more concentrated, so water leaves the cell and it shrinks (crenates).",
+  "distractors": "A: swelling happens in a hypotonic solution, where water moves in. B: no change happens in an isotonic solution. C: water moves, not salt, and the cell loses water.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.5-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.5",
+  "format": "Supply answer",
+  "stem": "How many grams of glucose are in 250 mL of a 5% (weight/volume) glucose solution? Enter a number.",
+  "options": [],
+  "answer": "12.5|12.5 g|12.5g|12.5 grams|12.50|12.50 g",
+  "explanation": "A 5% (w/v) solution has 5 g per 100 mL. 250 mL is 2.5 × 100 mL, so 2.5 × 5 g = 12.5 g.",
+  "distractors": "Common errors: 5 × 250 = 1,250 (forgetting that percent means per 100 mL); 50 (treating 5% as per 25 mL).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-001",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "A solution has a pH of 3. Which statement best describes it?",
+  "options": [
+   "It is acidic, with more H⁺ ions than pure water.",
+   "It is basic, with more OH⁻ ions than pure water.",
+   "It is neutral, like pure water.",
+   "It is acidic, with fewer H⁺ ions than pure water."
+  ],
+  "answer": "A",
+  "explanation": "Below pH 7 is acidic, and a lower pH means more hydrogen ions. pH 3 has 10,000 times the H⁺ concentration of pure water (pH 7).",
+  "distractors": "B: basic solutions have pH above 7. C: neutral is pH 7. D: acidic is right, but acids have more H⁺ than water, not fewer; this reverses the scale.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-002",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "A solution at pH 4 has how many times the hydrogen ion concentration of a solution at pH 6?",
+  "options": [
+   "2 times",
+   "20 times",
+   "100 times",
+   "1,000 times"
+  ],
+  "answer": "C",
+  "explanation": "Each pH unit is a tenfold change. Two units apart: 10 × 10 = 100 times. Lower pH means more hydrogen ions.",
+  "distractors": "A: subtracts the pH values (6 − 4) instead of using powers of 10. B: multiplies 2 by 10. D: would be three pH units apart.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-003",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "When an acid reacts completely with a base, what are the usual products?",
+  "options": [
+   "A salt and water",
+   "Hydrogen gas only",
+   "A stronger acid",
+   "Oxygen and carbon dioxide"
+  ],
+  "answer": "A",
+  "explanation": "This is a neutralization reaction: acid + base → salt + water. For example, HCl + NaOH → NaCl + H₂O.",
+  "distractors": "B: hydrogen gas comes from an acid reacting with certain metals. C: neutralization weakens the acid. D: carbon dioxide comes from combustion or from an acid reacting with a carbonate.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

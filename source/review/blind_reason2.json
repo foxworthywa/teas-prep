@@ -1,0 +1,296 @@
+[
+ {
+  "id": "S.4.1-004",
+  "format": "Multiple choice",
+  "stem": "Which tool should be used to measure the mass of a sample of powder?",
+  "options": [
+   "Graduated cylinder",
+   "Thermometer",
+   "Electronic balance",
+   "Meter stick"
+  ]
+ },
+ {
+  "id": "S.4.1-005",
+  "format": "Multiple choice",
+  "stem": "Convert 450 milligrams to grams.",
+  "options": [
+   "0.45 g",
+   "4.5 g",
+   "45 g",
+   "450,000 g"
+  ]
+ },
+ {
+  "id": "S.4.1-006",
+  "format": "Supply answer",
+  "stem": "A patient's temperature is 102.2 °F. What is it in degrees Celsius? Use °C = (°F − 32) × 5/9. Enter a number.",
+  "options": []
+ },
+ {
+  "id": "S.4.1-007",
+  "format": "Multiple choice",
+  "stem": "Four students each weigh the same 50.0 g standard mass three times. Whose results are both accurate and precise?\n\nStudent | Trial 1 | Trial 2 | Trial 3\n1 | 50.1 g | 49.9 g | 50.0 g\n2 | 47.2 g | 47.3 g | 47.2 g\n3 | 48.0 g | 52.1 g | 50.4 g\n4 | 53.5 g | 46.8 g | 51.9 g",
+  "options": [
+   "Student 2",
+   "Student 1",
+   "Student 3",
+   "Student 4"
+  ]
+ },
+ {
+  "id": "S.4.1-008",
+  "format": "Multiple choice",
+  "stem": "An irregularly shaped rock is lowered into a graduated cylinder. The water level rises from 35.0 mL to 42.5 mL. What is the volume of the rock?",
+  "options": [
+   "42.5 cm³",
+   "77.5 cm³",
+   "35.0 cm³",
+   "7.5 cm³"
+  ]
+ },
+ {
+  "id": "S.4.1-009",
+  "format": "Multiple choice",
+  "stem": "Which length is the greatest?",
+  "options": [
+   "600,000 mm",
+   "0.5 km",
+   "450 m",
+   "5,000 cm"
+  ]
+ },
+ {
+  "id": "S.4.1-010",
+  "format": "Multiple choice",
+  "stem": "A pediatric dose is 0.25 mg. How many micrograms (mcg) is this?",
+  "options": [
+   "2.5 mcg",
+   "25 mcg",
+   "250 mcg",
+   "0.00025 mcg"
+  ]
+ },
+ {
+  "id": "S.4.2-004",
+  "format": "Multiple choice",
+  "stem": "Which statement best describes a scientific theory?",
+  "options": [
+   "An educated guess that has not yet been tested",
+   "A law that has not yet been proven",
+   "The result of a single experiment",
+   "A well-tested explanation backed by evidence"
+  ]
+ },
+ {
+  "id": "S.4.2-005",
+  "format": "Multiple choice",
+  "stem": "A company claims its new hand sanitizer reduces infections in hospital units. Which finding would most weaken this claim?",
+  "options": [
+   "Infection rates were the same with or without it.",
+   "Some nurses said the sanitizer had an unpleasant smell.",
+   "The sanitizer costs more than plain soap.",
+   "Nurses who used the sanitizer said they liked it."
+  ]
+ },
+ {
+  "id": "S.4.2-006",
+  "format": "Multiple choice",
+  "stem": "Which is an example of deductive reasoning?",
+  "options": [
+   "Several patients improved on a drug, so it will work for every patient.",
+   "Every swan I have seen is white, so all swans are white.",
+   "All mammals have hair; a dolphin is a mammal; so a dolphin has hair.",
+   "The sun has risen every day so far, so it will rise tomorrow."
+  ]
+ },
+ {
+  "id": "S.4.2-007",
+  "format": "Multiple choice",
+  "stem": "A survey finds that people who drink more coffee report more headaches. Which conclusion is best supported?",
+  "options": [
+   "Coffee causes headaches in most people.",
+   "Headaches cause people to drink more coffee.",
+   "The survey proves there is no link.",
+   "They are linked, but the survey can't show cause."
+  ]
+ },
+ {
+  "id": "S.4.2-008",
+  "format": "Select all",
+  "stem": "A student wants evidence that music makes plants grow taller. Which steps would make the evidence stronger? Select all that apply.",
+  "options": [
+   "Use many plants in each group.",
+   "Randomly assign plants to the music and no-music groups.",
+   "Play music only to the plants that already look healthiest.",
+   "Keep light, water and soil the same for both groups.",
+   "Ask a friend whether the music plants look taller."
+  ]
+ },
+ {
+  "id": "S.4.2-009",
+  "format": "Multiple choice",
+  "stem": "In a lab, a student adds drops of an indicator to a clear solution. Which statement is an observation?",
+  "options": [
+   "The solution must be basic.",
+   "The solution turned blue.",
+   "The reaction probably released heat.",
+   "A new compound must have formed."
+  ]
+ },
+ {
+  "id": "S.4.2-010",
+  "format": "Multiple choice",
+  "stem": "A study of 20 volunteers found that Supplement Z improved memory. Which would make this result most trustworthy?",
+  "options": [
+   "The study was paid for by the company that sells Z.",
+   "The volunteers were told they were taking Z.",
+   "The result was widely shared on social media.",
+   "Independent teams repeated it with more people."
+  ]
+ },
+ {
+  "id": "S.4.3-004",
+  "format": "Multiple choice",
+  "stem": "The table shows how much sugar dissolves in 100 mL of water at different temperatures:\n\nTemperature | Sugar dissolved\n20 °C | 204 g\n40 °C | 238 g\n60 °C | 287 g\n80 °C | 362 g\n\nBased on the pattern, how much sugar would most likely dissolve at 100 °C?",
+  "options": [
+   "More than 362 g",
+   "Less than 204 g",
+   "About 362 g",
+   "About 287 g"
+  ]
+ },
+ {
+  "id": "S.4.3-005",
+  "format": "Multiple choice",
+  "stem": "In a forest, foxes eat rabbits. After a mild winter, the fox population grows sharply and the rabbit population falls. What is most likely to happen next to the fox population?",
+  "options": [
+   "It will decrease as food becomes scarce.",
+   "It will keep growing at the same rate.",
+   "It will stay exactly the same.",
+   "It will grow faster because there are fewer rabbits."
+  ]
+ },
+ {
+  "id": "S.4.3-006",
+  "format": "Multiple choice",
+  "stem": "A gas in a sealed container occupies 6 L at a pressure of 2 atm. If the temperature stays the same and the pressure is raised to 4 atm, what will the volume be?",
+  "options": [
+   "3 L",
+   "6 L",
+   "12 L",
+   "8 L"
+  ]
+ },
+ {
+  "id": "S.4.3-007",
+  "format": "Multiple choice",
+  "stem": "A student records heart rate at different treadmill speeds:\n\nSpeed | Heart rate\n0 mph | 70 bpm\n3 mph | 95 bpm\n5 mph | 130 bpm\n7 mph | 165 bpm\n\nWhat is the best prediction of heart rate at 6 mph?",
+  "options": [
+   "About 115 bpm",
+   "About 175 bpm",
+   "About 148 bpm",
+   "About 95 bpm"
+  ]
+ },
+ {
+  "id": "S.4.3-008",
+  "format": "Multiple choice",
+  "stem": "Air pressure decreases as altitude increases. A sealed bag of chips is packed at sea level and carried up a mountain. What will most likely happen to the bag?",
+  "options": [
+   "It will shrink.",
+   "It will stay the same size.",
+   "It will lose air through the seal.",
+   "It will puff up."
+  ]
+ },
+ {
+  "id": "S.4.3-009",
+  "format": "Ordered response",
+  "stem": "A person becomes dehydrated. Put these events in the order they occur.",
+  "options": [
+   "The kidneys reabsorb more water.",
+   "Blood volume falls.",
+   "ADH (antidiuretic hormone) is released.",
+   "Urine becomes more concentrated."
+  ]
+ },
+ {
+  "id": "S.4.3-010",
+  "format": "Multiple choice",
+  "stem": "A bacterial population doubles every 30 minutes. If it starts with 500 bacteria, how many will there be after 2 hours?",
+  "options": [
+   "2,000",
+   "8,000",
+   "4,000",
+   "1,000"
+  ]
+ },
+ {
+  "id": "S.4.4-005",
+  "format": "Multiple choice",
+  "stem": "A nurse tests whether a new type of dressing makes wounds heal faster than the standard dressing. What is the dependent variable?",
+  "options": [
+   "The type of dressing",
+   "The age of the patients",
+   "The time it takes wounds to heal",
+   "The number of nurses on the unit"
+  ]
+ },
+ {
+  "id": "S.4.4-006",
+  "format": "Multiple choice",
+  "stem": "In a drug study, Group 1 receives the new drug and stays in private rooms. Group 2 receives a placebo and stays in a shared ward. What is the main flaw in this design?",
+  "options": [
+   "There is no control group.",
+   "The placebo group should also get the drug.",
+   "The sample size is too large.",
+   "The groups differ in more than one way."
+  ]
+ },
+ {
+  "id": "S.4.4-007",
+  "format": "Multiple choice",
+  "stem": "A student tests how the amount of sunlight affects plant growth. Which is a controlled variable?",
+  "options": [
+   "The amount of sunlight",
+   "The height of the plants",
+   "The number of leaves that grow",
+   "The amount of water given"
+  ]
+ },
+ {
+  "id": "S.4.4-008",
+  "format": "Multiple choice",
+  "stem": "A scientist's results do not support her hypothesis. What should she do?",
+  "options": [
+   "Report the results and test a revised hypothesis.",
+   "Adjust the data so it matches the hypothesis.",
+   "Throw out the results and report nothing.",
+   "Repeat only the trials that agreed with the hypothesis."
+  ]
+ },
+ {
+  "id": "S.4.4-009",
+  "format": "Multiple choice",
+  "stem": "Why do scientists repeat trials in an experiment?",
+  "options": [
+   "To make the data look more impressive",
+   "To reduce the effect of chance errors",
+   "To change the hypothesis partway through",
+   "To avoid needing a separate control group"
+  ]
+ },
+ {
+  "id": "S.4.4-010",
+  "format": "Select all",
+  "stem": "Which are characteristics of a good scientific hypothesis? Select all that apply.",
+  "options": [
+   "It can be tested.",
+   "It could be shown to be wrong.",
+   "It is based on personal opinion.",
+   "It makes a prediction.",
+   "It has already been proven true."
+  ]
+ }
+]

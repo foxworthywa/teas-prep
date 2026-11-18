@@ -1,0 +1,421 @@
+[
+ {
+  "id": "S.3.1-004",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.1",
+  "format": "Multiple choice",
+  "stem": "Nitrogen has atomic number 7. How many neutrons are in an atom of nitrogen-15?",
+  "options": [
+   "7",
+   "8",
+   "15",
+   "22"
+  ],
+  "answer": "B",
+  "explanation": "The mass number (15) is protons + neutrons. Nitrogen has 7 protons, so neutrons = 15 − 7 = 8.",
+  "distractors": "A: the number of protons. C: the mass number. D: adds the atomic number and the mass number.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.1-005",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.1",
+  "format": "Multiple choice",
+  "stem": "A calcium atom (atomic number 20) loses two electrons. What does it become?",
+  "options": [
+   "A Ca²⁺ ion with 20 protons and 18 electrons",
+   "A Ca²⁻ ion with 20 protons and 22 electrons",
+   "A Ca²⁺ ion with 18 protons and 18 electrons",
+   "An atom of argon, element 18"
+  ],
+  "answer": "A",
+  "explanation": "Losing electrons leaves more protons (positive) than electrons (negative). 20 protons − 18 electrons = a +2 charge. The proton number never changes in a chemical reaction.",
+  "distractors": "B: gaining electrons would make a negative ion. C: the proton count doesn't change. D: changing the element would require changing the number of protons.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.1-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.1",
+  "format": "Multiple choice",
+  "stem": "Which pair of elements is most likely to form an ionic bond?",
+  "options": [
+   "Carbon and oxygen",
+   "Nitrogen and hydrogen",
+   "Sodium and chlorine",
+   "Oxygen and oxygen"
+  ],
+  "answer": "C",
+  "explanation": "Ionic bonds usually form between a metal and a nonmetal. Sodium (a metal) gives an electron to chlorine (a nonmetal), forming Na⁺ and Cl⁻.",
+  "distractors": "A, B and D: each pair is two nonmetals, which share electrons in covalent bonds.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.1-007",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.1",
+  "format": "Select all",
+  "stem": "Which statements are true of two isotopes of the same element? Select all that apply.",
+  "options": [
+   "They have the same number of protons.",
+   "They have the same number of neutrons.",
+   "They have different mass numbers.",
+   "They have different atomic numbers.",
+   "They react in nearly the same way chemically."
+  ],
+  "answer": "A, C, E",
+  "explanation": "Isotopes of an element have the same number of protons (the same atomic number) but different numbers of neutrons, so different mass numbers. Chemical behavior depends mainly on electrons, so isotopes react almost identically.",
+  "distractors": "B: isotopes differ in neutrons. D: the same element always has the same atomic number.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.2-004",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Multiple choice",
+  "stem": "Water droplets form on the outside of a glass of iced tea on a warm day. What process causes this?",
+  "options": [
+   "Evaporation",
+   "Melting",
+   "Sublimation",
+   "Condensation"
+  ],
+  "answer": "D",
+  "explanation": "Water vapor in the warm air cools when it touches the cold glass and changes from gas to liquid: condensation.",
+  "distractors": "A: evaporation is liquid to gas, the opposite. B: melting is solid to liquid; the water was never solid on the outside of the glass. C: sublimation is solid directly to gas.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.2-005",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Multiple choice",
+  "stem": "Ice in a glass of water is melting at 0 °C. What happens to the temperature of the ice-water mixture while the ice melts?",
+  "options": [
+   "It rises steadily as heat is absorbed.",
+   "It stays at 0 °C until the ice is gone.",
+   "It drops below 0 °C as the ice absorbs heat.",
+   "It rises above 0 °C and then falls back."
+  ],
+  "answer": "B",
+  "explanation": "During a change of state, added heat goes into breaking the attractions between water molecules, not into raising the temperature. The mixture stays at 0 °C until the ice is gone.",
+  "distractors": "A: the temperature rises only after all the ice has melted. C: the ice absorbs heat from the water and the surroundings, but the mixture stays at its melting point rather than dropping below it. D: there is no such rise and fall.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.2-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Multiple choice",
+  "stem": "An object has a mass of 25 g and a volume of 20 mL. What is its density, and will it float in water (density 1 g/mL)?",
+  "options": [
+   "0.8 g/mL; it floats",
+   "1.25 g/mL; it floats",
+   "1.25 g/mL; it sinks",
+   "0.8 g/mL; it sinks"
+  ],
+  "answer": "C",
+  "explanation": "Density = mass ÷ volume = 25 ÷ 20 = 1.25 g/mL. That is greater than water's 1 g/mL, so it sinks.",
+  "distractors": "A and D: divide volume by mass (20 ÷ 25 = 0.8). B: correct density, but an object denser than water sinks.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.2-007",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.2",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a chemical property of a substance?",
+  "options": [
+   "Flammability",
+   "Density",
+   "Boiling point",
+   "Color"
+  ],
+  "answer": "A",
+  "explanation": "A chemical property describes how a substance reacts to form new substances. Flammability is the ability to burn.",
+  "distractors": "B, C and D: density, boiling point and color can be observed without changing the substance, so they are physical properties.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-004",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "Which set of coefficients balances this equation? __ Al + __ O₂ → __ Al₂O₃",
+  "options": [
+   "2, 3, 1",
+   "4, 6, 2",
+   "2, 1, 1",
+   "4, 3, 2"
+  ],
+  "answer": "D",
+  "explanation": "4Al + 3O₂ → 2Al₂O₃. Left: 4 Al and 6 O. Right: 2 × 2 = 4 Al and 2 × 3 = 6 O.",
+  "distractors": "A: Al balances (2 = 2) but O does not (6 on the left, 3 on the right). B: O gives 12 on the left and 6 on the right. C: O gives 2 on the left and 3 on the right.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-005",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "What type of reaction is AgNO₃ + NaCl → AgCl + NaNO₃?",
+  "options": [
+   "Double replacement",
+   "Single replacement",
+   "Synthesis",
+   "Decomposition"
+  ],
+  "answer": "A",
+  "explanation": "Two compounds swap partners: AB + CD → AD + CB. Silver pairs with chlorine and sodium pairs with nitrate.",
+  "distractors": "B: in single replacement a lone element replaces part of a compound; there is no lone element here. C: synthesis makes one product. D: decomposition starts with one reactant.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "Methane burns according to CH₄ + 2O₂ → CO₂ + 2H₂O. How many molecules of O₂ are needed to burn 5 molecules of CH₄ completely?",
+  "options": [
+   "2",
+   "5",
+   "10",
+   "20"
+  ],
+  "answer": "C",
+  "explanation": "The equation shows 2 O₂ for every 1 CH₄. So 5 CH₄ need 5 × 2 = 10 O₂.",
+  "distractors": "A: copies the coefficient from the equation. B: assumes a 1:1 ratio. D: counts oxygen atoms (10 × 2) instead of O₂ molecules.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.3-007",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.3",
+  "format": "Multiple choice",
+  "stem": "Burning wood gives off heat and light. How is this reaction classified?",
+  "options": [
+   "Endothermic",
+   "A physical change",
+   "Exothermic",
+   "A decomposition reaction"
+  ],
+  "answer": "C",
+  "explanation": "A reaction that releases energy to its surroundings is exothermic. Burning (combustion) is exothermic.",
+  "distractors": "A: endothermic reactions absorb energy from their surroundings. B: burning forms new substances (ash, carbon dioxide, water vapor), so it is a chemical change. D: burning combines fuel with oxygen; it is a combustion reaction, not a decomposition.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-004",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "An effervescent antacid tablet fizzes when dropped in water. Which conditions would make the reaction finish fastest?",
+  "options": [
+   "A whole tablet in cold water",
+   "A whole tablet in warm water",
+   "A crushed tablet in cold water",
+   "A crushed tablet in warm water"
+  ],
+  "answer": "D",
+  "explanation": "Crushing increases surface area, so more particles can react at once, and warmer water makes particles move faster and collide more often and with more energy. Both speed the reaction.",
+  "distractors": "A: neither change; the slowest. B: warmer water helps, but the whole tablet has less surface area. C: crushing helps, but cold water slows the particles.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-005",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "Adding a catalyst to a reaction changes which of the following?",
+  "options": [
+   "The energy of the reactants",
+   "The activation energy",
+   "The energy of the products",
+   "The total energy released"
+  ],
+  "answer": "B",
+  "explanation": "A catalyst provides a different pathway with a lower activation energy. The starting and ending energies, and so the overall energy released, stay the same.",
+  "distractors": "A and C: the reactants and products are the same substances with the same energy. D: the overall energy change depends only on the reactants and products.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.4-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.4",
+  "format": "Multiple choice",
+  "stem": "The reaction N₂ + 3H₂ ⇌ 2NH₃ is at equilibrium. If more N₂ is added, what will the system do?",
+  "options": [
+   "Shift left, making more N₂ and H₂",
+   "Stop reacting until the N₂ is used",
+   "Shift right, making more NH₃",
+   "Stay exactly the same"
+  ],
+  "answer": "C",
+  "explanation": "By Le Chatelier's principle, the system shifts to counteract the change: it uses up some of the added N₂ by making more NH₃.",
+  "distractors": "A: shifting left would add even more N₂. B: reactions at equilibrium never stop; both directions continue. D: adding a reactant disturbs the equilibrium.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.5-004",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.5",
+  "format": "Multiple choice",
+  "stem": "How much 20% stock solution is needed to make 500 mL of a 4% solution?",
+  "options": [
+   "100 mL",
+   "125 mL",
+   "400 mL",
+   "2,500 mL"
+  ],
+  "answer": "A",
+  "explanation": "Use C₁V₁ = C₂V₂: 20% × V₁ = 4% × 500 mL. V₁ = 2,000 ÷ 20 = 100 mL (then add water up to 500 mL).",
+  "distractors": "B: divides 500 by 4. C: the amount of water to add, not the stock. D: inverts the ratio (20 × 500 ÷ 4).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.5-005",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.5",
+  "format": "Multiple choice",
+  "stem": "Why does an open soda go flat faster when it is warm than when it is cold?",
+  "options": [
+   "Warm soda has more sugar dissolved in it.",
+   "Warm soda is under higher pressure.",
+   "Cold soda contains a different type of gas.",
+   "Warm liquid can hold less dissolved gas."
+  ],
+  "answer": "D",
+  "explanation": "Gases are less soluble in warmer liquids, so carbon dioxide escapes faster from warm soda.",
+  "distractors": "A: sugar content doesn't change with temperature. B: once open, both are at room pressure. C: the gas is carbon dioxide in both.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.5-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.5",
+  "format": "Multiple choice",
+  "stem": "Which of these mixtures is a solution?",
+  "options": [
+   "Sand stirred into water",
+   "Oil and vinegar",
+   "Salt dissolved in water",
+   "Granola"
+  ],
+  "answer": "C",
+  "explanation": "A solution is a homogeneous mixture: evenly mixed at the particle level. Dissolved salt spreads evenly through the water.",
+  "distractors": "A and B: sand settles and oil separates; they are heterogeneous mixtures. D: granola's parts are visible, so it is heterogeneous.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.5-007",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.5",
+  "format": "Multiple choice",
+  "stem": "Normal saline is 0.9% (w/v) sodium chloride. How many grams of sodium chloride are in 1 liter?",
+  "options": [
+   "0.9 g",
+   "90 g",
+   "0.09 g",
+   "9 g"
+  ],
+  "answer": "D",
+  "explanation": "0.9% (w/v) means 0.9 g per 100 mL. 1 L = 1,000 mL = 10 × 100 mL, so 10 × 0.9 g = 9 g.",
+  "distractors": "A: the amount in 100 mL, not 1 L. B: multiplies by 100 instead of 10. C: divides instead of multiplying.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-004",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "Which substance is the most basic?",
+  "options": [
+   "Lemon juice, pH 2",
+   "Blood, pH 7.4",
+   "Bleach, pH 12.5",
+   "Pure water, pH 7"
+  ],
+  "answer": "C",
+  "explanation": "The higher the pH above 7, the more basic. Bleach, at 12.5, is the most basic.",
+  "distractors": "A: pH 2 is strongly acidic. B: blood is only slightly basic. D: pH 7 is neutral.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-005",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "A patient's blood pH drops from 7.40 to 7.30. Which statement describes this change?",
+  "options": [
+   "Alkalosis, with fewer hydrogen ions",
+   "Acidosis, with more hydrogen ions",
+   "Acidosis, with fewer hydrogen ions",
+   "Normal; it is still above 7"
+  ],
+  "answer": "B",
+  "explanation": "Normal blood pH is 7.35–7.45. Below 7.35 is acidosis. A lower pH means a higher concentration of hydrogen ions.",
+  "distractors": "A: alkalosis is pH above 7.45. C: acidosis is right, but a lower pH means more H⁺, not fewer. D: blood pH must stay in its narrow normal range; 7.30 is too low even though it is above 7.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.3.6-006",
+  "section": "Science",
+  "subarea": "S.3",
+  "objective": "S.3.6",
+  "format": "Multiple choice",
+  "stem": "Antacid tablets relieve heartburn caused by stomach acid. How do they change the pH in the stomach?",
+  "options": [
+   "They are bases, so they raise the pH toward neutral.",
+   "They are bases, so they lower the pH further.",
+   "They are acids, so they raise the pH toward neutral.",
+   "They add H⁺ ions, so they raise the pH."
+  ],
+  "answer": "A",
+  "explanation": "Antacids contain mild bases, such as magnesium hydroxide or calcium carbonate. They react with stomach acid, removing H⁺ ions, so the pH rises toward neutral. (Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O; calcium carbonate also gives off CO₂.)",
+  "distractors": "B: removing acid raises the pH; a lower pH means more acid. C: adding acid would worsen heartburn. D: adding H⁺ would lower the pH, not raise it.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

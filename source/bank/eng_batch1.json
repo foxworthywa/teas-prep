@@ -1,0 +1,612 @@
+[
+ {
+  "id": "E.1.1-001",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word is spelled correctly?",
+  "options": [
+   "Recieve",
+   "Receive",
+   "Recive",
+   "Receeve"
+  ],
+  "answer": "B",
+  "explanation": "\"Receive\" follows the rule \"i before e, except after c\": after c, the vowels are ei.",
+  "distractors": "A: reverses the vowels after c. C: drops the e. D: replaces ei with ee.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-002",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nThe nurses left ___ coats in the break room.",
+  "options": [
+   "their",
+   "there",
+   "they're",
+   "thier"
+  ],
+  "answer": "A",
+  "explanation": "\"Their\" is the possessive form: the coats belong to the nurses.",
+  "distractors": "B: \"there\" refers to a place (\"over there\"). C: \"they're\" means \"they are.\" D: a misspelling of \"their.\"",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-003",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nThe new visiting hours will ___ every family on the unit.",
+  "options": [
+   "effect",
+   "affects",
+   "affect",
+   "effects"
+  ],
+  "answer": "C",
+  "explanation": "\"Affect\" is usually a verb meaning \"to influence.\" The sentence needs a verb after \"will.\"",
+  "distractors": "A: \"effect\" is usually a noun (a result); as a verb it means \"to bring about\" (effect a change), which doesn't fit here. B: after \"will,\" a verb takes its base form (affect), not -s. D: \"effects\" is a plural noun or an -s verb form; neither fits after \"will.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-004",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Select all",
+  "stem": "Which words are spelled correctly? Select all that apply.",
+  "options": [
+   "necessary",
+   "seperate",
+   "definitely",
+   "occurence",
+   "accommodate"
+  ],
+  "answer": "A, C, E",
+  "explanation": "Necessary (one c, two s's), definitely (ends in -itely) and accommodate (two c's and two m's) are spelled correctly.",
+  "distractors": "B: the correct spelling is \"separate\" (there is \"a rat\" in separate). D: the correct spelling is \"occurrence\" (double r).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-001",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence is punctuated correctly?",
+  "options": [
+   "After the shift ended, the nurse wrote her notes.",
+   "After the shift ended the nurse, wrote her notes.",
+   "After, the shift ended the nurse wrote her notes.",
+   "After the shift, ended the nurse wrote her notes."
+  ],
+  "answer": "A",
+  "explanation": "An introductory dependent clause (\"After the shift ended\") is followed by a comma before the main clause.",
+  "distractors": "B: puts the comma between the subject and its verb. C and D: place the comma inside the introductory clause, breaking it apart.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-002",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses an apostrophe correctly?",
+  "options": [
+   "The patient's were discharged today.",
+   "Its' battery died during the shift.",
+   "The doctors's notes were clear.",
+   "The patients' rooms were cleaned."
+  ],
+  "answer": "D",
+  "explanation": "\"Patients'\" is a plural possessive: the rooms belonging to several patients. For a plural noun ending in s, add only an apostrophe.",
+  "distractors": "A: \"patients\" here is a simple plural, so no apostrophe is needed. B: the possessive of \"it\" is \"its,\" with no apostrophe. C: a plural ending in s takes only an apostrophe (doctors'), not 's.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-003",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses a semicolon correctly?",
+  "options": [
+   "I studied every night; and I felt ready.",
+   "I studied every night; I felt ready.",
+   "I studied; every night before the test.",
+   "Because I studied; I felt ready on test day."
+  ],
+  "answer": "B",
+  "explanation": "A semicolon can join two complete sentences (independent clauses) that are closely related.",
+  "distractors": "A: these two short clauses have no internal commas, so use a comma before \"and,\" or drop \"and\" and keep the semicolon. C: \"every night before the test\" is not a complete sentence. D: \"Because I studied\" is a dependent clause; it takes a comma, not a semicolon.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-004",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses commas correctly?",
+  "options": [
+   "Bring your ID two pencils, and a water bottle.",
+   "Bring, your ID, two pencils and, a water bottle.",
+   "Bring your ID, two pencils, and a water bottle.",
+   "Bring your ID, two pencils, and, a water bottle."
+  ],
+  "answer": "C",
+  "explanation": "Items in a series are separated by commas. The comma before \"and\" (the serial or Oxford comma) is standard in most academic writing; AP style leaves it out, and either is acceptable if used consistently. Only C places every comma correctly; none of the options is a correct version without the serial comma.",
+  "distractors": "A: leaves out the comma after the first item. B: puts commas after \"Bring\" and after \"and.\" D: adds a comma after \"and.\"",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-001",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a complete sentence?",
+  "options": [
+   "Because the clinic was closed.",
+   "Running down the hall to the elevator.",
+   "The clinic closed early.",
+   "When the doctor arrives."
+  ],
+  "answer": "C",
+  "explanation": "A complete sentence has a subject (the clinic) and a verb (closed) and expresses a complete thought.",
+  "distractors": "A and D: begin with a subordinating word (because, when), so they are dependent clauses that can't stand alone. B: has no subject and no complete verb.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-002",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which revision correctly fixes this run-on sentence?\n\nThe lab results came back they were normal.",
+  "options": [
+   "The lab results came back, they were normal.",
+   "The lab results came back; they were normal.",
+   "The lab results came back they, were normal.",
+   "The lab results, came back they were normal."
+  ],
+  "answer": "B",
+  "explanation": "Two independent clauses can be joined with a semicolon (or a period, or a comma plus a conjunction such as \"and\").",
+  "distractors": "A: a comma alone between two complete sentences creates a comma splice. C and D: put commas in the wrong places and leave the run-on.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-003",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence is a compound sentence?",
+  "options": [
+   "The nurse checked the chart and called the doctor.",
+   "After checking the chart, the nurse called the doctor.",
+   "Because she checked the chart, the nurse knew the dose.",
+   "The nurse checked the chart, and the doctor reviewed it."
+  ],
+  "answer": "D",
+  "explanation": "A compound sentence joins two independent clauses, each with its own subject and verb (\"the nurse checked\"; \"the doctor reviewed\"), here with a comma and the conjunction \"and.\" A semicolon can also join them.",
+  "distractors": "A: one subject with two verbs (a compound predicate), so it is a simple sentence. B: a simple sentence that begins with a phrase. C: a complex sentence: a dependent clause plus one independent clause.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-004",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence is written correctly?",
+  "options": [
+   "Walking into the room, the nurse heard the monitor beep.",
+   "Walking into the room, the monitor beeped.",
+   "The monitor beeped walking into the room.",
+   "Walking into the room, a loud beep came from the monitor."
+  ],
+  "answer": "A",
+  "explanation": "An introductory phrase describes the noun right after the comma. The nurse is the one walking into the room.",
+  "distractors": "B, C and D: the phrase \"walking into the room\" ends up describing the monitor or the beep (a dangling or misplaced modifier).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-001",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nEach of the students ___ a name badge.",
+  "options": [
+   "have",
+   "has",
+   "are having",
+   "were having"
+  ],
+  "answer": "B",
+  "explanation": "\"Each\" is singular, so it takes a singular verb: \"Each ... has.\" The phrase \"of the students\" does not change the subject.",
+  "distractors": "A, C and D: plural verbs that agree with \"students\" instead of the true subject, \"each.\"",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-002",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses pronouns correctly?",
+  "options": [
+   "Me and Maria went to the lab.",
+   "Maria and me went to the lab.",
+   "Maria and I went to the lab.",
+   "Maria and myself went to the lab."
+  ],
+  "answer": "C",
+  "explanation": "The pronoun is part of the subject, so it takes the subject form \"I.\" Test it alone: \"I went to the lab.\"",
+  "distractors": "A and B: \"me\" is an object pronoun (\"Me went\" is wrong). D: \"myself\" must refer back to \"I\" or \"me\" earlier in the sentence (\"I hurt myself\"; \"I did it myself\"); it can't replace \"I\" as a subject.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-003",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence keeps verb tense consistent?",
+  "options": [
+   "She opened the chart and read the notes.",
+   "She opened the chart and reads the notes.",
+   "She opens the chart and read the notes.",
+   "She will open the chart and read the notes yesterday."
+  ],
+  "answer": "A",
+  "explanation": "Both verbs (opened, read) are in the past tense. (\"Read\" is spelled the same in present and past; here it is past.)",
+  "distractors": "B and C: shift between past and present. D: \"will\" (future) conflicts with \"yesterday\" (past).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-004",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence avoids an unclear pronoun reference?",
+  "options": [
+   "When Dana called Kim, she was upset.",
+   "Dana told Kim that her test was canceled.",
+   "Dana and Kim's shift, she said, was moved.",
+   "Dana was upset when she called Kim."
+  ],
+  "answer": "D",
+  "explanation": "In D, \"she\" must be Dana: the person calling Kim can't be Kim, so the pronoun has only one possible meaning.",
+  "distractors": "A: \"she\" could mean Dana or Kim. B: \"her test\" could be Dana's or Kim's. C: \"she\" has no clear referent.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-001",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence is most appropriate for an email to a professor?",
+  "options": [
+   "Hey, can u send me the notes from class?",
+   "Send me the notes from Tuesday's class ASAP.",
+   "Could you please send the notes from Tuesday's class?",
+   "Yo prof, notes pls?"
+  ],
+  "answer": "C",
+  "explanation": "A message to a professor should be polite and use standard spelling and full words.",
+  "distractors": "A and D: use slang and text abbreviations. B: is a blunt command, which sounds rude in a request.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-002",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "A nurse is explaining a procedure to a patient with no medical background. Which sentence is best?",
+  "options": [
+   "We'll put a small tube in a vein in your arm to give you fluids.",
+   "We'll insert a peripheral IV catheter for parenteral fluid administration.",
+   "We'll start an IV for hydration.",
+   "You need fluids, so just let us handle it."
+  ],
+  "answer": "A",
+  "explanation": "The audience is a patient without medical training, so plain language that explains what will happen is best.",
+  "distractors": "B: accurate but full of jargon the patient may not understand. C: uses the abbreviation IV and the word hydration without explaining them. D: dismissive and explains nothing.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-003",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Select all",
+  "stem": "Which phrases are too informal for a scholarship essay? Select all that apply.",
+  "options": [
+   "I am committed to",
+   "kind of a big deal",
+   "gonna",
+   "In addition",
+   "stuff like that"
+  ],
+  "answer": "B, C, E",
+  "explanation": "Formal writing avoids slang and vague, conversational phrases.",
+  "distractors": "A and D: standard, formal phrases that fit an essay.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-004",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "Which word best completes this sentence in a formal lab report?\n\nThe results ___ the hypothesis.",
+  "options": [
+   "back up",
+   "support",
+   "are cool with",
+   "go along with"
+  ],
+  "answer": "B",
+  "explanation": "\"Support\" is precise, formal wording used in scientific writing.",
+  "distractors": "A, C and D: conversational phrases that are too informal for a lab report.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-001",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence would make the best topic sentence for a paragraph about the benefits of regular exercise?",
+  "options": [
+   "My cousin runs every morning before work.",
+   "Some gyms charge high monthly fees.",
+   "Running shoes come in many styles and colors.",
+   "Regular exercise has several health benefits."
+  ],
+  "answer": "D",
+  "explanation": "A topic sentence states the main idea that the rest of the paragraph will support.",
+  "distractors": "A: a specific example, not the main idea. B and C: details about gyms and shoes, which are off the topic of benefits.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-002",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Ordered response",
+  "stem": "Put these sentences in the most logical order for a paragraph about handwashing.",
+  "options": [
+   "Lather with soap and scrub for at least 20 seconds.",
+   "Wet your hands with clean running water.",
+   "Dry your hands with a clean towel.",
+   "Rinse your hands well under running water."
+  ],
+  "answer": "B, A, D, C",
+  "explanation": "Handwashing follows a set order: wet, lather and scrub, rinse, dry.",
+  "distractors": "Common error: rinsing before lathering; you can't rinse off soap that hasn't been applied. Another: drying before rinsing.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-003",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence does NOT belong in a paragraph about how to prepare for the TEAS?",
+  "options": [
+   "Take a practice test to find your weak areas.",
+   "Reread your notes on the topics you missed.",
+   "The TEAS is published by ATI, a testing company.",
+   "Get a good night's sleep before test day."
+  ],
+  "answer": "C",
+  "explanation": "The paragraph is about how to prepare. Who publishes the test doesn't help with preparation, so that sentence breaks the paragraph's unity.",
+  "distractors": "A, B and D: each is a preparation step that supports the main idea.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-004",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Choose the best transition for the blank.\n\nMany students feel anxious about math. ___, regular practice can build confidence.",
+  "options": [
+   "Therefore",
+   "However",
+   "For example",
+   "Similarly"
+  ],
+  "answer": "B",
+  "explanation": "The second sentence offers a contrast (a solution to the problem of anxiety), so a contrast transition fits.",
+  "distractors": "A: \"therefore\" signals a result, but practice is not a result of anxiety. C: \"for example\" introduces an example of anxiety. D: \"similarly\" signals a comparison.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-001",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "In which stage of the writing process does a writer brainstorm ideas and make an outline?",
+  "options": [
+   "Prewriting",
+   "Drafting",
+   "Revising",
+   "Editing"
+  ],
+  "answer": "A",
+  "explanation": "Prewriting (planning) is when a writer gathers ideas, chooses a focus and organizes the ideas, often in an outline.",
+  "distractors": "B: drafting is writing the first full version. C: revising is improving content and organization. D: editing is correcting grammar, spelling and punctuation.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-002",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "During which stage of the writing process should a writer correct spelling and punctuation errors?",
+  "options": [
+   "Revising",
+   "Editing",
+   "Drafting",
+   "Prewriting"
+  ],
+  "answer": "B",
+  "explanation": "Editing (proofreading) focuses on surface errors: spelling, punctuation, grammar and capitalization.",
+  "distractors": "A: revising focuses on bigger issues such as ideas, organization and clarity. C: drafting gets ideas down first. D: prewriting is planning.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-003",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "A student rereads her essay draft and notices the main points are in a confusing order. What should she do next?",
+  "options": [
+   "Proofread it for spelling errors",
+   "Rewrite only the conclusion",
+   "Add more examples to each point",
+   "Revise it to reorganize the ideas"
+  ],
+  "answer": "D",
+  "explanation": "Problems with organization and clarity are fixed during revision, by moving, adding or cutting content.",
+  "distractors": "A: proofreading catches surface errors, not organization. B: the conclusion isn't the problem; the order of the points is. C: more examples won't fix a confusing order.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-004",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which is the best thesis statement for an essay arguing that community colleges should offer free TEAS preparation?",
+  "options": [
+   "Community colleges offer many different programs.",
+   "The TEAS has four sections: reading, math, science, and English.",
+   "Community colleges should offer free TEAS prep to help more students qualify.",
+   "Some students take the TEAS more than once before they pass."
+  ],
+  "answer": "C",
+  "explanation": "A thesis states the writer's main claim, which the essay will support. Option C takes a clear, arguable position on the essay's topic.",
+  "distractors": "A, B and D: statements of fact that don't make an arguable claim.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-001",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "The prefix hyper- means",
+  "options": [
+   "below normal",
+   "above normal",
+   "within",
+   "before"
+  ],
+  "answer": "B",
+  "explanation": "Hyper- means above or excessive, as in hypertension (high blood pressure).",
+  "distractors": "A: below normal is hypo- (hypoglycemia). C: within is intra- or endo-. D: before is pre-.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-002",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using its word parts, what does cardiology mean?",
+  "options": [
+   "Inflammation of the heart",
+   "Surgery on the heart",
+   "A heart muscle",
+   "The study of the heart"
+  ],
+  "answer": "D",
+  "explanation": "Cardi/o means heart and -logy means study of: the study of the heart.",
+  "distractors": "A: inflammation of the heart is carditis (-itis). B: heart surgery uses suffixes like -tomy or -ectomy. C: -logy does not mean muscle.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-003",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "The suffix -itis means",
+  "options": [
+   "inflammation",
+   "removal",
+   "study of",
+   "pain"
+  ],
+  "answer": "A",
+  "explanation": "-itis means inflammation, as in tonsillitis (inflamed tonsils) and arthritis (inflamed joints).",
+  "distractors": "B: removal is -ectomy. C: study of is -logy. D: pain is -algia.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-004",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using word parts, which word means a slow heart rate?",
+  "options": [
+   "Tachycardia",
+   "Bradycardia",
+   "Cardiomegaly",
+   "Bradypnea"
+  ],
+  "answer": "B",
+  "explanation": "Brady- means slow and cardi/o means heart.",
+  "distractors": "A: tachy- means fast. C: -megaly means enlargement. D: brady- means slow, but -pnea means breathing; bradypnea is a slow breathing rate.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

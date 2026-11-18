@@ -1,0 +1,4 @@
+source/build/out/
+__pycache__/
+*.xlsx
+.DS_Store

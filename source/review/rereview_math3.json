@@ -1,0 +1,168 @@
+[
+ {
+  "id": "M.2.5-007",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.5",
+  "format": "Multiple choice",
+  "stem": "A medication order is 0.5 g. The tablets on hand are 250 mg each. How many tablets should be given?",
+  "options": [
+   "20",
+   "0.5",
+   "0.2",
+   "2"
+  ],
+  "answer": "D",
+  "explanation": "Convert grams to milligrams: 0.5 g × 1,000 = 500 mg. 500 mg ÷ 250 mg per tablet = 2 tablets.",
+  "distractors": "A: misplaces the decimal point, turning 0.5 g into 5,000 mg (5,000 ÷ 250). B: divides the wrong way (250 ÷ 500). C: misplaces the decimal point the other way, turning 0.5 g into 50 mg (50 ÷ 250).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.2-006",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.2",
+  "format": "Multiple choice",
+  "stem": "Five quiz scores have a mean of 80. A sixth score of 92 is added. What is the new mean?",
+  "options": [
+   "86",
+   "98.4",
+   "82",
+   "82.4"
+  ],
+  "answer": "C",
+  "explanation": "Total of the first five: 80 × 5 = 400. New total: 400 + 92 = 492. New mean: 492 ÷ 6 = 82.",
+  "distractors": "A: averages the old mean and the new score ((80 + 92) ÷ 2). B: divides the new total by 5 instead of 6 (492 ÷ 5). D: spreads the new score's extra 12 points over 5 scores instead of 6 (80 + 12 ÷ 5).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.3-007",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.3",
+  "format": "Multiple choice",
+  "stem": "Using V = 1,000 − 125t for the volume left in an IV bag after t hours, after how many hours will the bag be empty?",
+  "options": [
+   "9",
+   "0.125",
+   "8",
+   "125"
+  ],
+  "answer": "C",
+  "explanation": "Empty means V = 0: 0 = 1,000 − 125t, so 125t = 1,000 and t = 8 hours.",
+  "distractors": "A: adds the hourly loss to the starting volume ((1,000 + 125) ÷ 125). B: divides the wrong way (125 ÷ 1,000). D: the hourly rate, not the time.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.3-006",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.3",
+  "format": "Multiple choice",
+  "stem": "The volume V (in mL) left in an IV bag after t hours is V = 1,000 − 125t. What does the −125 represent?",
+  "options": [
+   "The bag starts with 125 mL.",
+   "The bag loses 125 mL each hour.",
+   "The bag is empty after 125 hours.",
+   "125 mL is left after 1 hour."
+  ],
+  "answer": "B",
+  "explanation": "In V = 1,000 − 125t, the coefficient of t is the rate of change. The volume goes down 125 mL for each hour.",
+  "distractors": "A: the starting volume is the constant term, 1,000 mL, not 125. C: 125 is the change per hour, not a number of hours. D: after 1 hour the bag has lost 125 mL; it has not kept 125 mL.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.4-008",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.4",
+  "format": "Multiple choice",
+  "stem": "Two angles of a triangle measure 35° and 90°. What is the third angle?",
+  "options": [
+   "145°",
+   "55°",
+   "65°",
+   "125°"
+  ],
+  "answer": "B",
+  "explanation": "The angles of a triangle add to 180°. 180 − 35 − 90 = 55°.",
+  "distractors": "A: subtracts only the 35° angle from 180°. C: adds 35 + 90 incorrectly as 115, then 180 − 115 = 65. D: the sum of the two given angles, not the third angle.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.3-008",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.3",
+  "format": "Multiple choice",
+  "stem": "A study examines how the number of cigarettes smoked per day relates to lung capacity. Which is the independent variable?",
+  "options": [
+   "Cigarettes smoked per day",
+   "Lung capacity (in liters)",
+   "Amount of air exhaled per breath",
+   "The study's sample size"
+  ],
+  "answer": "A",
+  "explanation": "The independent variable is the input the study compares groups by: cigarettes per day. Lung capacity is the outcome that may depend on it.",
+  "distractors": "B: lung capacity is the dependent variable (the outcome). C: another measure of lung function, so also an outcome. D: a feature of the study design, not a variable being compared.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.5-008",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.5",
+  "format": "Supply answer",
+  "stem": "How many teaspoons are in 1 fluid ounce? (1 fl oz = 2 tbsp; 1 tbsp = 3 tsp) Enter a number.",
+  "options": [],
+  "answer": "6|6 tsp|6 teaspoons",
+  "explanation": "1 fl oz = 2 tbsp, and 2 tbsp × 3 = 6 teaspoons.",
+  "distractors": "Common errors: 2 (stopping at tablespoons); 5 (adding 2 + 3 instead of multiplying).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.2-008",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.2",
+  "format": "Multiple choice",
+  "stem": "On a quiz, each student scored 2, 3 or 4 points:\n\nScore | Number of students\n2 | 3\n3 | 5\n4 | 2\n\nWhat is the mean score?",
+  "options": [
+   "3",
+   "9.7",
+   "29",
+   "2.9"
+  ],
+  "answer": "D",
+  "explanation": "Multiply each score by its count and add: 2 × 3 + 3 × 5 + 4 × 2 = 6 + 15 + 8 = 29. Divide by the number of students, 3 + 5 + 2 = 10: 29 ÷ 10 = 2.9.",
+  "distractors": "A: averages the three score values (2 + 3 + 4) ÷ 3, ignoring how many students got each. B: divides the total by the number of rows (29 ÷ 3). C: the total points, not divided by the number of students.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "M.2.5-006",
+  "section": "Math",
+  "subarea": "M.2",
+  "objective": "M.2.5",
+  "format": "Multiple choice",
+  "stem": "A patient is 5 feet 6 inches tall. What is the patient's height in centimeters, to the nearest tenth? (1 in = 2.54 cm)",
+  "options": [
+   "167.6 cm",
+   "152.4 cm",
+   "170.7 cm",
+   "165.0 cm"
+  ],
+  "answer": "A",
+  "explanation": "5 feet 6 inches = 5 × 12 + 6 = 66 inches. 66 × 2.54 = 167.64, about 167.6 cm.",
+  "distractors": "B: converts only the 5 feet (60 inches). C: reads 5 feet 6 inches as 5.6 feet (67.2 inches). D: rounds 2.54 down to 2.5 (66 × 2.5).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ }
+]

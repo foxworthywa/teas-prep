@@ -1,0 +1,308 @@
+[
+ {
+  "id": "S.2.1-001",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Multiple choice",
+  "stem": "Which organelle produces most of the ATP a cell uses?",
+  "options": [
+   "Mitochondrion",
+   "Ribosome",
+   "Golgi apparatus",
+   "Lysosome"
+  ],
+  "answer": "A",
+  "explanation": "Mitochondria carry out aerobic cellular respiration, which produces most of the cell's ATP.",
+  "distractors": "B: ribosomes make proteins. C: the Golgi apparatus modifies, sorts and packages proteins. D: lysosomes digest worn-out parts and debris.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-002",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Multiple choice",
+  "stem": "Which structure is found in plant cells but NOT in animal cells?",
+  "options": [
+   "Cell membrane",
+   "Ribosome",
+   "Cell wall",
+   "Mitochondrion"
+  ],
+  "answer": "C",
+  "explanation": "Plant cells have a rigid cell wall made of cellulose outside the cell membrane (and chloroplasts and a large central vacuole). Animal cells have no cell wall.",
+  "distractors": "A, B and D: both plant and animal cells have a cell membrane, ribosomes and mitochondria. A common error is thinking plants lack mitochondria because they have chloroplasts.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-003",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Multiple choice",
+  "stem": "A human skin cell with 46 chromosomes divides by mitosis. How many chromosomes does each daughter cell have?",
+  "options": [
+   "23",
+   "92",
+   "46",
+   "46 in one cell and 0 in the other"
+  ],
+  "answer": "C",
+  "explanation": "Mitosis makes two genetically identical daughter cells, each with the same chromosome number as the parent: 46.",
+  "distractors": "A: 23 is the number in gametes made by meiosis. B: 92 is double the parent number. Each chromosome is copied before mitosis, but the copies separate into the two daughter cells, so each gets 46. D: mitosis divides the chromosomes equally between the two cells.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-004",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Select all",
+  "stem": "Which statements describe meiosis? Select all that apply.",
+  "options": [
+   "It produces gametes (sex cells).",
+   "It produces two identical daughter cells.",
+   "It halves the chromosome number.",
+   "It is how skin cells replace themselves.",
+   "It produces genetically varied cells."
+  ],
+  "answer": "A, C, E",
+  "explanation": "Meiosis produces haploid cells with half the chromosome number (four sperm in males; one egg plus small polar bodies in females), and the cells are genetically different from one another because of crossing over and independent assortment.",
+  "distractors": "B and D describe mitosis, which produces two identical body cells for growth and repair.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Ordered response",
+  "stem": "Put these levels of organization in order from simplest to most complex.",
+  "options": [
+   "Organ",
+   "Cell",
+   "Organ system",
+   "Tissue"
+  ],
+  "answer": "B, D, A, C",
+  "explanation": "Cells group into tissues, tissues form organs, and organs work together as organ systems.",
+  "distractors": "Common error: placing organ before tissue. An organ is made of several tissue types.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-001",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "During transcription, which molecule is made using DNA as a template?",
+  "options": [
+   "Protein",
+   "Messenger RNA (mRNA)",
+   "Glucose",
+   "A second strand of DNA"
+  ],
+  "answer": "B",
+  "explanation": "Transcription copies a gene's DNA sequence into messenger RNA in the nucleus. The mRNA then carries the code to a ribosome.",
+  "distractors": "A: proteins are made during translation, the next step. C: glucose is not coded by DNA. D: copying DNA into DNA is replication, not transcription.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-002",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "A DNA strand has the sequence A-T-G-C. Which sequence correctly shows the complementary bases, lined up base by base?",
+  "options": [
+   "A-T-G-C",
+   "U-A-C-G",
+   "C-G-T-A",
+   "T-A-C-G"
+  ],
+  "answer": "D",
+  "explanation": "In DNA, adenine pairs with thymine and guanine pairs with cytosine. So A-T-G-C pairs with T-A-C-G.",
+  "distractors": "A: identical, not complementary. B: uracil is found in RNA, not DNA. C: pairs A with C and T with G; the correct pairs are A-T and G-C.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-003",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "Where in the cell does translation (building a protein from mRNA) take place?",
+  "options": [
+   "At the ribosome",
+   "In the nucleus",
+   "In the lysosome",
+   "In the Golgi apparatus"
+  ],
+  "answer": "A",
+  "explanation": "Ribosomes read the mRNA codons and link the matching amino acids, brought by tRNA, into a protein.",
+  "distractors": "B: the nucleus is where transcription happens. C: lysosomes break molecules down. D: the Golgi modifies, sorts and packages proteins after ribosomes build them.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-001",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "In pea plants, purple flowers (P) are dominant over white flowers (p). Two plants with genotype Pp are crossed. What fraction of the offspring is expected to have white flowers?",
+  "options": [
+   "0",
+   "1/2",
+   "3/4",
+   "1/4"
+  ],
+  "answer": "D",
+  "explanation": "A Punnett square for Pp \u00d7 Pp gives PP, Pp, Pp and pp. Only pp shows the recessive white color: 1 out of 4.",
+  "distractors": "A: white is possible because both parents carry p. B: 1/2 is the fraction that are heterozygous (Pp). C: 3/4 is the fraction with purple flowers.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-002",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "What does the term heterozygous mean?",
+  "options": [
+   "Having two identical alleles for a gene",
+   "Having two different alleles for a gene",
+   "Having only recessive alleles",
+   "Showing the recessive trait"
+  ],
+  "answer": "B",
+  "explanation": "Heterozygous means the two alleles for a gene are different, such as Pp. Homozygous means they are the same, such as PP or pp.",
+  "distractors": "A: describes homozygous. C: two recessive alleles is homozygous recessive. D: a heterozygous individual usually shows the dominant trait.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-003",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "A homozygous dominant tall plant (TT) is crossed with a homozygous recessive short plant (tt). What will the offspring be?",
+  "options": [
+   "All tall, genotype Tt",
+   "Half tall and half short",
+   "All short, genotype tt",
+   "All tall, genotype TT"
+  ],
+  "answer": "A",
+  "explanation": "Every offspring gets T from one parent and t from the other, so all are Tt. Because T is dominant, all are tall.",
+  "distractors": "B: a 1:1 ratio would come from Tt \u00d7 tt. C: short offspring need tt, which is impossible here. D: TT would require T from both parents.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-001",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "Most enzymes are which type of macromolecule?",
+  "options": [
+   "Carbohydrates",
+   "Lipids",
+   "Proteins",
+   "Nucleic acids"
+  ],
+  "answer": "C",
+  "explanation": "Nearly all enzymes are proteins: chains of amino acids folded into a specific shape that speeds up a chemical reaction.",
+  "distractors": "A: carbohydrates mainly supply energy and structure. B: lipids store energy and form membranes. D: nucleic acids (DNA and RNA) store and carry genetic information. (A few enzymes are made of RNA, called ribozymes, but most are proteins.)",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-002",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "Which type of biomolecule stores the most energy per gram?",
+  "options": [
+   "Protein",
+   "Carbohydrate (starch)",
+   "Nucleic acid",
+   "Triglyceride (fat)"
+  ],
+  "answer": "D",
+  "explanation": "Fats (triglycerides, made of glycerol and three fatty acids) store about twice as much energy per gram as carbohydrates or proteins.",
+  "distractors": "A: protein supplies about the same energy per gram as carbohydrate. B: carbohydrate is the body's quickest fuel but stores about half as much energy per gram as fat. C: nucleic acids store genetic information, not energy.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-003",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "What are the building blocks (monomers) of proteins?",
+  "options": [
+   "Monosaccharides",
+   "Amino acids",
+   "Nucleotides",
+   "Fatty acids"
+  ],
+  "answer": "B",
+  "explanation": "Proteins are chains of amino acids joined by peptide bonds.",
+  "distractors": "A: monosaccharides build carbohydrates. C: nucleotides build nucleic acids. D: fatty acids are parts of many lipids.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-001",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Multiple choice",
+  "stem": "Why are antibiotics NOT effective against the common cold?",
+  "options": [
+   "Colds are caused by viruses, and antibiotics target bacteria.",
+   "Cold-causing bacteria have thick cell walls that block antibiotics from entering.",
+   "Antibiotics only work against fungi.",
+   "The immune system destroys antibiotics."
+  ],
+  "answer": "A",
+  "explanation": "Antibiotics act on structures and processes found in bacteria, such as cell walls and bacterial ribosomes. Viruses lack these, so antibiotics do not affect them. Colds are viral.",
+  "distractors": "B: colds are not caused by bacteria. C: antibiotics act on bacteria; antifungal drugs treat fungi. D: the immune system does not destroy antibiotics.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-002",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Select all",
+  "stem": "Which of the following are true of viruses? Select all that apply.",
+  "options": [
+   "They have their own ribosomes.",
+   "They can reproduce only inside a host cell.",
+   "They are larger than bacteria.",
+   "They contain DNA or RNA.",
+   "They enclose their genome in a protein coat (capsid)."
+  ],
+  "answer": "B, D, E",
+  "explanation": "A virus is genetic material (DNA or RNA) inside a protein coat (capsid). It has no ribosomes or metabolism of its own, so it must use a host cell's machinery to reproduce.",
+  "distractors": "A: viruses lack ribosomes. C: almost all viruses are much smaller than bacteria.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

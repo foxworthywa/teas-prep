@@ -1,0 +1,245 @@
+[
+ {
+  "id": "S.3.1-004",
+  "format": "Multiple choice",
+  "stem": "Nitrogen has atomic number 7. How many neutrons are in an atom of nitrogen-15?",
+  "options": [
+   "7",
+   "8",
+   "15",
+   "22"
+  ]
+ },
+ {
+  "id": "S.3.1-005",
+  "format": "Multiple choice",
+  "stem": "A calcium atom (atomic number 20) loses two electrons. What does it become?",
+  "options": [
+   "A Ca²⁺ ion with 20 protons and 18 electrons",
+   "A Ca²⁻ ion with 20 protons and 22 electrons",
+   "A Ca²⁺ ion with 18 protons and 18 electrons",
+   "An atom of argon, element 18"
+  ]
+ },
+ {
+  "id": "S.3.1-006",
+  "format": "Multiple choice",
+  "stem": "Which pair of elements is most likely to form an ionic bond?",
+  "options": [
+   "Carbon and oxygen",
+   "Nitrogen and hydrogen",
+   "Sodium and chlorine",
+   "Oxygen and oxygen"
+  ]
+ },
+ {
+  "id": "S.3.1-007",
+  "format": "Select all",
+  "stem": "Which statements are true of two isotopes of the same element? Select all that apply.",
+  "options": [
+   "They have the same number of protons.",
+   "They have the same number of neutrons.",
+   "They have different mass numbers.",
+   "They have different atomic numbers.",
+   "They react in nearly the same way chemically."
+  ]
+ },
+ {
+  "id": "S.3.2-004",
+  "format": "Multiple choice",
+  "stem": "Water droplets form on the outside of a glass of iced tea on a warm day. What process causes this?",
+  "options": [
+   "Evaporation",
+   "Melting",
+   "Sublimation",
+   "Condensation"
+  ]
+ },
+ {
+  "id": "S.3.2-005",
+  "format": "Multiple choice",
+  "stem": "Ice in a glass of water is melting at 0 °C. What happens to the temperature of the ice-water mixture while the ice melts?",
+  "options": [
+   "It rises steadily as heat is absorbed.",
+   "It stays at 0 °C until the ice is gone.",
+   "It drops below 0 °C as the ice absorbs heat.",
+   "It rises above 0 °C and then falls back."
+  ]
+ },
+ {
+  "id": "S.3.2-006",
+  "format": "Multiple choice",
+  "stem": "An object has a mass of 25 g and a volume of 20 mL. What is its density, and will it float in water (density 1 g/mL)?",
+  "options": [
+   "0.8 g/mL; it floats",
+   "1.25 g/mL; it floats",
+   "1.25 g/mL; it sinks",
+   "0.8 g/mL; it sinks"
+  ]
+ },
+ {
+  "id": "S.3.2-007",
+  "format": "Multiple choice",
+  "stem": "Which of the following is a chemical property of a substance?",
+  "options": [
+   "Flammability",
+   "Density",
+   "Boiling point",
+   "Color"
+  ]
+ },
+ {
+  "id": "S.3.3-004",
+  "format": "Multiple choice",
+  "stem": "Which set of coefficients balances this equation? __ Al + __ O₂ → __ Al₂O₃",
+  "options": [
+   "2, 3, 1",
+   "4, 6, 2",
+   "2, 1, 1",
+   "4, 3, 2"
+  ]
+ },
+ {
+  "id": "S.3.3-005",
+  "format": "Multiple choice",
+  "stem": "What type of reaction is AgNO₃ + NaCl → AgCl + NaNO₃?",
+  "options": [
+   "Double replacement",
+   "Single replacement",
+   "Synthesis",
+   "Decomposition"
+  ]
+ },
+ {
+  "id": "S.3.3-006",
+  "format": "Multiple choice",
+  "stem": "In the reaction 2H₂ + O₂ → 2H₂O, how many molecules of water form from 6 molecules of H₂ (with plenty of O₂)?",
+  "options": [
+   "6",
+   "3",
+   "12",
+   "2"
+  ]
+ },
+ {
+  "id": "S.3.3-007",
+  "format": "Multiple choice",
+  "stem": "Burning wood gives off heat and light. How is this reaction classified?",
+  "options": [
+   "Endothermic",
+   "A physical change",
+   "Exothermic",
+   "Neither; no net energy change"
+  ]
+ },
+ {
+  "id": "S.3.4-004",
+  "format": "Multiple choice",
+  "stem": "Which change would make a sugar cube dissolve fastest in a cup of water?",
+  "options": [
+   "Using cold water instead of warm",
+   "Leaving the cup completely still",
+   "Using a larger sugar cube",
+   "Crushing it and using hot water"
+  ]
+ },
+ {
+  "id": "S.3.4-005",
+  "format": "Multiple choice",
+  "stem": "Adding a catalyst to a reaction changes which of the following?",
+  "options": [
+   "The energy of the reactants",
+   "The activation energy",
+   "The energy of the products",
+   "The total energy released"
+  ]
+ },
+ {
+  "id": "S.3.4-006",
+  "format": "Multiple choice",
+  "stem": "The reaction N₂ + 3H₂ ⇌ 2NH₃ is at equilibrium. If more N₂ is added, what will the system do?",
+  "options": [
+   "Shift left, making more N₂ and H₂",
+   "Stop reacting until the N₂ is used",
+   "Shift right, making more NH₃",
+   "Stay exactly the same"
+  ]
+ },
+ {
+  "id": "S.3.5-004",
+  "format": "Multiple choice",
+  "stem": "How much 20% stock solution is needed to make 500 mL of a 4% solution?",
+  "options": [
+   "100 mL",
+   "125 mL",
+   "400 mL",
+   "2,500 mL"
+  ]
+ },
+ {
+  "id": "S.3.5-005",
+  "format": "Multiple choice",
+  "stem": "Why does an open soda go flat faster when it is warm than when it is cold?",
+  "options": [
+   "Warm soda has more sugar dissolved in it.",
+   "Warm soda is under higher pressure.",
+   "Cold soda contains a different type of gas.",
+   "Warm liquid can hold less dissolved gas."
+  ]
+ },
+ {
+  "id": "S.3.5-006",
+  "format": "Multiple choice",
+  "stem": "Which of these mixtures is a solution?",
+  "options": [
+   "Sand stirred into water",
+   "Oil and vinegar",
+   "Salt dissolved in water",
+   "Granola"
+  ]
+ },
+ {
+  "id": "S.3.5-007",
+  "format": "Multiple choice",
+  "stem": "Normal saline is 0.9% (w/v) sodium chloride. How many grams of sodium chloride are in 1 liter?",
+  "options": [
+   "0.9 g",
+   "90 g",
+   "0.09 g",
+   "9 g"
+  ]
+ },
+ {
+  "id": "S.3.6-004",
+  "format": "Multiple choice",
+  "stem": "Which substance is the most basic?",
+  "options": [
+   "Lemon juice, pH 2",
+   "Blood, pH 7.4",
+   "Bleach, pH 12.5",
+   "Pure water, pH 7"
+  ]
+ },
+ {
+  "id": "S.3.6-005",
+  "format": "Multiple choice",
+  "stem": "A patient's blood pH drops from 7.40 to 7.30. Which statement describes this change?",
+  "options": [
+   "Alkalosis, with fewer hydrogen ions",
+   "Acidosis, with more hydrogen ions",
+   "Acidosis, with fewer hydrogen ions",
+   "Normal; it is still above 7"
+  ]
+ },
+ {
+  "id": "S.3.6-006",
+  "format": "Multiple choice",
+  "stem": "Antacid tablets relieve heartburn because they contain",
+  "options": [
+   "a base that neutralizes excess stomach acid.",
+   "an acid that strengthens stomach acid.",
+   "a buffer that raises the amount of stomach acid.",
+   "an enzyme that digests stomach acid."
+  ]
+ }
+]

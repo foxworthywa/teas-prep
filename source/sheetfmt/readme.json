@@ -1,0 +1,2 @@
+{"rules":[{"range":"A1:B40","font":"Arial"},{"range":"A1","bold":true,"size":14},{"range":"A2","italic":true},{"range":"A4","bold":true},{"range":"A10","bold":true},{"range":"A17","bold":true},{"range":"A5:A8","bold":true},{"range":"A11:A15","bold":true},{"range":"A18:A20","bold":true},{"range":"B1:B40","wrap":true,"valign":"top"},{"range":"A1:A40","valign":"top"}],
+ "col_widths":{"A":170,"B":720}}

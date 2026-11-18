@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="t d" font-family="Arial, Helvetica, sans-serif">
+  <title id="t">The withdrawal reflex arc</title>
+  <desc id="d">Five numbered steps in a loop through the spinal cord. 1: a receptor in the skin detects heat. 2: a sensory neuron carries the signal to the spinal cord. 3: an interneuron in the spinal cord passes it on. 4: a motor neuron carries the signal out. 5: an arm muscle contracts and the hand pulls away. A separate dashed branch carries the signal up the spinal cord to the brain, where pain is felt a moment after the hand has already moved.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B4FA0"/></marker>
+  </defs>
+  <rect id="bg" x="0" y="0" width="100%" height="100%" fill="#FFFFFF"/>
+  <style>.box{fill:#F4F6F9;stroke:#333;stroke-width:2}.n{font-size:15px;font-weight:bold}.t{font-size:14px}</style>
+
+  <!-- Brain -->
+  <rect x="290" y="15" width="180" height="62" rx="12" fill="#EEE8F6" stroke="#6B4FA0" stroke-width="2"/>
+  <text x="380" y="41" text-anchor="middle" class="n">BRAIN</text>
+  <text x="380" y="62" text-anchor="middle" class="t">Pain is felt (a moment later)</text>
+  <line x1="380" y1="180" x2="380" y2="82" stroke="#6B4FA0" stroke-width="3" stroke-dasharray="7,5" marker-end="url(#g)"/>
+  <text x="392" y="125" class="t" fill="#6B4FA0">Signal also travels up to the brain</text>
+
+  <!-- Spinal cord -->
+  <rect x="290" y="185" width="180" height="110" rx="14" fill="#FFF4D6" stroke="#B7791F" stroke-width="2.5"/>
+  <text x="380" y="212" text-anchor="middle" class="n">3. SPINAL CORD</text>
+  <text x="380" y="236" text-anchor="middle" class="t">Interneuron passes</text>
+  <text x="380" y="254" text-anchor="middle" class="t">the signal directly</text>
+  <text x="380" y="272" text-anchor="middle" class="t">to a motor neuron</text>
+
+  <!-- Receptor -->
+  <rect x="20" y="320" width="200" height="80" rx="12" class="box"/>
+  <text x="120" y="350" text-anchor="middle" class="n">1. RECEPTOR</text>
+  <text x="120" y="372" text-anchor="middle" class="t">Skin of the hand</text>
+  <text x="120" y="390" text-anchor="middle" class="t">detects heat</text>
+
+  <!-- Effector -->
+  <rect x="540" y="320" width="200" height="80" rx="12" class="box"/>
+  <text x="640" y="350" text-anchor="middle" class="n">5. EFFECTOR</text>
+  <text x="640" y="372" text-anchor="middle" class="t">Arm muscle contracts;</text>
+  <text x="640" y="390" text-anchor="middle" class="t">hand pulls away</text>
+
+  <!-- Sensory neuron -->
+  <path d="M120,316 L120,240 L284,240" fill="none" stroke="#333" stroke-width="3" marker-end="url(#a)"/>
+  <text x="130" y="230" class="n">2. Sensory neuron</text>
+  <text x="130" y="270" class="t">(carries signal in)</text>
+
+  <!-- Motor neuron -->
+  <path d="M470,240 L640,240 L640,314" fill="none" stroke="#333" stroke-width="3" marker-end="url(#a)"/>
+  <text x="490" y="230" class="n">4. Motor neuron</text>
+  <text x="490" y="270" class="t">(carries signal out)</text>
+</svg>

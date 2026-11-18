@@ -1,0 +1,233 @@
+[
+ {
+  "id": "S.1.2-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.2",
+  "format": "Multiple choice",
+  "stem": "A swimmer holds her breath underwater. After about a minute, the urge to breathe becomes very strong. Which change in her blood is the main cause of this urge?",
+  "options": [
+   "Rising carbon dioxide level",
+   "Falling nitrogen level",
+   "Rising oxygen level",
+   "Falling red blood cell count"
+  ],
+  "answer": "A",
+  "explanation": "Breathing is driven mainly by carbon dioxide. While she holds her breath, CO2 builds up in the blood (making it more acidic), and the brainstem's respiratory centers respond with a strong drive to breathe.",
+  "distractors": "B: nitrogen is not used by the body and does not control breathing. C: oxygen falls, not rises, while holding the breath, and in healthy people falling oxygen is a weaker trigger than rising CO2. D: red blood cell count does not change in a minute.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.2-004",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.2",
+  "format": "Multiple choice",
+  "stem": "During a normal, quiet inhalation, what happens to the diaphragm and to the pressure inside the lungs?",
+  "options": [
+   "The diaphragm relaxes and moves up; lung pressure rises.",
+   "The diaphragm contracts and moves down; lung pressure falls.",
+   "The diaphragm contracts and moves down; lung pressure rises.",
+   "The diaphragm relaxes and moves down; lung pressure rises."
+  ],
+  "answer": "B",
+  "explanation": "The diaphragm contracts and flattens (moves down), enlarging the chest cavity. Larger volume means lower pressure in the lungs, so air flows in from outside where the pressure is higher.",
+  "distractors": "A: describes quiet exhalation. C: the diaphragm does move down, but a bigger chest cavity lowers lung pressure; higher pressure would push air out. D: a relaxing diaphragm moves up, and rising pressure would push air out.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.4-004",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.4",
+  "format": "Ordered response",
+  "stem": "Put these structures in the order food passes through them.",
+  "options": [
+   "Duodenum",
+   "Esophagus",
+   "Ileum",
+   "Stomach",
+   "Jejunum"
+  ],
+  "answer": "B, D, A, E, C",
+  "explanation": "Food moves from the esophagus to the stomach, then through the three parts of the small intestine in order: duodenum, jejunum, ileum.",
+  "distractors": "Common error: putting the ileum before the jejunum. The duodenum is first, the ileum last; it joins the large intestine.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.4-005",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.4",
+  "format": "Multiple choice",
+  "stem": "Which organ is the main source of the bicarbonate that neutralizes acidic chyme entering the duodenum?",
+  "options": [
+   "Liver",
+   "Gallbladder",
+   "Pancreas",
+   "Large intestine"
+  ],
+  "answer": "C",
+  "explanation": "The pancreas sends pancreatic juice, rich in bicarbonate and digestive enzymes, into the duodenum. The bicarbonate neutralizes stomach acid so intestinal enzymes can work.",
+  "distractors": "A: the liver makes bile, whose main job is emulsifying fat. B: the gallbladder stores and concentrates bile; it is not a major source of bicarbonate. D: the large intestine is downstream of the duodenum.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.5-004",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.5",
+  "format": "Multiple choice",
+  "stem": "After a stroke, a patient has trouble keeping his balance and his movements are jerky and uncoordinated, but his strength is normal. Which brain region was most likely damaged?",
+  "options": [
+   "Medulla oblongata",
+   "Occipital lobe",
+   "Hypothalamus",
+   "Cerebellum"
+  ],
+  "answer": "D",
+  "explanation": "The cerebellum coordinates movement and balance. Damage causes clumsy, poorly coordinated movement even when muscle strength is intact.",
+  "distractors": "A: the medulla controls breathing, heart rate and blood pressure. B: the occipital lobe processes vision. C: the hypothalamus regulates temperature, hunger, thirst and the pituitary.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.5-005",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.5",
+  "format": "Multiple choice",
+  "stem": "Which type of neuron carries signals from the central nervous system out to a muscle?",
+  "options": [
+   "Motor (efferent) neuron",
+   "Sensory (afferent) neuron",
+   "Interneuron",
+   "Receptor cell"
+  ],
+  "answer": "A",
+  "explanation": "Motor (efferent) neurons carry signals out of the CNS to effectors such as muscles and glands. Memory aid: Efferent Exits.",
+  "distractors": "B: sensory (afferent) neurons carry signals in to the CNS. C: interneurons connect neurons within the CNS. D: receptors detect stimuli; they do not carry commands to muscles.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.9-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.9",
+  "format": "Multiple choice",
+  "stem": "A patient's blood calcium level is low. Which hormone will the body release to raise it?",
+  "options": [
+   "Calcitonin",
+   "Insulin",
+   "Aldosterone",
+   "Parathyroid hormone"
+  ],
+  "answer": "D",
+  "explanation": "Parathyroid hormone (PTH) raises blood calcium. It increases bone breakdown by osteoclasts (indirectly, through other bone cells), increases calcium reabsorption in the kidneys, and activates vitamin D, which increases calcium absorption from food.",
+  "distractors": "A: calcitonin lowers blood calcium, the opposite effect. B: insulin lowers blood glucose. C: aldosterone increases sodium reabsorption.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.9-004",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.9",
+  "format": "Multiple choice",
+  "stem": "During labor, stretching of the cervix triggers the release of oxytocin, which causes stronger contractions that stretch the cervix even more. This is an example of",
+  "options": [
+   "negative feedback.",
+   "a reflex arc.",
+   "positive feedback.",
+   "antagonistic hormones."
+  ],
+  "answer": "C",
+  "explanation": "In positive feedback the response amplifies the original change. Stretching causes oxytocin, which causes more stretching, until delivery ends the loop.",
+  "distractors": "A: negative feedback would reduce the stretching and oxytocin release. B: a reflex arc is the nerve pathway from receptor to effector. Nerves do help trigger oxytocin release here, but 'reflex arc' does not describe the self-amplifying loop the question asks about. D: antagonistic hormones (such as insulin and glucagon) have opposite effects on the same variable.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.10-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.10",
+  "format": "Multiple choice",
+  "stem": "A urine test shows glucose in the urine of a patient whose blood glucose is very high. What is the best explanation?",
+  "options": [
+   "The tubules cannot reabsorb all of the filtered glucose.",
+   "The glomerulus has stopped filtering glucose.",
+   "ADH has increased glucose secretion into the urine.",
+   "The bladder is producing glucose."
+  ],
+  "answer": "A",
+  "explanation": "Glucose is normally filtered and then all of it is reabsorbed in the tubules. When blood glucose is very high, more is filtered than the tubules can reabsorb, so the excess spills into the urine.",
+  "distractors": "B: if the glomerulus stopped filtering glucose, there would be less glucose in the urine, not more. C: ADH controls water reabsorption, not glucose. D: the bladder only stores urine.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.11-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.11",
+  "format": "Multiple choice",
+  "stem": "A child receives the measles vaccine and is later exposed to measles but does not get sick. Which type of immunity protected the child?",
+  "options": [
+   "Natural active immunity",
+   "Artificial active immunity",
+   "Artificial passive immunity",
+   "Natural passive immunity"
+  ],
+  "answer": "B",
+  "explanation": "A vaccine is artificial (given on purpose) and the child's own immune system made the antibodies and memory cells, so it is active. Together: artificial active immunity.",
+  "distractors": "A: natural active immunity comes from having the disease. C: artificial passive immunity is an injection of ready-made antibodies. D: natural passive immunity is antibodies from the mother, across the placenta or in breast milk.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.11-004",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.11",
+  "format": "Multiple choice",
+  "stem": "HIV mainly infects and destroys which cells, weakening both antibody and cell-mediated responses?",
+  "options": [
+   "B cells",
+   "Cytotoxic T cells",
+   "Neutrophils",
+   "Helper T cells"
+  ],
+  "answer": "D",
+  "explanation": "HIV targets helper T cells (CD4 cells). Because helper T cells activate both B cells and cytotoxic T cells, losing them weakens the whole adaptive immune response.",
+  "distractors": "A: B cells make antibodies after activation; HIV does not mainly target them, though they lose help from helper T cells. B: cytotoxic (CD8) T cells kill infected cells; they are weakened because they depend on helper T cells, not because HIV infects them. C: neutrophils are innate phagocytes and are not HIV's main target.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.12-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.12",
+  "format": "Select all",
+  "stem": "Which bones are part of the axial skeleton? Select all that apply.",
+  "options": [
+   "Femur",
+   "Sternum",
+   "Vertebrae",
+   "Scapula",
+   "Ribs",
+   "Hip (coxal) bones"
+  ],
+  "answer": "B, C, E",
+  "explanation": "The axial skeleton forms the body's central axis: skull (plus the hyoid and the ear ossicles), vertebral column, ribs and sternum.",
+  "distractors": "A: the femur is a limb bone. D and F: the scapula is part of the shoulder girdle and the hip (coxal) bones form the pelvic girdle; the girdles attach the limbs, so they are appendicular.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

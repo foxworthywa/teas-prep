@@ -1,0 +1,512 @@
+[
+ {
+  "id": "S.4.1-004",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "Which tool should be used to measure the mass of a sample of powder?",
+  "options": [
+   "Graduated cylinder",
+   "Thermometer",
+   "Electronic balance",
+   "Meter stick"
+  ],
+  "answer": "C",
+  "explanation": "Mass is measured with a balance (electronic or triple-beam).",
+  "distractors": "A: a graduated cylinder measures liquid volume. B: a thermometer measures temperature. D: a meter stick measures length.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-005",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "Convert 450 milligrams to grams.",
+  "options": [
+   "0.45 g",
+   "4.5 g",
+   "45 g",
+   "450,000 g"
+  ],
+  "answer": "A",
+  "explanation": "1 g = 1,000 mg. Going to a larger unit makes the number smaller: 450 ÷ 1,000 = 0.45 g.",
+  "distractors": "B and C: move the decimal point too few places. D: multiplies instead of dividing.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-006",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Supply answer",
+  "stem": "A patient's temperature is 102.2 °F. What is it in degrees Celsius? Use °C = (°F − 32) × 5/9. Enter a number.",
+  "options": [],
+  "answer": "39|39 °C|39°C|39.0|39.0 °C|39.0°C|39 C|39C|39 degrees|39.00",
+  "explanation": "102.2 − 32 = 70.2. 70.2 × 5/9 = 39 °C.",
+  "distractors": "Common errors: 56.8 (forgetting to subtract 32: 102.2 × 5/9); 88.8 (multiplying by 5/9 and then adding 32); 126.4 (using 9/5 instead of 5/9 after subtracting 32).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-007",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "Four students each weigh the same 50.0 g standard mass three times. Whose results are both accurate and precise?\n\nStudent | Trial 1 | Trial 2 | Trial 3\n1 | 50.1 g | 49.9 g | 50.0 g\n2 | 47.2 g | 47.3 g | 47.2 g\n3 | 48.0 g | 52.1 g | 50.4 g\n4 | 53.5 g | 46.8 g | 51.9 g",
+  "options": [
+   "Student 2",
+   "Student 1",
+   "Student 3",
+   "Student 4"
+  ],
+  "answer": "B",
+  "explanation": "Student 1's readings are close to the true value (accurate) and close to each other (precise).",
+  "distractors": "A: Student 2 is precise (readings agree) but not accurate (about 2.8 g low). C: Student 3's average is close to 50 g, but the readings are spread out (not precise). D: Student 4's readings are spread out and not reliably close to 50 g.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-008",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "An irregularly shaped rock is lowered into a graduated cylinder. The water level rises from 35.0 mL to 42.5 mL. What is the volume of the rock?",
+  "options": [
+   "42.5 cm³",
+   "77.5 cm³",
+   "35.0 cm³",
+   "7.5 cm³"
+  ],
+  "answer": "D",
+  "explanation": "By water displacement, the rock's volume equals the rise in water level: 42.5 − 35.0 = 7.5 mL = 7.5 cm³ (1 mL = 1 cm³).",
+  "distractors": "A: the final water level, which includes the water. B: adds the two readings. C: the starting water level.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "Which length is the greatest?",
+  "options": [
+   "60,000 mm",
+   "0.5 km",
+   "450 m",
+   "5,000 cm"
+  ],
+  "answer": "B",
+  "explanation": "Convert to meters: 60,000 mm = 60 m; 0.5 km = 500 m; 450 m; 5,000 cm = 50 m. The greatest is 0.5 km.",
+  "distractors": "A: the biggest raw number, but only 60 m. C: 450 m is less than 500 m. D: 5,000 cm is only 50 m.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-010",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "A pediatric dose is 0.25 mg. How many micrograms (mcg) is this?",
+  "options": [
+   "2.5 mcg",
+   "25 mcg",
+   "250 mcg",
+   "0.00025 mcg"
+  ],
+  "answer": "C",
+  "explanation": "1 mg = 1,000 mcg. Going to a smaller unit makes the number bigger: 0.25 × 1,000 = 250 mcg.",
+  "distractors": "A and B: treat milli to micro as one or two steps of 10 instead of a factor of 1,000. D: divides instead of multiplying.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-004",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "Which statement best describes a scientific theory?",
+  "options": [
+   "An educated guess that has not yet been tested",
+   "A law that has not yet been proven",
+   "The result of a single experiment",
+   "A well-tested explanation backed by evidence"
+  ],
+  "answer": "D",
+  "explanation": "A scientific theory is a broad explanation that has been tested repeatedly and is supported by a large body of evidence (for example, cell theory, germ theory).",
+  "distractors": "A: an untested guess is closer to a hypothesis. B: theories don't turn into laws; laws describe what happens, theories explain why. C: one experiment is not enough to establish a theory.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-005",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "A company claims its new hand sanitizer reduces infections in hospital units. Which finding would most weaken this claim?",
+  "options": [
+   "Infection rates were the same with or without it.",
+   "Some nurses said the sanitizer had an unpleasant smell.",
+   "The sanitizer costs more than plain soap.",
+   "Nurses who used the sanitizer said they liked it."
+  ],
+  "answer": "A",
+  "explanation": "The claim is about infections. If units using the sanitizer had the same infection rate as comparable units without it, the evidence shows no effect.",
+  "distractors": "B, C and D: smell, cost and preference say nothing about whether infections were reduced.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-006",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "Which is an example of deductive reasoning?",
+  "options": [
+   "Several patients improved on a drug, so it will work for every patient.",
+   "Every swan I have seen is white, so all swans are white.",
+   "All mammals have hair; a dolphin is a mammal; so a dolphin has hair.",
+   "The sun has risen every day so far, so it will rise tomorrow."
+  ],
+  "answer": "C",
+  "explanation": "Deductive reasoning goes from a general rule to a specific conclusion. If the premises are true, the conclusion must be true.",
+  "distractors": "A, B and D: each generalizes from specific observations to a broad rule (inductive reasoning). Inductive conclusions can be overturned by a new observation.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-007",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "A survey finds that people who drink more coffee report more headaches. Which conclusion is best supported?",
+  "options": [
+   "Coffee causes headaches in most people.",
+   "Headaches lead people to drink more coffee.",
+   "Cutting back on coffee would likely reduce headaches.",
+   "They are linked, but the survey can't show cause."
+  ],
+  "answer": "D",
+  "explanation": "A survey shows a correlation. It cannot show cause; a third factor (such as stress or lack of sleep) might lead to both.",
+  "distractors": "A and B: each claims a cause the survey cannot establish. C: predicting that drinking less coffee would reduce headaches assumes coffee causes them; the survey can't show that.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-008",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Select all",
+  "stem": "A student wants evidence that music makes plants grow taller. Which steps would make the evidence stronger? Select all that apply.",
+  "options": [
+   "Use many plants in each group.",
+   "Randomly assign plants to the music and no-music groups.",
+   "Play music only to the plants that already look healthiest.",
+   "Keep light, water and soil the same for both groups.",
+   "Ask a friend whether the music plants look taller."
+  ],
+  "answer": "A, B, D",
+  "explanation": "Larger samples reduce the effect of chance, random assignment makes the groups alike at the start, and controlling other variables means any difference can be linked to the music.",
+  "distractors": "C: picking the healthiest plants for the music group biases the result. E: a friend's impression is not a measurement.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "In a lab, a student adds drops of an indicator to a colorless solution. Which statement is a direct observation?",
+  "options": [
+   "The solution is basic.",
+   "The solution turned blue.",
+   "The indicator reacted with a base.",
+   "A new compound formed."
+  ],
+  "answer": "B",
+  "explanation": "An observation is what is directly seen or measured: the color changed to blue.",
+  "distractors": "A, C and D: each is an inference that explains the color change; none can be seen directly.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-010",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "A study of 20 volunteers found that Supplement Z improved memory. Which would make this result most trustworthy?",
+  "options": [
+   "The study was paid for by the company that sells Z.",
+   "The volunteers were told they were taking Z.",
+   "The result was widely shared on social media.",
+   "Independent teams repeated it with more people."
+  ],
+  "answer": "D",
+  "explanation": "Replication by independent researchers with larger samples is strong evidence that a result is real and not due to chance or bias.",
+  "distractors": "A: a funder with a stake in the outcome is a possible conflict of interest. B: knowing they took Z can create a placebo effect. C: popularity is not evidence.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-004",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "The table shows how much sugar dissolves in 100 g of water at different temperatures:\n\nTemperature | Sugar dissolved\n20 °C | 204 g\n40 °C | 238 g\n60 °C | 287 g\n80 °C | 362 g\n\nBased on the pattern, how much sugar would most likely dissolve at 100 °C?",
+  "options": [
+   "More than 362 g",
+   "Less than 204 g",
+   "About 362 g",
+   "About 287 g"
+  ],
+  "answer": "A",
+  "explanation": "Solubility rises with temperature, and each 20-degree step adds more than the last (+34, +49, +75). At 100 °C it should be well above 362 g.",
+  "distractors": "B: reverses the trend. C: assumes the trend stops. D: the value at 60 °C.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-005",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "In a forest, foxes eat rabbits. After a mild winter, the fox population grows sharply and the rabbit population falls. What is most likely to happen next to the fox population?",
+  "options": [
+   "It will decrease as food becomes scarce.",
+   "It will keep growing at the same rate.",
+   "It will stay exactly the same.",
+   "It will grow faster because there are fewer rabbits."
+  ],
+  "answer": "A",
+  "explanation": "With fewer rabbits to eat, food becomes scarce, so the fox population will likely fall. Predator and prey populations tend to rise and fall in cycles.",
+  "distractors": "B and D: ignore the shrinking food supply. C: populations respond to changes in food.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-006",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A gas in a sealed container occupies 6 L at a pressure of 2 atm. If the temperature stays the same and the pressure is raised to 4 atm, what will the volume be?",
+  "options": [
+   "3 L",
+   "6 L",
+   "12 L",
+   "8 L"
+  ],
+  "answer": "A",
+  "explanation": "Pressure and volume are inversely related (Boyle's law): P₁V₁ = P₂V₂. 2 × 6 = 4 × V₂, so V₂ = 3 L. Doubling the pressure halves the volume.",
+  "distractors": "B: assumes volume doesn't change. C: treats the relationship as direct (doubling volume). D: adds the change in pressure to the volume.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-007",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A student records heart rate at different treadmill speeds:\n\nSpeed | Heart rate\n0 mph | 70 bpm\n3 mph | 95 bpm\n5 mph | 130 bpm\n7 mph | 165 bpm\n\nWhat is the best prediction of heart rate at 6 mph?",
+  "options": [
+   "About 115 bpm",
+   "About 175 bpm",
+   "About 148 bpm",
+   "About 95 bpm"
+  ],
+  "answer": "C",
+  "explanation": "6 mph is halfway between 5 and 7 mph, so the heart rate should be about halfway between 130 and 165: about 148 bpm.",
+  "distractors": "A: lower than the value at 5 mph, which reverses the trend. B: higher than the value at 7 mph. D: the value at 3 mph.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-008",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "Air pressure decreases as altitude increases. A sealed bag of chips is packed at sea level and carried up a mountain. What will most likely happen to the bag?",
+  "options": [
+   "It will shrink.",
+   "It will stay the same size.",
+   "It will lose air through the seal.",
+   "It will puff up."
+  ],
+  "answer": "D",
+  "explanation": "The air sealed inside stays at sea-level pressure. As outside pressure drops, the inside pressure is greater, so the bag expands.",
+  "distractors": "A: shrinking would happen going down to higher pressure. B: the pressure difference changes the bag's size. C: a sealed bag doesn't lose air.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Ordered response",
+  "stem": "A person becomes dehydrated. Put these events in the order they occur.",
+  "options": [
+   "The kidneys reabsorb more water.",
+   "Blood volume falls and the blood becomes more concentrated.",
+   "ADH (antidiuretic hormone) is released.",
+   "Urine becomes more concentrated."
+  ],
+  "answer": "B, C, A, D",
+  "explanation": "Losing water makes the blood more concentrated and lowers blood volume. The hypothalamus senses this, and ADH is released from the posterior pituitary. ADH makes the kidneys reabsorb more water, so less water leaves in the urine and the urine becomes more concentrated.",
+  "distractors": "Common error: placing the kidney response before the hormone that triggers it.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-010",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A bacterial population doubles every 30 minutes. If it starts with 500 bacteria, how many will there be after 2 hours?",
+  "options": [
+   "2,000",
+   "8,000",
+   "4,000",
+   "1,000"
+  ],
+  "answer": "B",
+  "explanation": "2 hours = 4 doubling periods. 500 → 1,000 → 2,000 → 4,000 → 8,000.",
+  "distractors": "A: multiplies 500 by the number of periods (500 × 4) instead of doubling four times, or doubles only twice. C: doubles only three times. D: doubles only once.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-005",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "A nurse tests whether a new type of dressing makes wounds heal faster than the standard dressing. What is the dependent variable?",
+  "options": [
+   "The type of dressing",
+   "The age of the patients",
+   "The time it takes wounds to heal",
+   "The number of nurses on the unit"
+  ],
+  "answer": "C",
+  "explanation": "The dependent variable is what is measured: healing time. It depends on the dressing.",
+  "distractors": "A: the dressing type is the independent variable. B and D: these should be controlled or kept similar between groups.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-006",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "In a drug study, Group 1 receives the new drug and stays in private rooms. Group 2 receives a placebo and stays in a shared ward. What is the main flaw in this design?",
+  "options": [
+   "There is no control group.",
+   "The placebo group should also get the drug.",
+   "Neither group knew which treatment it received.",
+   "The groups differ in more than one way."
+  ],
+  "answer": "D",
+  "explanation": "The groups differ in both treatment and room type, so any difference in results can't be blamed on the drug alone.",
+  "distractors": "A: the placebo group is the control. B: giving both groups the drug would remove the comparison. C: blinding the groups is a strength, not a flaw.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-007",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "A student tests how the amount of sunlight affects plant growth. Which is a controlled variable?",
+  "options": [
+   "The amount of sunlight",
+   "The height of the plants",
+   "The number of leaves that grow",
+   "The amount of water given"
+  ],
+  "answer": "D",
+  "explanation": "Controlled variables are kept the same for all groups so they don't affect the result. Water should be equal for every plant.",
+  "distractors": "A: sunlight is the independent variable. B and C: height and leaf count are measured results (dependent variables).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-008",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "A scientist's results do not support her hypothesis. What should she do?",
+  "options": [
+   "Report the results and test a revised hypothesis.",
+   "Repeat the experiment until the results support it.",
+   "Throw out the results and report nothing.",
+   "Repeat only the trials that agreed with the hypothesis."
+  ],
+  "answer": "A",
+  "explanation": "Results that don't support a hypothesis are still useful. Scientists report them honestly and form or test a new hypothesis.",
+  "distractors": "B: repeating only until the results agree biases the conclusion. C: discarding results hides useful information. D: choosing only agreeing trials biases the conclusion.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-009",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "Why do scientists repeat trials in an experiment?",
+  "options": [
+   "To make the data look more impressive",
+   "To reduce the effect of chance errors",
+   "To change the hypothesis partway through",
+   "To reduce the effect of systematic error"
+  ],
+  "answer": "B",
+  "explanation": "Repeating trials shows whether results are consistent and reduces the influence of random errors and chance.",
+  "distractors": "A: the goal is reliability, not appearance. C: repeating trials doesn't change the hypothesis. D: repeating doesn't reduce a systematic error, such as a miscalibrated scale that reads high every time; the same error repeats in every trial. Repeating trials reduces only random (chance) error.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-010",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Select all",
+  "stem": "Which are characteristics of a good scientific hypothesis? Select all that apply.",
+  "options": [
+   "It can be tested.",
+   "It could be shown to be wrong.",
+   "It is based on personal opinion.",
+   "It leads to a testable prediction.",
+   "It has already been proven true."
+  ],
+  "answer": "A, B, D",
+  "explanation": "A good hypothesis is testable, falsifiable (some result could show it is wrong), and makes a prediction, often in if-then form.",
+  "distractors": "C: opinions can't be tested. E: a hypothesis is tested, not already proven; experiments support or refute it.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ }
+]

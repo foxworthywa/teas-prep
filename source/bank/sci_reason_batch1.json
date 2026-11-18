@@ -1,0 +1,245 @@
+[
+ {
+  "id": "S.4.1-001",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "A nurse needs to measure exactly 37 mL of a liquid. Which of these tools gives the most precise measurement?",
+  "options": [
+   "Beaker",
+   "Erlenmeyer flask (cone-shaped)",
+   "Graduated cylinder",
+   "Test tube"
+  ],
+  "answer": "C",
+  "explanation": "A graduated cylinder is narrow and finely marked, so it measures liquid volume much more precisely than the other choices.",
+  "distractors": "A and B: beakers and flasks have rough markings meant only for estimates. D: most test tubes have no volume markings.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-002",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Supply answer",
+  "stem": "Convert 2.5 kilograms to grams. Enter a number.",
+  "options": [],
+  "answer": "2500|2,500|2500 g|2,500 g|2500g|2,500g|2500 grams|2,500 grams",
+  "explanation": "Kilo- means 1,000, so 1 kg = 1,000 g. 2.5 × 1,000 = 2,500 g. Moving to a smaller unit gives a bigger number.",
+  "distractors": "Common errors: 250 (multiplying by 100); 0.0025 (dividing instead of multiplying).",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.1-003",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.1",
+  "format": "Multiple choice",
+  "stem": "Water in a graduated cylinder has a curved surface (a meniscus). How should you read the volume?",
+  "options": [
+   "At the top edge of the curved surface, looking down from above",
+   "At the bottom of the curve, with your eye level with it",
+   "At the highest marking on the cylinder that the water touches along the glass",
+   "At the average of the top and bottom of the curve"
+  ],
+  "answer": "B",
+  "explanation": "Water curves down in the middle, forming a meniscus. Read the bottom of the meniscus with your eye level with it to avoid parallax error.",
+  "distractors": "A: reading the edge overestimates the volume, and looking from above adds parallax error. C: water clings up the glass at the edges, so this overestimates. D: there is no averaging rule; read the bottom of the curve with your eye level with it.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-001",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "Which statement about a patient is an inference rather than an observation?",
+  "options": [
+   "The patient's temperature is 39 °C.",
+   "The patient's skin is red and warm.",
+   "The patient probably has an infection.",
+   "The patient's heart rate is 110 beats per minute."
+  ],
+  "answer": "C",
+  "explanation": "An inference is a conclusion drawn from observations. \"Probably has an infection\" interprets the data; the other statements report what was measured or seen.",
+  "distractors": "A, B and D: each is an observation gathered directly by measurement or the senses.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-002",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "Which evidence would best support the claim that Drug X lowers blood pressure?",
+  "options": [
+   "A well-known athlete says Drug X lowered her own blood pressure.",
+   "Ten people who already take Drug X say on a survey that they now feel much healthier.",
+   "An advertisement from the drug's maker says it is the best treatment.",
+   "In a large randomized trial, Drug X lowered pressure more than a placebo did."
+  ],
+  "answer": "D",
+  "explanation": "A large randomized trial with a placebo control group directly measures blood pressure and compares it fairly, so it is the strongest evidence.",
+  "distractors": "A: a single testimonial is anecdotal. B: a small, self-selected group reporting feelings, not measured blood pressure. C: the maker has a conflict of interest and gives no data.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.2-003",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.2",
+  "format": "Multiple choice",
+  "stem": "A study finds that towns with more hospitals also have more deaths each year. What is the best conclusion?",
+  "options": [
+   "Hospitals cause more people to die, so towns should build fewer of them.",
+   "More deaths cause towns to build more hospitals to keep up with demand.",
+   "The data must contain an error, because hospitals are known to save lives.",
+   "They are correlated; a third factor, such as population, may explain both."
+  ],
+  "answer": "D",
+  "explanation": "Correlation does not show causation. Larger towns have both more hospitals and more deaths simply because more people live there.",
+  "distractors": "A and B: each assumes one causes the other without evidence. C: the pattern is real and expected, so there is no reason to assume an error.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-001",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A student measures an enzyme's activity. Activity rises steadily from 20 °C to 40 °C, then drops sharply between 40 °C and 50 °C. What is the best prediction for its activity at 60 °C?",
+  "options": [
+   "Very low, because high heat changes the enzyme's shape",
+   "Higher than at 40 °C, because heat speeds up reactions",
+   "About the same as at 20 °C, because the curve repeats",
+   "Twice the activity at 40 °C, because the temperature is higher"
+  ],
+  "answer": "A",
+  "explanation": "The data show a peak near 40 °C and a sharp drop above it, the pattern of an enzyme denaturing. Extending the trend, activity at 60 °C should be very low.",
+  "distractors": "B: ignores the drop above 40 °C. C: nothing in the data suggests the curve repeats. D: assumes a straight-line relationship the data contradict.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-002",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A sealed syringe of air is kept at constant temperature. If you push the plunger in so the volume of air decreases, what happens to the pressure of the air?",
+  "options": [
+   "It decreases.",
+   "It stays the same.",
+   "It increases.",
+   "It drops to zero."
+  ],
+  "answer": "C",
+  "explanation": "Pressure and volume of a gas are inversely related at constant temperature (Boyle's law): the same particles in less space hit the walls more often, so pressure rises.",
+  "distractors": "A: describes a direct relationship, which is wrong for pressure and volume. B: the change in volume does change pressure. D: pressure would drop only if the gas were removed.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.3-003",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.3",
+  "format": "Multiple choice",
+  "stem": "A student records the boiling point of water at different altitudes: sea level, 100 °C; 1,500 m, 95 °C; 3,000 m, 90 °C. Assuming the pattern continues, what is the best prediction for the boiling point at 4,500 m?",
+  "options": [
+   "80 °C",
+   "85 °C",
+   "90 °C",
+   "95 °C"
+  ],
+  "answer": "B",
+  "explanation": "The boiling point drops about 5 °C for every 1,500 m of altitude. One more 1,500 m step below 90 °C gives 85 °C.",
+  "distractors": "A: drops 10 °C, twice the observed step. C: assumes the boiling point stops changing. D: reverses the trend.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-001",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "A student tests how fertilizer affects plant growth. She gives four groups of plants 0, 5, 10 and 15 grams of fertilizer and measures their height after three weeks. What is the independent variable?",
+  "options": [
+   "The amount of fertilizer",
+   "The height of the plants",
+   "The length of the experiment",
+   "The amount of water given"
+  ],
+  "answer": "A",
+  "explanation": "The independent variable is the one the experimenter deliberately changes: the amount of fertilizer.",
+  "distractors": "B: plant height is the dependent variable, the result being measured. C and D: these should be kept the same for all groups (controlled variables).",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-002",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "A student gives four groups of plants 0, 5, 10 and 15 grams of fertilizer and measures their height after three weeks. What is the purpose of the group that receives 0 grams?",
+  "options": [
+   "It is the dependent variable.",
+   "It is the control, used for comparison.",
+   "It shows the best amount of fertilizer.",
+   "It proves that the hypothesis is correct."
+  ],
+  "answer": "B",
+  "explanation": "The 0-gram group is the control: it shows how plants grow without the treatment, so the effect of fertilizer can be measured against it.",
+  "distractors": "A: the dependent variable is plant height, a measurement, not a group. C: the 0-gram group alone cannot show the best amount; that requires comparing results across all the groups. D: experiments support or refute a hypothesis; they do not prove it.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-003",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Ordered response",
+  "stem": "Put these steps of the scientific method in the usual order.",
+  "options": [
+   "Analyze the data",
+   "Form a hypothesis",
+   "Make an observation and ask a question",
+   "Conduct an experiment",
+   "Draw a conclusion"
+  ],
+  "answer": "C, B, D, A, E",
+  "explanation": "Observe and ask a question, form a testable hypothesis, test it with an experiment, analyze the data, then draw a conclusion about whether the data support the hypothesis.",
+  "distractors": "Common error: placing the hypothesis after the experiment. The hypothesis is the prediction the experiment tests.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.4.4-004",
+  "section": "Science",
+  "subarea": "S.4",
+  "objective": "S.4.4",
+  "format": "Multiple choice",
+  "stem": "Which statement is a testable hypothesis?",
+  "options": [
+   "Plants are the most beautiful living things.",
+   "If plants get more light, they will grow taller.",
+   "The plant grew 5 centimeters last week.",
+   "Gardeners should water their plants in the morning."
+  ],
+  "answer": "B",
+  "explanation": "A hypothesis is a testable prediction, often in if-then form, that an experiment can support or refute.",
+  "distractors": "A: an opinion cannot be tested. C: an observation (a measurement already made). D: a recommendation, not a prediction an experiment could support or refute.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ }
+]

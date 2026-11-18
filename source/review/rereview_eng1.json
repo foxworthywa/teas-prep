@@ -1,0 +1,249 @@
+[
+ {
+  "id": "E.2.1-004",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence avoids an unclear pronoun reference?",
+  "options": [
+   "When Dana called Kim, she was upset.",
+   "Dana told Kim that her test was canceled.",
+   "Dana and Kim's shift, she said, was moved.",
+   "Dana was upset when she called Kim."
+  ],
+  "answer": "D",
+  "explanation": "In D, \"she\" must be Dana: the person calling Kim can't be Kim, so the pronoun has only one possible meaning.",
+  "distractors": "A: \"she\" could mean Dana or Kim. B: \"her test\" could be Dana's or Kim's. C: \"she\" has no clear referent.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-002",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Ordered response",
+  "stem": "Put these sentences in the most logical order for a paragraph about handwashing.",
+  "options": [
+   "Lather with soap and scrub for at least 20 seconds.",
+   "Wet your hands with clean running water.",
+   "Dry your hands with a clean towel.",
+   "Rinse your hands well under running water."
+  ],
+  "answer": "B, A, D, C",
+  "explanation": "Handwashing follows a set order: wet, lather and scrub, rinse, dry.",
+  "distractors": "Common error: rinsing before lathering; you can't rinse off soap that hasn't been applied. Another: drying before rinsing.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.3-003",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence does NOT belong in a paragraph about how to prepare for the TEAS?",
+  "options": [
+   "Take a practice test to find your weak areas.",
+   "Reread your notes on the topics you missed.",
+   "The TEAS was first introduced several decades ago.",
+   "Get a good night's sleep before test day."
+  ],
+  "answer": "C",
+  "explanation": "The paragraph is about how to prepare. The history of the test doesn't help with preparation, so it breaks the paragraph's unity.",
+  "distractors": "A, B and D: each is a preparation step that supports the main idea.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-004",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "Which is the best thesis statement for an essay arguing that community colleges should offer free TEAS preparation?",
+  "options": [
+   "Community colleges offer many different programs.",
+   "The TEAS has four sections: reading, math, science, and English.",
+   "Community colleges should offer free TEAS prep to help more students qualify.",
+   "Some students take the TEAS more than once before they pass."
+  ],
+  "answer": "C",
+  "explanation": "A thesis states the writer's main claim, which the essay will support. Option C takes a clear, arguable position on the essay's topic.",
+  "distractors": "A, B and D: statements of fact that don't make an arguable claim.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-004",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence is written most clearly?",
+  "options": [
+   "Walking into the room, the nurse heard the monitor beep.",
+   "Walking into the room, the monitor beeped.",
+   "The monitor beeped walking into the room.",
+   "Walking into the room, a loud beep came from the monitor."
+  ],
+  "answer": "A",
+  "explanation": "An introductory phrase describes the noun right after the comma. The nurse is the one walking into the room.",
+  "distractors": "B, C and D: the phrase \"walking into the room\" ends up describing the monitor or the beep (a dangling or misplaced modifier).",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-003",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses a semicolon correctly?",
+  "options": [
+   "I studied every night; and I felt ready.",
+   "I studied every night; I felt ready.",
+   "I studied; every night before the test.",
+   "Because I studied; I felt ready on test day."
+  ],
+  "answer": "B",
+  "explanation": "A semicolon joins two complete sentences (independent clauses) that are closely related.",
+  "distractors": "A: a semicolon is not followed by a coordinating conjunction such as \"and\"; use a comma, or drop \"and.\" C: \"every night before the test\" is not a complete sentence. D: \"Because I studied\" is a dependent clause; it takes a comma, not a semicolon.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.1-002",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.1",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses pronouns correctly?",
+  "options": [
+   "Me and Maria went to the lab.",
+   "Maria and me went to the lab.",
+   "Maria and I went to the lab.",
+   "Maria and myself went to the lab."
+  ],
+  "answer": "C",
+  "explanation": "The pronoun is part of the subject, so it takes the subject form \"I.\" Test it alone: \"I went to the lab.\"",
+  "distractors": "A and B: \"me\" is an object pronoun (\"Me went\" is wrong). D: \"myself\" is used only when \"I\" is the subject of the same clause, either reflexively (\"I hurt myself\") or for emphasis (\"I did it myself\").",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.2-004",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.2",
+  "format": "Multiple choice",
+  "stem": "Which sentence uses commas correctly?",
+  "options": [
+   "Bring your ID two pencils, and a water bottle.",
+   "Bring, your ID, two pencils and, a water bottle.",
+   "Bring your ID, two pencils, and a water bottle.",
+   "Bring your ID, two pencils, and, a water bottle."
+  ],
+  "answer": "C",
+  "explanation": "Items in a series are separated by commas. The comma before \"and\" (the serial or Oxford comma) is standard in most academic writing; AP style leaves it out, and either is acceptable if used consistently. No option here is correct without it.",
+  "distractors": "A: leaves out the comma after the first item. B: puts commas after \"Bring\" and after \"and.\" D: adds a comma after \"and.\"",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.2-004",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.2",
+  "format": "Multiple choice",
+  "stem": "Using word parts, which word means a slow heart rate?",
+  "options": [
+   "Tachycardia",
+   "Bradycardia",
+   "Cardiomegaly",
+   "Hypercardia"
+  ],
+  "answer": "B",
+  "explanation": "Brady- means slow and cardi/o means heart.",
+  "distractors": "A: tachy- means fast. C: -megaly means enlargement. D: hyper- means above or excessive; \"hypercardia\" is not a standard term.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.1-003",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.1",
+  "format": "Multiple choice",
+  "stem": "Which word correctly completes the sentence?\n\nThe new visiting hours will ___ every family on the unit.",
+  "options": [
+   "effect",
+   "affects",
+   "affect",
+   "effects"
+  ],
+  "answer": "C",
+  "explanation": "\"Affect\" is usually a verb meaning \"to influence.\" The sentence needs a verb after \"will.\"",
+  "distractors": "A and D: \"effect\" is usually a noun meaning a result. B: after \"will,\" a verb takes its base form (affect), not -s.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.2.2-002",
+  "section": "English",
+  "subarea": "E.2",
+  "objective": "E.2.2",
+  "format": "Multiple choice",
+  "stem": "A nurse is explaining a procedure to a patient with no medical background. Which sentence is best?",
+  "options": [
+   "We'll put a small tube in a vein in your arm to give you fluids.",
+   "We'll insert a peripheral IV catheter for parenteral fluid administration.",
+   "We'll start an IV for hydration.",
+   "You need fluids, so just let us handle it."
+  ],
+  "answer": "A",
+  "explanation": "The audience is a patient without medical training, so plain language that explains what will happen is best.",
+  "distractors": "B: accurate but full of jargon the patient may not understand. C: uses the abbreviation IV and the word hydration without explaining them. D: dismissive and explains nothing.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.3.1-003",
+  "section": "English",
+  "subarea": "E.3",
+  "objective": "E.3.1",
+  "format": "Multiple choice",
+  "stem": "A student rereads her essay draft and notices the main points are in a confusing order. What should she do next?",
+  "options": [
+   "Proofread it for spelling errors",
+   "Rewrite only the conclusion",
+   "Add more examples to each point",
+   "Revise it to reorganize the ideas"
+  ],
+  "answer": "D",
+  "explanation": "Problems with organization and clarity are fixed during revision, by moving, adding or cutting content.",
+  "distractors": "A: proofreading catches surface errors, not organization. B: the conclusion isn't the problem; the order of the points is. C: more examples won't fix a confusing order.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "E.1.3-003",
+  "section": "English",
+  "subarea": "E.1",
+  "objective": "E.1.3",
+  "format": "Multiple choice",
+  "stem": "Which sentence is a compound sentence?",
+  "options": [
+   "The nurse checked the chart and called the doctor.",
+   "After checking the chart, the nurse called the doctor.",
+   "Because she checked the chart, the nurse knew the dose.",
+   "The nurse checked the chart, and the doctor reviewed it."
+  ],
+  "answer": "D",
+  "explanation": "A compound sentence joins two independent clauses, each with its own subject and verb (\"the nurse checked\"; \"the doctor reviewed\"), here with a comma and the conjunction \"and.\" A semicolon can also join them.",
+  "distractors": "A: one subject with two verbs (a compound predicate), so it is a simple sentence. B: a simple sentence that begins with a phrase. C: a complex sentence: a dependent clause plus one independent clause.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ }
+]

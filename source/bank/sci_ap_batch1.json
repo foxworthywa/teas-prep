@@ -1,0 +1,573 @@
+[
+ {
+  "id": "S.1.1-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.1",
+  "format": "Multiple choice",
+  "stem": "In anatomical position, which term describes the location of the knee relative to the ankle?",
+  "options": [
+   "Distal",
+   "Medial",
+   "Proximal",
+   "Inferior"
+  ],
+  "answer": "C",
+  "explanation": "Proximal means closer to the point where a limb attaches to the trunk. The knee is closer to the hip than the ankle is, so the knee is proximal to the ankle.",
+  "distractors": "A: distal is the reverse (the ankle is distal to the knee). B: medial means toward the midline, which compares side-to-side position, not position along a limb. D: the knee is superior to the ankle, not inferior.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.1-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.1",
+  "format": "Multiple choice",
+  "stem": "A plane divides the body into anterior and posterior portions. Which plane is it?",
+  "options": [
+   "Frontal (coronal) plane",
+   "Sagittal plane",
+   "Transverse (horizontal) plane",
+   "Midsagittal (median) plane"
+  ],
+  "answer": "A",
+  "explanation": "The frontal (coronal) plane runs vertically from side to side, separating the front of the body from the back.",
+  "distractors": "B and D: sagittal planes divide the body into left and right portions (midsagittal into equal halves). C: the transverse plane divides the body into superior (upper) and inferior (lower) portions.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.1-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.1",
+  "format": "Select all",
+  "stem": "Which organs are located in the abdominopelvic cavity? Select all that apply.",
+  "options": [
+   "Heart",
+   "Stomach",
+   "Lungs",
+   "Urinary bladder",
+   "Liver"
+  ],
+  "answer": "B, D, E",
+  "explanation": "The abdominopelvic cavity lies below the diaphragm. It holds the stomach and liver (abdominal portion) and the urinary bladder (pelvic portion).",
+  "distractors": "A and C: the heart and lungs are in the thoracic cavity, above the diaphragm.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.2-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.2",
+  "format": "Ordered response",
+  "stem": "Put these structures in the order that inhaled air passes through them.",
+  "options": [
+   "Bronchi",
+   "Larynx",
+   "Alveoli",
+   "Trachea",
+   "Pharynx"
+  ],
+  "answer": "E, B, D, A, C",
+  "explanation": "Air moves from the pharynx (throat) to the larynx (voice box), down the trachea, into the bronchi, through smaller bronchioles, and finally into the alveoli, where gas exchange happens.",
+  "distractors": "Common error: placing the trachea before the larynx. The larynx sits at the top of the trachea, so air passes through it first.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.2-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.2",
+  "format": "Multiple choice",
+  "stem": "Oxygen moves from the alveoli into the pulmonary capillary blood mainly because",
+  "options": [
+   "alveolar cells pump oxygen into the capillary blood.",
+   "hemoglobin leaves the capillaries to collect oxygen.",
+   "outgoing carbon dioxide pushes oxygen into the blood.",
+   "oxygen's partial pressure is higher in alveolar air."
+  ],
+  "answer": "D",
+  "explanation": "Gas exchange in the lungs happens by diffusion. Oxygen moves from where its partial pressure is higher (alveolar air) to where it is lower (blood arriving from the body).",
+  "distractors": "A: no active transport is involved; diffusion needs no pumps. B: hemoglobin stays inside red blood cells in the capillaries. C: carbon dioxide diffuses the other way on its own gradient; it does not push oxygen.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.3-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.3",
+  "format": "Multiple choice",
+  "stem": "Which valve keeps blood from flowing backward from the left ventricle into the left atrium?",
+  "options": [
+   "Tricuspid valve",
+   "Mitral valve",
+   "Pulmonary semilunar valve",
+   "Aortic semilunar valve"
+  ],
+  "answer": "B",
+  "explanation": "The mitral valve (also called the bicuspid valve) sits between the left atrium and the left ventricle. It closes when the left ventricle contracts.",
+  "distractors": "A: the tricuspid valve is between the right atrium and right ventricle. C: the pulmonary valve is between the right ventricle and the pulmonary trunk. D: the aortic valve is between the left ventricle and the aorta.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.3-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.3",
+  "format": "Multiple choice",
+  "stem": "Which statement about the pulmonary veins is correct?",
+  "options": [
+   "They carry oxygen-rich blood from the lungs to the left atrium.",
+   "They carry oxygen-poor blood from the heart to the lungs.",
+   "They carry oxygen-poor blood from the body to the right atrium.",
+   "They carry oxygen-rich blood from the heart to the body."
+  ],
+  "answer": "A",
+  "explanation": "Veins are named for direction, not oxygen content: they carry blood toward the heart. The pulmonary veins return freshly oxygenated blood from the lungs to the left atrium.",
+  "distractors": "B: describes the pulmonary arteries. C: describes the venae cavae. D: describes the aorta. Students who assume every vein carries oxygen-poor blood tend to pick the pulmonary-artery or venae-cavae option.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.3-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.3",
+  "format": "Multiple choice",
+  "stem": "Normally the AV node briefly delays the electrical signal before passing it to the ventricles. If there were no delay, what would most likely happen?",
+  "options": [
+   "The SA node would stop firing and the heart would stop.",
+   "Blood would flow backward through the semilunar valves.",
+   "The atria would stop contracting altogether.",
+   "The ventricles would contract before they had filled."
+  ],
+  "answer": "D",
+  "explanation": "The AV node's delay gives the atria time to finish pushing blood into the ventricles. Without it, the ventricles would contract before they had finished filling, so they would pump less blood with each beat.",
+  "distractors": "A: the SA node fires on its own; the AV node does not control it. B: semilunar valves prevent backflow from the arteries regardless of AV timing. C: the atria still receive the signal from the SA node and still contract.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.3-004",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.3",
+  "format": "Multiple choice",
+  "stem": "Across the walls of which vessels does most exchange of gases and nutrients with body cells take place?",
+  "options": [
+   "Arteries",
+   "Arterioles",
+   "Capillaries",
+   "Veins"
+  ],
+  "answer": "C",
+  "explanation": "Capillary walls are a single layer of cells, so oxygen, nutrients and wastes can diffuse between blood and tissue. Most exchange happens there.",
+  "distractors": "A and B: arteries and arterioles have thick muscular walls that carry and regulate blood flow. D: vein walls are too thick for meaningful exchange; veins return blood to the heart.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.3-005",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.3",
+  "format": "Select all",
+  "stem": "Which of the following are formed elements of blood? Select all that apply.",
+  "options": [
+   "Platelets",
+   "Plasma",
+   "Red blood cells",
+   "Albumin",
+   "White blood cells"
+  ],
+  "answer": "A, C, E",
+  "explanation": "The formed elements are the cells and cell fragments in blood: red blood cells, white blood cells and platelets.",
+  "distractors": "B: plasma is the liquid part of blood, not a formed element. D: albumin is a protein dissolved in plasma.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.4-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.4",
+  "format": "Multiple choice",
+  "stem": "Where does most absorption of nutrients into the blood take place?",
+  "options": [
+   "Stomach",
+   "Small intestine",
+   "Large intestine",
+   "Esophagus"
+  ],
+  "answer": "B",
+  "explanation": "The small intestine has a huge surface area from circular folds, villi and microvilli. Most digested nutrients are absorbed there.",
+  "distractors": "A: the stomach mainly stores and mixes food and begins protein digestion; it absorbs little. C: the large intestine mainly absorbs water and electrolytes. D: the esophagus only moves food to the stomach.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.4-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.4",
+  "format": "Supply answer",
+  "stem": "Bile is produced by the liver and stored and concentrated in the ______.",
+  "options": [],
+  "answer": "gallbladder | gall bladder | gall-bladder",
+  "explanation": "The gallbladder stores bile and concentrates it between meals, then releases it into the small intestine when fatty food arrives.",
+  "distractors": "Common wrong answers: pancreas (makes digestive enzymes, not bile) and liver (makes bile but does not store it).",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.4-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.4",
+  "format": "Multiple choice",
+  "stem": "Bile helps the digestion of fats mainly by",
+  "options": [
+   "breaking the chemical bonds in fat molecules.",
+   "carrying fatty acids directly into the blood.",
+   "neutralizing acid inside the stomach.",
+   "breaking large fat globules into small droplets."
+  ],
+  "answer": "D",
+  "explanation": "Bile emulsifies fat: it breaks large fat globules into many small droplets. This gives the enzyme lipase much more surface to work on. Bile itself contains no digestive enzymes.",
+  "distractors": "A: chemical digestion of fat is done by lipase, not bile. B: fats are absorbed into intestinal cells and then mostly into lymph, not carried by bile into blood. C: bile enters the small intestine, not the stomach.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.5-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.5",
+  "format": "Multiple choice",
+  "stem": "Which part of a neuron receives signals from other neurons?",
+  "options": [
+   "Dendrites",
+   "Axon",
+   "Axon terminals",
+   "Myelin sheath"
+  ],
+  "answer": "A",
+  "explanation": "Dendrites are branched extensions that receive incoming signals and carry them toward the cell body.",
+  "distractors": "B: the axon carries signals away from the cell body. C: axon terminals release neurotransmitter to the next cell. D: myelin insulates the axon and speeds conduction.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.5-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.5",
+  "format": "Multiple choice",
+  "stem": "A person touches a hot pan and jerks the hand away before feeling any pain. This rapid withdrawal is coordinated mainly by the",
+  "options": [
+   "cerebrum.",
+   "spinal cord.",
+   "cerebellum.",
+   "hypothalamus."
+  ],
+  "answer": "B",
+  "explanation": "The withdrawal reflex is routed through the spinal cord: sensory neurons connect through spinal interneurons to motor neurons, so the hand moves without waiting for the brain. The pain signal also travels up to the brain at the same time, which is why the pain is felt a moment after the hand has already moved.",
+  "distractors": "A: the cerebrum produces the conscious feeling of pain, which comes after the reflex. C: the cerebellum coordinates smooth, practiced movement. D: the hypothalamus regulates temperature, hunger and hormones.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.5-003",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.5",
+  "format": "Select all",
+  "stem": "Which responses are caused by the sympathetic nervous system? Select all that apply.",
+  "options": [
+   "Increased digestive activity",
+   "Increased heart rate",
+   "Dilation of the bronchioles",
+   "Dilation of the pupils",
+   "Release of glucose from the liver",
+   "Constriction of the pupils"
+  ],
+  "answer": "B, C, D, E",
+  "explanation": "The sympathetic division prepares the body for action ('fight or flight'): faster heart rate, wider airways, wider pupils, and more glucose released into the blood for fuel.",
+  "distractors": "A and F are parasympathetic ('rest and digest') effects: the parasympathetic division increases digestive activity and constricts the pupils.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.6-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.6",
+  "format": "Multiple choice",
+  "stem": "Which type of muscle tissue is under voluntary (conscious) control?",
+  "options": [
+   "Cardiac muscle",
+   "Smooth muscle",
+   "Skeletal muscle",
+   "Both cardiac and smooth muscle"
+  ],
+  "answer": "C",
+  "explanation": "Skeletal muscle moves the skeleton and is controlled voluntarily through somatic motor neurons.",
+  "distractors": "A: cardiac muscle contracts on its own rhythm. B: smooth muscle in organ and vessel walls is involuntary. D: both are involuntary.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.6-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.6",
+  "format": "Multiple choice",
+  "stem": "During skeletal muscle contraction, sarcomeres shorten because",
+  "options": [
+   "myosin heads pull actin filaments toward the center.",
+   "the actin and myosin filaments themselves get shorter.",
+   "calcium binds to myosin and makes it longer.",
+   "the Z discs at each end of the sarcomere move farther apart."
+  ],
+  "answer": "A",
+  "explanation": "In the sliding filament model, myosin heads bind actin and pull the thin filaments toward the center. The filaments slide past each other; neither changes length.",
+  "distractors": "B: the filaments keep their length and only overlap more. C: calcium binds troponin, which moves tropomyosin aside and exposes the binding sites on actin; it does not lengthen myosin. D: the Z discs move closer together as the sarcomere shortens.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.7-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.7",
+  "format": "Multiple choice",
+  "stem": "Where does fertilization of an egg by a sperm normally occur?",
+  "options": [
+   "Uterus",
+   "Ovary",
+   "Vagina (birth canal)",
+   "Fallopian (uterine) tube"
+  ],
+  "answer": "D",
+  "explanation": "Fertilization normally happens in the fallopian (uterine) tube. The early embryo then travels to the uterus and implants in its lining.",
+  "distractors": "A: the uterus is where the embryo implants, not where fertilization usually occurs. B: the ovary releases the egg. C: sperm are deposited in the vagina but must travel to the uterine tube.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.7-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.7",
+  "format": "Multiple choice",
+  "stem": "Where are sperm produced?",
+  "options": [
+   "Epididymis",
+   "Seminiferous tubules",
+   "Prostate gland",
+   "Vas deferens (ductus deferens)"
+  ],
+  "answer": "B",
+  "explanation": "Sperm are made in the seminiferous tubules, the coiled tubes inside each testis.",
+  "distractors": "A: the epididymis stores sperm while they mature. C: the prostate adds fluid to semen. D: the vas deferens carries sperm toward the urethra.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.8-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.8",
+  "format": "Multiple choice",
+  "stem": "Which layer of the skin has no blood vessels of its own?",
+  "options": [
+   "Dermis",
+   "Hypodermis",
+   "Epidermis",
+   "Papillary layer of the dermis"
+  ],
+  "answer": "C",
+  "explanation": "The epidermis is avascular. Its living cells get nutrients by diffusion from blood vessels in the dermis below.",
+  "distractors": "A and D: the dermis, including its papillary layer, is well supplied with capillaries. B: the hypodermis (subcutaneous layer) contains larger blood vessels and fat.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.8-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.8",
+  "format": "Multiple choice",
+  "stem": "On a hot day, how does the skin help lower body temperature?",
+  "options": [
+   "Dermal blood vessels constrict and sweating decreases.",
+   "Melanocytes increase melanin production.",
+   "The epidermis thickens to block heat.",
+   "Dermal blood vessels dilate and sweating increases."
+  ],
+  "answer": "D",
+  "explanation": "Dilated dermal vessels bring warm blood close to the surface so heat can leave the body, and evaporating sweat carries more heat away.",
+  "distractors": "A: this is the response to cold; it conserves heat. B: melanin protects against UV radiation; it does not cool the body. C: the epidermis does not thicken in response to heat.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.9-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.9",
+  "format": "Multiple choice",
+  "stem": "After a large meal, blood glucose rises. Which hormone does the pancreas release in response?",
+  "options": [
+   "Insulin",
+   "Glucagon",
+   "Cortisol",
+   "Epinephrine"
+  ],
+  "answer": "A",
+  "explanation": "Insulin from pancreatic beta cells lowers blood glucose by helping cells take up glucose and by promoting glycogen storage.",
+  "distractors": "B: glucagon is released when blood glucose is low and raises it. C: cortisol (adrenal cortex) raises blood glucose during stress. D: epinephrine (adrenal medulla) also raises blood glucose.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.9-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.9",
+  "format": "Multiple choice",
+  "stem": "Thyroid hormone levels in the blood rise above normal. Which response helps bring them back down?",
+  "options": [
+   "The hypothalamus increases release of thyrotropin-releasing hormone (TRH).",
+   "The thyroid gland increases its uptake of iodine from the blood.",
+   "The anterior pituitary decreases release of thyroid-stimulating hormone (TSH).",
+   "The adrenal cortex increases its release of aldosterone into the blood."
+  ],
+  "answer": "C",
+  "explanation": "This is negative feedback. High thyroid hormone inhibits the anterior pituitary (and the hypothalamus), so less thyroid-stimulating hormone (TSH) is released and the thyroid makes less hormone.",
+  "distractors": "A: more TRH would push thyroid hormone even higher; in negative feedback, TRH release falls. B: more iodine uptake would support more hormone production, the opposite of what is needed. D: aldosterone regulates sodium and water, not thyroid hormone.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.10-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.10",
+  "format": "Ordered response",
+  "stem": "Put these structures in the order urine passes through them after it leaves the nephrons.",
+  "options": [
+   "Urethra",
+   "Ureter",
+   "Urinary bladder",
+   "Renal pelvis"
+  ],
+  "answer": "D, B, C, A",
+  "explanation": "Urine drains from the collecting ducts through the calyces into the renal pelvis, then down a ureter to the urinary bladder for storage, and leaves the body through the urethra.",
+  "distractors": "Common error: swapping ureter and urethra. The ureters (two) connect kidneys to bladder; the urethra (one) drains the bladder to the outside.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.10-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.10",
+  "format": "Multiple choice",
+  "stem": "What is the effect of antidiuretic hormone (ADH) on the kidneys?",
+  "options": [
+   "Less water is reabsorbed, so urine is more dilute.",
+   "More water is reabsorbed, so urine is more concentrated.",
+   "More protein is filtered into the urine.",
+   "More sodium is excreted in the urine."
+  ],
+  "answer": "B",
+  "explanation": "ADH makes the collecting ducts more permeable to water, so more water returns to the blood. Urine volume drops and urine becomes more concentrated. 'Antidiuretic' means 'against urine production.'",
+  "distractors": "A: describes low ADH (alcohol, for example, suppresses ADH). C: ADH does not control protein filtration; protein in the urine is a sign of kidney damage. D: ADH acts on water; aldosterone is the main hormone that adjusts sodium.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.11-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.11",
+  "format": "Multiple choice",
+  "stem": "Which cells produce and release antibodies?",
+  "options": [
+   "Helper T cells",
+   "Neutrophils",
+   "Natural killer cells",
+   "Plasma cells"
+  ],
+  "answer": "D",
+  "explanation": "When a B cell is activated by its antigen, it divides and many of its descendants become plasma cells, which secrete large amounts of antibody.",
+  "distractors": "A: helper T cells coordinate the immune response by signaling other cells but do not make antibodies. B: neutrophils are phagocytes. C: natural killer cells destroy infected or abnormal cells directly.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.11-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.11",
+  "format": "Select all",
+  "stem": "Which of the following are part of the body's innate (nonspecific) defenses? Select all that apply.",
+  "options": [
+   "Antibodies",
+   "Intact skin",
+   "Memory T cells",
+   "Fever",
+   "Plasma cells"
+  ],
+  "answer": "B, D",
+  "explanation": "Innate defenses work the same way against any invader and do not require earlier exposure to it: physical barriers such as intact skin, and general responses such as fever and inflammation.",
+  "distractors": "A, C and E belong to adaptive (specific) immunity, which targets particular antigens. Plasma cells make antibodies during an infection, including a first infection; memory T cells are left behind afterward to respond faster next time.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.12-001",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.12",
+  "format": "Multiple choice",
+  "stem": "Which cells break down bone tissue and release calcium into the blood?",
+  "options": [
+   "Osteoclasts",
+   "Osteoblasts",
+   "Osteocytes",
+   "Chondrocytes"
+  ],
+  "answer": "A",
+  "explanation": "Osteoclasts resorb (break down) bone matrix, releasing calcium and phosphate into the blood. Memory aid: osteoClasts Cut bone down; osteoBlasts Build it up.",
+  "distractors": "B: osteoblasts build new bone. C: osteocytes are mature bone cells that maintain the matrix. D: chondrocytes are cartilage cells.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.1.12-002",
+  "section": "Science",
+  "subarea": "S.1",
+  "objective": "S.1.12",
+  "format": "Multiple choice",
+  "stem": "What is the main function of red bone marrow?",
+  "options": [
+   "Storing fat",
+   "Absorbing calcium from the diet",
+   "Forming blood cells",
+   "Growing new cartilage"
+  ],
+  "answer": "C",
+  "explanation": "Red bone marrow is the site of hematopoiesis: it produces red blood cells, white blood cells and platelets.",
+  "distractors": "A: yellow marrow stores fat. B: dietary calcium is absorbed in the small intestine. D: cartilage growth happens at growth plates and other cartilage, not in marrow.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ }
+]

@@ -1,0 +1,358 @@
+[
+ {
+  "id": "S.1.1-1",
+  "page": "S.1.1",
+  "type": "openstax",
+  "fig": "1.13",
+  "res": "077db56686dd31b966e5b0f56eefbc6e2ddc7214",
+  "title": "Directional Terms Applied to the Human Body",
+  "alt": "Side and front views of a person in anatomical position with paired arrows: cranial and caudal along the trunk, anterior (ventral) and posterior (dorsal) front to back, medial and lateral across the abdomen, and proximal and distal along an arm and a leg.",
+  "caption": "Directional terms come in opposite pairs. Note that proximal and distal are marked along the limbs."
+ },
+ {
+  "id": "S.1.1-2",
+  "page": "S.1.1",
+  "type": "openstax",
+  "fig": "1.14",
+  "res": "380a8c8bbe4346e8fd87c5781e6bbc656f23a6fc",
+  "title": "Planes of the Body",
+  "alt": "A person standing in anatomical position crossed by three see-through planes: a sagittal plane dividing left from right, a frontal (coronal) plane dividing front from back, and a transverse plane dividing upper from lower. An oblique plane is shown at the ankles.",
+  "caption": "The sagittal plane separates left from right, the frontal (coronal) plane separates front from back, and the transverse plane separates upper from lower."
+ },
+ {
+  "id": "S.1.1-3",
+  "page": "S.1.1",
+  "type": "openstax",
+  "fig": "1.15",
+  "res": "31b2c67b26e49d57f60ae5244033f5b4a0e7da6b",
+  "title": "Dorsal and Ventral Body Cavities",
+  "alt": "Side and front views of the body cavities in color: the cranial and vertebral cavities form the dorsal cavity; the thoracic cavity (pleural cavities and the mediastinum with the pericardial cavity) and the abdominopelvic cavity (abdominal and pelvic cavities) form the ventral cavity, separated by the diaphragm.",
+  "caption": "The diaphragm divides the ventral cavity into the thoracic cavity above and the abdominopelvic cavity below."
+ },
+ {
+  "id": "S.1.1-4",
+  "page": "S.1.1",
+  "type": "openstax",
+  "fig": "1.16",
+  "res": "a47422bfbf5f1dcb46cca86199377b7e98de2e38",
+  "title": "Abdominopelvic Regions and Quadrants",
+  "alt": "Two views of the abdomen over the organs. Left: a three-by-three grid of the nine abdominopelvic regions. Right: two crossing lines through the navel making the right upper, left upper, right lower and left lower quadrants.",
+  "caption": "Nine regions (left) and four quadrants (right). Right and left are the patient's right and left.",
+  "osx_title": "Regions and Quadrants of the Peritoneal Cavity"
+ },
+ {
+  "id": "S.1.2-1",
+  "page": "S.1.2",
+  "type": "openstax",
+  "fig": "22.2",
+  "res": "a20b8077aaf4688018122bf8f59ecfea069ed3b0",
+  "title": "Major Respiratory Structures",
+  "alt": "Upper body with the respiratory organs labeled: nasal cavity, nostril, oral cavity, pharynx, larynx, trachea, right and left main bronchi, right and left lungs, and the diaphragm beneath the lungs.",
+  "caption": "Air passes through the nose or mouth, pharynx, larynx and trachea, then into the bronchi and lungs. The diaphragm sits under the lungs."
+ },
+ {
+  "id": "S.1.2-2",
+  "page": "S.1.2",
+  "type": "openstax",
+  "fig": "22.10",
+  "res": "09a9e7232a1476aabaca09bf662d1d0ca8fe5f0d",
+  "title": "Respiratory Zone",
+  "alt": "A terminal bronchiole branching into respiratory bronchioles, alveolar ducts and clusters of alveoli (alveolar sacs). A network of capillaries wraps the alveoli, with deoxygenated blood arriving from a pulmonary artery branch and oxygenated blood leaving toward a pulmonary vein.",
+  "caption": "Gas exchange happens where capillaries wrap around the alveoli."
+ },
+ {
+  "id": "S.1.2-3",
+  "page": "S.1.2",
+  "type": "openstax",
+  "fig": "22.17",
+  "res": "5ae96ca57ec74c0100efe6d029917e51d981c5e2",
+  "title": "Normal Inspiration and Expiration",
+  "alt": "Two side views of the chest. Inspiration: the external intercostal muscles and the diaphragm contract, the diaphragm moves down and the thoracic cavity expands. Expiration: the muscles relax, the diaphragm moves up and the thoracic cavity gets smaller.",
+  "caption": "Inhaling: the diaphragm contracts and flattens, the chest gets bigger, and air flows in. Normal exhaling is passive: the muscles relax and the chest gets smaller."
+ },
+ {
+  "id": "S.1.3-1",
+  "page": "S.1.3",
+  "type": "original",
+  "file": "S.1.3-fig1-blood-flow",
+  "title": "Path of blood through the heart, lungs and body",
+  "alt": "Schematic in anatomical view (the patient's right is on the image's left). Oxygen-poor blood (dashed blue) returns through the venae cavae to the right atrium, passes the tricuspid valve to the right ventricle, then the pulmonary valve into the pulmonary trunk and arteries to the lungs. Oxygen-rich blood (solid red) returns through the pulmonary veins to the left atrium, passes the mitral valve to the left ventricle, then the aortic valve into the aorta and out to the body.",
+  "caption": "One loop, two pumps. Trace it with your finger until you can do it without looking."
+ },
+ {
+  "id": "S.1.3-2",
+  "page": "S.1.3",
+  "type": "openstax",
+  "fig": "19.9",
+  "res": "c9d5c770b3ddb5014230220f12028905df9b896e",
+  "title": "Internal Structures of the Heart",
+  "alt": "Anterior view of the heart cut open to show the four chambers, the tricuspid, mitral (bicuspid), pulmonary and aortic valves, the great vessels (venae cavae, aorta, pulmonary trunk, pulmonary arteries and veins), the interventricular septum and the heart wall layers.",
+  "caption": "The real anatomy behind the schematic. Notice how much thicker the left ventricle wall is."
+ },
+ {
+  "id": "S.1.3-3",
+  "page": "S.1.3",
+  "type": "openstax",
+  "fig": "19.18",
+  "res": "ab4103111b36720e9c0b2ac83f5ef1b73e8a1686",
+  "title": "Conduction System of the Heart",
+  "alt": "Frontal section of the heart with the conduction system in yellow: the sinoatrial (SA) node in the right atrium, internodal pathways, the atrioventricular (AV) node, the AV bundle (bundle of His), right and left bundle branches, and Purkinje fibers in the ventricle walls.",
+  "caption": "The signal starts at the SA node, pauses at the AV node, then travels through the AV bundle (bundle of His) and the bundle branches to the Purkinje fibers."
+ },
+ {
+  "id": "S.1.4-1",
+  "page": "S.1.4",
+  "type": "openstax",
+  "fig": "23.2",
+  "res": "abe85277d60c52f85be133e1b5ddc40aea009e1c",
+  "title": "Components of the Digestive System",
+  "alt": "The digestive system in a person's outline: mouth, tongue, salivary glands, pharynx, esophagus, stomach, liver, gallbladder, pancreas, spleen, small intestine (duodenum, jejunum, ileum), large intestine (cecum, appendix, ascending, transverse, descending and sigmoid colon, rectum), anal canal and anus.",
+  "caption": "The alimentary canal runs from mouth to anus. The liver, gallbladder and pancreas are accessory organs: food never passes through them. The spleen is shown only for position; it belongs to the lymphatic and immune system."
+ },
+ {
+  "id": "S.1.5-1",
+  "page": "S.1.5",
+  "type": "openstax",
+  "fig": "12.8",
+  "res": "5eb1ce492d604faad88e5b8b096fc7ac4a8fcb8f",
+  "title": "Parts of a Neuron",
+  "alt": "A neuron with dendrites branching from the cell body (soma), a long axon wrapped in segments of myelin sheath made by an oligodendrocyte, with nodes of Ranvier between them, and branching axon terminals ending at a synapse.",
+  "caption": "Signals travel one way: dendrites, then cell body, then axon, then axon terminals. Here the myelin is made by an oligodendrocyte, so this is a central nervous system neuron."
+ },
+ {
+  "id": "S.1.5-2",
+  "page": "S.1.5",
+  "type": "original",
+  "file": "S.1.5-fig2-reflex-arc",
+  "title": "The withdrawal reflex arc",
+  "alt": "Five numbered steps: 1, a receptor in the skin detects heat; 2, a sensory neuron carries the signal to the spinal cord; 3, an interneuron in the spinal cord passes it to a motor neuron; 4, the motor neuron carries the signal out; 5, an arm muscle contracts and the hand pulls away. A dashed branch carries the signal up to the brain, where pain is felt a moment later.",
+  "caption": "The reflex loop runs through the spinal cord, so the hand moves before the brain registers pain."
+ },
+ {
+  "id": "S.1.6-1",
+  "page": "S.1.6",
+  "type": "openstax",
+  "fig": "10.10",
+  "res": "1463f0ef934552382ad130bf14cd23dd9e1e779a",
+  "title": "The Sliding Filament Model of Muscle Contraction",
+  "alt": "Two sarcomeres, relaxed (top) and contracted (bottom). Thin actin filaments attach to Z discs at each end; thick myosin filaments sit in the middle. When contracted, the Z discs are closer together and the light I bands and H zone are narrower, while the dark A band stays the same width.",
+  "caption": "In contraction the filaments slide past each other. Neither filament gets shorter; the Z discs move closer."
+ },
+ {
+  "id": "S.1.7-1",
+  "page": "S.1.7",
+  "type": "openstax",
+  "fig": "27.2",
+  "res": "042d21957f771b1d4f914c8ce874c5ca2fac7d65",
+  "title": "Testicular (Male) Reproductive System",
+  "alt": "Male reproductive system in lateral view with the testis, epididymis, ductus (vas) deferens, seminal vesicle, ejaculatory duct, prostate gland, bulbourethral gland, urethra and penis labeled, plus external views.",
+  "caption": "Sperm form in the testis, mature in the epididymis, and travel through the vas deferens and urethra. The seminal vesicles, prostate and bulbourethral glands add fluid."
+ },
+ {
+  "id": "S.1.7-2",
+  "page": "S.1.7",
+  "type": "openstax",
+  "fig": "27.9",
+  "res": "1ea115cf35f7999867f3eda8538332a5f2257792",
+  "title": "Ovarian (Female) Reproductive System",
+  "alt": "Female reproductive system. Lateral view: uterus, ovary, cervix, vagina, bladder, urethra, rectum. Anterior view: ovaries, uterine tubes with fimbriae, uterus, cervix and vagina.",
+  "caption": "The egg leaves the ovary, is swept into the uterine (fallopian) tube, where fertilization usually happens, and an embryo implants in the uterus. Note: the label \"posterior fornix of uterus\" should read \"posterior fornix of the vagina,\" and \"labium minora/majora\" should read \"labia minora/majora.\""
+ },
+ {
+  "id": "S.1.8-1",
+  "page": "S.1.8",
+  "type": "openstax",
+  "fig": "5.2",
+  "res": "e6f48dafa8ec810f4b5ffb432f8e6e21cacee048",
+  "title": "Layers of Skin",
+  "alt": "Block of skin in cross-section showing the thin epidermis on top, the thick dermis with hair follicles, sebaceous glands, sweat glands, arrector pili muscle, nerves and blood vessels, and the fatty hypodermis below.",
+  "caption": "Epidermis on top (no blood vessels), dermis in the middle (vessels, nerves, glands, hair follicles), hypodermis below (fat)."
+ },
+ {
+  "id": "S.1.9-1",
+  "page": "S.1.9",
+  "type": "openstax",
+  "fig": "17.2",
+  "res": "eade2d286c1bf61900ea443ba642f097fc0c334d",
+  "title": "Endocrine System",
+  "alt": "Body outline showing endocrine glands: pineal gland, hypothalamus and pituitary gland in the brain; thyroid and parathyroid glands in the neck; thymus; adrenal glands on the kidneys; pancreas; ovaries and testes.",
+  "caption": "The main endocrine glands. The hypothalamus and pituitary control several of the others."
+ },
+ {
+  "id": "S.1.9-2",
+  "page": "S.1.9",
+  "type": "original",
+  "file": "S.1.9-fig2-glucose-feedback",
+  "title": "Negative feedback control of blood glucose",
+  "alt": "Two loops around normal blood glucose. When glucose rises after a meal, pancreatic beta cells release insulin, cells take up glucose and the liver stores glycogen, and glucose falls back to normal. When glucose falls, alpha cells release glucagon, the liver breaks down glycogen and releases glucose, and glucose rises back to normal.",
+  "caption": "Insulin lowers blood glucose; glucagon raises it. Each response pushes the level back toward normal: that is negative feedback."
+ },
+ {
+  "id": "S.1.9-3",
+  "page": "S.1.9",
+  "type": "openstax",
+  "fig": "17.13",
+  "res": "0c75c57b179f6d45096268109e754fc2f4084022",
+  "title": "Classic Negative Feedback Loop",
+  "alt": "Flowchart of thyroid control. When thyroid hormone (T3 and T4) is low, the hypothalamus releases TRH, which triggers TSH release from the pituitary; TSH makes the thyroid release T3 and T4, which raise metabolic rate. High T3 and T4 inhibit release of TRH and TSH.",
+  "caption": "The thyroid axis: hypothalamus (TRH), then pituitary (TSH), then thyroid (T3 and T4). High thyroid hormone switches off the steps above it."
+ },
+ {
+  "id": "S.1.10-1",
+  "page": "S.1.10",
+  "type": "openstax",
+  "fig": "25.8",
+  "res": "ffe5ed4530aa183540afdd1c9b995f5246660b05",
+  "title": "Left Kidney",
+  "alt": "Cross-section of a kidney showing the outer cortex, the medulla with its pyramids, minor and major calyces draining into the renal pelvis, the ureter leaving at the hilum, and the renal artery, vein and nerve. An inset shows the kidneys' position in the back of the abdomen.",
+  "caption": "Urine drains from the pyramids into the calyces and renal pelvis, then leaves through the ureter."
+ },
+ {
+  "id": "S.1.11-1",
+  "page": "S.1.11",
+  "type": "openstax",
+  "fig": "21.14",
+  "res": "323d371324ea1977569312560d0cf65431cc8a9b",
+  "title": "The Inflammatory Response",
+  "alt": "Two panels at a skin wound with bacteria. Top: mast cells detect injury and release histamine. Bottom: blood flow increases and phagocytes leave the vessel to attack the pathogens; the area swells, reddens, warms and hurts.",
+  "caption": "Inflammation is an innate response: histamine increases blood flow, and phagocytes arrive. The result is redness, heat, swelling and pain."
+ },
+ {
+  "id": "S.1.12-1",
+  "page": "S.1.12",
+  "type": "openstax",
+  "fig": "6.7",
+  "res": "584a309c687dbba48af841cf629d2a6937ad6599",
+  "title": "Anatomy of a Long Bone",
+  "alt": "A long bone with the shaft (diaphysis) and two ends (epiphyses) labeled, plus articular cartilage, spongy bone with red marrow in the ends, compact bone, the medullary cavity with yellow marrow, the periosteum, endosteum, epiphyseal line and a nutrient artery.",
+  "caption": "Red marrow sits in the spongy bone of the ends; yellow (fatty) marrow fills the shaft's medullary cavity in adults."
+ },
+ {
+  "id": "S.1.12-2",
+  "page": "S.1.12",
+  "type": "openstax",
+  "fig": "6.11",
+  "res": "a556bd455f44e1339456a7f7f065b1d9184940ed",
+  "title": "Bone Cells",
+  "alt": "Four bone cell types drawn from a piece of bone: osteocyte (maintains bone tissue), osteoblast (forms bone matrix), osteogenic cell (stem cell) and osteoclast (resorbs bone).",
+  "caption": "Osteoblasts build bone, osteoclasts break it down, osteocytes maintain it, and osteogenic cells are the stem cells that become osteoblasts."
+ },
+ {
+  "id": "S.2.1-1",
+  "page": "S.2.1",
+  "type": "openstax",
+  "book": "cob",
+  "fig": "3.7(a)",
+  "res": "",
+  "title": "A typical animal cell",
+  "osx_title": "Animal cell",
+  "alt": "Labeled cutaway of an animal cell showing the nucleus with nuclear envelope, chromatin and nucleolus; rough and smooth endoplasmic reticulum; Golgi apparatus; mitochondria; lysosomes; peroxisomes; a small vacuole; cytoskeleton (microtubules, intermediate filaments, microfilaments); centrosome; cytoplasm; and the plasma membrane.",
+  "caption": "Find each organelle from the table in the drawing. Note that the animal cell has no cell wall."
+ },
+ {
+  "id": "S.2.1-2",
+  "page": "S.2.1",
+  "type": "openstax",
+  "book": "cob",
+  "fig": "3.7(b)",
+  "res": "",
+  "title": "A typical plant cell",
+  "osx_title": "Plant cell",
+  "alt": "Labeled cutaway of a plant cell with a thick outer cell wall, plasma membrane, large central vacuole filling much of the cell, green chloroplasts, mitochondria, nucleus, rough and smooth endoplasmic reticulum, Golgi apparatus, ribosomes, peroxisome, plastid, cytoskeleton and plasmodesmata connecting to neighboring cells.",
+  "caption": "Compare with the animal cell: the plant cell adds a cell wall, chloroplasts and a large central vacuole, and it still has mitochondria."
+ },
+ {
+  "id": "S.2.1-3",
+  "page": "S.2.1",
+  "type": "openstax",
+  "book": "cob",
+  "fig": "6.3",
+  "res": "",
+  "title": "The cell cycle",
+  "alt": "Circular diagram of the cell cycle. Interphase takes up most of the circle and includes G1 (cell growth), S (DNA synthesis) and G2 (cell growth). A thin wedge labeled mitotic phase, made of mitosis and cytokinesis, leads to the formation of two daughter cells.",
+  "caption": "Interphase (G1, S, G2) is most of the cycle. Mitosis and cytokinesis are only a small slice."
+ },
+ {
+  "id": "S.2.1-4",
+  "page": "S.2.1",
+  "type": "openstax",
+  "book": "cob",
+  "fig": "7.6",
+  "res": "",
+  "title": "Meiosis compared with mitosis",
+  "alt": "Side-by-side flow diagrams. Meiosis runs through meiosis I and meiosis II and ends in four haploid cells. Mitosis runs through prophase, prometaphase, metaphase, anaphase and telophase and ends in two diploid cells. A table below compares when DNA synthesis, synapsis, crossover and chromosome alignment occur in each process.",
+  "caption": "Meiosis divides twice and ends with four haploid cells; mitosis divides once and ends with two diploid cells. Crossing over happens only in meiosis."
+ },
+ {
+  "id": "S.2.2-1",
+  "page": "S.2.2",
+  "type": "original",
+  "file": "S.2.2-fig1-central-dogma",
+  "title": "From gene to protein",
+  "alt": "Diagram in three boxes. In the nucleus, the DNA template strand TAC GGA is transcribed into the mRNA AUG CCU. The mRNA moves to the cytoplasm, where at a ribosome it is translated, one three-base codon at a time, into a chain of amino acids: methionine, then proline. A note says that in DNA, A pairs with T and G with C, and in RNA uracil replaces thymine, so A pairs with U.",
+  "caption": "DNA is transcribed into mRNA in the nucleus; mRNA is translated into protein at a ribosome. Check the pairing yourself: T-A-C becomes A-U-G."
+ },
+ {
+  "id": "S.2.2-2",
+  "page": "S.2.2",
+  "type": "openstax",
+  "book": "cob",
+  "fig": "9.21",
+  "res": "",
+  "title": "Translation at the ribosome",
+  "osx_title": "Translation",
+  "alt": "Three stages of translation along an mRNA reading AUGUUUCGA. First, a tRNA with anticodon UAC carrying methionine pairs with the start codon AUG. Second, the large ribosomal subunit joins and a second tRNA (anticodon AAA, carrying phenylalanine) enters the A site. Third, the methionine is joined to phenylalanine, the first tRNA moves to the E site to leave, and a third tRNA (anticodon GCU, carrying arginine) arrives, lengthening the polypeptide chain.",
+  "caption": "Each tRNA anticodon pairs with an mRNA codon (UAC with AUG, AAA with UUU), and the ribosome links the amino acids into a chain."
+ },
+ {
+  "id": "S.2.3-1",
+  "page": "S.2.3",
+  "type": "openstax",
+  "book": "cob",
+  "fig": "8.9",
+  "res": "",
+  "title": "A monohybrid cross",
+  "osx_title": "Monohybrid cross",
+  "alt": "Pea seed color cross. Parent generation: homozygous yellow YY and homozygous green yy, each making one kind of gamete. All F1 offspring are Yy yellow. Crossing two F1 plants gives a Punnett square with YY, Yy, Yy and yy: three yellow to one green. The genotype ratio is 1 YY : 2 Yy : 1 yy.",
+  "caption": "YY \u00d7 yy gives all Yy. Yy \u00d7 Yy gives a 1:2:1 genotype ratio and a 3:1 phenotype ratio. Learn this square cold."
+ },
+ {
+  "id": "S.2.5-1",
+  "page": "S.2.5",
+  "type": "openstax",
+  "book": "cob",
+  "fig": "13.5",
+  "res": "",
+  "title": "A typical bacterial cell",
+  "osx_title": "Features of a typical bacterium",
+  "alt": "Cutaway of a rod-shaped bacterium showing, from outside in, a capsule, cell wall and cell membrane; hair-like pili on the surface; a long whip-like flagellum; ribosomes in the cytoplasm; and a tangled circular chromosome of DNA in the nucleoid region, with no nuclear membrane around it.",
+  "caption": "No nucleus, but a cell wall and its own ribosomes: two features antibiotics can target and viruses lack."
+ },
+ {
+  "id": "S.3.6-1",
+  "page": "S.3.6",
+  "type": "original",
+  "file": "S.3.6-fig1-ph-scale",
+  "title": "The pH scale",
+  "alt": "A color bar numbered 0 to 14, red at the acidic end, green near neutral 7 and purple at the basic end. Examples above the bar: stomach acid about 1.7, lemon juice about 2, vinegar about 3, black coffee about 5, pure water 7, blood 7.35 to 7.45, baking soda about 8.5, ammonia about 11, bleach about 12.5, drain cleaner about 14. Arrows below show that toward 0 is more acidic (more H+) and toward 14 is more basic (more OH-). A note says each step is a tenfold change.",
+  "caption": "Lower pH means more hydrogen ions. Example values are approximate."
+ },
+ {
+  "id": "M.2.1-1",
+  "page": "M.2.1",
+  "type": "original",
+  "file": "M.2.1-fig1-graphs",
+  "title": "A bar graph and a line graph",
+  "alt": "Left: bar graph titled Clinic visits per month, y-axis Number of visits from 0 to 200 in steps of 20. January 120, February 150, March 140, April 180, May 165. Right: line graph titled Temperature after a fever reducer, x-axis Hours after dose from 0 to 6, y-axis Temperature in degrees Fahrenheit from 98 to 102.5. Points: 0 h 101.8, 1 h 101.2, 2 h 100.6, 3 h 100.2, 4 h 99.6, 5 h 99.0, 6 h 98.8.",
+  "caption": "Bar graphs compare categories; line graphs show change over time. Read the title, axes and scale first."
+ },
+ {
+  "id": "M.2.3-1",
+  "page": "M.2.3",
+  "type": "original",
+  "file": "M.2.3-fig1-scatter",
+  "title": "Three kinds of correlation",
+  "alt": "Three scatter plots. Positive correlation: test score rises as hours studied increases. Negative correlation: hours of sleep falls as hours of screen time increases. No correlation: points for shoe size against test score are scattered with no pattern.",
+  "caption": "Rising points: positive. Falling points: negative. No pattern: no correlation. These data are made up for illustration."
+ }
+]

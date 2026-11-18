@@ -1,0 +1,460 @@
+[
+ {
+  "id": "S.2.1-006",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Multiple choice",
+  "stem": "A cell is placed in a solution, and water moves out of the cell, causing it to shrink. What kind of solution is it?",
+  "options": [
+   "Hypotonic",
+   "Isotonic",
+   "Hypertonic",
+   "Saturated"
+  ],
+  "answer": "C",
+  "explanation": "Water moves by osmosis toward the higher solute concentration. Water leaving the cell means the outside solution has more solute: it is hypertonic.",
+  "distractors": "A: in a hypotonic solution water moves into the cell, and it swells. B: in an isotonic solution there is no net water movement. D: \"saturated\" describes how much solute a solution can hold, not its effect on a cell.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-007",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Multiple choice",
+  "stem": "A cell moves sodium ions out across its membrane, from an area of lower concentration to an area of higher concentration. Which process is this?",
+  "options": [
+   "Simple diffusion",
+   "Osmosis",
+   "Facilitated diffusion",
+   "Active transport"
+  ],
+  "answer": "D",
+  "explanation": "Moving particles against their concentration gradient (low to high) requires energy (ATP) and a protein pump. That is active transport; the sodium-potassium pump is the classic example.",
+  "distractors": "A and C: diffusion, simple or facilitated, moves particles from high to low concentration without ATP. B: osmosis is the movement of water, not ions.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-008",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Multiple choice",
+  "stem": "Cells in the pancreas make large amounts of digestive enzymes, which are proteins, for export. Which organelle would you expect to be especially abundant in these cells?",
+  "options": [
+   "Smooth endoplasmic reticulum",
+   "Rough endoplasmic reticulum",
+   "Lysosomes",
+   "Centrioles"
+  ],
+  "answer": "B",
+  "explanation": "Rough ER is studded with ribosomes that make proteins for export. Cells that secrete large amounts of protein have extensive rough ER (and Golgi).",
+  "distractors": "A: smooth ER makes lipids and detoxifies drugs; it has no ribosomes. C: lysosomes digest material inside the cell. D: centrioles help organize cell division.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-009",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Ordered response",
+  "stem": "Put these four stages of mitosis in order.",
+  "options": [
+   "Anaphase",
+   "Prophase",
+   "Telophase",
+   "Metaphase"
+  ],
+  "answer": "B, D, A, C",
+  "explanation": "Prophase (chromosomes condense), metaphase (they line up in the middle), anaphase (sister chromatids pull apart), telophase (two nuclei form). Memory hook: PMAT.",
+  "distractors": "Common error: swapping metaphase and anaphase. Chromosomes line up (metaphase) before they separate (anaphase).",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-010",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Multiple choice",
+  "stem": "During which phase of meiosis does crossing over between homologous chromosomes occur?",
+  "options": [
+   "Prophase I",
+   "Metaphase II",
+   "Anaphase I",
+   "Telophase II"
+  ],
+  "answer": "A",
+  "explanation": "Crossing over happens in prophase I, when homologous chromosomes pair up and exchange segments. It is a major source of genetic variation.",
+  "distractors": "B: in metaphase II single chromosomes line up; homologs are already separated. C: in anaphase I homologs separate; crossing over has already happened. D: telophase II ends meiosis.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.1-011",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.1",
+  "format": "Select all",
+  "stem": "Which structures are found in prokaryotic cells such as bacteria? Select all that apply.",
+  "options": [
+   "Ribosomes",
+   "Nucleus",
+   "Cell membrane",
+   "Mitochondria",
+   "DNA"
+  ],
+  "answer": "A, C, E",
+  "explanation": "All cells have ribosomes, a cell membrane, cytoplasm and DNA. Prokaryotes keep their DNA in a nucleoid region, not a nucleus.",
+  "distractors": "B and D: prokaryotes have no nucleus and no membrane-bound organelles such as mitochondria.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-004",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "Which nitrogen base is found in RNA but not in DNA?",
+  "options": [
+   "Thymine",
+   "Uracil",
+   "Adenine",
+   "Guanine"
+  ],
+  "answer": "B",
+  "explanation": "RNA uses uracil (U) in place of thymine (T).",
+  "distractors": "A: thymine is found in DNA, not RNA. C and D: adenine and guanine are found in both.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "An mRNA codon reads AUG. Which tRNA anticodon pairs with it?",
+  "options": [
+   "AUG",
+   "TAC",
+   "UAC",
+   "ATG"
+  ],
+  "answer": "C",
+  "explanation": "The anticodon is complementary to the codon, using RNA bases: A pairs with U, U with A, G with C. AUG pairs with UAC.",
+  "distractors": "A: identical, not complementary. B: uses T, which is not found in RNA. D: a DNA sequence with T, and not complementary.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-006",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "A mutation changes one base in a gene, but the protein's amino acid sequence is unchanged. What is the best explanation?",
+  "options": [
+   "The mutation shifted the reading frame of the gene.",
+   "The mutation happened in a ribosome, not the DNA.",
+   "The mRNA corrects the error before translation.",
+   "More than one codon can code for the same amino acid."
+  ],
+  "answer": "D",
+  "explanation": "The genetic code is redundant: several codons code for the same amino acid. A substitution that changes one codon to another for the same amino acid is a silent mutation.",
+  "distractors": "A: a frameshift changes every codon after it, which would change the protein. B: ribosomes don't carry genes. C: mRNA is copied from the DNA; it does not correct it.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-007",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "How many nucleotides make up one codon?",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ],
+  "answer": "C",
+  "explanation": "A codon is a sequence of three nucleotides in mRNA. Each codon specifies one amino acid (or a stop signal).",
+  "distractors": "A, B and D: a codon is always three bases; this is why inserting or deleting one base shifts the reading frame.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.2-008",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.2",
+  "format": "Multiple choice",
+  "stem": "Deleting one nucleotide near the start of a gene usually harms the protein more than substituting one nucleotide. Why?",
+  "options": [
+   "It shifts how every later codon is read.",
+   "It changes only the last amino acid.",
+   "It changes only the one amino acid at that spot.",
+   "It prevents the gene from being copied at all."
+  ],
+  "answer": "A",
+  "explanation": "Codons are read three bases at a time. Deleting one base shifts how every later group of three is read (a frameshift), so most amino acids after that point change, and a stop codon often appears early.",
+  "distractors": "B: the change starts at the deletion, not at the end of the protein. C: that describes a single substitution; a deletion affects every codon after it. D: the gene can still be transcribed; the message is garbled.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-004",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "Cystic fibrosis is caused by a recessive allele. Two parents who are both carriers have a child. What is the probability that the child is also a carrier?",
+  "options": [
+   "1/4",
+   "1/2",
+   "3/4",
+   "0"
+  ],
+  "answer": "B",
+  "explanation": "Cc × Cc gives CC, Cc, Cc and cc. Carriers are heterozygous (Cc): 2 out of 4 = 1/2.",
+  "distractors": "A: the chance of having the disease (cc) or of being CC. C: the chance of not having the disease (CC + Cc). D: carriers can pass on the allele.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "Hemophilia is an X-linked recessive trait. A carrier mother and an unaffected father have a son. What is the probability that he has hemophilia?",
+  "options": [
+   "0",
+   "1/4",
+   "1/2",
+   "1"
+  ],
+  "answer": "C",
+  "explanation": "Sons get their X from the mother and their Y from the father. The mother (XᴴXʰ) passes Xʰ half the time, so each son has a 1/2 chance of hemophilia.",
+  "distractors": "A: the mother carries the allele, so a son can be affected. B: the chance that any child (son or daughter) is an affected son. D: only half of the mother's X chromosomes carry the allele.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-006",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "A mother with type A blood (genotype AO) and a father with type B blood (genotype BO) have a child. What is the probability that the child has type O blood?",
+  "options": [
+   "0",
+   "1/4",
+   "1/2",
+   "3/4"
+  ],
+  "answer": "B",
+  "explanation": "AO × BO gives AB, AO, BO and OO. Type O requires OO: 1 out of 4.",
+  "distractors": "A: both parents carry O, so type O is possible. C and D: only one of the four combinations is OO.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-007",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "In snapdragons, flower color shows incomplete dominance: RR is red, RW is pink and WW is white. Two pink plants are crossed. What fraction of the offspring will be pink?",
+  "options": [
+   "1/2",
+   "1/4",
+   "3/4",
+   "All of them"
+  ],
+  "answer": "A",
+  "explanation": "RW × RW gives RR, RW, RW and WW: 1 red, 2 pink, 1 white. Pink is 2 out of 4 = 1/2.",
+  "distractors": "B: the fraction that is red, or white. C: treats pink as dominant (the 3:1 pattern). D: assumes like parents always produce like offspring.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.3-008",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.3",
+  "format": "Multiple choice",
+  "stem": "A tall pea plant of unknown genotype is crossed with a short plant (tt). Half of the offspring are short. What is the genotype of the tall parent?",
+  "options": [
+   "Tt",
+   "TT",
+   "TT; the short offspring came from mutations.",
+   "It cannot be determined."
+  ],
+  "answer": "A",
+  "explanation": "Short offspring (tt) must get a t from each parent, so the tall parent must carry t: it is Tt. Tt × tt gives half Tt (tall) and half tt (short).",
+  "distractors": "B: TT × tt would give all tall (Tt) offspring. C: half the offspring being short is far too many to blame on chance mutations. D: the short offspring reveal the hidden allele; this is the purpose of a test cross.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-004",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "Which type of macromolecule forms the basic structure of cell membranes?",
+  "options": [
+   "Proteins",
+   "Lipids (phospholipids)",
+   "Carbohydrates",
+   "Nucleic acids"
+  ],
+  "answer": "B",
+  "explanation": "Phospholipids, with water-loving heads and water-fearing tails, arrange into a bilayer that forms every cell membrane.",
+  "distractors": "A: proteins are embedded in the membrane but don't form the bilayer. C: carbohydrates attach to the outer surface as markers. D: nucleic acids store genetic information.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "The enzyme lactase splits lactose (milk sugar) into glucose and galactose. What type of reaction is this?",
+  "options": [
+   "Hydrolysis",
+   "Dehydration synthesis",
+   "Denaturation",
+   "Neutralization"
+  ],
+  "answer": "A",
+  "explanation": "Hydrolysis breaks a bond by adding water. Digestion of larger molecules into smaller units, like lactose into two simple sugars, is hydrolysis.",
+  "distractors": "B: dehydration synthesis is the reverse: it joins units and removes water. C: denaturation changes a protein's shape. D: neutralization is an acid reacting with a base.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-006",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "Which element is found in all proteins but not in simple sugars such as glucose?",
+  "options": [
+   "Carbon",
+   "Hydrogen",
+   "Oxygen",
+   "Nitrogen"
+  ],
+  "answer": "D",
+  "explanation": "Every amino acid has an amino group containing nitrogen. Simple sugars such as glucose contain only carbon, hydrogen and oxygen.",
+  "distractors": "A, B and C: carbon, hydrogen and oxygen are found in both carbohydrates and proteins.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.4-007",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.4",
+  "format": "Multiple choice",
+  "stem": "The stomach enzyme pepsin works best at about pH 2. What happens to pepsin's activity when it enters the small intestine, where the pH is about 8?",
+  "options": [
+   "It increases, because enzymes work faster at higher pH.",
+   "It stays the same, because enzymes are not used up.",
+   "It drops sharply, as the higher pH alters pepsin's shape.",
+   "It changes so that it digests fats instead of proteins."
+  ],
+  "answer": "C",
+  "explanation": "Each enzyme has an optimum pH. Far from it, the enzyme's shape (and its active site) changes, so the substrate no longer fits and activity drops.",
+  "distractors": "A: each enzyme has its own optimum; pepsin's is acidic. B: enzymes are reusable, but they can still be inactivated by the wrong pH. D: an enzyme's job is set by its shape; it doesn't switch to a different substrate.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-003",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Multiple choice",
+  "stem": "Malaria is caused by which type of microorganism?",
+  "options": [
+   "A virus",
+   "A bacterium",
+   "A protozoan",
+   "A fungus"
+  ],
+  "answer": "C",
+  "explanation": "Malaria is caused by Plasmodium, a single-celled eukaryote (protozoan), spread by mosquito bites.",
+  "distractors": "A, B and D: malaria is not caused by a virus, bacterium or fungus; the mosquito is the vector, not the cause.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-004",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Multiple choice",
+  "stem": "Why should patients take antibiotics exactly as prescribed, rather than skipping doses or stopping on their own?",
+  "options": [
+   "Misuse lets less-susceptible bacteria survive and spread.",
+   "The body stores leftover antibiotic for future infections.",
+   "Antibiotics also help clear viral infections.",
+   "Extra doses help the immune system make antibodies."
+  ],
+  "answer": "A",
+  "explanation": "Using antibiotics incorrectly, such as skipping doses, taking leftover or shared antibiotics, or taking them when they aren't needed, can expose bacteria to drug levels that don't kill them. Less-susceptible bacteria can then survive and multiply, which contributes to antibiotic resistance. Stopping on one's own can also let the infection return. The prescriber sets the dose and length of treatment, so patients should follow it exactly and ask before changing it.",
+  "distractors": "B: the body does not store antibiotics for later. C: antibiotics do not work on viruses. D: antibodies come from the immune system's response to a pathogen, not from antibiotic doses.",
+  "difficulty": 3,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-005",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Select all",
+  "stem": "Which of these diseases are caused by viruses? Select all that apply.",
+  "options": [
+   "Strep throat",
+   "Influenza",
+   "Tuberculosis",
+   "Measles",
+   "HIV/AIDS"
+  ],
+  "answer": "B, D, E",
+  "explanation": "Influenza, measles and HIV/AIDS are viral diseases.",
+  "distractors": "A and C: strep throat and tuberculosis are bacterial infections, which is why they are treated with antibiotics.",
+  "difficulty": 2,
+  "diagnostic": "Yes"
+ },
+ {
+  "id": "S.2.5-006",
+  "section": "Science",
+  "subarea": "S.2",
+  "objective": "S.2.5",
+  "format": "Multiple choice",
+  "stem": "Athlete's foot is caused by which type of microorganism?",
+  "options": [
+   "A bacterium",
+   "A virus",
+   "A protozoan",
+   "A fungus"
+  ],
+  "answer": "D",
+  "explanation": "Athlete's foot is a fungal skin infection, treated with antifungal medicine.",
+  "distractors": "A, B and C: it is not caused by a bacterium, virus or protozoan.",
+  "difficulty": 1,
+  "diagnostic": "Yes"
+ }
+]
