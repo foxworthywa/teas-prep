@@ -85,7 +85,7 @@ def main():
                 check("didn't let the site copy" in panel, f"[{mode}] manual instructions shown")
                 txt = pg.input_value(".coach-manual")
             else:
-                check(panel.startswith("Copied."), f"[{mode}] panel says Copied")
+                check(panel.startswith("Copied.") and "Check the top of the chat" in panel or "Check the top of the chat says" in panel, f"[{mode}] panel says Copied and how to check it is the Coach")
                 txt = pg.evaluate("navigator.clipboard.readText()")
             check(txt.startswith("[From ESCC TEAS Practice]") and f"Question ID: {qid}" in txt,
                   f"[{mode}] clipboard/text holds the handoff for {qid}")

@@ -154,7 +154,7 @@ def coach_link():
         return ""
     name = html.escape(COACH_NAME)
     return (f'<a class="nav-coach" href="{html.escape(COACH_URL, quote=True)}" target="_blank" rel="noopener" '
-            f'title="Opens the {name} in Google Gemini. Sign in with your VCCS account.">'
+            f'title="Opens the {name} in Google Gemini. Sign in with your VCCS account first, or Gemini opens without the Coach.">'
             f'<span class="long">{name}</span><span class="short">Coach</span><span aria-hidden="true"> ↗</span>'
             f'<span class="sr-only"> (opens Google Gemini in a new tab)</span></a>')
 

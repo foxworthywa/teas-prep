@@ -305,3 +305,4 @@ h1.practice-h { font-size: 1.25rem; margin: 2px 0 2px; }
 }
 .paste-label { display: block; font-weight: 600; margin: 14px 0 4px; }
 .paste-box { width: 100%; font: 16px/1.4 ui-monospace, Menlo, Consolas, monospace; border: 1.5px solid #93a6b8; border-radius: 8px; padding: 8px; }
+.coach-check { font-size: 0.9rem; }

@@ -50,7 +50,7 @@ export default {
   coach: {
     url: "https://gemini.google.com/gem/1_RGgNysHi4efVzrPCYqttJQ5gGz6GcNW?usp=sharing",
     name: "TEAS Coach",
-    signInNote: "Opens Google Gemini. Sign in with your VCCS student account (the one ending in @email.vccs.edu).",
+    signInNote: "Opens Google Gemini. You must be signed in with your VCCS student account (the one ending in @email.vccs.edu); if you're not, Gemini opens without the Coach.",
   },
 
   programs: ["LPN", "RN", "Dental hygiene", "Other / undecided"],

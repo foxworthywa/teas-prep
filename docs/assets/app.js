@@ -353,7 +353,7 @@ function copySync(text) {
 }
 
 const IN_APP_TIP = "If you're reading this inside another app (like Gmail, Facebook or Canvas), open this site in Safari or Chrome instead.";
-const ACCOUNT_TIP = "If Gemini says you need access, or opens without the TEAS Coach, you may be signed in with a personal Google account. Tap your profile picture in Gemini, switch to your VCCS account (@email.vccs.edu), then tap Open the TEAS Coach again.";
+const ACCOUNT_TIP = "If the top of the chat just says Gemini (not TEAS Coach), or Gemini says you need access, you're not in the Coach. Sign in, or tap your profile picture and switch, to your VCCS account (@email.vccs.edu), then tap Open the TEAS Coach again.";
 
 function coachPanel(panel, text, state) {
   const url = esc(config.coach.url);
@@ -364,9 +364,10 @@ function coachPanel(panel, text, state) {
   const show = `<details class="coach-text"><summary>Show the copied text</summary><textarea readonly rows="8">${esc(text)}</textarea></details>`;
   if (state === "opened") {
     panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> The ${name} should be open now. Tap its message box and paste (on a phone: press and hold, then Paste), then send.</p>
+      <p class="coach-check"><strong>Check the top of the chat says ${name}.</strong> If it just says Gemini, you're not signed in with your VCCS account, so you're talking to plain Gemini, not the Coach. Sign in, then tap Open the ${name} again.</p>
       <div class="btn-row tight-row">${open("secondary")}${again}</div>${help}${show}`;
   } else if (state === "copied") {
-    panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> Now open the ${name}, paste into its message box, and send.</p>
+    panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> Now open the ${name}, paste into its message box, and send. Check the top of the chat says ${name}; if it just says Gemini, sign in with your VCCS account first.</p>
       <div class="btn-row tight-row">${open("")}${again}</div>${help}${show}`;
   } else if (state === "stale") {
     panel.innerHTML = `<p>This question is no longer loaded. Go back to it and tap the button again.</p>`;
@@ -1131,7 +1132,7 @@ function viewAbout() {
     <h2>How the diagnostic works</h2>
     <p>Each section's diagnostic asks ${DCFG.minPerSubarea} to ${Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea)} questions from each part of the section. A part stops early only when more questions would be very unlikely to change your band; students near the line between two bands usually answer all of them. If you take a diagnostic again, you get mostly questions you haven't seen.</p>
     <p>Results are given as bands, not scores: <em>Build the basics</em> (under 60% correct), <em>Getting there</em> (60% to 79%) and <em>Strong</em> (80% or more). The bands describe how you did on this site's questions. They aren't a prediction of your TEAS score; that will come only after these results are checked against real TEAS scores.</p>
-    ${coachOn() ? `<h2>The TEAS Coach</h2><p>After any practice question, or any question when you review a diagnostic, you can ask the ${esc(config.coach.name)}, an AI tutor in Google Gemini, to help you with it. The site copies the question and your answer, and you paste it into the Coach. The Coach uses ESCC's study pages and is set up to make you think first rather than hand over answers. It can still make mistakes; if it disagrees with the site's answer, tell your instructor the question ID. You'll need to sign in with your VCCS student Google account. If you don't have one yet, everything else on this site still works.</p>` : ""}
+    ${coachOn() ? `<h2>The TEAS Coach</h2><p>After any practice question, or any question when you review a diagnostic, you can ask the ${esc(config.coach.name)}, an AI tutor in Google Gemini, to help you with it. The site copies the question and your answer, and you paste it into the Coach. The Coach uses ESCC's study pages and is set up to make you think first rather than hand over answers. It can still make mistakes; if it disagrees with the site's answer, tell your instructor the question ID. You need to be signed in with your VCCS student Google account; if you're not, Gemini opens without the Coach (the top of the chat will just say Gemini). If you don't have one yet, everything else on this site still works.</p>` : ""}
     <h2>Your privacy</h2>
     <p>There's no login. Your answers are stored only in this browser, on this device. If you clear your browser data, your progress is erased, so use <a href="#/progress">My progress</a> to download a copy. Results are sent to ESCC only if you choose to, through a Google Form you submit yourself.${coachOn() ? " If you use the TEAS Coach, what you paste and type there goes to Google Gemini under your VCCS account, not to this site." : ""}</p>
     <h2>Credits</h2>
@@ -1188,7 +1189,7 @@ async function start() {
   }
   if (coachOn()) {
     document.querySelector(".site-header nav")?.insertAdjacentHTML("beforeend",
-      `<a class="nav-coach" href="${esc(config.coach.url)}" target="_blank" rel="noopener" title="Opens the ${esc(config.coach.name)} in Google Gemini. Sign in with your VCCS account."><span class="long">${esc(config.coach.name)}</span><span class="short">Coach</span><span aria-hidden="true"> ↗</span><span class="sr-only"> (opens Google Gemini in a new tab)</span></a>`);
+      `<a class="nav-coach" href="${esc(config.coach.url)}" target="_blank" rel="noopener" title="Opens the ${esc(config.coach.name)} in Google Gemini. Sign in with your VCCS account first, or Gemini opens without the Coach."><span class="long">${esc(config.coach.name)}</span><span class="short">Coach</span><span aria-hidden="true"> ↗</span><span class="sr-only"> (opens Google Gemini in a new tab)</span></a>`);
   }
   // drop anything that doesn't match this bank (old saves, edited files)
   state = sanitize(state);
