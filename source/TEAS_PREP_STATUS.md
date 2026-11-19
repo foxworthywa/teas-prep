@@ -10,7 +10,7 @@ Last updated: 2026-11-18 (late evening: practice site built)
 - Drive folder: ESCC TEAS Prep — https://drive.google.com/drive/folders/1lhyZ1D6LPp9pd-ssDrH8L8jfLT6NrU3-
   - Study pages subfolder: one Google Doc per objective, figures embedded. The Objectives tab column J is the authoritative link list.
   - "Superseded study pages (safe to delete)" subfolder: 33 older copies replaced on 2026-11-18 (see below).
-- Tutor instructions (Gem now, Gemini skill later): claude/TEAS_TUTOR_INSTRUCTIONS.md. Alex is holding off on updating the Gem until the materials exist.
+- TEAS Coach (Gem now, Gemini skill later): instructions v3 in `coach/TEAS_COACH_INSTRUCTIONS.md` (also claude/TEAS_TUTOR_INSTRUCTIONS.md in the project); knowledge files `coach/knowledge/ESCC_TEAS_<Section>.md` (built by `scripts/build_coach_files.py`).
 - Build pipeline (in the repo under `source/`): pages/*.md sources with {{FIG id}} markers; build/figures.json manifest (OpenStax figures carry their book); build_pages.py makes web, docs and notebook versions (the notebook version strips all figures and checks none remain); build_docs_html.py makes Docs-ready HTML with embedded images (transparent images flattened onto white). It now also inserts the blank lines Python-Markdown needs before lists and before "---" dividers. Small corrections to published Docs are made in place (replaceAllText or paragraph-style edits) so links don't change.
 
 ## Decisions (Alex, 2026-11-17)
@@ -43,6 +43,9 @@ Last updated: 2026-11-18 (late evening: practice site built)
 - Study pages are hosted on the site, built from `source/pages/*.md`, which matched all 64 Docs on 2026-11-18. **Edit the .md sources from now on, not the Docs.**
 - Progress stays in the browser (download/load/clear). An optional prefilled Google Form is not configured yet.
 - Reviews: code audit, student-perspective UX review and re-review in `source/review/site_*.md`.
+- Phone-first practice (2026-11-18): Keep going, Quick 10 per section, section tabs with folded parts, answer button pinned at the bottom on phones. Study pages have "On this page" contents.
+- "Ask the TEAS Coach" (2026-11-18): after any practice or diagnostic-review answer, one tap copies the question, the student's answer, the key, the explanation, the student's choice notes and any passage, then opens the Gem. There are fallbacks (copy on a second tap; manual copy), plus Copy again and account-switch help. The buttons stay hidden until `coach.url` is set in `docs/assets/config.js`. Reviewed in `source/review/coach_review.md`; tested in `tests/coach_test.py`.
+- AI decisions (2026-11-18): add the Gem; no interactive NotebookLM notebooks for now (public sharing is disabled for Workspace Education accounts, and they would duplicate the Gem and site). Audio overviews hosted on the site remain an option.
 
 ## Open items for Alex
 - Turn on GitHub Pages: Settings › Pages › Deploy from a branch › main, /docs. The site code is on main (2026-11-18). The address will be https://foxworthywa.github.io/teas-prep/
@@ -50,7 +53,16 @@ Last updated: 2026-11-18 (late evening: practice site built)
 - The Docs converter mangles "___" blanks (M.2.3 Doc shows `say " depends on ."`) and nested bold/italic (E.2.1 §5). The website is fine; fix the two Docs if they are still shared anywhere.
 - Delete the "Superseded study pages (safe to delete)" folder, the three "zz import temp" sheets, plus these in the Study pages folder: "OLD S.1.1 (no figures, replaced - delete)", "OLD S.1.3 (no figures, replaced - delete)", "zz image import test (delete)", "zz html image test (delete)".
 - Fill Programs tab cutoffs (LPN, RN, dental hygiene).
-- TEAS Gem link. Choose a license (suggested: CC BY 4.0 for content, MIT for code).
+- TEAS Coach go-live:
+  - Paste PART 1 of `coach/TEAS_COACH_INSTRUCTIONS.md` into the Gem, after filling [ADVISING_CONTACT].
+  - Attach the 4 knowledge files.
+  - Set the Gem's General access.
+  - Send Claude the share link (it goes into `coach.url`).
+  - Test on an iPhone and an Android phone with a student account.
+- Sheet fixes noticed in review:
+  - M.1.10-004's explanation says "Subtract 85:" (should be "Subtract 85 from both sides") and lists "10, 16 and 15" (should be "10, 15 and 16").
+  - R.1.3-004's "Step A" could read "the A (Aim) step" (faculty).
+- Choose a license (suggested: CC BY 4.0 for content, MIT for code).
 - Unconfirmed: whether the TEAS on-screen calculator has a square-root key (pages tell students to know perfect squares either way).
 - For Reading faculty: R.3.2-003, R.3.2-004 and R.3.3-005 explanations say "A"/"B" for Passage A/B, which can be confused with option letters; the four English explanations that name options by letter (E.1.2-004, E.1.2-012, E.2.1-004, E.2.3-009) would read better quoting the option.
 - For English faculty: E.2.1 presents singular "they" as acceptable and advises plural rewrites as the safe test choice; check against current ATI materials.

@@ -45,6 +45,14 @@ export default {
     },
   },
 
+  // TEAS Coach (Gemini Gem). Leave url empty to hide the "Ask the TEAS Coach" buttons.
+  // Use the Gem's share link (Gemini > Explore Gems > Share > Copy link).
+  coach: {
+    url: "",
+    name: "TEAS Coach",
+    signInNote: "Opens Google Gemini. Sign in with your VCCS student account (the one ending in @email.vccs.edu).",
+  },
+
   programs: ["LPN", "RN", "Dental hygiene", "Other / undecided"],
 
   // sections whose diagnostic and practice pages say the questions are awaiting

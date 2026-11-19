@@ -498,3 +498,58 @@ export function renderRich(text) {
 }
 
 export { esc as escapeHtml };
+
+// ------------------------------------------------------------------ TEAS Coach handoff
+// Plain text the site copies for the student to paste into the TEAS Coach (a Gemini Gem).
+// kind: "wrong" (after a miss) or "guessed" (right, but the student guessed).
+// Options use the letters the student saw. Nothing identifying the student is included.
+export function coachHandoff(bank, item, response, order, kind) {
+  const obj = bank.objectives[item.objective] || {};
+  const map = letterMap(order || []);
+  const optText = Object.fromEntries((item.options || []).map((o) => [o.id, o.text]));
+  const label = (id) => `${map[id]}. ${optText[id]}`;
+  const numbered = (ids) => ids.map((id, i) => `${i + 1}. ${optText[id]}`);
+  const lines = ["[From ESCC TEAS Practice]"];
+  lines.push(`Section: ${item.section} (${obj.subarea || item.subarea} ${obj.subareaName || ""})`.replace(/\s+\)/, ")"));
+  lines.push(`Objective: ${item.objective} ${obj.text || ""}`.trim());
+  lines.push(`Question ID: ${item.id}`);
+  if (item.reviewPending) lines.push("Note: this question is new and still being checked by ESCC faculty.");
+  for (const pid of item.passages || []) {
+    const p = bank.passages[pid];
+    if (p) lines.push("", `Passage: ${p.title} (${p.type})`, p.text);
+  }
+  lines.push("", "Question:", item.stem);
+  const guessed = kind === "guessed";
+  if (item.format === "mc" || item.format === "multi") {
+    lines.push("", "Options:", ...order.map(label));
+    if (item.format === "multi") lines.push("(Select all that apply.)");
+    const pick = item.format === "mc" ? (response ? [response] : []) : order.filter((id) => (response || []).includes(id));
+    const keys = order.filter((id) => item.key.includes(id));
+    lines.push("", `My answer: ${pick.length ? pick.map((id) => map[id]).join(", ") : "(no answer)"}${guessed ? " (correct, but I guessed)" : ""}`);
+    lines.push(`Correct answer: ${keys.map((id) => map[id]).join(", ")}`);
+  } else if (item.format === "order") {
+    // students see a numbered list they rearrange, not letters
+    lines.push("", "(Put these in order.)", "", `My order${guessed ? " (correct, but I guessed)" : ""}:`, ...numbered(response && response.length ? response : order));
+    lines.push("", "Correct order:", ...numbered(item.key));
+  } else {
+    lines.push("(Type the answer.)", "", `My answer: ${String(response ?? "").trim() || "(no answer)"}${guessed ? " (correct, but I guessed)" : ""}`);
+    const first = item.accepted[0];
+    // other genuinely different answers (not unit or spacing variants of the first)
+    const rest = item.numeric && item.numeric.length
+      ? item.numeric.filter((v) => !numbersMatch(v, parseNumberAnswer(first) ?? NaN)).map(String)
+      : item.accepted.slice(1).filter((a) => normalizeText(a) !== normalizeText(first));
+    lines.push(`Correct answer: ${first}${rest.length ? ` (also accepted: ${rest.join(", ")})` : ""}`);
+  }
+  lines.push(`Explanation from the practice site: ${relabelLetters(item.explanation, map, item.explanationLetters === "bare" ? "bare" : "option")}`);
+  // the notes the student just read on the site, so the Coach gives the same reason
+  const notes = guessed ? [] : feedbackNotes(item, response, order || []);
+  for (const n of notes) {
+    const why = n.optionId ? (n.lead ? "" : `About ${map[n.optionId]}: `) : /^common (error|mistake)/i.test(n.text) ? "" : "Note: ";
+    lines.push(`${why}${n.text}`);
+  }
+  lines.push("");
+  lines.push(guessed
+    ? "Help me understand why this is right so I'm not guessing next time. Quiz me first to see what I already know."
+    : "I got this wrong. Before you explain, ask me how I was thinking about it.");
+  return lines.join("\n");
+}

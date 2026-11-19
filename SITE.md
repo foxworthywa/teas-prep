@@ -56,8 +56,19 @@ The Sheet holds all content. This file holds two display settings the Sheet has 
 4. In `config.js`, set `resultsForm.url` to the form's `.../viewform` address. Then copy each `entry.NNN` into `resultsForm.fields` (name, email, program, kind, section, summary, details).
 5. A "Send my results to ESCC (optional)" button then appears on diagnostic results and on My progress. It opens the form already filled in. Nothing is sent until the student presses Submit. If your form only accepts VCCS accounts, students must be signed in to one, so set the form to accept anyone if you want applicants to use it.
 
+## TEAS Coach (Gemini Gem)
+
+The Coach's instructions and setup steps are in `coach/TEAS_COACH_INSTRUCTIONS.md`. Its knowledge files are `coach/knowledge/*.md`; rebuild them with `scripts/build_coach_files.py` after changing study pages, then re-upload them to the Gem.
+
+Set `coach.url` in `docs/assets/config.js` to the Gem's share link. After that, every practice answer and every diagnostic review question shows a Coach button:
+- After a wrong answer: **Ask the TEAS Coach about this**.
+- After a right answer: **I guessed. Ask the TEAS Coach why it's right**.
+
+One tap copies the question, the student's answer, the correct answer and the explanation (plus the passage, for Reading), then opens the Coach in a new tab for the student to paste. If a browser blocks that, the site copies on a second tap; if that's blocked too, it shows the text to copy by hand. With `coach.url` empty, no buttons appear.
+
 ## Tests
 
 - `node --test tests/core.test.mjs`: grading, supply-answer normalizing, option order, do-not-pair and passage limits across 200 random forms per section, banding, the stopping rule, and a check that the export copies the Sheet text exactly.
 - `python3 tests/test_xlsx_path.py`: building from a downloaded .xlsx gives the same result as building from the tab dumps.
+- `python3 tests/coach_test.py`: the Coach button copies the right text and opens the Coach, including both fallbacks.
 - `python3 tests/smoke.py --shots /tmp/shots`: opens the site in headless Chrome. It runs every diagnostic and some practice, loads all 64 study pages, and fails on any script error or missing file.

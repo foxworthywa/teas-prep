@@ -257,3 +257,18 @@ h1.practice-h { font-size: 1.25rem; margin: 2px 0 2px; }
   .btn-row.action-bar { position: sticky; bottom: 0; z-index: 4; background: rgba(255, 255, 255, 0.97); margin: 14px -18px 0; padding: 10px 18px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
   .btn-row.action-bar .btn:not(.link) { flex: 1; text-align: center; padding: 13px 18px; }
 }
+
+/* TEAS Coach */
+.coach { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 12px; }
+.coach-btn.btn:not(.link) { background: #5b3c88; }
+.coach-btn.btn:not(.link):hover { background: #472d6d; }
+.coach-note { margin: 6px 0 0; }
+.coach-panel:not(:empty) { margin-top: 10px; background: #f3effa; border: 1px solid #d9cdee; border-radius: 8px; padding: 10px 12px; }
+.coach-panel p { margin: 4px 0; }
+.coach-panel textarea { width: 100%; font: 0.85rem/1.4 ui-monospace, Menlo, Consolas, monospace; border: 1px solid var(--line); border-radius: 6px; padding: 6px; margin-top: 6px; }
+.coach-ok strong { color: #472d6d; }
+.coach-panel { scroll-margin-bottom: 96px; }
+.coach-panel .tight-row { margin: 8px 0; }
+.coach-help summary, .coach-text summary { cursor: pointer; font-size: 0.9rem; color: var(--brand); margin-top: 4px; }
+.coach-help p { font-size: 0.9rem; }
+@media (max-width: 640px) { .coach-panel textarea { font-size: 16px; } }

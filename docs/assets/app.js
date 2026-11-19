@@ -298,8 +298,117 @@ function feedbackHtml(item, response, order) {
     ${yourNotes ? `<h3>About your answer</h3>${yourNotes}` : ""}
     ${generalHtml}
     <p class="study-link">Study page: <a href="${studyUrl(item.objective)}">${item.objective} ${esc(objTitle(item.objective))}</a></p>
+    ${coachBlock(item, response, order, ok)}
   </div>`;
 }
+
+// ------------------------------------------------------------------ TEAS Coach
+// The site copies the question, the student's answer and the explanation, then opens
+// the Coach (a Gemini Gem) for the student to paste into. Copying happens inside the tap
+// itself (works in every browser we know of), with two fallbacks: the async clipboard API
+// with a second tap to open the Coach, and finally the text shown for manual copying.
+const coachOn = () => !!(config.coach && config.coach.url);
+const coachContexts = new Map();
+let coachSeq = 0;
+
+function coachBlock(item, response, order, ok) {
+  if (!coachOn()) return "";
+  const id = `c${++coachSeq}`;
+  coachContexts.set(id, { item, response: Array.isArray(response) ? response.slice() : response, order: (order || []).slice() });
+  if (coachContexts.size > 200) coachContexts.delete(coachContexts.keys().next().value);
+  const name = esc(config.coach.name || "TEAS Coach");
+  const btn = ok
+    ? `<button type="button" class="btn link coach-btn" data-coach="${id}" data-kind="guessed">I guessed. Ask the ${name} why it's right</button>`
+    : `<button type="button" class="btn coach-btn" data-coach="${id}" data-kind="wrong">Ask the ${name} about this</button>`;
+  return `<div class="coach">${btn}<p class="small muted coach-note">${esc(config.coach.signInNote || "")} Tapping copies this question so you can paste it there.</p><div class="coach-panel" aria-live="polite"></div></div>`;
+}
+
+// Copy inside the tap. The copy event handler sets the text directly, so we know the
+// clipboard really got it (execCommand alone can report success without copying).
+function copySync(text) {
+  let wrote = false;
+  const onCopy = (e) => {
+    if (!e.clipboardData) return;
+    e.clipboardData.setData("text/plain", text);
+    e.preventDefault();
+    wrote = true;
+  };
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.setAttribute("readonly", "");
+  ta.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px;";
+  document.body.appendChild(ta);
+  const active = document.activeElement;
+  document.addEventListener("copy", onCopy, true);
+  ta.focus({ preventScroll: true });
+  ta.select();
+  ta.setSelectionRange(0, text.length);
+  let ok = false;
+  try { ok = document.execCommand("copy"); } catch { ok = false; }
+  document.removeEventListener("copy", onCopy, true);
+  ta.remove();
+  if (active && active.focus) active.focus({ preventScroll: true });
+  return ok && wrote;
+}
+
+const IN_APP_TIP = "If you're reading this inside another app (like Gmail, Facebook or Canvas), open this site in Safari or Chrome instead.";
+const ACCOUNT_TIP = "If Gemini says you need access, or opens without the TEAS Coach, you may be signed in with a personal Google account. Tap your profile picture in Gemini, switch to your VCCS account (@email.vccs.edu), then tap Open the TEAS Coach again.";
+
+function coachPanel(panel, text, state) {
+  const url = esc(config.coach.url);
+  const name = esc(config.coach.name || "TEAS Coach");
+  const open = (cls) => `<a class="btn ${cls}" href="${url}" target="_blank" rel="noopener">Open the ${name}</a>`;
+  const again = `<button type="button" class="btn secondary coach-again">Copy again</button>`;
+  const help = `<details class="coach-help"><summary>Trouble?</summary><p>${ACCOUNT_TIP}</p><p>If signing in replaced what you copied, tap Copy again, then paste.</p><p>${IN_APP_TIP}</p></details>`;
+  const show = `<details class="coach-text"><summary>Show the copied text</summary><textarea readonly rows="8">${esc(text)}</textarea></details>`;
+  if (state === "opened") {
+    panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> The ${name} should be open in a new tab. Tap its message box and paste (on a phone: press and hold, then Paste), then send.</p>
+      <div class="btn-row tight-row">${open("secondary")}${again}</div>${help}${show}`;
+  } else if (state === "copied") {
+    panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> Now open the ${name}, paste into its message box, and send.</p>
+      <div class="btn-row tight-row">${open("")}${again}</div>${help}${show}`;
+  } else if (state === "stale") {
+    panel.innerHTML = `<p>This question is no longer loaded. Go back to it and tap the button again.</p>`;
+  } else {
+    panel.innerHTML = `<p><strong>Your browser didn't let the site copy automatically.</strong> Press and hold in the box below, tap <strong>Select All</strong>, then <strong>Copy</strong>. Then open the ${name} and paste.</p>
+      <textarea class="coach-manual" readonly rows="8">${esc(text)}</textarea><div class="btn-row tight-row">${open("")}</div>${help}`;
+    const ta = panel.querySelector("textarea");
+    ta.addEventListener("focus", () => { ta.select(); ta.setSelectionRange(0, ta.value.length); });
+  }
+  const copyAgain = panel.querySelector(".coach-again");
+  if (copyAgain) copyAgain.addEventListener("click", () => {
+    if (copySync(text)) { copyAgain.textContent = "Copied again"; return; }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(() => (copyAgain.textContent = "Copied again"), () => coachPanel(panel, text, "manual"));
+    else coachPanel(panel, text, "manual");
+  });
+  // keep the panel clear of the pinned answer bar on phones
+  requestAnimationFrame(() => panel.scrollIntoView({ block: "nearest" }));
+}
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-coach]");
+  if (!btn || !coachOn()) return;
+  const now = Date.now();
+  if (now - Number(btn.dataset.last || 0) < 1500) return; // ignore a double tap
+  btn.dataset.last = String(now);
+  const panel = btn.closest(".coach").querySelector(".coach-panel");
+  const ctx = coachContexts.get(btn.dataset.coach);
+  if (!ctx) return coachPanel(panel, "", "stale");
+  const text = core.coachHandoff(bank, ctx.item, ctx.response, ctx.order, btn.dataset.kind);
+  if (copySync(text)) {
+    const w = window.open(config.coach.url, "_blank");
+    if (w) { try { w.opener = null; } catch { /* ignore */ } }
+    coachPanel(panel, text, w ? "opened" : "copied");
+    btn.focus({ preventScroll: true });
+    return;
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => coachPanel(panel, text, "copied"), () => coachPanel(panel, text, "manual"));
+  } else {
+    coachPanel(panel, text, "manual");
+  }
+  btn.focus({ preventScroll: true });
+});
 
 // ------------------------------------------------------------------ home
 function viewHome() {
@@ -810,8 +919,9 @@ function viewAbout() {
     <h2>How the diagnostic works</h2>
     <p>Each section's diagnostic asks ${DCFG.minPerSubarea} to ${Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea)} questions from each part of the section. A part stops early only when more questions would be very unlikely to change your band; students near the line between two bands usually answer all of them. If you take a diagnostic again, you get mostly questions you haven't seen.</p>
     <p>Results are given as bands, not scores: <em>Build the basics</em> (under 60% correct), <em>Getting there</em> (60% to 79%) and <em>Strong</em> (80% or more). The bands describe how you did on this site's questions. They aren't a prediction of your TEAS score; that will come only after these results are checked against real TEAS scores.</p>
+    ${coachOn() ? `<h2>The TEAS Coach</h2><p>After any practice question, or any question when you review a diagnostic, you can ask the ${esc(config.coach.name)}, an AI tutor in Google Gemini, to help you with it. The site copies the question and your answer, and you paste it into the Coach. The Coach uses ESCC's study pages and is set up to make you think first rather than hand over answers. It can still make mistakes; if it disagrees with the site's answer, tell your instructor the question ID. You'll need to sign in with your VCCS student Google account. If you don't have one yet, everything else on this site still works.</p>` : ""}
     <h2>Your privacy</h2>
-    <p>There's no login. Your answers are stored only in this browser, on this device. If you clear your browser data, your progress is erased, so use <a href="#/progress">My progress</a> to download a copy. Results are sent to ESCC only if you choose to, through a Google Form you submit yourself.</p>
+    <p>There's no login. Your answers are stored only in this browser, on this device. If you clear your browser data, your progress is erased, so use <a href="#/progress">My progress</a> to download a copy. Results are sent to ESCC only if you choose to, through a Google Form you submit yourself.${coachOn() ? " If you use the TEAS Coach, what you paste and type there goes to Google Gemini under your VCCS account, not to this site." : ""}</p>
     <h2>Credits</h2>
     <p>Questions, passages and study pages were written for ESCC. Some study-page figures come from OpenStax textbooks (CC BY 4.0) and are credited where used. TEAS is a registered trademark of ATI. This site is not affiliated with or endorsed by ATI.</p>
     <p class="small muted">Question bank built ${esc(bank.built)}.</p>`, "About");

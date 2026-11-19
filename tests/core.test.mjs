@@ -306,3 +306,46 @@ test("export copies Sheet text exactly (raw dump vs bank.json)", (t) => {
     if (it.format !== "supply") assert.deepEqual(it.key, r["Correct answer"].match(/[A-F]/g), it.id);
   }
 });
+
+test("TEAS Coach handoff text", () => {
+  // multiple choice, wrong answer, shuffled letters
+  const mc = byId["S.1.1-001"]; // key C 'Proximal'
+  const order = ["D", "C", "B", "A"];
+  const t = core.coachHandoff(bank, mc, "A", order, "wrong");
+  assert.match(t, /^\[From ESCC TEAS Practice\]/);
+  assert.match(t, /Question ID: S\.1\.1-001/);
+  assert.match(t, /Options:\nA\. Inferior\nB\. Proximal\nC\. Medial\nD\. Distal/);
+  assert.match(t, /My answer: D\nCorrect answer: B\n/);
+  assert.match(t, /Explanation from the practice site: Proximal means/);
+  assert.match(t, /ask me how I was thinking/);
+  assert.ok(!/undefined|null/.test(t), t);
+  // guessed variant hides nothing but adds the note and no 'Correct answer' line
+  const g = core.coachHandoff(bank, mc, "C", order, "guessed");
+  assert.match(g, /My answer: B \(correct, but I guessed\)/);
+  assert.match(g, /Correct answer: B/);
+  assert.ok(!/About /.test(g), "no distractor notes when guessed right");
+  // the note the student read is included, with displayed letters
+  assert.match(t, /About D: /);
+  // ordered response uses the numbered text the student saw, not letters
+  const ord = byId["S.1.2-001"];
+  const ot = core.coachHandoff(bank, ord, ["B", "E", "D", "A", "C"], ["B", "E", "D", "A", "C"], "wrong");
+  assert.match(ot, /My order:\n1\. Larynx\n2\. Pharynx/);
+  assert.match(ot, /Correct order:\n1\. Pharynx\n2\. Larynx\n3\. Trachea\n4\. Bronchi\n5\. Alveoli/);
+  // review flag and alternate accepted answers
+  assert.match(core.coachHandoff(bank, byId["E.1.1-002"], "A", ["A", "B", "C", "D"], "wrong"), /still being checked by ESCC faculty/);
+  assert.match(core.coachHandoff(bank, byId["M.2.4-004"], "100", [], "wrong"), /Correct answer: 282\.6 \(also accepted: 282\.7\)/);
+  // bare-letter explanation is relabelled
+  const e = byId["E.1.2-004"];
+  const eo = ["D", "C", "B", "A"].filter((x) => e.options.some((o) => o.id === x));
+  const et = core.coachHandoff(bank, e, eo[0], eo, "wrong");
+  assert.ok(!/Only C /.test(et) || core.letterMap(eo).C === "C", et);
+  // every item in every format produces clean text
+  for (const it of bank.items) {
+    const o = core.displayOrder(it, "coach");
+    const r = it.format === "mc" ? o[0] : it.format === "multi" ? [o[0]] : it.format === "order" ? o.slice() : "12";
+    const txt = core.coachHandoff(bank, it, r, o, "wrong");
+    assert.ok(!/undefined|\[object|\bNaN\b/.test(txt), it.id);
+    for (const p of it.passages || []) assert.ok(txt.includes(bank.passages[p].text), `${it.id} passage`);
+    assert.ok(txt.length < 6000, `${it.id} length ${txt.length}`);
+  }
+});
