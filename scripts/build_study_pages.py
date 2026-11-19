@@ -150,13 +150,17 @@ def add_contents(body):
 
 
 def coach_link():
+    """Coach link: goes to the app's intro page (index.html#/coach) until the student has
+    seen it once; a tiny script then points it straight at Gemini (same rule as the app)."""
     if not COACH_URL:
         return ""
     name = html.escape(COACH_NAME)
-    return (f'<a class="nav-coach" href="{html.escape(COACH_URL, quote=True)}" target="_blank" rel="noopener" '
-            f'title="Opens the {name} in Google Gemini. Sign in with your VCCS account first, or Gemini opens without the Coach.">'
-            f'<span class="long">{name}</span><span class="short">Coach</span><span aria-hidden="true"> ↗</span>'
-            f'<span class="sr-only"> (opens Google Gemini in a new tab)</span></a>')
+    url = json.dumps(COACH_URL)
+    return (f'<a class="nav-coach" href="../index.html#/coach">'
+            f'<span class="long">{name}</span><span class="short">Coach</span></a>'
+            f'<script>try{{if((JSON.parse(localStorage.getItem("escc-teas-prep:v1"))||{{}}).ui.coachIntroSeen){{'
+            f'var c=document.currentScript.previousElementSibling;c.href={url};c.target="_blank";c.rel="noopener";'
+            f'c.insertAdjacentHTML("beforeend",\'<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens Google Gemini in a new tab)</span>\')}}}}catch(e){{}}</script>')
 
 
 def shell(title, inner, depth_prefix="../"):

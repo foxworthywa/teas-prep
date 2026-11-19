@@ -64,7 +64,7 @@ function sanitize(data) {
   const p = data.profile && typeof data.profile === "object" ? data.profile : {};
   out.profile = { name: String(p.name || "").slice(0, 100), email: String(p.email || "").slice(0, 100), program: String(p.program || "").slice(0, 60) };
   const lp = data.lastPractice;
-  out.ui = { installNudgeDismissed: !!(data.ui && data.ui.installNudgeDismissed), transferHintDismissed: !!(data.ui && data.ui.transferHintDismissed) };
+  out.ui = { installNudgeDismissed: !!(data.ui && data.ui.installNudgeDismissed), transferHintDismissed: !!(data.ui && data.ui.transferHintDismissed), coachIntroSeen: !!(data.ui && data.ui.coachIntroSeen) };
   out.lastPractice = lp && ["obj", "mix", "weak"].includes(lp.kind) && typeof lp.arg === "string" ? { kind: lp.kind, arg: lp.arg } : null;
   out.current = data.current && typeof data.current === "object" && Array.isArray(data.current.order) && data.current.order.every((id) => byId[id]) ? data.current : null;
   return out;
@@ -411,6 +411,35 @@ document.addEventListener("click", (e) => {
   }
   btn.focus({ preventScroll: true });
 });
+
+// The header's Coach link goes to a short intro page until the student has seen it once
+// (the site can't tell whether they're signed in to Google), then straight to Gemini.
+function updateCoachNav() {
+  const a = document.querySelector(".site-header .nav-coach");
+  if (!a) return;
+  const direct = !!state.ui.coachIntroSeen;
+  a.href = direct ? config.coach.url : "#/coach";
+  if (direct) { a.target = "_blank"; a.rel = "noopener"; } else { a.removeAttribute("target"); a.removeAttribute("rel"); }
+  a.querySelectorAll(".nav-ext, .nav-ext-sr").forEach((x) => (x.hidden = !direct));
+}
+
+function viewCoach() {
+  navHighlight("coach");
+  if (!coachOn()) return viewNotFound();
+  const name = esc(config.coach.name);
+  setView(`<h1>The ${name}</h1>
+    <p class="lead">An AI tutor in Google Gemini, set up for the TEAS. It uses ESCC's study pages and makes you think first instead of just giving answers.</p>
+    <div class="notice"><p><strong>Sign in with your VCCS student account</strong> (the one ending in @email.vccs.edu). If you're not signed in, Gemini still opens, but without the Coach.</p>
+      <p>Check the top of the chat: it should say <strong>${name}</strong>. If it just says Gemini, sign in (or tap your profile picture and switch to your VCCS account), then come back and tap the button again.</p></div>
+    <p>Ask it for practice questions on a topic, help with something you don't get, or a study plan. To get help with a question you missed on this site, use the <strong>Ask the ${name}</strong> button under that question instead; it sends the question along for you.</p>
+    <p class="coach-remember"><label><input type="checkbox" id="coach-remember" checked> Next time, open the ${name} directly</label></p>
+    <div class="btn-row"><a class="btn coach-open" id="coach-open" href="${esc(config.coach.url)}" target="_blank" rel="noopener">Open the ${name}</a><a class="btn secondary" href="#/practice">Back to practice</a></div>`, config.coach.name);
+  document.getElementById("coach-open").addEventListener("click", () => {
+    state.ui.coachIntroSeen = document.getElementById("coach-remember").checked;
+    save();
+    updateCoachNav();
+  });
+}
 
 // ------------------------------------------------------------------ add to home screen
 // The site can be installed as a home-screen app (manifest + icons; no offline caching
@@ -1164,6 +1193,7 @@ function route() {
         return parts[1] ? viewPractice(parts[1]) : viewPracticeMenu();
       case "progress": return viewProgress();
       case "about": return viewAbout();
+      case "coach": return viewCoach();
       default: return viewNotFound();
     }
   } catch (err) {
@@ -1189,10 +1219,11 @@ async function start() {
   }
   if (coachOn()) {
     document.querySelector(".site-header nav")?.insertAdjacentHTML("beforeend",
-      `<a class="nav-coach" href="${esc(config.coach.url)}" target="_blank" rel="noopener" title="Opens the ${esc(config.coach.name)} in Google Gemini. Sign in with your VCCS account first, or Gemini opens without the Coach."><span class="long">${esc(config.coach.name)}</span><span class="short">Coach</span><span aria-hidden="true"> ↗</span><span class="sr-only"> (opens Google Gemini in a new tab)</span></a>`);
+      `<a class="nav-coach" data-nav="coach"><span class="long">${esc(config.coach.name)}</span><span class="short">Coach</span><span class="nav-ext" aria-hidden="true"> ↗</span><span class="sr-only nav-ext-sr"> (opens Google Gemini in a new tab)</span></a>`);
   }
   // drop anything that doesn't match this bank (old saves, edited files)
   state = sanitize(state);
+  updateCoachNav();
   document.querySelector(".skip")?.addEventListener("click", (e) => { e.preventDefault(); $main.focus(); });
   window.addEventListener("hashchange", route);
   route();

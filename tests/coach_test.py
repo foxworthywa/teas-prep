@@ -142,6 +142,40 @@ def main():
         check(pg.locator(".review-body button[data-coach]").count() == 1, "diagnostic review offers the Coach")
         ctx.close()
 
+        # header link: intro page first, then direct (app and study pages)
+        ctx = b.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True)
+        pg = ctx.new_page()
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.goto(base + "#/practice")
+        pg.wait_for_selector(".section-list")
+        check(pg.get_attribute(".nav-coach", "href") == "#/coach", "header Coach link goes to the intro page at first")
+        pg.goto(base + "study/S.1.2.html")
+        check(pg.get_attribute(".nav-coach", "href") == "../index.html#/coach", "study-page Coach link goes to the intro page at first")
+        pg.click(".nav-coach")
+        pg.wait_for_selector("#coach-open")
+        check("VCCS" in pg.inner_text("main") and "just says Gemini" in pg.inner_text("main"), "intro page explains the sign-in and how to check")
+        # untick: stays on the intro next time
+        pg.uncheck("#coach-remember")
+        with ctx.expect_page() as np_:
+            pg.click("#coach-open")
+        check("coach-standin" in np_.value.url, "intro page opens the Coach")
+        np_.value.close()
+        check(pg.get_attribute(".nav-coach", "href") == "#/coach", "unticked: header link still goes to the intro")
+        # tick (default): direct from now on
+        pg.check("#coach-remember")
+        with ctx.expect_page() as np_:
+            pg.click("#coach-open")
+        np_.value.close()
+        check("coach-standin" in (pg.get_attribute(".nav-coach", "href") or "") and pg.get_attribute(".nav-coach", "target") == "_blank", "after 'next time directly', header link opens the Coach")
+        pg.reload()
+        pg.wait_for_selector("h1")
+        check("coach-standin" in (pg.get_attribute(".nav-coach", "href") or ""), "direct link remembered after reload")
+        pg.goto(base + "study/S.1.2.html")
+        href = pg.get_attribute(".nav-coach", "href") or ""
+        check(href.startswith("https://gemini.google.com/gem/") and pg.get_attribute(".nav-coach", "target") == "_blank",
+              f"study-page link is direct too ({href[:40]}...)")
+        ctx.close()
+
         # with no Coach URL configured, no buttons appear
         cfg.write_text(re.sub(r'(coach: \{\s*url: )"[^"]*"', r'\1""', cfg.read_text()))
         ctx = b.new_context()
