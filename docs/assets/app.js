@@ -512,7 +512,7 @@ function installSlot() {
   if (isStandalone()) {
     if (isIOS() && !hasProgress() && !state.ui.transferHintDismissed) {
       return `<div class="install-nudge" role="region" aria-label="Bring your progress">
-        <p><strong>Practiced in Safari before?</strong> This app keeps its own records. To bring your progress over: in Safari, open this site, go to My progress and tap <strong>Copy my progress</strong>. Then come back here and paste it on <a href="#/progress#move">My progress</a>.</p>
+        <p><strong>Practiced in Safari before?</strong> This app keeps its own records. To bring your progress over: in Safari, open this site, go to My progress and tap <strong>Copy my progress</strong>. Then come back here, open <a href="#/progress#move">My progress</a>, and tap <strong>Paste my progress</strong>.</p>
         <div class="btn-row tight-row"><button type="button" class="btn link" data-install="dismiss-transfer">Got it</button></div></div>`;
     }
     return "";
@@ -540,7 +540,7 @@ function installSteps() {
     return `<ol class="install-steps">${transfer}${share}
         <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
         <li>Leave <strong>Open as Web App</strong> on, and tap <strong>Add</strong>.</li>
-        ${hasProgress() ? `<li>Open the new TEAS Prep icon and go to <strong>My progress</strong>. Press and hold in the <strong>Paste progress</strong> box, tap <strong>Paste</strong>, then tap <strong>Load pasted progress</strong>.</li>` : ""}
+        ${hasProgress() ? `<li>Open the new TEAS Prep icon and go to <strong>My progress</strong>. Tap <strong>Paste my progress</strong>, then <strong>Paste</strong> when your phone asks.</li>` : ""}
       </ol>
       <p class="small muted">Don't see ••• or Share? You may be inside another app's browser (from email or a course app). Tap the compass or <strong>Open in Safari</strong> first.</p>
       <p class="small muted">On an iPhone, the home-screen app also keeps your progress safer: Safari can clear saved data for sites you haven't visited in a while.</p>`;
@@ -989,7 +989,8 @@ function viewProgress() {
     <h2 id="move">Move your progress</h2>
     <p class="small muted">Progress lives in this browser only. To move it to another phone, another browser, or the home-screen app, copy it here and paste it there.</p>
     <div class="btn-row"><button class="btn secondary" id="copy-progress">Copy my progress</button><span id="copy-msg" class="small" aria-live="polite"></span></div>
-    <label class="paste-label" for="paste-progress">Paste progress you copied</label>
+    <div class="btn-row"><button class="btn" id="paste-direct" hidden>Paste my progress</button></div>
+    <label class="paste-label" for="paste-progress">Or paste it here</label>
     <textarea id="paste-progress" class="paste-box" rows="3" placeholder="Press and hold here, then tap Paste" autocomplete="off" spellcheck="false"></textarea>
     <div class="btn-row"><button class="btn secondary" id="paste-load">Load pasted progress</button></div>
     <details class="small"><summary>Use a file instead</summary>
@@ -1017,6 +1018,16 @@ function viewProgress() {
     }
   };
   document.getElementById("paste-load").addEventListener("click", () => merged(document.getElementById("paste-progress").value, "text"));
+  // one tap: read the clipboard (the phone asks to confirm with its own Paste button)
+  const direct = document.getElementById("paste-direct");
+  if (navigator.clipboard && navigator.clipboard.readText && window.isSecureContext) {
+    direct.hidden = false;
+    direct.addEventListener("click", () => {
+      navigator.clipboard.readText().then((t) => merged(t, "text"), () => {
+        document.getElementById("io-msg").innerHTML = `<p class="notice">Your phone didn't share the clipboard. Press and hold in the box below, tap Paste, then Load pasted progress.</p>`;
+      });
+    });
+  }
   document.getElementById("import").addEventListener("change", async (e) => {
     const f = e.target.files[0];
     if (f) merged(await f.text(), "file");
