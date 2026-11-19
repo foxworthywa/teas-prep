@@ -24,7 +24,7 @@ def main():
     shutil.copytree(ROOT, site)
     (site / "coach-standin.html").write_text("<!doctype html><title>Coach stand-in</title><h1>Coach</h1>")
     cfg = site / "assets" / "config.js"
-    cfg.write_text(re.sub(r'(coach: \{\s*url: )""', r'\1"COACH_URL"', cfg.read_text()))
+    cfg.write_text(re.sub(r'(coach: \{\s*url: )"[^"]*"', r'\1"COACH_URL"', cfg.read_text()))
 
     class Q(http.server.SimpleHTTPRequestHandler):
         def log_message(self, *x):

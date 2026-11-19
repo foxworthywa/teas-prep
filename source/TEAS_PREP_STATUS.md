@@ -53,7 +53,7 @@ Last updated: 2026-11-18 (late evening: practice site built)
 - The Docs converter mangles "___" blanks (M.2.3 Doc shows `say " depends on ."`) and nested bold/italic (E.2.1 §5). The website is fine; fix the two Docs if they are still shared anywhere.
 - Delete the "Superseded study pages (safe to delete)" folder, the three "zz import temp" sheets, plus these in the Study pages folder: "OLD S.1.1 (no figures, replaced - delete)", "OLD S.1.3 (no figures, replaced - delete)", "zz image import test (delete)", "zz html image test (delete)".
 - Fill Programs tab cutoffs (LPN, RN, dental hygiene).
-- TEAS Coach go-live:
+- TEAS Coach go-live (Gem created 2026-11-18; link set in `coach.url`):
   - Paste PART 1 of `coach/TEAS_COACH_INSTRUCTIONS.md` into the Gem, after filling [ADVISING_CONTACT].
   - Attach the 4 knowledge files.
   - Set the Gem's General access.

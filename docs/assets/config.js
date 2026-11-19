@@ -48,7 +48,7 @@ export default {
   // TEAS Coach (Gemini Gem). Leave url empty to hide the "Ask the TEAS Coach" buttons.
   // Use the Gem's share link (Gemini > Explore Gems > Share > Copy link).
   coach: {
-    url: "",
+    url: "https://gemini.google.com/gem/1_RGgNysHi4efVzrPCYqttJQ5gGz6GcNW?usp=sharing",
     name: "TEAS Coach",
     signInNote: "Opens Google Gemini. Sign in with your VCCS student account (the one ending in @email.vccs.edu).",
   },
