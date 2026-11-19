@@ -22,6 +22,8 @@ from build_pages import render  # noqa: E402  (same figure captions and credits 
 
 BANK = json.loads((ROOT / "docs" / "data" / "bank.json").read_text(encoding="utf-8"))
 _cfg = (ROOT / "docs" / "assets" / "config.js").read_text(encoding="utf-8")
+_coach = re.search(r'coach:\s*\{\s*url:\s*"([^"]*)"[\s\S]*?name:\s*"([^"]*)"', _cfg)
+COACH_URL, COACH_NAME = (_coach.group(1), _coach.group(2)) if _coach else ("", "TEAS Coach")
 REVIEW_PENDING = re.findall(r'"([A-Za-z]+)"', re.search(r"reviewPendingSections:\s*\[([^\]]*)\]", _cfg).group(1))
 MAX_W = 1400
 LIST_RE = re.compile(r"^(\s*)([-*]|\d+\.)\s")
@@ -147,6 +149,16 @@ def add_contents(body):
     return body
 
 
+def coach_link():
+    if not COACH_URL:
+        return ""
+    name = html.escape(COACH_NAME)
+    return (f'<a class="nav-coach" href="{html.escape(COACH_URL, quote=True)}" target="_blank" rel="noopener" '
+            f'title="Opens the {name} in Google Gemini. Sign in with your VCCS account.">'
+            f'<span class="long">{name}</span><span class="short">Coach</span><span aria-hidden="true"> ↗</span>'
+            f'<span class="sr-only"> (opens Google Gemini in a new tab)</span></a>')
+
+
 def shell(title, inner, depth_prefix="../"):
     return f"""<!doctype html>
 <html lang="en">
@@ -161,7 +173,7 @@ def shell(title, inner, depth_prefix="../"):
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="{depth_prefix}index.html">ESCC TEAS Prep</a>
-  <nav aria-label="Main"><a href="{depth_prefix}index.html#/diagnostic">Diagnostic</a><a href="{depth_prefix}index.html#/practice">Practice</a><a href="{depth_prefix}study/index.html" aria-current="page">Study pages</a><a href="{depth_prefix}index.html#/progress">My progress</a></nav>
+  <nav aria-label="Main"><a href="{depth_prefix}index.html#/diagnostic">Diagnostic</a><a href="{depth_prefix}index.html#/practice">Practice</a><a href="{depth_prefix}study/index.html" aria-current="page"><span class="long">Study pages</span><span class="short">Study</span></a><a href="{depth_prefix}index.html#/progress"><span class="long">My progress</span><span class="short">Progress</span></a>{coach_link()}</nav>
 </div></header>
 <main id="main" class="wrap">
 {inner}

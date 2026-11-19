@@ -969,6 +969,10 @@ async function start() {
     $main.innerHTML = `<h1>Couldn't load the questions</h1><p>Check your internet connection and reload the page.</p>`;
     return;
   }
+  if (coachOn()) {
+    document.querySelector(".site-header nav")?.insertAdjacentHTML("beforeend",
+      `<a class="nav-coach" href="${esc(config.coach.url)}" target="_blank" rel="noopener" title="Opens the ${esc(config.coach.name)} in Google Gemini. Sign in with your VCCS account."><span class="long">${esc(config.coach.name)}</span><span class="short">Coach</span><span aria-hidden="true"> ↗</span><span class="sr-only"> (opens Google Gemini in a new tab)</span></a>`);
+  }
   // drop anything that doesn't match this bank (old saves, edited files)
   state = sanitize(state);
   document.querySelector(".skip")?.addEventListener("click", (e) => { e.preventDefault(); $main.focus(); });
