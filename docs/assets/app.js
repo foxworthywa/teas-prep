@@ -468,13 +468,51 @@ function downloadProgress() {
 
 const hasProgress = () => state.attempts.length > 0 || state.diagnostics.length > 0;
 
+// Copy all progress as text. The clipboard is shared between Safari and the
+// home-screen app (and between browsers), so this is the easy way to move it.
+function copyProgress() {
+  const text = JSON.stringify(state);
+  if (copySync(text)) return true;
+  const msg = document.getElementById("copy-msg");
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(
+      () => { if (msg) msg.textContent = "Copied. Now open the other browser or the app, go to My progress, and paste."; },
+      () => { if (msg) msg.textContent = "Your browser didn't allow copying. Use a file instead (below)."; });
+    return "pending";
+  }
+  if (msg) msg.textContent = "Your browser didn't allow copying. Use a file instead (below).";
+  return false;
+}
+
+// Merge progress from pasted text or a file into this device's progress.
+function mergeProgress(text) {
+  let parsed;
+  try {
+    const t = String(text || "");
+    parsed = JSON.parse(t.slice(t.indexOf("{"), t.lastIndexOf("}") + 1));
+  } catch { return false; }
+  if (!parsed || !Array.isArray(parsed.attempts) || !Array.isArray(parsed.diagnostics)) return false;
+  const data = sanitize(parsed);
+  const key = (a) => `${a.id}|${a.t}`;
+  const have = new Set(state.attempts.map(key));
+  state.attempts = state.attempts.concat(data.attempts.filter((a) => !have.has(key(a)))).sort((a, b) => a.t - b.t);
+  const dk = new Set(state.diagnostics.map((d) => `${d.section}|${d.date}`));
+  state.diagnostics = state.diagnostics.concat(data.diagnostics.filter((d) => !dk.has(`${d.section}|${d.date}`))).sort((a, b) => a.date - b.date);
+  // bring "Keep going", an unfinished diagnostic and contact details along if this device has none
+  if (!state.lastPractice && data.lastPractice) state.lastPractice = data.lastPractice;
+  if (!state.current && data.current && !data.current.finished) state.current = data.current;
+  if (!state.profile.name && !state.profile.email && (data.profile.name || data.profile.email)) state.profile = data.profile;
+  save();
+  return true;
+}
+
 // HTML for the home and Practice pages: a one-time nudge, then a quiet button.
 // In the installed iPhone app with no progress yet: a one-time "bring your progress" note.
 function installSlot() {
   if (isStandalone()) {
     if (isIOS() && !hasProgress() && !state.ui.transferHintDismissed) {
       return `<div class="install-nudge" role="region" aria-label="Bring your progress">
-        <p><strong>Practiced in Safari before?</strong> This app keeps its own records. If you downloaded your progress, load it: <a href="#/progress">My progress</a> › <strong>Load progress from a file</strong> (look in Files › Downloads).</p>
+        <p><strong>Practiced in Safari before?</strong> This app keeps its own records. To bring your progress over: in Safari, open this site, go to My progress and tap <strong>Copy my progress</strong>. Then come back here and paste it on <a href="#/progress#move">My progress</a>.</p>
         <div class="btn-row tight-row"><button type="button" class="btn link" data-install="dismiss-transfer">Got it</button></div></div>`;
     }
     return "";
@@ -494,7 +532,7 @@ function installSteps() {
   }
   if (isIOS()) {
     const transfer = hasProgress()
-      ? `<li><strong>Save your progress first.</strong> The home-screen app keeps its own records, separate from this browser. <button type="button" class="btn secondary inline-btn" data-install="download">Download my progress</button> (it goes to Files › Downloads).</li>`
+      ? `<li><strong>Copy your progress first.</strong> The home-screen app keeps its own records, separate from this browser. <button type="button" class="btn secondary inline-btn" data-install="copy">Copy my progress</button> <span class="small copy-ok" aria-live="polite"></span></li>`
       : "";
     const share = /CriOS/.test(UA)
       ? `<li>Tap the <strong>Share</strong> button (a square with an arrow pointing up) in the address bar.</li>`
@@ -502,7 +540,7 @@ function installSteps() {
     return `<ol class="install-steps">${transfer}${share}
         <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
         <li>Leave <strong>Open as Web App</strong> on, and tap <strong>Add</strong>.</li>
-        ${hasProgress() ? `<li>Open the new TEAS Prep icon, go to <strong>My progress</strong>, and tap <strong>Load progress from a file</strong>.</li>` : ""}
+        ${hasProgress() ? `<li>Open the new TEAS Prep icon and go to <strong>My progress</strong>. Press and hold in the <strong>Paste progress</strong> box, tap <strong>Paste</strong>, then tap <strong>Load pasted progress</strong>.</li>` : ""}
       </ol>
       <p class="small muted">Don't see ••• or Share? You may be inside another app's browser (from email or a course app). Tap the compass or <strong>Open in Safari</strong> first.</p>
       <p class="small muted">On an iPhone, the home-screen app also keeps your progress safer: Safari can clear saved data for sites you haven't visited in a while.</p>`;
@@ -525,7 +563,11 @@ function showStepsDialog() {
     <div class="btn-row dlg-foot"><button type="button" class="btn" data-close>Done</button></div>`;
   document.body.appendChild(dlg);
   dlg.querySelectorAll("[data-close]").forEach((x) => x.addEventListener("click", () => dlg.close()));
-  dlg.querySelector('[data-install="download"]')?.addEventListener("click", downloadProgress);
+  dlg.querySelector('[data-install="copy"]')?.addEventListener("click", () => {
+    const r = copyProgress();
+    const ok = dlg.querySelector(".copy-ok");
+    if (ok) ok.textContent = r === false ? "Copying didn't work here. Use My progress › Use a file instead." : "Copied.";
+  });
   dlg.addEventListener("close", () => {
     state.ui.installNudgeDismissed = true;
     save();
@@ -944,37 +986,40 @@ function viewProgress() {
     ${sections}
     <h2>Diagnostic history</h2>${history}
     <div class="btn-row">${sendButton()}</div>
-    <h2>Move or clear your progress</h2>
-    <p class="small muted">Progress lives in this browser only. To move it to another device, download it here and load it there.</p>
-    <div class="btn-row"><button class="btn secondary" id="export">Download my progress</button>
-      <label class="btn secondary" for="import">Load progress from a file</label><input id="import" type="file" accept="application/json,.json" class="sr-only">
-      <button class="btn link" id="clear">Clear all my progress</button></div>
-    <div id="io-msg" aria-live="polite"></div>`, "My progress");
+    <h2 id="move">Move your progress</h2>
+    <p class="small muted">Progress lives in this browser only. To move it to another phone, another browser, or the home-screen app, copy it here and paste it there.</p>
+    <div class="btn-row"><button class="btn secondary" id="copy-progress">Copy my progress</button><span id="copy-msg" class="small" aria-live="polite"></span></div>
+    <label class="paste-label" for="paste-progress">Paste progress you copied</label>
+    <textarea id="paste-progress" class="paste-box" rows="3" placeholder="Press and hold here, then tap Paste" autocomplete="off" spellcheck="false"></textarea>
+    <div class="btn-row"><button class="btn secondary" id="paste-load">Load pasted progress</button></div>
+    <details class="small"><summary>Use a file instead</summary>
+      <div class="btn-row"><button class="btn secondary" id="export">Download my progress</button>
+      <label class="btn secondary" for="import">Load progress from a file</label><input id="import" type="file" class="sr-only"></div>
+      <p class="muted">On an iPhone, downloads go to the Files app, in Downloads.</p></details>
+    <div id="io-msg" aria-live="polite"></div>
+    <h2>Clear your progress</h2>
+    <div class="btn-row"><button class="btn link" id="clear">Clear all my progress</button></div>`, "My progress");
+  if (location.hash.endsWith("#move")) document.getElementById("move")?.scrollIntoView();
   document.getElementById("export").addEventListener("click", downloadProgress);
-  document.getElementById("import").addEventListener("change", async (e) => {
-    const f = e.target.files[0];
+  document.getElementById("copy-progress").addEventListener("click", () => {
+    const ok = copyProgress();
+    document.getElementById("copy-msg").textContent = ok === true
+      ? "Copied. Now open the other browser or the app, go to My progress, and paste."
+      : "";
+  });
+  const merged = (text, how) => {
     const msg = document.getElementById("io-msg");
-    if (!f) return;
-    try {
-      const parsed = JSON.parse(await f.text());
-      if (!parsed || !Array.isArray(parsed.attempts) || !Array.isArray(parsed.diagnostics)) throw new Error("not a progress file");
-      const data = sanitize(parsed);
-      // merge: keep everything, drop exact duplicates
-      const key = (a) => `${a.id}|${a.t}`;
-      const have = new Set(state.attempts.map(key));
-      state.attempts = state.attempts.concat(data.attempts.filter((a) => !have.has(key(a)))).sort((a, b) => a.t - b.t);
-      const dk = new Set(state.diagnostics.map((d) => `${d.section}|${d.date}`));
-      state.diagnostics = state.diagnostics.concat(data.diagnostics.filter((d) => !dk.has(`${d.section}|${d.date}`))).sort((a, b) => a.date - b.date);
-      // bring "Keep going", an unfinished diagnostic and contact details along if this device has none
-      if (!state.lastPractice && data.lastPractice) state.lastPractice = data.lastPractice;
-      if (!state.current && data.current && !data.current.finished) state.current = data.current;
-      if (!state.profile.name && !state.profile.email && (data.profile.name || data.profile.email)) state.profile = data.profile;
-      save();
+    if (mergeProgress(text)) {
       viewProgress();
       document.getElementById("io-msg").innerHTML = `<p class="notice">Progress loaded and combined with what was already here.</p>`;
-    } catch {
-      msg.innerHTML = `<p class="notice">That file couldn't be read as a TEAS Prep progress file.</p>`;
+    } else {
+      msg.innerHTML = `<p class="notice">That ${how} doesn't look like TEAS Prep progress. ${how === "text" ? "Copy it again with Copy my progress, then paste the whole thing." : ""}</p>`;
     }
+  };
+  document.getElementById("paste-load").addEventListener("click", () => merged(document.getElementById("paste-progress").value, "text"));
+  document.getElementById("import").addEventListener("change", async (e) => {
+    const f = e.target.files[0];
+    if (f) merged(await f.text(), "file");
   });
   document.getElementById("clear").addEventListener("click", (e) => {
     const box = document.getElementById("io-msg");

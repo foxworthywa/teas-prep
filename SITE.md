@@ -72,7 +72,7 @@ The site can be installed as a home-screen app (`docs/manifest.webmanifest`, ico
 - **What the icon does:** opens straight to Practice. On Android, long-pressing the icon offers Keep going plus Quick 10 for Science, Math and Reading.
 - **On phones:** the home and Practice pages show a one-time "Practice in seconds" nudge, then a quiet "Add TEAS Prep to your home screen" button.
   - Android Chrome: it opens Chrome's own install prompt.
-  - iPhone and other browsers: it shows the steps. iPhone users who already have progress are told to download it first, because the iPhone home-screen app keeps its own storage separate from Safari.
+  - iPhone and other browsers: it shows the steps. iPhone users who already have progress are told to copy it first and paste it in the app (My progress › Paste progress), because the iPhone home-screen app keeps its own storage separate from Safari. Copy and paste is the main way to move progress anywhere; a file is the fallback.
 - **Don't change the manifest's `"id": "/teas-prep/"`.** Changing it orphans every installed copy.
 - **Testing:** the real-phone checklist is at the end of `source/review/install_review.md`.
 

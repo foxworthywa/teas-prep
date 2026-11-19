@@ -303,3 +303,5 @@ h1.practice-h { font-size: 1.25rem; margin: 2px 0 2px; }
 @media (orientation: landscape) {
   .wrap { padding-left: max(18px, env(safe-area-inset-left)); padding-right: max(18px, env(safe-area-inset-right)); }
 }
+.paste-label { display: block; font-weight: 600; margin: 14px 0 4px; }
+.paste-box { width: 100%; font: 16px/1.4 ui-monospace, Menlo, Consolas, monospace; border: 1.5px solid #93a6b8; border-radius: 8px; padding: 8px; }
