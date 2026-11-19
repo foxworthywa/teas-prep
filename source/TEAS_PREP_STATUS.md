@@ -45,6 +45,7 @@ Last updated: 2026-11-18 (late evening: practice site built)
 - Reviews: code audit, student-perspective UX review and re-review in `source/review/site_*.md`.
 - Phone-first practice (2026-11-18): Keep going, Quick 10 per section, section tabs with folded parts, answer button pinned at the bottom on phones. Study pages have "On this page" contents.
 - "Ask the TEAS Coach" (2026-11-18): after any practice or diagnostic-review answer, one tap copies the question, the student's answer, the key, the explanation, the student's choice notes and any passage, then opens the Gem. There are fallbacks (copy on a second tap; manual copy), plus Copy again and account-switch help. The buttons stay hidden until `coach.url` is set in `docs/assets/config.js`. Reviewed in `source/review/coach_review.md`; tested in `tests/coach_test.py`.
+- Home-screen app, Phase 1 (2026-11-19): manifest and icons, opening to Practice, with Android shortcuts. Install nudge and per-phone steps; Chrome's own prompt on Android; progress-transfer steps for iPhone. No offline caching yet. Reviewed in `source/review/install_review.md`, which ends with the real-phone checklist. Phase 2 (offline, network-first, with an off switch) waits on that checklist.
 - AI decisions (2026-11-18): add the Gem; no interactive NotebookLM notebooks for now (public sharing is disabled for Workspace Education accounts, and they would duplicate the Gem and site). Audio overviews hosted on the site remain an option.
 
 ## Open items for Alex
@@ -59,6 +60,7 @@ Last updated: 2026-11-18 (late evening: practice site built)
   - Set the Gem's General access.
   - Send Claude the share link (it goes into `coach.url`).
   - Test on an iPhone and an Android phone with a student account.
+- Run the real-phone checklist for the home-screen app (iPhone and Android), then decide on Phase 2 (offline).
 - Sheet fixes noticed in review:
   - M.1.10-004's explanation says "Subtract 85:" (should be "Subtract 85 from both sides") and lists "10, 16 and 15" (should be "10, 15 and 16").
   - R.1.3-004's "Step A" could read "the A (Aim) step" (faculty).

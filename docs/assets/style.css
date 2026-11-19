@@ -285,3 +285,21 @@ h1.practice-h { font-size: 1.25rem; margin: 2px 0 2px; }
 }
 /* headings focused by the app on page change don't need a ring */
 [tabindex="-1"]:focus { outline: none; }
+
+/* add to home screen */
+.site-header { padding-top: env(safe-area-inset-top); }
+.install-nudge { border: 1.5px solid var(--brand-2); background: #eef7f9; border-radius: var(--radius); padding: 12px 14px; margin: 10px 0 14px; }
+.install-nudge p { margin: 0; }
+.install-quiet { margin: 4px 0 10px; }
+.install-steps { padding-left: 1.3em; }
+.install-steps li { margin: 6px 0; }
+.install-dialog .notice p { margin: 4px 0; }
+.install-dialog { max-height: calc(100vh - 32px); overflow: auto; padding-top: 0; padding-bottom: 0; }
+.install-dialog .dlg-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; position: sticky; top: 0; background: #fff; padding-top: 18px; }
+.install-dialog .dlg-head h2 { margin: 0 0 6px; font-size: 1.2rem; }
+.install-dialog .dlg-x { font: inherit; font-size: 1.1rem; background: none; border: 0; padding: 4px 8px; cursor: pointer; color: var(--muted); min-width: 44px; min-height: 44px; }
+.install-dialog .dlg-foot { position: sticky; bottom: 0; background: #fff; margin: 10px 0 0; padding: 10px 0 16px; }
+.inline-btn { padding: 6px 12px; margin: 4px 0; }
+@media (orientation: landscape) {
+  .wrap { padding-left: max(18px, env(safe-area-inset-left)); padding-right: max(18px, env(safe-area-inset-right)); }
+}

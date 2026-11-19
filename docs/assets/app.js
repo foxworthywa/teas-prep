@@ -11,7 +11,7 @@ let studyTitles = {};
 
 // ------------------------------------------------------------------ storage
 const KEY = "escc-teas-prep:v1";
-const blank = () => ({ v: 1, attempts: [], diagnostics: [], current: null, profile: {} });
+const blank = () => ({ v: 1, attempts: [], diagnostics: [], current: null, profile: {}, ui: {} });
 let storageOk = true;
 let state = blank();
 
@@ -64,6 +64,7 @@ function sanitize(data) {
   const p = data.profile && typeof data.profile === "object" ? data.profile : {};
   out.profile = { name: String(p.name || "").slice(0, 100), email: String(p.email || "").slice(0, 100), program: String(p.program || "").slice(0, 60) };
   const lp = data.lastPractice;
+  out.ui = { installNudgeDismissed: !!(data.ui && data.ui.installNudgeDismissed), transferHintDismissed: !!(data.ui && data.ui.transferHintDismissed) };
   out.lastPractice = lp && ["obj", "mix", "weak"].includes(lp.kind) && typeof lp.arg === "string" ? { kind: lp.kind, arg: lp.arg } : null;
   out.current = data.current && typeof data.current === "object" && Array.isArray(data.current.order) && data.current.order.every((id) => byId[id]) ? data.current : null;
   return out;
@@ -362,7 +363,7 @@ function coachPanel(panel, text, state) {
   const help = `<details class="coach-help"><summary>Trouble?</summary><p>${ACCOUNT_TIP}</p><p>If signing in replaced what you copied, tap Copy again, then paste.</p><p>${IN_APP_TIP}</p></details>`;
   const show = `<details class="coach-text"><summary>Show the copied text</summary><textarea readonly rows="8">${esc(text)}</textarea></details>`;
   if (state === "opened") {
-    panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> The ${name} should be open in a new tab. Tap its message box and paste (on a phone: press and hold, then Paste), then send.</p>
+    panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> The ${name} should be open now. Tap its message box and paste (on a phone: press and hold, then Paste), then send.</p>
       <div class="btn-row tight-row">${open("secondary")}${again}</div>${help}${show}`;
   } else if (state === "copied") {
     panel.innerHTML = `<p class="coach-ok"><strong>Copied.</strong> Now open the ${name}, paste into its message box, and send.</p>
@@ -410,6 +411,160 @@ document.addEventListener("click", (e) => {
   btn.focus({ preventScroll: true });
 });
 
+// ------------------------------------------------------------------ add to home screen
+// The site can be installed as a home-screen app (manifest + icons; no offline caching
+// yet). A page can't add an icon by itself. Where the browser offers its own install
+// prompt (Chrome on Android fires beforeinstallprompt even without a service worker),
+// "Show me how" opens that prompt; otherwise it shows the steps for that phone.
+const UA = navigator.userAgent || "";
+const isIOS = () => /iPhone|iPad|iPod/.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1);
+const isAndroid = () => /Android/.test(UA);
+const isPhone = () => isIOS() || isAndroid();
+const isStandalone = () => {
+  try {
+    return ["standalone", "fullscreen", "minimal-ui"].some((m) => window.matchMedia(`(display-mode: ${m})`).matches) || navigator.standalone === true;
+  } catch { return false; }
+};
+// in-app browsers that usually can't add to the home screen (Apple's in-app Safari
+// view looks exactly like Safari, so the iPhone steps also mention it)
+const isInApp = () => /FBAN|FBAV|FB_IAB|Instagram|LinkedInApp|Snapchat|GSA\/|Line\/|; wv\)/.test(UA);
+let installPrompt = null;
+window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installPrompt = e; });
+window.addEventListener("appinstalled", () => { installPrompt = null; markInstalled(); });
+
+function markInstalled() {
+  state.ui.installNudgeDismissed = true;
+  save();
+  refreshInstallSlots();
+}
+
+function refreshInstallSlots(focusQuiet) {
+  document.querySelectorAll(".install-nudge, .install-quiet").forEach((n) => (n.outerHTML = installSlot()));
+  if (focusQuiet) document.querySelector(".install-quiet button")?.focus({ preventScroll: true });
+}
+
+function progressFile() {
+  const name = `teas-prep-progress-${new Date().toISOString().slice(0, 10)}.json`;
+  return { name, blob: new Blob([JSON.stringify(state)], { type: "application/json" }) };
+}
+
+// In an installed iPhone app a plain download can strand the student on a preview
+// screen, so there we use the share sheet ("Save to Files").
+function downloadProgress() {
+  const { name, blob } = progressFile();
+  if (isIOS() && isStandalone() && navigator.canShare && typeof File !== "undefined") {
+    const file = new File([blob], name, { type: "application/json" });
+    if (navigator.canShare({ files: [file] })) {
+      navigator.share({ files: [file], title: "TEAS Prep progress" }).catch(() => {});
+      return;
+    }
+  }
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+const hasProgress = () => state.attempts.length > 0 || state.diagnostics.length > 0;
+
+// HTML for the home and Practice pages: a one-time nudge, then a quiet button.
+// In the installed iPhone app with no progress yet: a one-time "bring your progress" note.
+function installSlot() {
+  if (isStandalone()) {
+    if (isIOS() && !hasProgress() && !state.ui.transferHintDismissed) {
+      return `<div class="install-nudge" role="region" aria-label="Bring your progress">
+        <p><strong>Practiced in Safari before?</strong> This app keeps its own records. If you downloaded your progress, load it: <a href="#/progress">My progress</a> › <strong>Load progress from a file</strong> (look in Files › Downloads).</p>
+        <div class="btn-row tight-row"><button type="button" class="btn link" data-install="dismiss-transfer">Got it</button></div></div>`;
+    }
+    return "";
+  }
+  if (!isPhone()) return "";
+  if (!state.ui.installNudgeDismissed) {
+    return `<div class="install-nudge" role="region" aria-label="Add to home screen">
+      <p><strong>Practice in seconds.</strong> Put TEAS Prep on your home screen and it opens like an app, straight to practice.</p>
+      <div class="btn-row tight-row"><button type="button" class="btn" data-install="how">Show me how</button><button type="button" class="btn link" data-install="dismiss">Not now</button></div></div>`;
+  }
+  return `<p class="install-quiet"><button type="button" class="btn link" data-install="how">Add TEAS Prep to your home screen</button></p>`;
+}
+
+function installSteps() {
+  if (isInApp()) {
+    return `<p>You're reading this inside another app, which can't add icons. Open this page in ${isIOS() ? "Safari" : "Chrome"} first: look for a menu (••• or ⋮) with <strong>Open in ${isIOS() ? "Safari" : "browser"}</strong>. Then tap the button again.</p>`;
+  }
+  if (isIOS()) {
+    const transfer = hasProgress()
+      ? `<li><strong>Save your progress first.</strong> The home-screen app keeps its own records, separate from this browser. <button type="button" class="btn secondary inline-btn" data-install="download">Download my progress</button> (it goes to Files › Downloads).</li>`
+      : "";
+    const share = /CriOS/.test(UA)
+      ? `<li>Tap the <strong>Share</strong> button (a square with an arrow pointing up) in the address bar.</li>`
+      : `<li>Tap <strong>•••</strong> next to the address bar, then <strong>Share</strong>. (If you see the <strong>Share</strong> button, a square with an arrow pointing up, tap that instead.)</li>`;
+    return `<ol class="install-steps">${transfer}${share}
+        <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+        <li>Leave <strong>Open as Web App</strong> on, and tap <strong>Add</strong>.</li>
+        ${hasProgress() ? `<li>Open the new TEAS Prep icon, go to <strong>My progress</strong>, and tap <strong>Load progress from a file</strong>.</li>` : ""}
+      </ol>
+      <p class="small muted">Don't see ••• or Share? You may be inside another app's browser (from email or a course app). Tap the compass or <strong>Open in Safari</strong> first.</p>
+      <p class="small muted">On an iPhone, the home-screen app also keeps your progress safer: Safari can clear saved data for sites you haven't visited in a while.</p>`;
+  }
+  return `<ol class="install-steps">
+      <li>In Chrome, tap <strong>⋮</strong> (top right, or bottom right if your address bar is at the bottom).</li>
+      <li>Tap <strong>Add to home screen</strong>, then <strong>Install</strong> (it may say <strong>Install app</strong>).</li>
+      <li>Tap <strong>Install</strong> again to confirm.</li>
+    </ol>
+    <p class="small muted">Using Samsung Internet? Tap ☰, then <strong>Add page to</strong>, then <strong>Home screen</strong>.</p>`;
+}
+
+function showStepsDialog() {
+  const dlg = document.createElement("dialog");
+  dlg.className = "install-dialog";
+  dlg.setAttribute("aria-labelledby", "install-h");
+  dlg.innerHTML = `<div class="dlg-head"><h2 id="install-h">Add TEAS Prep to your home screen</h2><button type="button" class="dlg-x" data-close aria-label="Close">✕</button></div>
+    ${installSteps()}
+    <p class="small">The icon opens straight to Practice. It's free and doesn't use the app store.</p>
+    <div class="btn-row dlg-foot"><button type="button" class="btn" data-close>Done</button></div>`;
+  document.body.appendChild(dlg);
+  dlg.querySelectorAll("[data-close]").forEach((x) => x.addEventListener("click", () => dlg.close()));
+  dlg.querySelector('[data-install="download"]')?.addEventListener("click", downloadProgress);
+  dlg.addEventListener("close", () => {
+    state.ui.installNudgeDismissed = true;
+    save();
+    dlg.remove();
+    refreshInstallSlots(true);
+  });
+  dlg.showModal();
+}
+
+function showInstallDialog() {
+  if (installPrompt) {
+    const p = installPrompt;
+    installPrompt = null;
+    Promise.resolve()
+      .then(() => p.prompt())
+      .then(() => p.userChoice)
+      .then((c) => { if (c && c.outcome === "accepted") markInstalled(); })
+      .catch(() => showStepsDialog());
+    return;
+  }
+  showStepsDialog();
+}
+
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-install]");
+  if (!b || b.closest("dialog")) return;
+  if (b.dataset.install === "how") showInstallDialog();
+  if (b.dataset.install === "dismiss") {
+    state.ui.installNudgeDismissed = true;
+    save();
+    refreshInstallSlots(true);
+  }
+  if (b.dataset.install === "dismiss-transfer") {
+    state.ui.transferHintDismissed = true;
+    save();
+    refreshInstallSlots();
+  }
+});
+
 // ------------------------------------------------------------------ home
 function viewHome() {
   navHighlight("");
@@ -430,6 +585,7 @@ function viewHome() {
     <p class="small muted">Your progress is saved in this browser on this device only. Clearing your browser data erases it; <a href="#/progress">My progress</a> lets you download a copy.</p>
     ${cur && !cur.finished ? `<p class="notice">You have a ${esc(cur.section)} diagnostic in progress. <a href="#/diagnostic/${cur.section}">Pick up where you left off</a>.</p>` : ""}
     ${(() => { const l = lastPracticeLink(); return l ? `<a class="keep-going" href="${l.href}"><span class="kg-label">Keep practicing</span><span class="kg-what">${esc(l.label)}</span></a>` : ""; })()}
+    ${installSlot()}
     <div class="cards">
       <div class="card"><h2>1. Take a diagnostic</h2><p>A practice test for one section (Reading, Math, Science or English). It shows where you stand in each part of the section, so you know what to study. Allow 20 to 60 minutes.</p><div class="spacer"></div><a class="btn" href="#/diagnostic">Start a diagnostic</a></div>
       <div class="card"><h2>2. Practice by objective</h2><p>Questions for each of the 64 TEAS objectives, with an explanation for every answer you pick.</p><div class="spacer"></div><a class="btn" href="#/practice">Practice</a></div>
@@ -625,8 +781,11 @@ function viewPracticeMenu() {
       <span class="sb-stats">${st.n ? `${meter(st.c, st.n)}${st.c}/${st.n} right` : `${n} questions`}</span></a></li>`;
   }).join("");
   const quick = bank.sections.map((s) => `<a class="btn secondary" href="#/practice/mix/${s.name}">${s.name}</a>`).join("");
+  const cur = state.current && !state.current.finished ? state.current : null;
   setView(`<h1>Practice</h1>
+    ${cur ? `<p class="notice small">You have a ${esc(cur.section)} diagnostic in progress. <a href="#/diagnostic/${cur.section}">Pick up where you left off</a>.</p>` : ""}
     ${last ? `<a class="keep-going" href="${last.href}"><span class="kg-label">Keep going</span><span class="kg-what">${esc(last.label)}</span></a>` : ""}
+    ${installSlot()}
     <h2 class="tight">Quick 10</h2>
     <p class="small muted">Ten mixed questions from one section. Good for a few spare minutes.</p>
     <div class="quick-row">${quick}</div>
@@ -791,14 +950,7 @@ function viewProgress() {
       <label class="btn secondary" for="import">Load progress from a file</label><input id="import" type="file" accept="application/json,.json" class="sr-only">
       <button class="btn link" id="clear">Clear all my progress</button></div>
     <div id="io-msg" aria-live="polite"></div>`, "My progress");
-  document.getElementById("export").addEventListener("click", () => {
-    const blob = new Blob([JSON.stringify(state)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `teas-prep-progress-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-  });
+  document.getElementById("export").addEventListener("click", downloadProgress);
   document.getElementById("import").addEventListener("change", async (e) => {
     const f = e.target.files[0];
     const msg = document.getElementById("io-msg");
@@ -813,6 +965,10 @@ function viewProgress() {
       state.attempts = state.attempts.concat(data.attempts.filter((a) => !have.has(key(a)))).sort((a, b) => a.t - b.t);
       const dk = new Set(state.diagnostics.map((d) => `${d.section}|${d.date}`));
       state.diagnostics = state.diagnostics.concat(data.diagnostics.filter((d) => !dk.has(`${d.section}|${d.date}`))).sort((a, b) => a.date - b.date);
+      // bring "Keep going", an unfinished diagnostic and contact details along if this device has none
+      if (!state.lastPractice && data.lastPractice) state.lastPractice = data.lastPractice;
+      if (!state.current && data.current && !data.current.finished) state.current = data.current;
+      if (!state.profile.name && !state.profile.email && (data.profile.name || data.profile.email)) state.profile = data.profile;
       save();
       viewProgress();
       document.getElementById("io-msg").innerHTML = `<p class="notice">Progress loaded and combined with what was already here.</p>`;
@@ -940,6 +1096,11 @@ function route() {
       case "diagnostic": return parts[1] ? viewDiagnostic(parts[1]) : viewDiagnosticMenu();
       case "results": return viewResults(parts[1]);
       case "practice":
+        if (parts[1] === "continue") {
+          const l = lastPracticeLink();
+          if (l) { location.replace(l.href); return; }
+          return viewPracticeMenu();
+        }
         if (parts[1] === "weak") return viewPractice(null, parts[2]);
         if (parts[1] === "mix") return viewPractice(null, null, parts[2]);
         if (parts[1] && sectionOf(parts[1])) return viewPracticeSection(parts[1]);

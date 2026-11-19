@@ -80,7 +80,7 @@ def page_html(code, md_text):
         alt, rel = m.group(1), m.group(2)
         name, w, h = web_figure(pathlib.Path("figures") / pathlib.Path(rel).name)
         k = f"FIGTOKEN{len(figs)}X"
-        figs[k] = (f'<a href="figures/{name}" title="Open the full-size figure">'
+        figs[k] = (f'<a href="figures/{name}" target="_blank" rel="noopener" title="Open the full-size figure">'
                    f'<img src="figures/{name}" alt="{html.escape(alt, quote=True)}" '
                    f'width="{w}" height="{h}" loading="lazy"></a>')
         return f"\n\n{k}\n\n"
@@ -91,7 +91,7 @@ def page_html(code, md_text):
     text = re.sub(r"_{2,}", lambda m: "\\_" * len(m.group(0)), text)
     body = markdown.markdown(text, extensions=["tables", "sane_lists"])
     for k, v in figs.items():
-        body = body.replace(f"<p>{k}</p>", f'<figure class="study-fig">{v}<p class="fig-tip">Tap or click the figure to open it full size.</p></figure>')
+        body = body.replace(f"<p>{k}</p>", f'<figure class="study-fig">{v}<p class="fig-tip">Tap or click the figure to open it full size (in a new tab).</p></figure>')
     # caption + credit paragraphs follow the image: fold them into the figure
     body = re.sub(r'</figure>\s*<p>(<strong>Figure \d+\..*?)</p>',
                   lambda m: f'<figcaption>{m.group(1)}</figcaption></figure>', body, flags=re.S)
@@ -167,6 +167,10 @@ def shell(title, inner, depth_prefix="../"):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)} · ESCC TEAS Prep</title>
 <link rel="icon" href="{depth_prefix}favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{depth_prefix}manifest.webmanifest">
+<link rel="apple-touch-icon" href="{depth_prefix}icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0b4f6c">
+<meta name="apple-mobile-web-app-title" content="TEAS Prep">
 <link rel="stylesheet" href="{depth_prefix}assets/style.css">
 </head>
 <body class="study">

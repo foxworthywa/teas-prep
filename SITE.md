@@ -66,9 +66,22 @@ Set `coach.url` in `docs/assets/config.js` to the Gem's share link. After that, 
 
 One tap copies the question, the student's answer, the correct answer and the explanation (plus the passage, for Reading), then opens the Coach in a new tab for the student to paste. If a browser blocks that, the site copies on a second tap; if that's blocked too, it shows the text to copy by hand. With `coach.url` empty, no buttons appear.
 
+## Home-screen app
+
+The site can be installed as a home-screen app (`docs/manifest.webmanifest`, icons in `docs/icons/`, made by `scripts/make_icons.py`).
+- **What the icon does:** opens straight to Practice. On Android, long-pressing the icon offers Keep going plus Quick 10 for Science, Math and Reading.
+- **On phones:** the home and Practice pages show a one-time "Practice in seconds" nudge, then a quiet "Add TEAS Prep to your home screen" button.
+  - Android Chrome: it opens Chrome's own install prompt.
+  - iPhone and other browsers: it shows the steps. iPhone users who already have progress are told to download it first, because the iPhone home-screen app keeps its own storage separate from Safari.
+- **Don't change the manifest's `"id": "/teas-prep/"`.** Changing it orphans every installed copy.
+- **Testing:** the real-phone checklist is at the end of `source/review/install_review.md`.
+
+Offline practice (a service worker) is a planned Phase 2. It will fetch fresh content whenever online, cache under a `teas-prep-` prefix (the github.io origin is shared), and have an off switch in `config.js`.
+
 ## Tests
 
 - `node --test tests/core.test.mjs`: grading, supply-answer normalizing, option order, do-not-pair and passage limits across 200 random forms per section, banding, the stopping rule, and a check that the export copies the Sheet text exactly.
 - `python3 tests/test_xlsx_path.py`: building from a downloaded .xlsx gives the same result as building from the tab dumps.
+- `python3 tests/install_test.py`: the manifest (served under /teas-prep/ as on GitHub), the app identity Chrome computes, and the install nudge and steps on emulated iPhone, Android, desktop, installed and in-app browsers.
 - `python3 tests/coach_test.py`: the Coach button copies the right text and opens the Coach, including both fallbacks.
 - `python3 tests/smoke.py --shots /tmp/shots`: opens the site in headless Chrome. It runs every diagnostic and some practice, loads all 64 study pages, and fails on any script error or missing file.

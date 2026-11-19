@@ -1,0 +1,93 @@
+{
+  "id": "/teas-prep/",
+  "name": "ESCC TEAS Prep",
+  "short_name": "TEAS Prep",
+  "description": "Free TEAS 7 practice from Eastern Shore Community College: diagnostic, practice questions and study pages.",
+  "lang": "en-US",
+  "start_url": "./#/practice",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#0b4f6c",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Keep going",
+      "short_name": "Keep going",
+      "url": "./#/practice/continue",
+      "icons": [
+        {
+          "src": "icons/icon-maskable-192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
+    },
+    {
+      "name": "Quick 10: Science",
+      "short_name": "Science 10",
+      "url": "./#/practice/mix/Science",
+      "icons": [
+        {
+          "src": "icons/icon-maskable-192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
+    },
+    {
+      "name": "Quick 10: Math",
+      "short_name": "Math 10",
+      "url": "./#/practice/mix/Math",
+      "icons": [
+        {
+          "src": "icons/icon-maskable-192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
+    },
+    {
+      "name": "Quick 10: Reading",
+      "short_name": "Reading 10",
+      "url": "./#/practice/mix/Reading",
+      "icons": [
+        {
+          "src": "icons/icon-maskable-192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
+    }
+  ]
+}
