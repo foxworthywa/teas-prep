@@ -197,6 +197,9 @@ test("diagnostic forms respect every constraint", () => {
       const ids = Object.values(f.bySub).flat();
       assert.equal(new Set(ids).size, ids.length, "no repeats");
       assert.deepEqual([...ids].sort(), [...f.order].sort(), "order covers the plan");
+      // parts come one after another, in section order
+      const seq = f.order.map((id) => byId[id].subarea).filter((c, i, a) => i === 0 || a[i - 1] !== c);
+      assert.deepEqual(seq, f.parts, `${sec} parts are blocked`);
       assert.deepEqual(core.formConflicts(bank, ids), [], `${sec} do-not-pair`);
       for (const [code, list] of Object.entries(f.bySub)) {
         assert.ok(list.length <= 15, code);
@@ -209,12 +212,15 @@ test("diagnostic forms respect every constraint", () => {
         assert.ok(Object.values(count).every((c) => c <= 4), JSON.stringify(count));
         assert.ok((count["RP-21"] || 0) <= 3, "RP-21 spread");
         ids.filter((id) => rp21.has(id)).forEach((id) => rp21Seen.add(id));
-        // passage groups are contiguous
-        const first = {}, last = {};
-        f.order.forEach((id, i) => { const p = byId[id].passages[0]; first[p] ??= i; last[p] = i; });
-        for (const p in first) {
-          const span = f.order.slice(first[p], last[p] + 1);
-          assert.ok(span.every((id) => byId[id].passages[0] === p), `passage ${p} split`);
+        // within each part, a passage's items are together
+        for (const code of f.parts) {
+          const part = f.order.filter((id) => byId[id].subarea === code);
+          const first = {}, last = {};
+          part.forEach((id, i) => { const p = byId[id].passages[0]; first[p] ??= i; last[p] = i; });
+          for (const p in first) {
+            const span = part.slice(first[p], last[p] + 1);
+            assert.ok(span.every((id) => byId[id].passages[0] === p), `passage ${p} split within ${code}`);
+          }
         }
         if (s < 5) seen = new Set([...seen, ...ids]);
       }
@@ -348,4 +354,36 @@ test("TEAS Coach handoff text", () => {
     for (const p of it.passages || []) assert.ok(txt.includes(bank.passages[p].text), `${it.id} passage`);
     assert.ok(txt.length < 6000, `${it.id} length ${txt.length}`);
   }
+});
+
+test("one part at a time, and breaks between parts", () => {
+  const all = { ...cfg };
+  // a single-part run only uses that part
+  const one = core.newDiagnostic(bank, "Science", all, { seed: "p1", seen: new Set(), parts: ["S.2"] });
+  assert.deepEqual(one.parts, ["S.2"]);
+  assert.ok(one.order.every((id) => byId[id].subarea === "S.2") && one.order.length === 15);
+  // a whole-section run offers a break after each part but the last
+  const s = core.newDiagnostic(bank, "Science", all, { seed: "p2", seen: new Set() });
+  const breaks = [];
+  let i, guard = 0;
+  while ((i = core.nextIndex(s, bank)) !== -1 && guard++ < 100) {
+    const it = byId[s.order[i]];
+    const r = it.format === "supply" ? it.accepted[0] : it.format === "mc" ? it.key[0] : it.key.slice();
+    core.recordDiagnosticAnswer(s, bank, all, i, r);
+    if (s.breakAfter) { breaks.push(s.breakAfter); s.breakAfter = null; }
+    const parts = core.sessionParts(s, bank);
+    assert.ok(parts.filter((p) => p.current).length <= 1);
+  }
+  assert.deepEqual(breaks, ["S.1", "S.2", "S.3"], "a break after each part except the last");
+  assert.ok(s.finished && !s.breakAfter);
+  // finished-only results while a run is under way
+  const t = core.newDiagnostic(bank, "Math", all, { seed: "p3", seen: new Set() });
+  for (let k = 0; k < 8; k++) {
+    const j = core.nextIndex(t, bank);
+    const it = byId[t.order[j]];
+    core.recordDiagnosticAnswer(t, bank, all, j, it.format === "supply" ? it.accepted[0] : it.format === "mc" ? it.key[0] : it.key.slice());
+  }
+  const done = core.diagnosticResults(t, bank, all, { all: false });
+  assert.deepEqual(done.map((r) => r.code), ["M.1"]);
+  assert.equal(core.sessionParts(t, bank).find((p) => p.current).code, "M.2");
 });

@@ -1,5 +1,5 @@
 // ESCC TEAS Prep: single-page app (hash routes). Logic lives in core.js.
-import * as core from "./core.js";
+import * as core from "./core.js?v=20261124";
 import config from "./config.js";
 
 const { escapeHtml: esc, renderRich } = core;
@@ -54,8 +54,9 @@ function sanitize(data) {
         section: d.section,
         date: d.date,
         seed: String(d.seed || ""),
+        parts: (Array.isArray(d.parts) ? d.parts : []).filter((c) => codes.has(c)),
         results: d.results.filter((r) => r && codes.has(r.code) && num(r.n) && num(r.correct) && bandIds.has(r.band))
-          .map((r) => ({ code: r.code, n: r.n, correct: r.correct, band: r.band, stoppedEarly: !!r.stoppedEarly, nearCutoff: !!r.nearCutoff })),
+          .map((r) => ({ code: r.code, n: r.n, correct: r.correct, band: r.band, stoppedEarly: !!r.stoppedEarly, nearCutoff: !!r.nearCutoff, ...(num(r.date) ? { date: r.date } : {}) })),
         items: (Array.isArray(d.items) ? d.items : []).filter((id) => byId[id]),
         answers: (Array.isArray(d.answers) ? d.answers : []).filter((a) => a && byId[a.id] && typeof a.correct === "boolean")
           .map((a) => ({ id: a.id, correct: a.correct, response: Array.isArray(a.response) ? a.response.filter((x) => typeof x === "string") : typeof a.response === "string" ? a.response : null })),
@@ -66,7 +67,17 @@ function sanitize(data) {
   const lp = data.lastPractice;
   out.ui = { installNudgeDismissed: !!(data.ui && data.ui.installNudgeDismissed), transferHintDismissed: !!(data.ui && data.ui.transferHintDismissed), coachIntroSeen: !!(data.ui && data.ui.coachIntroSeen) };
   out.lastPractice = lp && ["obj", "mix", "weak"].includes(lp.kind) && typeof lp.arg === "string" ? { kind: lp.kind, arg: lp.arg } : null;
-  out.current = data.current && typeof data.current === "object" && Array.isArray(data.current.order) && data.current.order.every((id) => byId[id]) ? data.current : null;
+  out.current = data.current && typeof data.current === "object" && Array.isArray(data.current.order) && data.current.order.every((id) => byId[id]) && okSection.has(data.current.section) ? data.current : null;
+  if (out.current && !Array.isArray(out.current.parts)) {
+    // a diagnostic started before parts existed: give the rest of it part by part
+    const c = out.current;
+    const codes = sectionOf(c.section).subareas.map((x) => x.code);
+    const rest = c.order.slice(c.pos).map((id, k) => ({ id, k }))
+      .sort((a, b) => codes.indexOf(byId[a.id].subarea) - codes.indexOf(byId[b.id].subarea) || a.k - b.k).map((x) => x.id);
+    c.order = c.order.slice(0, c.pos).concat(rest);
+    c.parts = codes;
+    c.breakAfter = null;
+  }
   return out;
 }
 function save() {
@@ -526,8 +537,13 @@ function mergeProgress(text) {
   const key = (a) => `${a.id}|${a.t}`;
   const have = new Set(state.attempts.map(key));
   state.attempts = state.attempts.concat(data.attempts.filter((a) => !have.has(key(a)))).sort((a, b) => a.t - b.t);
-  const dk = new Set(state.diagnostics.map((d) => `${d.section}|${d.date}`));
-  state.diagnostics = state.diagnostics.concat(data.diagnostics.filter((d) => !dk.has(`${d.section}|${d.date}`))).sort((a, b) => a.date - b.date);
+  const dkey = (d) => (d.seed ? `seed|${d.seed}` : `${d.section}|${d.date}`);
+  const byKey = new Map(state.diagnostics.map((d) => [dkey(d), d]));
+  for (const d of data.diagnostics) {
+    const mine = byKey.get(dkey(d));
+    if (!mine || d.results.length > mine.results.length || (d.results.length === mine.results.length && d.date > mine.date)) byKey.set(dkey(d), d);
+  }
+  state.diagnostics = [...byKey.values()].sort((a, b) => a.date - b.date);
   // bring "Keep going", an unfinished diagnostic and contact details along if this device has none
   if (!state.lastPractice && data.lastPractice) state.lastPractice = data.lastPractice;
   if (!state.current && data.current && !data.current.finished) state.current = data.current;
@@ -638,16 +654,33 @@ document.addEventListener("click", (e) => {
 });
 
 // ------------------------------------------------------------------ home
+// Latest diagnostic result for each part, whichever run it came from.
+function latestByPart() {
+  const out = {};
+  state.diagnostics.forEach((d, idx) => {
+    for (const r of d.results || []) {
+      const date = r.date || d.date;
+      if (!out[r.code] || date >= out[r.code].date) out[r.code] = { r, date, idx };
+    }
+  });
+  return out;
+}
+const maxPer = () => Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea || DCFG.maxPerSubarea);
+const perPartText = () => `${DCFG.minPerSubarea} to ${maxPer()} questions, about 10 to 15 minutes`;
+const partLabel = (code) => {
+  for (const sec of bank.sections) { const x = sec.subareas.find((y) => y.code === code); if (x) return `${code} ${x.name}`; }
+  return code;
+};
+
 function viewHome() {
   navHighlight("");
   const cur = state.current;
-  const last = {};
-  for (const d of state.diagnostics) last[d.section] = d;
+  const latest = latestByPart();
   const sectionCards = bank.sections.map((s) => {
-    const d = last[s.name];
+    const have = s.subareas.filter((x) => latest[x.code]);
     return `<div class="card"><h3>${s.name}</h3>
       <p class="small muted">${s.subareas.map((x) => esc(x.name)).join(" · ")}</p>
-      ${d ? `<p class="small">Last diagnostic ${fmtDate(d.date)}: ${d.results.map((r) => `${esc(r.code)} ${bandChip(bandById(r.band))}`).join(" ")}</p>` : `<p class="small muted">No diagnostic yet.</p>`}
+      ${have.length ? `<p class="small">Latest diagnostic: ${s.subareas.map((x) => `${esc(x.code)} ${bandChip(latest[x.code] ? bandById(latest[x.code].r.band) : null)}`).join(" ")}</p>` : `<p class="small muted">No diagnostic yet.</p>`}
       <div class="spacer"></div>
       <div class="btn-row" style="margin:6px 0 0"><a class="btn" href="#/diagnostic/${s.name}">Diagnostic</a><a class="btn secondary" href="#/practice/${s.name}">Practice</a></div></div>`;
   }).join("");
@@ -659,7 +692,7 @@ function viewHome() {
     ${(() => { const l = lastPracticeLink(); return l ? `<a class="keep-going" href="${l.href}"><span class="kg-label">Keep practicing</span><span class="kg-what">${esc(l.label)}</span></a>` : ""; })()}
     ${installSlot()}
     <div class="cards">
-      <div class="card"><h2>1. Take a diagnostic</h2><p>A practice test for one section (Reading, Math, Science or English). It shows where you stand in each part of the section, so you know what to study. Allow 20 to 60 minutes.</p><div class="spacer"></div><a class="btn" href="#/diagnostic">Start a diagnostic</a></div>
+      <div class="card"><h2>1. Take a diagnostic</h2><p>A practice test that shows where you stand in each part of a section, so you know what to study. Do one part at a time (about 10 to 15 minutes each) or a whole section with breaks.</p><div class="spacer"></div><a class="btn" href="#/diagnostic">Start a diagnostic</a></div>
       <div class="card"><h2>2. Practice by objective</h2><p>Questions for each of the 64 TEAS objectives, with an explanation for every answer you pick.</p><div class="spacer"></div><a class="btn" href="#/practice">Practice</a></div>
       <div class="card"><h2>3. Study pages</h2><p>A short page for each objective with figures, quick checks and links to free textbooks.</p><div class="spacer"></div><a class="btn" href="study/index.html">Study pages</a></div>
     </div>
@@ -668,67 +701,121 @@ function viewHome() {
 }
 
 // ------------------------------------------------------------------ diagnostic
+function partListHtml(s, latest) {
+  return `<ul class="obj-list part-list">${s.subareas.map((x) => {
+    const l = latest[x.code];
+    return `<li><a class="obj-link" href="#/diagnostic/${s.name}/${x.code}"><span class="obj-main"><span class="code">${x.code}</span>${esc(x.name)}</span>
+      <span class="obj-stats">${l ? `${bandChip(bandById(l.r.band))} ${fmtDate(l.date)}` : "Not taken yet"}</span></a></li>`;
+  }).join("")}</ul>`;
+}
+
 function viewDiagnosticMenu() {
   navHighlight("diagnostic");
+  const latest = latestByPart();
+  const cur = state.current && !state.current.finished ? state.current : null;
   const cards = bank.sections.map((s) => {
-    const max = s.subareas.length * Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea);
-    const min = s.subareas.length * DCFG.minPerSubarea;
+    const n = s.subareas.length;
     const t = s.teas;
+    const resumeHere = cur && cur.section === s.name;
     return `<div class="card"><h2>${s.name}</h2>
-      <p>${s.subareas.length} parts: ${s.subareas.map((x) => esc(x.name)).join("; ")}.</p>
-      <p class="small muted">${min} to ${max} questions. ${t ? `The real TEAS ${s.name} section has ${t.questions} questions in ${t.minutes} minutes.` : ""}</p>
-      <div class="spacer"></div><a class="btn" href="#/diagnostic/${s.name}">${state.current && state.current.section === s.name && !state.current.finished ? "Resume" : "Start"} ${s.name}</a></div>`;
+      ${resumeHere ? `<p><a class="btn" href="#/diagnostic/${s.name}">Resume your ${esc(s.name)} diagnostic</a></p>` : ""}
+      <p class="small">Take one part at a time (${perPartText()}):</p>
+      ${partListHtml(s, latest)}
+      <p class="small">Or take all ${n} parts in a row, with a break after each: usually about ${n * 9} to ${n * 13} questions, never more than ${n * maxPer()}.</p>
+      <div class="spacer"></div><a class="btn secondary" href="#/diagnostic/${s.name}/all">All ${n} parts of ${s.name}</a>
+      ${t ? `<p class="small muted">The real TEAS ${s.name} section has ${t.questions} questions in ${t.minutes} minutes.</p>` : ""}</div>`;
   }).join("");
   setView(`<h1>Diagnostic</h1>
-    <p class="lead">Pick a section. You'll answer questions from every part of that section, and you'll see how you did in each part at the end. No answers are shown until then, like the real test.</p>
-    <p class="small muted">Results come as practice bands (<em>Build the basics</em>, <em>Getting there</em>, <em>Strong</em>), not a predicted TEAS score. The bands haven't been matched to real TEAS scores yet.</p>
+    <p class="lead">Find out where you stand in each part of a section. As on the real test, you won't see whether you got a question right until you finish the part.</p>
+    <p class="small muted">Each part has ${DCFG.minPerSubarea} to ${maxPer()} questions. A part stops early when more questions would be very unlikely to change your result. Results come as practice bands (<em>Build the basics</em>, <em>Getting there</em>, <em>Strong</em>), not a predicted TEAS score.</p>
     <div class="cards">${cards}</div>`, "Diagnostic");
 }
 
-function viewDiagnostic(sectionName) {
+// #/diagnostic/<Section>            resume a run in progress, or choose
+// #/diagnostic/<Section>/all        start page for all parts in a row
+// #/diagnostic/<Section>/<S.2>      start page for one part
+function viewDiagnostic(sectionName, which) {
   navHighlight("diagnostic");
   const section = sectionOf(sectionName);
   if (!section) return viewNotFound();
-  const cur = state.current;
-  if (cur && cur.section === sectionName && !cur.finished) return runDiagnostic();
-  const other = cur && !cur.finished ? cur.section : null;
-  setView(`<h1>${sectionName} diagnostic</h1>
-    <p class="lead">${DCFG.minPerSubarea} to ${Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea)} questions for each of the ${section.subareas.length} parts of ${sectionName}, so ${section.subareas.length * DCFG.minPerSubarea} to ${section.subareas.length * Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea)} in all. A part stops early only when more questions would be very unlikely to change your band. Students who do very well or are just starting usually finish sooner; students in the middle usually answer every question. Plan on about a minute per question.</p>
+  const cur = state.current && !state.current.finished ? state.current : null;
+  if (!which) {
+    if (cur && cur.section === sectionName) return runDiagnostic();
+    return setView(`<h1>${esc(sectionName)} diagnostic</h1>
+      <p class="lead">Take one part at a time (${perPartText()}), or all ${section.subareas.length} parts in a row with a break after each.</p>
+      ${partListHtml(section, latestByPart())}
+      <div class="btn-row"><a class="btn" href="#/diagnostic/${sectionName}/all">All ${section.subareas.length} parts of ${esc(sectionName)}</a><a class="btn secondary" href="#/diagnostic">Back</a></div>`, `${sectionName} diagnostic`);
+  }
+  const all = which === "all";
+  const part = all ? null : section.subareas.find((x) => x.code === which);
+  if (!all && !part) return viewNotFound();
+  const n = all ? section.subareas.length : 1;
+  const title = all ? `${sectionName} diagnostic: all ${n} parts` : `${sectionName} diagnostic: ${part.code} ${part.name}`;
+  setView(`<h1>${esc(title)}</h1>
+    <p class="lead">${all
+      ? `${n} parts, one after another, each ${perPartText()}. Usually about ${n * 9} to ${n * 13} questions in all (never more than ${n * maxPer()}), about ${n * 10} to ${n * 15} minutes. After each part you'll see how you did and can take a break; your place is saved.`
+      : `${perPartText()}. You'll see how you did as soon as you finish.`}</p>
     <ul>
+      <li>A part stops early when more questions would be very unlikely to change your result. If your results land near the line between two bands, expect all ${maxPer()}.</li>
       <li>Work at your own pace. There's no timer. You can leave and come back; your place is saved in this browser.</li>
-      <li>You can't go back to change an answer. Each answer helps decide what comes next.</li>
+      <li>You can't go back to change an answer.</li>
       <li>Use scratch paper. For Math you may use a basic calculator, as on the real TEAS.</li>
       ${sectionName === "Reading" ? "<li>Some questions come with a passage. On a wide screen, the passage stays beside the question.</li>" : ""}
     </ul>
-    ${config.reviewPendingSections.includes(sectionName) ? `<p class="notice">${sectionName} questions are new and still being reviewed by ESCC faculty.</p>` : ""}
-    ${other ? `<p class="notice">Starting this will discard your unfinished ${esc(other)} diagnostic.</p>` : ""}
-    <div class="btn-row"><button class="btn" id="start">Start the ${sectionName} diagnostic</button><a class="btn secondary" href="#/diagnostic">Back</a></div>`, `${sectionName} diagnostic`);
+    ${config.reviewPendingSections.includes(sectionName) ? `<p class="notice">${esc(sectionName)} questions are new and still being reviewed by ESCC faculty.</p>` : ""}
+    ${cur ? `<p class="notice">You have an unfinished ${esc(cur.section)} diagnostic. Starting this one ends it; any parts you already finished stay saved.</p>` : ""}
+    <div class="btn-row"><button class="btn" id="start">Start</button><a class="btn secondary" href="#/diagnostic">Back</a></div>`, title);
   document.getElementById("start").addEventListener("click", () => {
     // prefer questions this student hasn't met yet, in earlier diagnostics or in practice
+    if (state.current && !state.current.finished) saveRunRecord(state.current); // keep any finished parts
     const seen = new Set([...state.diagnostics.flatMap((d) => d.items || []), ...state.attempts.map((a) => a.id)]);
-    state.current = core.newDiagnostic(bank, sectionName, DCFG, { seed: newSeed(), seen });
+    state.current = core.newDiagnostic(bank, sectionName, DCFG, { seed: newSeed(), seen, parts: all ? null : [part.code] });
     save();
-    runDiagnostic();
+    location.hash = `#/diagnostic/${sectionName}`;
   });
+}
+
+// Save the finished parts of a run as a diagnostic record (updated as each part ends).
+function saveRunRecord(s) {
+  const results = core.diagnosticResults(s, bank, DCFG, { all: false });
+  let idx = state.diagnostics.findIndex((d) => d.seed === s.seed);
+  if (!results.length && idx === -1) return -1;
+  const old = idx === -1 ? null : state.diagnostics[idx];
+  const now = Date.now();
+  const rec = {
+    section: s.section,
+    date: now,
+    seed: s.seed,
+    parts: (s.parts || []).slice(),
+    results: results.map((r) => ({
+      code: r.code, n: r.n, correct: r.correct, band: r.band.id, stoppedEarly: r.stoppedEarly, nearCutoff: r.nearCutoff,
+      date: old?.results.find((x) => x.code === r.code)?.date || now, // when this part finished
+    })),
+    items: s.answers.map((a) => a.id),
+    answers: s.answers.slice(),
+  };
+  if (idx === -1) { state.diagnostics.push(rec); idx = state.diagnostics.length - 1; } else state.diagnostics[idx] = rec;
+  return idx;
 }
 
 function runDiagnostic() {
   const s = state.current;
+  if (s.breakAfter) return showPartBreak();
   const idx = core.nextIndex(s, bank);
   if (idx === -1) return finishDiagnostic();
   const item = byId[s.order[idx]];
   const order = core.displayOrder(item, s.seed);
-  const answered = s.answers.length;
-  const maxTotal = s.order.length;
-  const remainingMax = s.order.slice(idx).filter((id) => !s.stats[byId[id].subarea].settled).length - 1; // after this one
-  const doneShare = answered / (answered + remainingMax);
+  const parts = core.sessionParts(s, bank);
+  const cur = parts.find((p) => p.current);
+  const doneShare = (parts.filter((p) => p.done).length + Math.min(cur.n / Math.max(cur.total, 1), 0.95)) / parts.length;
   let response = null;
-  setView(`<h1 class="sr-only">${esc(s.section)} diagnostic, question ${answered + 1}</h1>
-    <div class="q-head"><span><strong>${esc(s.section)} diagnostic</strong> · Question ${answered + 1}</span><span>${remainingMax > 0 ? `at most ${remainingMax} more after this` : "last question"}</span></div>
+  const partText = parts.length > 1 ? `Part ${cur.number} of ${parts.length}: ${esc(cur.name)}` : `${esc(cur.code)} ${esc(cur.name)}`;
+  setView(`<h1 class="sr-only">${esc(s.section)} diagnostic, ${partText}, question ${cur.n + 1}</h1>
+    <div class="q-head"><span><strong>${esc(s.section)}</strong> · ${partText}</span><span>Question ${cur.n + 1} of ${Math.min(DCFG.minPerSubarea, cur.total) < cur.total ? `up to ${cur.total}` : cur.total}</span></div>
     <div class="progressbar" role="progressbar" aria-label="Diagnostic progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(doneShare * 100)}"><span style="width:${(doneShare * 100).toFixed(1)}%"></span></div>
     <form id="qform">${itemHtml(item, { order, response, passageRepeat: passageRepeat(item) })}
       <div class="btn-row action-bar"><button class="btn" type="submit" id="submit" disabled>Submit answer</button>
-      <button class="btn link" type="button" id="quit">Stop and discard this diagnostic</button></div></form>
+      <button class="btn link" type="button" id="quit">Stop this diagnostic</button></div></form>
     <p class="small muted">Your place is saved. You can close this page and come back later.</p>`, `${s.section} diagnostic`);
   const form = document.getElementById("qform");
   const submit = document.getElementById("submit");
@@ -741,11 +828,34 @@ function runDiagnostic() {
     const ok = core.recordDiagnosticAnswer(s, bank, DCFG, idx, Array.isArray(response) ? response.slice() : response);
     if (ok === null) return runDiagnostic();
     logAttempt(item, ok, "d");
+    if (s.breakAfter || s.finished) saveRunRecord(s);
     save();
     runDiagnostic();
   });
   document.getElementById("quit").addEventListener("click", () => {
-    if (!confirmInline(form, "Discard this diagnostic? Answers so far won't be kept as a diagnostic result.")) return;
+    const anyDone = parts.some((p) => p.done);
+    confirmInline(form, anyDone
+      ? "Stop this diagnostic? The parts you finished stay saved; the part you're in now won't count."
+      : "Stop this diagnostic? Your answers in this part won't be kept as a result.");
+  });
+}
+
+// Between parts: show how the part went and offer a break.
+function showPartBreak() {
+  const s = state.current;
+  const parts = core.sessionParts(s, bank);
+  const done = parts.find((p) => p.code === s.breakAfter);
+  const next = parts.find((p) => p.current);
+  const r = core.diagnosticResults(s, bank, DCFG).find((x) => x.code === s.breakAfter);
+  setView(`<h1>Part ${done.number} of ${parts.length} done</h1>
+    <p class="lead">${esc(done.code)} ${esc(done.name)}: ${bandChip(r.band)} ${r.correct} of ${r.n} correct.</p>
+    <p>This is a good place to take a break. This part's result is saved, and when you come back you'll pick up at Part ${next.number}.</p>
+    <div class="btn-row"><button class="btn" id="go-on">Continue to Part ${next.number}: ${esc(next.name)}</button><a class="btn secondary" href="#/" id="pause">Stop for now</a></div>
+    <p class="small muted">Part ${next.number} has ${Math.min(DCFG.minPerSubarea, next.total) < next.total ? `${DCFG.minPerSubarea} to ${next.total}` : next.total} questions, about 10 to 15 minutes.</p>`, `${s.section} diagnostic`);
+  document.getElementById("go-on").addEventListener("click", () => {
+    s.breakAfter = null;
+    save();
+    runDiagnostic();
   });
 }
 
@@ -756,10 +866,11 @@ function confirmInline(anchor, text) {
   box = document.createElement("div");
   box.id = "confirm-box";
   box.className = "notice";
-  box.innerHTML = `<p>${esc(text)}</p><div class="btn-row" style="margin:8px 0 0"><button class="btn" type="button" data-yes>Yes, discard</button><button class="btn secondary" type="button" data-no>Keep going</button></div>`;
+  box.innerHTML = `<p>${esc(text)}</p><div class="btn-row" style="margin:8px 0 0"><button class="btn" type="button" data-yes>Yes, stop</button><button class="btn secondary" type="button" data-no>Keep going</button></div>`;
   anchor.after(box);
   box.querySelector("[data-no]").addEventListener("click", () => box.remove());
   box.querySelector("[data-yes]").addEventListener("click", () => {
+    if (state.current) saveRunRecord(state.current); // keep any finished parts
     state.current = null;
     save();
     location.hash = "#/diagnostic";
@@ -770,19 +881,10 @@ function confirmInline(anchor, text) {
 
 function finishDiagnostic() {
   const s = state.current;
-  const results = core.diagnosticResults(s, bank, DCFG);
-  const rec = {
-    section: s.section,
-    date: Date.now(),
-    seed: s.seed,
-    results: results.map((r) => ({ code: r.code, n: r.n, correct: r.correct, band: r.band.id, stoppedEarly: r.stoppedEarly, nearCutoff: r.nearCutoff })),
-    items: s.answers.map((a) => a.id),
-    answers: s.answers,
-  };
-  state.diagnostics.push(rec);
+  const idx = saveRunRecord(s);
   state.current = null;
   save();
-  location.hash = `#/results/${state.diagnostics.length - 1}`;
+  location.hash = idx === -1 ? "#/diagnostic" : `#/results/${idx}`;
 }
 
 function viewResults(i) {
@@ -790,29 +892,40 @@ function viewResults(i) {
   const rec = state.diagnostics[Number(i)];
   if (!rec) return viewNotFound();
   const section = sectionOf(rec.section);
-  const rows = rec.results.map((r) => {
-    const sub = section.subareas.find((x) => x.code === r.code);
+  const cur = state.current && !state.current.finished && state.current.seed === rec.seed ? state.current : null;
+  const planned = rec.parts && rec.parts.length ? rec.parts : section.subareas.map((x) => x.code);
+  const rows = section.subareas.map((sub) => {
+    const r = rec.results.find((x) => x.code === sub.code);
+    if (!r) {
+      const action = planned.includes(sub.code) && cur
+        ? `<a href="#/diagnostic/${rec.section}">Continue this diagnostic</a>`
+        : `<a href="#/diagnostic/${rec.section}/${sub.code}">Take this part</a>`;
+      return `<tr><th scope="row">${esc(sub.code)} ${esc(sub.name)}</th><td data-label="Band">${bandChip(null)}</td><td data-label="Score">—</td><td data-label="Note" class="small">${action}</td></tr>`;
+    }
     const note = r.nearCutoff ? "Close to the line between two bands" : r.stoppedEarly ? "Stopped early: more questions were very unlikely to change the band" : "";
-    return `<tr><th scope="row">${esc(r.code)} ${esc(sub?.name || "")}</th><td data-label="Band">${bandChip(bandById(r.band))}</td>
+    return `<tr><th scope="row">${esc(r.code)} ${esc(sub.name)}</th><td data-label="Band">${bandChip(bandById(r.band))}</td>
       <td data-label="Score">${r.correct} of ${r.n} correct (${pct(r.correct, r.n)}%)</td><td data-label="Note" class="small muted">${note}</td></tr>`;
   }).join("");
+  const doneCodes = new Set(rec.results.map((r) => r.code));
+  const answers = rec.answers.filter((a) => byId[a.id] && doneCodes.has(byId[a.id].subarea));
   const missed = {};
-  for (const a of rec.answers) if (!a.correct) { const o = byId[a.id]?.objective; if (o) missed[o] = (missed[o] || 0) + 1; }
+  for (const a of answers) if (!a.correct) { const o = byId[a.id].objective; missed[o] = (missed[o] || 0) + 1; }
   const missedList = Object.keys(missed).sort();
-  const review = rec.answers.map((a, k) => {
+  const review = answers.map((a) => {
     const it = byId[a.id];
-    if (!it) return "";
-    const order = core.displayOrder(it, rec.seed);
-    return `<details class="review-item" data-k="${k}"><summary>${a.correct ? '<span class="ok-mark">✓</span>' : '<span class="bad-mark">✗</span>'} Question ${k + 1} · ${it.objective} ${esc(objTitle(it.objective))}</summary><div class="review-body"></div></details>`;
+    const k = rec.answers.indexOf(a);
+    return `<details class="review-item" data-k="${k}"><summary>${a.correct ? '<span class="ok-mark">✓</span>' : '<span class="bad-mark">✗</span>'} ${esc(it.subarea)} · ${it.objective} ${esc(objTitle(it.objective))}</summary><div class="review-body"></div></details>`;
   }).join("");
+  const what = rec.results.length === 1 && planned.length === 1 ? partLabel(rec.results[0].code) : `${rec.results.length} of ${planned.length} part${planned.length > 1 ? "s" : ""}`;
   setView(`<h1>${esc(rec.section)} diagnostic results</h1>
-    <p class="muted">${fmtDate(rec.date)} · ${rec.answers.length} questions</p>
+    <p class="muted">${fmtDate(rec.date)} · ${esc(what)} · ${answers.length} questions</p>
+    ${cur ? `<p class="notice">This diagnostic isn't finished. <a href="#/diagnostic/${rec.section}">Continue where you left off</a>.</p>` : ""}
     <div class="table-wrap"><table class="results stack"><thead><tr><th scope="col">Part</th><th scope="col">Band</th><th scope="col">Score</th><th scope="col">Note</th></tr></thead><tbody>${rows}</tbody></table></div>
     <p class="small muted">Bands: <em>Build the basics</em> means under 60% correct; <em>Getting there</em>, 60% to 79%; <em>Strong</em>, 80% or more. These are practice bands for this site's questions, not a predicted TEAS score.</p>
     ${config.reviewPendingSections.includes(rec.section) ? `<p class="notice">${esc(rec.section)} questions are new and still being checked by ESCC faculty, so treat these bands as a rough guide.</p>` : ""}
     <h2>What to work on</h2>
     ${missedList.length ? `<ul class="obj-list">${missedList.map((o) => `<li><span class="obj-main"><span class="code">${o}</span>${esc(objTitle(o))}</span>
-      <span><a href="${studyUrl(o)}">Study page</a> · <a href="#/practice/${o}">Practice</a></span></li>`).join("")}</ul>` : "<p>You didn't miss anything. Try another section, or practice the objectives you want to keep fresh.</p>"}
+      <span><a href="${studyUrl(o)}">Study page</a> · <a href="#/practice/${o}">Practice</a></span></li>`).join("")}</ul>` : "<p>You didn't miss anything. Try another part, or practice the objectives you want to keep fresh.</p>"}
     <div class="btn-row">${sendButton()}<a class="btn secondary" href="#/practice/${rec.section}">Practice ${esc(rec.section)}</a><a class="btn secondary" href="#/diagnostic">Another diagnostic</a></div>
     <h2>Review your answers</h2><p class="small muted">Open a question to see the explanation.</p>${review}`, `${rec.section} results`);
   $main.querySelectorAll("details.review-item").forEach((d) =>
@@ -992,24 +1105,25 @@ function viewPractice(arg, weakSection, mixSection) {
 function viewProgress() {
   navHighlight("progress");
   const diag = state.diagnostics.map((d, i) => ({ d, i })).reverse();
-  const latest = {};
-  for (const { d } of state.diagnostics.map((d) => ({ d }))) latest[d.section] = d;
+  const latest = latestByPart();
   const sections = bank.sections.map((s) => {
-    const d = latest[s.name];
+    const dates = s.subareas.map((x) => latest[x.code]?.date).filter(Boolean);
+    const lastDate = dates.length ? Math.max(...dates) : null;
     const rows = s.subareas.map((sub) => {
-      const r = d?.results.find((x) => x.code === sub.code);
-      const since = d ? state.attempts.filter((a) => a.m === "p" && a.t > d.date && byId[a.id]?.subarea === sub.code) : [];
+      const l = latest[sub.code];
+      const r = l?.r;
+      const since = l ? state.attempts.filter((a) => a.m === "p" && a.t > l.date && byId[a.id]?.subarea === sub.code) : [];
       const sc = since.filter((a) => a.ok).length;
       const all = stats(bank.items.filter((i) => i.subarea === sub.code).map((i) => i.id));
-      return `<tr><th scope="row">${sub.code} ${esc(sub.name)}</th><td data-label="Diagnostic band">${r ? bandChip(bandById(r.band)) : bandChip(null)}</td>
-        <td data-label="Since then" class="small">${since.length ? `${sc}/${since.length} right in practice since then` : d ? "No practice since" : "—"}</td>
+      return `<tr><th scope="row">${sub.code} ${esc(sub.name)}</th><td data-label="Diagnostic band">${r ? bandChip(bandById(r.band)) : `${bandChip(null)} <a class="small" href="#/diagnostic/${s.name}/${sub.code}">Take this part</a>`}</td>
+        <td data-label="Since then" class="small">${since.length ? `${sc}/${since.length} right in practice since then` : l ? "No practice since" : "—"}</td>
         <td data-label="All answers" class="small">${all.n ? `${all.c}/${all.n} overall (${pct(all.c, all.n)}%)` : "—"}</td></tr>`;
     }).join("");
-    return `<h3>${s.name}${d ? ` <span class="small muted">· last diagnostic ${fmtDate(d.date)}</span>` : ""}</h3>
+    return `<h3>${s.name}${lastDate ? ` <span class="small muted">· last diagnostic ${fmtDate(lastDate)}</span>` : ""}</h3>
       <div class="table-wrap"><table class="results stack"><thead><tr><th scope="col">Part</th><th scope="col">Diagnostic band</th><th scope="col">Since then</th><th scope="col">All answers</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }).join("");
   const history = diag.length
-    ? `<ul class="obj-list">${diag.map(({ d, i }) => `<li><span class="obj-main"><a href="#/results/${i}">${esc(d.section)} diagnostic</a> · ${fmtDate(d.date)}</span><span class="obj-stats">${d.results.map((r) => `${esc(r.code)} ${bandChip(bandById(r.band))}`).join(" ")}</span></li>`).join("")}</ul>`
+    ? `<ul class="obj-list">${diag.map(({ d, i }) => `<li><span class="obj-main"><a href="#/results/${i}">${esc(d.section)} diagnostic</a> · ${fmtDate(d.date)}${d.results.length < (d.parts && d.parts.length ? d.parts.length : sectionOf(d.section).subareas.length) ? ` <span class="small muted">(${d.results.length} of ${d.parts && d.parts.length ? d.parts.length : sectionOf(d.section).subareas.length} parts)</span>` : ""}</span><span class="obj-stats">${d.results.map((r) => `${esc(r.code)} ${bandChip(bandById(r.band))}`).join(" ")}</span></li>`).join("")}</ul>`
     : "<p>No diagnostics yet.</p>";
   setView(`<h1>My progress</h1>
     <p class="lead">${state.attempts.length} questions answered on this device. Nothing is sent anywhere unless you choose to send it.</p>
@@ -1085,14 +1199,17 @@ function resultsPayload(kind, section, rec) {
     lines.push(`${rec.section} diagnostic ${new Date(rec.date).toISOString().slice(0, 10)}: ` +
       rec.results.map((r) => `${r.code} ${bandById(r.band)?.label} (${r.correct}/${r.n})`).join("; "));
   } else {
-    const latest = {};
-    for (const d of state.diagnostics) latest[d.section] = d;
-    for (const d of Object.values(latest))
-      lines.push(`${d.section} ${new Date(d.date).toISOString().slice(0, 10)}: ` + d.results.map((r) => `${r.code} ${bandById(r.band)?.label} (${r.correct}/${r.n})`).join("; "));
+    const latest = latestByPart();
+    for (const sec of bank.sections) {
+      const have = sec.subareas.filter((x) => latest[x.code]);
+      if (have.length)
+        lines.push(`${sec.name}: ` + have.map((x) => { const { r, date } = latest[x.code]; return `${r.code} ${bandById(r.band)?.label} (${r.correct}/${r.n}, ${new Date(date).toISOString().slice(0, 10)})`; }).join("; "));
+    }
     lines.push(`Questions answered: ${state.attempts.length}`);
   }
   const details = [];
-  const objs = rec ? [...new Set(rec.answers.filter((a) => !a.correct).map((a) => byId[a.id]?.objective).filter(Boolean))] : null;
+  const doneParts = rec ? new Set(rec.results.map((r) => r.code)) : null;
+  const objs = rec ? [...new Set(rec.answers.filter((a) => !a.correct && byId[a.id] && doneParts.has(byId[a.id].subarea)).map((a) => byId[a.id].objective))] : null;
   if (objs) details.push(`Missed objectives: ${objs.join(", ") || "none"}`);
   else {
     const per = Object.keys(bank.objectives).map((o) => ({ o, ...objectiveStats(o) })).filter((x) => x.n);
@@ -1159,7 +1276,7 @@ function viewAbout() {
   setView(`<h1>About this site</h1>
     <p>ESCC TEAS Prep is free practice for the ATI TEAS 7, written for Eastern Shore Community College students and applicants. It covers all four TEAS sections: Reading, Math, Science and English and Language Usage. There are ${bank.items.length} practice questions, ${Object.keys(bank.passages).length} original reading passages, and a study page for each of the ${Object.keys(bank.objectives).length} TEAS objectives.</p>
     <h2>How the diagnostic works</h2>
-    <p>Each section's diagnostic asks ${DCFG.minPerSubarea} to ${Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea)} questions from each part of the section. A part stops early only when more questions would be very unlikely to change your band; students near the line between two bands usually answer all of them. If you take a diagnostic again, you get mostly questions you haven't seen.</p>
+    <p>Each section's diagnostic is split into parts (for example, Science has four). You can take one part at a time or a whole section with a break after each part. Each part asks ${DCFG.minPerSubarea} to ${Math.min(DCFG.maxPerSubarea, bank.diagnosticMaxPerSubarea)} questions. A part stops early only when more questions would be very unlikely to change your band; students near the line between two bands usually answer all of them. If you take a diagnostic again, you get mostly questions you haven't seen.</p>
     <p>Results are given as bands, not scores: <em>Build the basics</em> (under 60% correct), <em>Getting there</em> (60% to 79%) and <em>Strong</em> (80% or more). The bands describe how you did on this site's questions. They aren't a prediction of your TEAS score; that will come only after these results are checked against real TEAS scores.</p>
     ${coachOn() ? `<h2>The TEAS Coach</h2><p>After any practice question, or any question when you review a diagnostic, you can ask the ${esc(config.coach.name)}, an AI tutor in Google Gemini, to help you with it. The site copies the question and your answer, and you paste it into the Coach. The Coach uses ESCC's study pages and is set up to make you think first rather than hand over answers. It can still make mistakes; if it disagrees with the site's answer, tell your instructor the question ID. You need to be signed in with your VCCS student Google account; if you're not, Gemini opens without the Coach (the top of the chat will just say Gemini). If you don't have one yet, everything else on this site still works.</p>` : ""}
     <h2>Your privacy</h2>
@@ -1179,7 +1296,7 @@ function route() {
   try {
     if (!parts.length) return viewHome();
     switch (parts[0]) {
-      case "diagnostic": return parts[1] ? viewDiagnostic(parts[1]) : viewDiagnosticMenu();
+      case "diagnostic": return parts[1] ? viewDiagnostic(parts[1], parts[2]) : viewDiagnosticMenu();
       case "results": return viewResults(parts[1]);
       case "practice":
         if (parts[1] === "continue") {

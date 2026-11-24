@@ -67,10 +67,19 @@ def main():
             shot("home")
             # diagnostics: run every section to the end with random answers
             for sec in (["Science", "Reading", "Math", "English"] if tag == "desk" else ["Reading"]):
-                page.goto(base + f"#/diagnostic/{sec}")
+                page.goto(base + f"#/diagnostic/{sec}/all")
                 page.click("#start")
+                page.wait_for_selector("#qform")
                 n = 0
-                while page.locator("#qform").count() and n < 80:
+                breaks = 0
+                while (page.locator("#qform").count() or page.locator("#go-on").count()) and n < 80:
+                    if page.locator("#go-on").count():
+                        breaks += 1
+                        if breaks == 1:
+                            shot(f"break-{sec}")
+                        page.click("#go-on")
+                        page.wait_for_selector("#qform")
+                        continue
                     if n == 1:
                         shot(f"diag-{sec}")
                     answer_current(page, rnd)
@@ -78,7 +87,7 @@ def main():
                     page.click("#submit")
                     n += 1
                     page.wait_for_function(
-                        "b => document.querySelector('table.results') || (document.querySelector('.q-head') && document.querySelector('.q-head').innerText !== b)",
+                        "b => document.querySelector('table.results') || document.querySelector('#go-on') || (document.querySelector('.q-head') && document.querySelector('.q-head').innerText !== b)",
                         arg=before)
                 page.wait_for_selector("table.results")
                 assert "results" in page.url, page.url
@@ -86,19 +95,88 @@ def main():
                 subs = {"Science": 4, "Reading": 3, "Math": 2, "English": 3}[sec]
                 if n > subs * 15 or n < subs * 6:
                     errors.append(f"{sec} diagnostic length {n} looks wrong")
+                if breaks != subs - 1:
+                    errors.append(f"{sec}: {breaks} break screens, expected {subs - 1}")
                 page.locator("details.review-item summary").first.click()
                 page.wait_for_selector(".review-body .feedback")
                 shot(f"results-{sec}")
-            # resume: start one, answer two, reload, should resume
-            page.goto(base + "#/diagnostic/Math")
+            # one part only: results show that part, the others offer "Take this part"
+            page.goto(base + "#/diagnostic/Science/S.2")
             page.click("#start")
+            page.wait_for_selector("#qform")
+            assert "S.2" in page.inner_text(".q-head"), page.inner_text(".q-head")
+            m = 0
+            while page.locator("#qform").count() and m < 20:
+                answer_current(page, rnd)
+                before = page.inner_text(".q-head")
+                page.click("#submit")
+                m += 1
+                page.wait_for_function("b => document.querySelector('table.results') || (document.querySelector('.q-head') && document.querySelector('.q-head').innerText !== b)", arg=before)
+            page.wait_for_selector("table.results")
+            assert 8 <= m <= 15, m
+            assert page.locator('a[href="#/diagnostic/Science/S.1"]').count() == 1, "untaken part offers to take it"
+            shot("results-one-part")
+            # whole section: stop at the break, come back to the break, results kept for part 1
+            page.goto(base + "#/diagnostic/Math/all")
+            page.click("#start")
+            page.wait_for_selector("#qform")
+            while not page.locator("#go-on").count():
+                answer_current(page, rnd)
+                before = page.inner_text(".q-head")
+                page.click("#submit")
+                page.wait_for_function("b => document.querySelector('#go-on') || (document.querySelector('.q-head') && document.querySelector('.q-head').innerText !== b)", arg=before)
+            assert "Part 1 of 2 done" in page.inner_text("h1"), page.inner_text("h1")
+            page.click("#pause")
+            page.wait_for_selector(".notice a[href='#/diagnostic/Math']")
+            page.goto(base + "#/progress")
+            page.wait_for_selector("table.results")
+            assert "(1 of 2 parts)" in page.inner_text("main"), "partial run listed with its finished part"
+            page.goto(base + "#/diagnostic/Math")
+            page.wait_for_selector("#go-on")
+            page.click("#go-on")
+            page.wait_for_selector("#qform")
+            assert "Part 2 of 2" in page.inner_text(".q-head"), page.inner_text(".q-head")
+            # resume: answer two, reload, should resume
             for _ in range(2):
                 answer_current(page, rnd)
+                before = page.inner_text(".q-head")
                 page.click("#submit")
+                page.wait_for_function("b => document.querySelector('.q-head') && document.querySelector('.q-head').innerText !== b", arg=before)
             page.reload()
             page.goto(base + "#/diagnostic/Math")
             page.wait_for_selector("#qform")
             assert "Question 3" in page.inner_text(".q-head"), page.inner_text(".q-head")
+            # stopping keeps part 1
+            page.click("#quit")
+            page.click("#confirm-box [data-yes]")
+            page.wait_for_selector(".part-list")
+            assert page.locator('.part-list a[href="#/diagnostic/Math/M.1"] .band:not(.band-none)').count() == 1, "part 1 kept after stopping"
+            page.goto(base + "#/progress")
+            page.wait_for_selector("table.results")
+            assert "(1 of 2 parts)" in page.inner_text("main"), "stopped run keeps only its finished part"
+            # a run saved by the previous version (no parts, no record yet): stopping keeps its finished part
+            page.goto(base + "#/diagnostic/Math/all")
+            page.click("#start")
+            page.wait_for_selector("#qform")
+            while not page.locator("#go-on").count():
+                answer_current(page, rnd)
+                before = page.inner_text(".q-head")
+                page.click("#submit")
+                page.wait_for_function("b => document.querySelector('#go-on') || (document.querySelector('.q-head') && document.querySelector('.q-head').innerText !== b)", arg=before)
+            page.evaluate("""() => { const k = 'escc-teas-prep:v1'; const st = JSON.parse(localStorage.getItem(k));
+              const c = st.current; delete c.parts; delete c.breakAfter;
+              st.diagnostics = st.diagnostics.filter((d) => d.seed !== c.seed); localStorage.setItem(k, JSON.stringify(st)); }""")
+            before_n = page.evaluate("() => JSON.parse(localStorage.getItem('escc-teas-prep:v1')).diagnostics.length")
+            page.reload()
+            page.goto(base + "#/diagnostic/Math")
+            page.wait_for_selector("#qform")
+            assert "Part 2 of 2" in page.inner_text(".q-head"), page.inner_text(".q-head")
+            page.click("#quit")
+            page.click("#confirm-box [data-yes]")
+            page.wait_for_selector(".part-list")
+            after = page.evaluate("() => JSON.parse(localStorage.getItem('escc-teas-prep:v1')).diagnostics.slice(-1)[0]")
+            n_after = page.evaluate("() => JSON.parse(localStorage.getItem('escc-teas-prep:v1')).diagnostics.length")
+            assert n_after == before_n + 1 and [r["code"] for r in after["results"]] == ["M.1"], after["results"]
             # practice: one objective per format
             for obj in ["S.1.2", "S.1.1", "M.1.4", "R.3.4", "E.1.1"]:
                 page.goto(base + f"#/practice/{obj}")

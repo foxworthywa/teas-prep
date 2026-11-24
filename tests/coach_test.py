@@ -127,8 +127,9 @@ def main():
             g.click()
         txt = pg.evaluate("navigator.clipboard.readText()")
         check("(correct, but I guessed)" in txt and "Correct answer:" in txt and "About " not in txt, "guessed handoff text")
-        pg.goto(base + "#/diagnostic/Math")
+        pg.goto(base + "#/diagnostic/Math/M.1")
         pg.click("#start")
+        pg.wait_for_selector("#qform")
         while pg.locator("#qform").count():
             before = pg.inner_text(".q-head")
             if pg.locator("#supply-in").count():

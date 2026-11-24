@@ -244,19 +244,26 @@ export function subareaSettled(correct, n, cfg, total) {
 // ------------------------------------------------------------------ diagnostic form
 const DIFFICULTY_TARGETS = [2, 1, 3, 2, 2, 1, 3, 2, 1, 2, 3, 2, 1, 2, 3];
 
-// Pick up to maxPer items per subarea for one section.
+// Pick up to maxPer items per subarea for one section (or for opts.parts, a list of
+// subarea codes in the order they will be given).
 //  - never two items on the same form that a "Do not place on the same form" note forbids
 //  - at most passageCap items per Reading passage (spreads RP-21's 12 items across forms)
 //  - spreads objectives within a subarea; mixes difficulty
 //  - prefers items the student has not seen in earlier diagnostics
-// Returns { bySub: {code: [ids in planned order]}, order: [ids in administration order], relaxed: [...] }
+// Administration order: one part after another (opts.parts order). Within a part,
+// a passage's items stay together.
+// Returns { bySub: {code: [ids in planned order]}, order: [ids in administration order], parts: [codes], relaxed: [...] }
 export function assembleForm(bank, sectionName, opts) {
   const rng = makeRng(opts.seed);
   const maxPer = opts.maxPerSubarea;
   const cap = opts.passageCap;
   const seen = opts.seen || new Set();
-  const section = bank.sections.find((s) => s.name === sectionName);
-  const pool = bank.items.filter((i) => i.section === sectionName && i.diagnostic);
+  const fullSection = bank.sections.find((s) => s.name === sectionName);
+  const parts = opts.parts && opts.parts.length
+    ? opts.parts.filter((c) => fullSection.subareas.some((x) => x.code === c))
+    : fullSection.subareas.map((x) => x.code);
+  const section = { ...fullSection, subareas: parts.map((c) => fullSection.subareas.find((x) => x.code === c)) };
+  const pool = bank.items.filter((i) => i.section === sectionName && i.diagnostic && parts.includes(i.subarea));
   const bySubPool = {};
   for (const s of section.subareas) bySubPool[s.code] = pool.filter((i) => i.subarea === s.code);
 
@@ -266,7 +273,8 @@ export function assembleForm(bank, sectionName, opts) {
   const bySub = {};
   const objCount = {};
   const relaxed = [];
-  for (const s of section.subareas) bySub[s.code] = [];
+  const partPassages = {};
+  for (const s of section.subareas) { bySub[s.code] = []; partPassages[s.code] = new Set(); }
 
   const passageOk = (it, c) => (it.passages || []).every((p) => (passageCount[p] || 0) < c);
 
@@ -290,50 +298,39 @@ export function assembleForm(bank, sectionName, opts) {
         if ((objCount[it.objective] || 0) !== minCount) continue;
         let score = Math.abs(it.difficulty - target) * 2 + rng() * 0.9;
         if (seen.has(it.id)) score += 10;
-        // share passages already on the form (less reading), but only a little
-        if ((it.passages || []).some((p) => passageCount[p])) score -= 0.6;
+        // share passages already in this part (less reading), but only a little;
+        // parts are given one after another, so sharing with another part saves nothing
+        if ((it.passages || []).some((p) => partPassages[code].has(p))) score -= 0.6;
         if (score < bestScore) { bestScore = score; best = it; }
       }
       if (!best) continue;
       chosen.add(best.id);
       bySub[code].push(best.id);
       objCount[best.objective] = (objCount[best.objective] || 0) + 1;
-      for (const p of best.passages || []) passageCount[p] = (passageCount[p] || 0) + 1;
+      for (const p of best.passages || []) { passageCount[p] = (passageCount[p] || 0) + 1; partPassages[code].add(p); }
       for (const x of best.notWith || []) banned.add(x);
     }
   }
 
-  // administration order
+  // administration order: part by part, so each part ends at a natural break
   const byId = Object.fromEntries(pool.map((i) => [i.id, i]));
-  const round = {};
-  for (const code in bySub) bySub[code].forEach((id, k) => (round[id] = k));
-  let order;
-  if (pool.some((i) => i.passages && i.passages.length)) {
-    // keep each passage's items together; passages come in the order their
-    // earliest-planned item was chosen, so every subarea gets early evidence
-    const groups = new Map();
-    for (const id of Object.keys(round)) {
-      const p = (byId[id].passages || [id])[0];
-      if (!groups.has(p)) groups.set(p, []);
-      groups.get(p).push(id);
-    }
-    const gl = [...groups.values()].map((ids) => ({
-      ids: ids.sort((a, b) => round[a] - round[b]),
-      first: Math.min(...ids.map((i) => round[i])),
-      tie: rng(),
-    }));
-    gl.sort((a, b) => a.first - b.first || a.tie - b.tie);
-    order = gl.flatMap((g) => g.ids);
-  } else {
-    order = [];
-    for (let k = 0; k < maxPer; k++) {
-      for (const s of shuffle(section.subareas, rng)) {
-        const id = bySub[s.code][k];
-        if (id) order.push(id);
-      }
+  const order = [];
+  for (const code of parts) {
+    const ids = bySub[code];
+    if (ids.some((id) => (byId[id].passages || []).length)) {
+      // keep each passage's items together, in the order their first item was planned
+      const groups = new Map();
+      ids.forEach((id) => {
+        const p = (byId[id].passages || [id])[0];
+        if (!groups.has(p)) groups.set(p, []);
+        groups.get(p).push(id);
+      });
+      for (const g of groups.values()) order.push(...g);
+    } else {
+      order.push(...ids);
     }
   }
-  return { bySub, order, relaxed };
+  return { bySub, order, parts, relaxed };
 }
 
 // Check a form against the do-not-pair notes (used by tests and as a guard).
@@ -346,10 +343,11 @@ export function formConflicts(bank, ids) {
 }
 
 // ------------------------------------------------------------------ diagnostic session
-export function newDiagnostic(bank, sectionName, cfg, { seed, seen }) {
+export function newDiagnostic(bank, sectionName, cfg, { seed, seen, parts }) {
   const form = assembleForm(bank, sectionName, {
     seed,
     seen,
+    parts,
     maxPerSubarea: Math.min(cfg.maxPerSubarea, bank.diagnosticMaxPerSubarea || cfg.maxPerSubarea),
     passageCap: cfg.passageCapPerForm,
   });
@@ -362,6 +360,8 @@ export function newDiagnostic(bank, sectionName, cfg, { seed, seen }) {
     started: Date.now(),
     order: form.order,
     bySub: form.bySub,
+    parts: form.parts,
+    breakAfter: null, // code of a part just finished, while the student is offered a break
     pos: 0,
     stats,
     answers: [], // {id, response, correct}
@@ -395,14 +395,35 @@ export function recordDiagnosticAnswer(session, bank, cfg, index, response) {
   if (correct) st.correct += 1;
   st.settled = subareaSettled(st.correct, st.n, cfg, st.total ?? session.bySub[it.subarea].length);
   session.pos = index + 1;
-  if (nextIndex(session, bank) === -1) session.finished = true;
+  const next = nextIndex(session, bank);
+  if (next === -1) session.finished = true;
+  else if (st.settled) session.breakAfter = it.subarea; // a part just ended and another follows
   return correct;
 }
 
-export function diagnosticResults(session, bank, cfg) {
+// Parts in the order given, and which one the next question belongs to.
+export function sessionParts(session, bank) {
+  const section = bank.sections.find((s) => s.name === session.section);
+  const codes = session.parts || section.subareas.map((s) => s.code);
+  const next = nextIndex(session, bank);
+  const current = next === -1 ? null : itemIndex(bank)[session.order[next]].subarea;
+  return codes.map((code, i) => ({
+    code,
+    name: section.subareas.find((s) => s.code === code)?.name || code,
+    number: i + 1,
+    done: !!session.stats[code]?.settled,
+    current: code === current,
+    n: session.stats[code]?.n || 0,
+    total: session.stats[code]?.total ?? (session.bySub[code] || []).length,
+  }));
+}
+
+// Results for the parts of this run (only finished parts unless all: true).
+export function diagnosticResults(session, bank, cfg, { all = true } = {}) {
   const section = bank.sections.find((s) => s.name === session.section);
   const byId = itemIndex(bank);
-  return section.subareas.map((s) => {
+  const codes = session.parts || section.subareas.map((s) => s.code);
+  return section.subareas.filter((s) => codes.includes(s.code) && (all || (session.stats[s.code]?.settled && session.stats[s.code].total > 0))).map((s) => {
     const st = session.stats[s.code];
     const b = bandFor(st.correct, st.n, cfg);
     const missed = session.answers
